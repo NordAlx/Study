@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram name="01_Функциональная_структура">
+    <mxGraphModel pageWidth="1100" pageHeight="900">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="users" value="Пользователи&#10;и зачисление" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="290" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="prepare" value="Подготовка&#10;обучения" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="405" y="50" width="290" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="learn" value="Обучение&#10;и оценивание" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="780" y="50" width="290" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="results" value="Итоги&#10;обучения" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="780" y="340" width="290" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="support" value="Поддержка&#10;Доступ, журнал, сбои" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="30" y="340" width="290" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="data" value="Работа с данными&#10;Чтение, запись, копии" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="405" y="625" width="290" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="storage" value="Реляционная БД и файловое хранилище" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="300" y="815" width="500" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="up" value="списки" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=open;endFill=0;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="users" target="prepare">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"/>
+            <mxPoint x="0" y="-25" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pl" value="комплект" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=open;endFill=0;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="prepare" target="learn">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"/>
+            <mxPoint x="0" y="-25" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lr" value="принятые результаты" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=open;endFill=0;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="learn" target="results">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"/>
+            <mxPoint x="0" y="-25" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="data0" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=open;endFill=0;exitX=0.8620689655172413;exitY=1.0;exitPerimeter=0;entryX=0.1206896551724138;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="users" target="data">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="270"/>
+              <mxPoint x="380" y="270"/>
+              <mxPoint x="380" y="550"/>
+              <mxPoint x="440" y="550"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="data1" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=open;endFill=0;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="prepare" target="data">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="data2" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=open;endFill=0;exitX=0.1724137931034483;exitY=1.0;exitPerimeter=0;entryX=0.8448275862068966;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="learn" target="data">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="735" y="150"/>
+              <mxPoint x="735" y="560"/>
+              <mxPoint x="650" y="560"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="data3" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=open;endFill=0;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.9482758620689655;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="results" target="data">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="925" y="590"/>
+              <mxPoint x="680" y="590"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sd" value="контроль копий" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=open;endFill=0;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.45;entryPerimeter=0;" edge="1" parent="1" source="support" target="data">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="360" y="390"/>
+              <mxPoint x="360" y="670"/>
+            </Array>
+            <mxPoint x="0" y="-25" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="su" value="права доступа" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=open;endFill=0;exitX=0.2413793103448276;exitY=0.0;exitPerimeter=0;entryX=0.2413793103448276;entryY=1.0;entryPerimeter=0;" edge="1" parent="1" source="support" target="users">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"/>
+            <mxPoint x="0" y="-25" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ds" value="чтение и запись" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=open;endFill=0;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="data" target="storage">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"/>
+            <mxPoint x="0" y="-25" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note0" value="Стрелки к подсистеме данных обозначают обращения к данным" style="text;html=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="299.6875" y="20.0" width="500.625" height="20" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

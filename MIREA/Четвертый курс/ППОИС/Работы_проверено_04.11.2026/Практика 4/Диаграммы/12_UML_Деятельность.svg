@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1600" viewBox="0 0 1100 1600"><rect width="100%" height="100%" fill="white"/>
+<text x="190.0078125" y="57.0" font-family="Arial" font-size="32" font-weight="700" fill="#17212B">UML Деятельность сопровождения продажи</text>
+<text x="253.5078125" y="1571.0" font-family="Arial" font-size="20" font-weight="400" fill="#17212B">Проектируемая модель сопровождения корпоративных продаж</text>
+<ellipse cx="550.5" cy="122.5" rx="22.5" ry="22.5" fill="#17212B" stroke="#364152" stroke-width="2"/>
+<rect x="280" y="195" width="540" height="90" rx="12" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="350.0078125" y="249.0" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">Принять и квалифицировать заявку</text>
+<polyline points="550,145 550,195" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="543.8835932041064,181.30366589531536 550,195 556.1164067958936,181.30366589531536" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="315" y="335" width="470" height="95" rx="12" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="416.5234375" y="391.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">Подготовить версию КП</text>
+<polyline points="550,285 550,335" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="543.8835932041064,321.30366589531536 550,335 556.1164067958936,321.30366589531536" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="70" y="500" width="960" height="18" rx="0" fill="#17212B" stroke="#364152" stroke-width="2"/>
+<polyline points="550,430 550,500" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="543.8835932041064,486.30366589531536 550,500 556.1164067958936,486.30366589531536" fill="#364152" stroke="#364152" stroke-width="2"/>
+<polyline points="270,518 270,590" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="263.88359320410643,576.3036658953154 270,590 276.11640679589357,576.3036658953154" fill="#364152" stroke="#364152" stroke-width="2"/>
+<polyline points="830,518 830,590" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="823.8835932041064,576.3036658953154 830,590 836.1164067958936,576.3036658953154" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="40" y="590" width="460" height="100" rx="12" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="79.0078125" y="634.0" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">Проверить коммерческие условия</text>
+<text x="122.0234375" y="664.0" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">и согласовать исключения</text>
+<rect x="600" y="590" width="460" height="100" rx="12" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="709.5" y="634.0" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">Проверить реквизиты</text>
+<text x="700.0" y="664.0" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">и комплект документов</text>
+<polyline points="270,690 270,760" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="263.88359320410643,746.3036658953154 270,760 276.11640679589357,746.3036658953154" fill="#364152" stroke="#364152" stroke-width="2"/>
+<polyline points="830,690 830,760" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="823.8835932041064,746.3036658953154 830,760 836.1164067958936,746.3036658953154" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="70" y="760" width="960" height="18" rx="0" fill="#17212B" stroke="#364152" stroke-width="2"/>
+<polyline points="550,778 550,830" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="543.8835932041064,816.3036658953154 550,830 556.1164067958936,816.3036658953154" fill="#364152" stroke="#364152" stroke-width="2"/>
+<polygon points="550.0,830 690,897.5 550.0,965 410,897.5" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="475.5" y="891.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">Обе проверки</text>
+<text x="495.0" y="920.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">успешны?</text>
+<polyline points="410,897 20,897 20,382 315,382" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="301.30366589531536,388.11640679589357 315,382 301.30366589531536,375.88359320410643" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="104.5078125" y="851.5" width="200.984375" height="37" fill="white"/>
+<text x="120.5078125" y="877.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">[нет] Доработать</text>
+<polyline points="550,965 550,1030" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="543.8835932041064,1016.3036658953154 550,1030 556.1164067958936,1016.3036658953154" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="571.0" y="976.5" width="68.0" height="37" fill="white"/>
+<text x="587.0" y="1002.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">[да]</text>
+<rect x="280" y="1030" width="540" height="90" rx="12" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="310.0234375" y="1084.0" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">Зафиксировать КП и подписанный договор</text>
+<polyline points="550,1120 550,1180" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="543.8835932041064,1166.3036658953154 550,1180 556.1164067958936,1166.3036658953154" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="280" y="1180" width="540" height="90" rx="12" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="312.0390625" y="1234.0" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">Создать заказ и передать на подключение</text>
+<polyline points="550,1270 550,1330" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="543.8835932041064,1316.3036658953154 550,1330 556.1164067958936,1316.3036658953154" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="280" y="1330" width="540" height="70" rx="12" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="347.015625" y="1374.0" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">Получить подтверждение активации</text>
+<polyline points="550,1400 550,1435" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="543.8835932041064,1421.3036658953154 550,1435 556.1164067958936,1421.3036658953154" fill="#364152" stroke="#364152" stroke-width="2"/>
+<ellipse cx="550.0" cy="1458.0" rx="23.0" ry="23.0" fill="#FFFFFF" stroke="#364152" stroke-width="2"/>
+<ellipse cx="550.0" cy="1458.0" rx="13.0" ry="13.0" fill="#17212B" stroke="#364152" stroke-width="2"/>
+</svg>

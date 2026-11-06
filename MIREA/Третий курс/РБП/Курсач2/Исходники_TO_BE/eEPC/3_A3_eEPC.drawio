@@ -1,0 +1,225 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="TOBE_A3_Print" name="A3">
+    <mxGraphModel dx="1414" dy="785" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="Медиаплан и рекламные материалы&#xa;согласованы" epc-kind="event" original-label="Медиаплан и рекламные материалы согласованы" source-id="Start" description="" id="Start">
+          <mxCell parent="1" style="shape=hexagon;size=.10;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="66" width="280" x="660" y="102" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Подготовить каналы и проверить&#xa;готовность в BPMSoft" epc-kind="function" original-label="Подготовить каналы и проверить готовность в BPMSoft" source-id="A31" description="Digital-специалист готовит сегмент и email в BPMSoft, цифровые размещения — в рекламном кабинете. Trade-маркетолог передаёт инструкции из карточки через подключённую почту. Ответы магазинов сохраняются в истории кампании; сотрудник проверяет готовность." id="A31">
+          <mxCell parent="1" style="rounded=1;arcSize=16;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#CFE2F3;strokeColor=#5685A7;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="76" width="280" x="660" y="202" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="BPMSoft" epc-kind="application" original-label="BPMSoft" source-id="A31_application0" description="" id="A31_application0_at_1">
+          <mxCell parent="1" style="shape=process;size=.06;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=0;align=center;verticalAlign=middle;spacing=5;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="36" width="260" x="348" y="222" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="a3_edge_29" edge="1" parent="1" source="A31_application0_at_1" style="html=1;strokeColor=#6C8EBF;strokeWidth=1;dashed=1;dashPattern=3 3;endArrow=none;endFill=0;endSize=6;rounded=0;curved=0;exitX=1;exitY=0.5;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;" target="A31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Trade-маркетолог" epc-kind="role" original-label="Trade-маркетолог" source-id="A31_role1" description="" id="A31_role1_at_3">
+          <mxCell parent="1" style="ellipse;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=0;align=center;verticalAlign=middle;spacing=5;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="36" width="260" x="985" y="188" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="a3_edge_27" edge="1" parent="1" source="A31_role1_at_3" style="html=1;strokeColor=#936900;strokeWidth=1;dashed=1;dashPattern=3 3;endArrow=none;endFill=0;endSize=6;rounded=0;curved=0;exitX=0;exitY=0.5;entryX=1;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;" target="A31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Специалист&#xa;digital-коммуникаций" epc-kind="role" original-label="Специалист digital-коммуникаций" source-id="A31_role0" description="" id="A31_role0_at_4">
+          <mxCell parent="1" style="ellipse;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=0;align=center;verticalAlign=middle;spacing=5;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="52" width="260" x="985" y="232" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="a3_edge_25" edge="1" parent="1" source="A31_role0_at_4" style="html=1;strokeColor=#936900;strokeWidth=1;dashed=1;dashPattern=3 3;endArrow=none;endFill=0;endSize=6;rounded=0;curved=0;exitX=0;exitY=0.5;entryX=1;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;" target="A31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Цифровые каналы и магазины&#xa;готовы к запуску" epc-kind="event" original-label="Цифровые каналы и магазины готовы к запуску" source-id="Ready" description="" id="Ready">
+          <mxCell parent="1" style="shape=hexagon;size=.10;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="66" width="280" x="660" y="312" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Запустить размещения и&#xa;утверждённую рассылку" epc-kind="function" original-label="Запустить размещения и утверждённую рассылку" source-id="A32" description="Digital-специалист запускает утверждённую рассылку в BPMSoft и размещения в рекламном кабинете. Trade-маркетолог проверяет подтверждения магазинов в карточке. Почтовый клиент и отдельный журнал отправок не используются." id="A32">
+          <mxCell parent="1" style="rounded=1;arcSize=16;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#CFE2F3;strokeColor=#5685A7;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="76" width="280" x="660" y="412" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="BPMSoft" epc-kind="application" original-label="BPMSoft" source-id="A32_application0" description="" id="A32_application0_at_5">
+          <mxCell parent="1" style="shape=process;size=.06;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=0;align=center;verticalAlign=middle;spacing=5;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="36" width="260" x="355" y="406" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="a3_edge_37" edge="1" parent="1" source="A32_application0_at_5" style="html=1;strokeColor=#6C8EBF;strokeWidth=1;dashed=1;dashPattern=3 3;endArrow=none;endFill=0;endSize=6;rounded=0;curved=0;exitX=1;exitY=0.5;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;" target="A32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Trade-маркетолог" epc-kind="role" original-label="Trade-маркетолог" source-id="A32_role1" description="" id="A32_role1_at_7">
+          <mxCell parent="1" style="ellipse;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=0;align=center;verticalAlign=middle;spacing=5;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="36" width="260" x="985" y="398" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="a3_edge_35" edge="1" parent="1" source="A32_role1_at_7" style="html=1;strokeColor=#936900;strokeWidth=1;dashed=1;dashPattern=3 3;endArrow=none;endFill=0;endSize=6;rounded=0;curved=0;exitX=0;exitY=0.5;entryX=1;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;" target="A32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Специалист&#xa;digital-коммуникаций" epc-kind="role" original-label="Специалист digital-коммуникаций" source-id="A32_role0" description="" id="A32_role0_at_8">
+          <mxCell parent="1" style="ellipse;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=0;align=center;verticalAlign=middle;spacing=5;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="52" width="260" x="985" y="442" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="a3_edge_33" edge="1" parent="1" source="A32_role0_at_8" style="html=1;strokeColor=#936900;strokeWidth=1;dashed=1;dashPattern=3 3;endArrow=none;endFill=0;endSize=6;rounded=0;curved=0;exitX=0;exitY=0.5;entryX=1;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;" target="A32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Запуск цифрового и розничного&#xa;направлений подтверждён" epc-kind="event" original-label="Запуск цифрового и розничного направлений подтверждён" source-id="Launched" description="" id="Launched">
+          <mxCell parent="1" style="shape=hexagon;size=.10;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="66" width="280" x="660" y="522" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="XOR" epc-kind="rule" original-label="XOR" source-id="Join" description="" id="Join">
+          <mxCell parent="1" style="ellipse;aspect=fixed;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="44" width="44" x="778" y="608" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Контролировать и корректировать&#xa;кампанию в BPMSoft" epc-kind="function" original-label="Контролировать и корректировать кампанию в BPMSoft" source-id="A33" description="Показатели рекламного кабинета и веб-аналитики проверяются и импортируются в BPMSoft. Система формирует сводку и контрольные задачи; менеджер анализирует отклонения. Исправления выполняются в каналах и фиксируются в карточке; изменение условий возвращается на согласование." id="A33">
+          <mxCell parent="1" style="rounded=1;arcSize=16;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#CFE2F3;strokeColor=#5685A7;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="76" width="280" x="660" y="708" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="BPMSoft" epc-kind="application" original-label="BPMSoft" source-id="A33_application0" description="" id="A33_application0_at_9">
+          <mxCell parent="1" style="shape=process;size=.06;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=0;align=center;verticalAlign=middle;spacing=5;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="36" width="260" x="355" y="728" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="a3_edge_47" edge="1" parent="1" source="A33_application0_at_9" style="html=1;strokeColor=#6C8EBF;strokeWidth=1;dashed=1;dashPattern=3 3;endArrow=none;endFill=0;endSize=6;rounded=0;curved=0;exitX=1;exitY=0.5;entryX=0;entryY=0.25;exitPerimeter=1;entryPerimeter=1;" target="A33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Trade-маркетолог" epc-kind="role" original-label="Trade-маркетолог" source-id="A33_role2" description="" id="A33_role2_at_12">
+          <mxCell parent="1" style="ellipse;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=0;align=center;verticalAlign=middle;spacing=5;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="36" width="260" x="985" y="672" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="a3_edge_45" edge="1" parent="1" source="A33_role2_at_12" style="html=1;strokeColor=#936900;strokeWidth=1;dashed=1;dashPattern=3 3;endArrow=none;endFill=0;endSize=6;rounded=0;curved=0;exitX=0;exitY=0.5;entryX=1;entryY=0.25;exitPerimeter=1;entryPerimeter=1;" target="A33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Менеджер рекламной кампании" epc-kind="role" original-label="Менеджер рекламной кампании" source-id="A33_role0" description="" id="A33_role0_at_13">
+          <mxCell parent="1" style="ellipse;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=0;align=center;verticalAlign=middle;spacing=5;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="36" width="260" x="985" y="716" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="a3_edge_41" edge="1" parent="1" source="A33_role0_at_13" style="html=1;strokeColor=#936900;strokeWidth=1;dashed=1;dashPattern=3 3;endArrow=none;endFill=0;endSize=6;rounded=0;curved=0;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;" target="A33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Специалист&#xa;digital-коммуникаций" epc-kind="role" original-label="Специалист digital-коммуникаций" source-id="A33_role1" description="" id="A33_role1_at_14">
+          <mxCell parent="1" style="ellipse;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=0;align=center;verticalAlign=middle;spacing=5;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="52" width="260" x="985" y="760" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="a3_edge_43" edge="1" parent="1" source="A33_role1_at_14" style="html=1;strokeColor=#936900;strokeWidth=1;dashed=1;dashPattern=3 3;endArrow=none;endFill=0;endSize=6;rounded=0;curved=0;exitX=0;exitY=0.5;entryX=1;entryY=0.75;exitPerimeter=1;entryPerimeter=1;" target="A33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5szLPHfvooPPuoxI9L-H-1" edge="1" parent="1" source="Decision" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="Change">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5szLPHfvooPPuoxI9L-H-3" edge="1" parent="1" source="Decision" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Complete">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="XOR" epc-kind="rule" original-label="XOR" source-id="Decision" description="" id="Decision">
+          <mxCell parent="1" style="ellipse;aspect=fixed;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="44" width="44" x="778" y="840" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Кампания продолжается; назначена&#xa;очередная проверка" epc-kind="event" original-label="Кампания продолжается; назначена очередная проверка" source-id="Next" description="" id="Next">
+          <mxCell parent="1" style="shape=hexagon;size=.10;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="66" width="280" x="300" y="904" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Период кампании завершён; данные&#xa;мониторинга подготовлены" epc-kind="event" original-label="Период кампании завершён; данные мониторинга подготовлены" source-id="Complete" description="" id="Complete">
+          <mxCell parent="1" style="shape=hexagon;size=.10;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="66" width="280" x="1020" y="904" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Требуется повторное согласование&#xa;изменённых условий" epc-kind="event" original-label="Требуется повторное согласование изменённых условий" source-id="Change" description="" id="Change">
+          <mxCell parent="1" style="shape=hexagon;size=.10;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="66" width="280" x="1380" y="904" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="a3_edge_17" edge="1" parent="1" source="Launched" style="html=1;strokeColor=#343B44;strokeWidth=1.6;endArrow=block;endFill=1;endSize=7;rounded=0;curved=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;" target="Join">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="600" />
+              <mxPoint x="800" y="596" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a3_edge_23" edge="1" parent="1" source="Next" style="html=1;strokeColor=#343B44;strokeWidth=1.6;endArrow=block;endFill=1;endSize=7;rounded=0;curved=0;exitX=0;exitY=0.75;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;" target="Join">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="288" y="953.5" />
+              <mxPoint x="288" y="630" />
+              <mxPoint x="766" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a3_edge_13" edge="1" parent="1" source="Start" style="html=1;strokeColor=#343B44;strokeWidth=1.6;endArrow=block;endFill=1;endSize=7;rounded=0;curved=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;" target="A31">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="180" />
+              <mxPoint x="800" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a3_edge_14" edge="1" parent="1" source="A31" style="html=1;strokeColor=#343B44;strokeWidth=1.6;endArrow=block;endFill=1;endSize=7;rounded=0;curved=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;" target="Ready">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="290" />
+              <mxPoint x="800" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a3_edge_15" edge="1" parent="1" source="Ready" style="html=1;strokeColor=#343B44;strokeWidth=1.6;endArrow=block;endFill=1;endSize=7;rounded=0;curved=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;" target="A32">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="390" />
+              <mxPoint x="800" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a3_edge_16" edge="1" parent="1" source="A32" style="html=1;strokeColor=#343B44;strokeWidth=1.6;endArrow=block;endFill=1;endSize=7;rounded=0;curved=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;" target="Launched">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="500" />
+              <mxPoint x="800" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a3_edge_18" edge="1" parent="1" source="Join" style="html=1;strokeColor=#343B44;strokeWidth=1.6;endArrow=block;endFill=1;endSize=7;rounded=0;curved=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;" target="A33">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="664" />
+              <mxPoint x="800" y="696" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a3_edge_19" edge="1" parent="1" source="A33" style="html=1;strokeColor=#343B44;strokeWidth=1.6;endArrow=block;endFill=1;endSize=7;rounded=0;curved=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;" target="Decision">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="796" />
+              <mxPoint x="800" y="828" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a3_edge_22" edge="1" parent="1" source="Decision" style="html=1;strokeColor=#343B44;strokeWidth=1.6;endArrow=block;endFill=1;endSize=7;rounded=0;curved=0;exitX=0;exitY=0.5;entryX=1;entryY=0.25;exitPerimeter=1;entryPerimeter=1;" target="Next">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="766" y="862" />
+              <mxPoint x="766" y="920.5" />
+              <mxPoint x="592" y="920.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1120" viewBox="0 0 1800 1120"><rect width="100%" height="100%" fill="white"/>
+<text x="510.5078125" y="57.0" font-family="Arial" font-size="32" font-weight="700" fill="#17212B">IDEF0 A0 Декомпозиция сопровождения продаж</text>
+<text x="603.5078125" y="1091.0" font-family="Arial" font-size="20" font-weight="400" fill="#17212B">Проектируемая модель сопровождения корпоративных продаж</text>
+<rect x="140" y="250" width="260" height="115" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="195.5" y="286.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">A1 Принять и</text>
+<text x="170.0078125" y="316.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">квалифицировать</text>
+<text x="233.5" y="346.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">заявку</text>
+<rect x="450" y="375" width="260" height="115" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="482.0234375" y="426.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">A2 Подготовить и</text>
+<text x="493.015625" y="456.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">согласовать КП</text>
+<rect x="760" y="500" width="260" height="115" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="812.5" y="551.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">A3 Оформить</text>
+<text x="846.0078125" y="581.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">договор</text>
+<rect x="1070" y="625" width="260" height="115" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1095.5078125" y="676.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">A4 Передать заказ</text>
+<text x="1109.515625" y="706.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">на подключение</text>
+<rect x="1380" y="750" width="260" height="115" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1402.015625" y="786.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">A5 Контролировать</text>
+<text x="1444.5390625" y="816.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">результат и</text>
+<text x="1448.5078125" y="846.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">отчётность</text>
+<polyline points="400,308 425,308 425,433 450,433" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="436.30366589531536,439.11640679589357 450,433 436.30366589531536,426.88359320410643" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="428.0078125" y="321.5" width="103.984375" height="37" fill="white"/>
+<text x="444.0078125" y="347.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">Сделка</text>
+<polyline points="710,433 735,433 735,558 760,558" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="746.3036658953154,564.1164067958936 760,558 746.3036658953154,551.8835932041064" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="760.5" y="446.5" width="59.0" height="37" fill="white"/>
+<text x="776.5" y="472.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">КП</text>
+<polyline points="1020,558 1045,558 1045,683 1070,683" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1056.3036658953154,689.1164067958936 1070,683 1056.3036658953154,676.8835932041064" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1043.5" y="571.5" width="113.0" height="37" fill="white"/>
+<text x="1059.5" y="597.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">Договор</text>
+<polyline points="1330,683 1355,683 1355,808 1380,808" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1366.3036658953154,814.1164067958936 1380,808 1366.3036658953154,801.8835932041064" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1366.0" y="696.5" width="88.0" height="37" fill="white"/>
+<text x="1382.0" y="722.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">Заказ</text>
+<polyline points="30,307 140,307" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="126.30366589531538,313.11640679589357 140,307 126.30366589531538,300.88359320410643" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="45.0" y="261.5" width="50.0" height="37" fill="white"/>
+<text x="61.0" y="287.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">I1</text>
+<polyline points="30,558 760,558" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="746.3036658953154,564.1164067958936 760,558 746.3036658953154,551.8835932041064" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="192.0078125" y="508.5" width="415.984375" height="37" fill="white"/>
+<text x="208.0078125" y="534.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">I2 Решение и подписанные документы</text>
+<polyline points="30,925 1340,925 1340,830 1380,830" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1366.3036658953154,836.1164067958936 1380,830 1366.3036658953154,823.8835932041064" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="512.0" y="881.5" width="276.0" height="37" fill="white"/>
+<text x="528.0" y="907.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">I3 Статусы подключения</text>
+<polyline points="270,180 270,250" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="263.88359320410643,236.30366589531536 270,250 276.11640679589357,236.30366589531536" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="224.0" y="136.5" width="92.0" height="37" fill="white"/>
+<text x="240.0" y="162.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">C2 C3</text>
+<polyline points="320,1030 320,365" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="326.11640679589357,378.69633410468464 320,365 313.88359320410643,378.69633410468464" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="281.0" y="981.5" width="98.0" height="37" fill="white"/>
+<text x="297.0" y="1007.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">M1 M2</text>
+<polyline points="580,180 580,375" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="573.8835932041064,361.30366589531536 580,375 586.1164067958936,361.30366589531536" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="517.5" y="136.5" width="125.0" height="37" fill="white"/>
+<text x="533.5" y="162.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">C2 C3 C1</text>
+<polyline points="630,1030 630,490" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="636.1164067958936,503.69633410468464 630,490 623.8835932041064,503.69633410468464" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="591.0" y="981.5" width="98.0" height="37" fill="white"/>
+<text x="607.0" y="1007.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">M1 M2</text>
+<polyline points="890,180 890,500" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="883.8835932041064,486.30366589531536 890,500 896.1164067958936,486.30366589531536" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="844.0" y="136.5" width="92.0" height="37" fill="white"/>
+<text x="860.0" y="162.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">C2 C3</text>
+<polyline points="940,1030 940,615" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="946.1164067958936,628.6963341046846 940,615 933.8835932041064,628.6963341046846" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="901.0" y="981.5" width="98.0" height="37" fill="white"/>
+<text x="917.0" y="1007.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">M1 M2</text>
+<polyline points="1200,180 1200,625" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1193.8835932041065,611.3036658953154 1200,625 1206.1164067958935,611.3036658953154" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1154.0" y="136.5" width="92.0" height="37" fill="white"/>
+<text x="1170.0" y="162.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">C2 C3</text>
+<polyline points="1250,1030 1250,740" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1256.1164067958935,753.6963341046846 1250,740 1243.8835932041065,753.6963341046846" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1211.0" y="981.5" width="98.0" height="37" fill="white"/>
+<text x="1227.0" y="1007.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">M1 M2</text>
+<polyline points="1510,180 1510,750" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1503.8835932041065,736.3036658953154 1510,750 1516.1164067958935,736.3036658953154" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1464.0" y="136.5" width="92.0" height="37" fill="white"/>
+<text x="1480.0" y="162.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">C2 C3</text>
+<polyline points="1560,1030 1560,865" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1566.1164067958935,878.6963341046846 1560,865 1553.8835932041065,878.6963341046846" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1521.0" y="981.5" width="98.0" height="37" fill="white"/>
+<text x="1537.0" y="1007.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">M1 M2</text>
+<polyline points="710,465 1740,465" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1726.3036658953154,471.11640679589357 1740,465 1726.3036658953154,458.88359320410643" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1675.0" y="424.5" width="60.0" height="37" fill="white"/>
+<text x="1691.0" y="450.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">O1</text>
+<polyline points="1020,590 1740,590" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1726.3036658953154,596.1164067958936 1740,590 1726.3036658953154,583.8835932041064" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1675.0" y="549.5" width="60.0" height="37" fill="white"/>
+<text x="1691.0" y="575.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">O2</text>
+<polyline points="1330,715 1740,715" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1726.3036658953154,721.1164067958936 1740,715 1726.3036658953154,708.8835932041064" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1675.0" y="674.5" width="60.0" height="37" fill="white"/>
+<text x="1691.0" y="700.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">O3</text>
+<polyline points="1640,807 1765,807" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1751.3036658953154,813.1164067958936 1765,807 1751.3036658953154,800.8835932041064" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1690.0" y="761.5" width="60.0" height="37" fill="white"/>
+<text x="1706.0" y="787.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">O4</text>
+<text x="663.015625" y="118.0" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">Граничные потоки I1–I3 C1–C3 M1–M2 O1–O4 соответствуют контексту</text>
+</svg>

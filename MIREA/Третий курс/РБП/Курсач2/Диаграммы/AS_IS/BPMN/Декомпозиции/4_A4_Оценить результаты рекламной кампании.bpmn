@@ -1,0 +1,487 @@
+<?xml version='1.0' encoding='UTF8'?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_A4" targetNamespace="https://mirea.example/gloria-jeans/as-is" exporter="Coursework BPMN authoring" exporterVersion="1.0">
+  <bpmn:resource id="Resource_R1" name="Директор департамента маркетинга и рекламы"/>
+  <bpmn:resource id="Resource_R2" name="Менеджер рекламной кампании"/>
+  <bpmn:resource id="Resource_R3" name="Специалист по разработке рекламных материалов"/>
+  <bpmn:resource id="Resource_R4" name="Специалист digital-коммуникаций"/>
+  <bpmn:resource id="Resource_R5" name="Trade-маркетолог"/>
+  <bpmn:resource id="Resource_R6" name="Маркетинговый аналитик"/>
+  <bpmn:resource id="Resource_S1" name="Категорийный менеджер"/>
+  <bpmn:resource id="Resource_S2" name="Руководитель магазина"/>
+  <bpmn:dataStore id="Store_ClientContacts" name="Клиентские контакты (файл Excel)" isUnlimited="true"/>
+  <bpmn:dataStore id="Store_MailingLog" name="Журнал email-рассылок (файл Excel)" isUnlimited="true"/>
+  <bpmn:dataStore id="Store_CampaignDocuments" name="Архив документов кампаний" isUnlimited="true"/>
+  <bpmn:dataStore id="Store_CorporateMail" name="Архив корпоративной переписки" isUnlimited="true"/>
+  <bpmn:process id="Process_A4" name="Оценить результаты рекламной кампании" isExecutable="false">
+    <bpmn:documentation>Учебная модель существующей ручной технологии. Входы данного уровня поступают из родительского процесса, смежных участников и постоянных файлов; происхождение указано в названиях и описаниях. Файл не предназначен для исполнения в движке.</bpmn:documentation>
+    <bpmn:laneSet id="A4_LaneSet">
+      <bpmn:lane id="A4_Lane_R6" name="Маркетинговый аналитик">
+        <bpmn:flowNodeRef>A4_Start</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A4_M41</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A4_A41</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A4_G41</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A4_A42</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="A4_Lane_R2" name="Менеджер рекламной кампании">
+        <bpmn:flowNodeRef>A4_A43</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A4_End</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="A4_Start" name="Период завершён; мониторинг подготовлен">
+      <bpmn:outgoing>A4_F1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:exclusiveGateway id="A4_M41" name="" gatewayDirection="Converging">
+      <bpmn:incoming>A4_F1</bpmn:incoming>
+      <bpmn:incoming>A4_F5</bpmn:incoming>
+      <bpmn:outgoing>A4_F2</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="A4_A41" name="Собрать результаты рекламной кампании">
+      <bpmn:documentation>Функция A41. Сопоставление периода, товаров и идентификатора, запрос недостающих сведений по почте, сведение показателей в Excel.
+Исполнитель: Маркетинговый аналитик.
+Средства: Персональный компьютер; Excel; Почтовый клиент; Корпоративная почта; Рекламный кабинет; Сервис веб-аналитики.
+Входы: Данные мониторинга; Данные цифровых каналов; Данные розничных размещений; Данные о продажах.
+Результаты: Сводные результаты кампании.
+Основания: Методика оценки результатов кампании; Требования к отчётности.</bpmn:documentation>
+      <bpmn:incoming>A4_F2</bpmn:incoming>
+      <bpmn:outgoing>A4_F3</bpmn:outgoing>
+      <bpmn:ioSpecification id="A4_A41_IO">
+        <bpmn:dataInput id="A4_Data_1_Item" name="Данные мониторинга [вход из A3]"/>
+        <bpmn:dataInput id="A4_Data_2_Item" name="Данные о продажах [коммерческий блок]"/>
+        <bpmn:dataInput id="A4_Data_9_Item" name="Архив документов кампаний"/>
+        <bpmn:dataInput id="A4_Data_11_Item" name="Архив корпоративной переписки"/>
+        <bpmn:dataOutput id="A4_Data_3_Item" name="Сводные результаты кампании (Excel)"/>
+        <bpmn:inputSet id="A4_A41_InputSet">
+          <bpmn:dataInputRefs>A4_Data_1_Item</bpmn:dataInputRefs>
+          <bpmn:dataInputRefs>A4_Data_2_Item</bpmn:dataInputRefs>
+          <bpmn:dataInputRefs>A4_Data_9_Item</bpmn:dataInputRefs>
+          <bpmn:dataInputRefs>A4_Data_11_Item</bpmn:dataInputRefs>
+        </bpmn:inputSet>
+        <bpmn:outputSet id="A4_A41_OutputSet">
+          <bpmn:dataOutputRefs>A4_Data_3_Item</bpmn:dataOutputRefs>
+        </bpmn:outputSet>
+      </bpmn:ioSpecification>
+      <bpmn:dataInputAssociation id="A4_Data_1">
+        <bpmn:sourceRef>A4_Doc1</bpmn:sourceRef>
+        <bpmn:targetRef>A4_Data_1_Item</bpmn:targetRef>
+      </bpmn:dataInputAssociation>
+      <bpmn:dataInputAssociation id="A4_Data_2">
+        <bpmn:sourceRef>A4_Doc2</bpmn:sourceRef>
+        <bpmn:targetRef>A4_Data_2_Item</bpmn:targetRef>
+      </bpmn:dataInputAssociation>
+      <bpmn:dataInputAssociation id="A4_Data_9">
+        <bpmn:sourceRef>A4_Store6</bpmn:sourceRef>
+        <bpmn:targetRef>A4_Data_9_Item</bpmn:targetRef>
+      </bpmn:dataInputAssociation>
+      <bpmn:dataInputAssociation id="A4_Data_11">
+        <bpmn:sourceRef>A4_Store7</bpmn:sourceRef>
+        <bpmn:targetRef>A4_Data_11_Item</bpmn:targetRef>
+      </bpmn:dataInputAssociation>
+      <bpmn:dataOutputAssociation id="A4_Data_3">
+        <bpmn:sourceRef>A4_Data_3_Item</bpmn:sourceRef>
+        <bpmn:targetRef>A4_Doc3</bpmn:targetRef>
+      </bpmn:dataOutputAssociation>
+      <bpmn:performer id="A4_A41_Performer">
+        <bpmn:resourceRef>Resource_R6</bpmn:resourceRef>
+      </bpmn:performer>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="A4_G41" name="Данные полны и сопоставимы?" gatewayDirection="Diverging">
+      <bpmn:incoming>A4_F3</bpmn:incoming>
+      <bpmn:outgoing>A4_F4</bpmn:outgoing>
+      <bpmn:outgoing>A4_F5</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="A4_A42" name="Проанализировать эффективность рекламной кампании">
+      <bpmn:documentation>Функция A42. 
+Исполнитель: Маркетинговый аналитик.
+Средства: Персональный компьютер; Excel; Сервис веб-аналитики.
+Входы: Сводные результаты кампании.
+Результаты: Аналитика эффективности рекламной кампании.
+Основания: Бриф рекламной кампании; Согласованный медиаплан; Утверждённый бюджетный лимит; Методика оценки результатов кампании.</bpmn:documentation>
+      <bpmn:incoming>A4_F4</bpmn:incoming>
+      <bpmn:outgoing>A4_F6</bpmn:outgoing>
+      <bpmn:ioSpecification id="A4_A42_IO">
+        <bpmn:dataInput id="A4_Data_4_Item" name="Сводные результаты кампании (Excel)"/>
+        <bpmn:dataOutput id="A4_Data_6_Item" name="Аналитика эффективности"/>
+        <bpmn:inputSet id="A4_A42_InputSet">
+          <bpmn:dataInputRefs>A4_Data_4_Item</bpmn:dataInputRefs>
+        </bpmn:inputSet>
+        <bpmn:outputSet id="A4_A42_OutputSet">
+          <bpmn:dataOutputRefs>A4_Data_6_Item</bpmn:dataOutputRefs>
+        </bpmn:outputSet>
+      </bpmn:ioSpecification>
+      <bpmn:dataInputAssociation id="A4_Data_4">
+        <bpmn:sourceRef>A4_Doc3</bpmn:sourceRef>
+        <bpmn:targetRef>A4_Data_4_Item</bpmn:targetRef>
+      </bpmn:dataInputAssociation>
+      <bpmn:dataOutputAssociation id="A4_Data_6">
+        <bpmn:sourceRef>A4_Data_6_Item</bpmn:sourceRef>
+        <bpmn:targetRef>A4_Doc4</bpmn:targetRef>
+      </bpmn:dataOutputAssociation>
+      <bpmn:performer id="A4_A42_Performer">
+        <bpmn:resourceRef>Resource_R6</bpmn:resourceRef>
+      </bpmn:performer>
+    </bpmn:task>
+    <bpmn:task id="A4_A43" name="Сформировать итоговый отчёт">
+      <bpmn:documentation>Функция A43. Менеджер формирует отчёт в Word, сохраняет и направляет его директору маркетинга и категорийному менеджеру по почте. Завершение означает передачу обоим адресатам.
+Исполнитель: Менеджер рекламной кампании.
+Средства: Персональный компьютер; Excel; Word; Почтовый клиент; Корпоративная почта.
+Входы: Сводные результаты кампании; Аналитика эффективности рекламной кампании.
+Результаты: Итоговый отчёт.
+Основания: Требования к отчётности.</bpmn:documentation>
+      <bpmn:incoming>A4_F6</bpmn:incoming>
+      <bpmn:outgoing>A4_F7</bpmn:outgoing>
+      <bpmn:ioSpecification id="A4_A43_IO">
+        <bpmn:dataInput id="A4_Data_5_Item" name="Сводные результаты кампании (Excel)"/>
+        <bpmn:dataInput id="A4_Data_7_Item" name="Аналитика эффективности"/>
+        <bpmn:dataOutput id="A4_Data_8_Item" name="Итоговый отчёт (Word)"/>
+        <bpmn:dataOutput id="A4_Data_10_Item" name="Архив документов кампаний"/>
+        <bpmn:dataOutput id="A4_Data_12_Item" name="Архив корпоративной переписки"/>
+        <bpmn:inputSet id="A4_A43_InputSet">
+          <bpmn:dataInputRefs>A4_Data_5_Item</bpmn:dataInputRefs>
+          <bpmn:dataInputRefs>A4_Data_7_Item</bpmn:dataInputRefs>
+        </bpmn:inputSet>
+        <bpmn:outputSet id="A4_A43_OutputSet">
+          <bpmn:dataOutputRefs>A4_Data_8_Item</bpmn:dataOutputRefs>
+          <bpmn:dataOutputRefs>A4_Data_10_Item</bpmn:dataOutputRefs>
+          <bpmn:dataOutputRefs>A4_Data_12_Item</bpmn:dataOutputRefs>
+        </bpmn:outputSet>
+      </bpmn:ioSpecification>
+      <bpmn:dataInputAssociation id="A4_Data_5">
+        <bpmn:sourceRef>A4_Doc3</bpmn:sourceRef>
+        <bpmn:targetRef>A4_Data_5_Item</bpmn:targetRef>
+      </bpmn:dataInputAssociation>
+      <bpmn:dataInputAssociation id="A4_Data_7">
+        <bpmn:sourceRef>A4_Doc4</bpmn:sourceRef>
+        <bpmn:targetRef>A4_Data_7_Item</bpmn:targetRef>
+      </bpmn:dataInputAssociation>
+      <bpmn:dataOutputAssociation id="A4_Data_8">
+        <bpmn:sourceRef>A4_Data_8_Item</bpmn:sourceRef>
+        <bpmn:targetRef>A4_Doc5</bpmn:targetRef>
+      </bpmn:dataOutputAssociation>
+      <bpmn:dataOutputAssociation id="A4_Data_10">
+        <bpmn:sourceRef>A4_Data_10_Item</bpmn:sourceRef>
+        <bpmn:targetRef>A4_Store6</bpmn:targetRef>
+      </bpmn:dataOutputAssociation>
+      <bpmn:dataOutputAssociation id="A4_Data_12">
+        <bpmn:sourceRef>A4_Data_12_Item</bpmn:sourceRef>
+        <bpmn:targetRef>A4_Store7</bpmn:targetRef>
+      </bpmn:dataOutputAssociation>
+      <bpmn:performer id="A4_A43_Performer">
+        <bpmn:resourceRef>Resource_R2</bpmn:resourceRef>
+      </bpmn:performer>
+    </bpmn:task>
+    <bpmn:endEvent id="A4_End" name="Итоговый отчёт сформирован и передан">
+      <bpmn:incoming>A4_F7</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:dataObject id="A4_Doc1_Object" name="Данные мониторинга [вход из A3]"/>
+    <bpmn:dataObjectReference id="A4_Doc1" name="Данные мониторинга [вход из A3]" dataObjectRef="A4_Doc1_Object">
+      <bpmn:documentation>Вход родительского контекста или результат указанной задачи.</bpmn:documentation>
+    </bpmn:dataObjectReference>
+    <bpmn:dataObject id="A4_Doc2_Object" name="Данные о продажах [коммерческий блок]"/>
+    <bpmn:dataObjectReference id="A4_Doc2" name="Данные о продажах [коммерческий блок]" dataObjectRef="A4_Doc2_Object">
+      <bpmn:documentation>Вход родительского контекста или результат указанной задачи.</bpmn:documentation>
+    </bpmn:dataObjectReference>
+    <bpmn:dataObject id="A4_Doc3_Object" name="Сводные результаты кампании (Excel)"/>
+    <bpmn:dataObjectReference id="A4_Doc3" name="Сводные результаты кампании (Excel)" dataObjectRef="A4_Doc3_Object">
+      <bpmn:documentation>Вход родительского контекста или результат указанной задачи.</bpmn:documentation>
+    </bpmn:dataObjectReference>
+    <bpmn:dataObject id="A4_Doc4_Object" name="Аналитика эффективности"/>
+    <bpmn:dataObjectReference id="A4_Doc4" name="Аналитика эффективности" dataObjectRef="A4_Doc4_Object">
+      <bpmn:documentation>Вход родительского контекста или результат указанной задачи.</bpmn:documentation>
+    </bpmn:dataObjectReference>
+    <bpmn:dataObject id="A4_Doc5_Object" name="Итоговый отчёт (Word)"/>
+    <bpmn:dataObjectReference id="A4_Doc5" name="Итоговый отчёт (Word)" dataObjectRef="A4_Doc5_Object">
+      <bpmn:documentation>Вход родительского контекста или результат указанной задачи.</bpmn:documentation>
+    </bpmn:dataObjectReference>
+    <bpmn:dataStoreReference id="A4_Store6" name="Архив документов кампаний" dataStoreRef="Store_CampaignDocuments">
+      <bpmn:documentation>Постоянное раздельное хранилище; существует до текущей кампании.</bpmn:documentation>
+    </bpmn:dataStoreReference>
+    <bpmn:dataStoreReference id="A4_Store7" name="Архив корпоративной переписки" dataStoreRef="Store_CorporateMail">
+      <bpmn:documentation>Постоянное раздельное хранилище; существует до текущей кампании.</bpmn:documentation>
+    </bpmn:dataStoreReference>
+    <bpmn:sequenceFlow id="A4_F1" sourceRef="A4_Start" targetRef="A4_M41"/>
+    <bpmn:sequenceFlow id="A4_F2" sourceRef="A4_M41" targetRef="A4_A41"/>
+    <bpmn:sequenceFlow id="A4_F3" sourceRef="A4_A41" targetRef="A4_G41"/>
+    <bpmn:sequenceFlow id="A4_F4" sourceRef="A4_G41" targetRef="A4_A42" name="Да">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Да</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="A4_F5" sourceRef="A4_G41" targetRef="A4_M41" name="Уточнить показатели">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Уточнить показатели</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="A4_F6" sourceRef="A4_A42" targetRef="A4_A43"/>
+    <bpmn:sequenceFlow id="A4_F7" sourceRef="A4_A43" targetRef="A4_End"/>
+    <bpmn:textAnnotation id="A4_ResourcesNote">
+      <bpmn:text>Средства труда: Персональный компьютер; Excel; Word; Почтовый клиент; Корпоративная почта; Рекламный кабинет; Сервис веб-аналитики.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="A4_ResourcesNote_Association" sourceRef="A4_ResourcesNote" targetRef="A4_A41" associationDirection="None"/>
+  </bpmn:process>
+  <bpmn:collaboration id="Collaboration_A4">
+    <bpmn:participant id="Participant_A4" name="Департамент маркетинга и рекламы" processRef="Process_A4"/>
+    <bpmn:participant id="Participant_S1" name="Коммерческий блок — Категорийный менеджер">
+      <bpmn:documentation>Смежный участник. Внутренние операции не показаны.</bpmn:documentation>
+    </bpmn:participant>
+    <bpmn:messageFlow id="A4_Message_1" name="Запрос данных о продажах" sourceRef="A4_A41" targetRef="Participant_S1"/>
+    <bpmn:messageFlow id="A4_Message_2" name="Данные о продажах" sourceRef="Participant_S1" targetRef="A4_A41"/>
+    <bpmn:messageFlow id="A4_Message_3" name="Итоговый отчёт" sourceRef="A4_A43" targetRef="Participant_S1"/>
+  </bpmn:collaboration>
+  <bpmndi:BPMNDiagram id="Diagram_A4">
+    <bpmndi:BPMNPlane id="Plane_A4" bpmnElement="Collaboration_A4">
+      <bpmndi:BPMNShape id="Participant_A4_di" bpmnElement="Participant_A4" isHorizontal="true">
+        <dc:Bounds x="100" y="180" width="2200" height="1030"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A4_Lane_R6_di" bpmnElement="A4_Lane_R6" isHorizontal="true">
+        <dc:Bounds x="130" y="180" width="2170" height="330"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A4_Lane_R2_di" bpmnElement="A4_Lane_R2" isHorizontal="true">
+        <dc:Bounds x="130" y="510" width="2170" height="700"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A4_Start_di" bpmnElement="A4_Start">
+        <dc:Bounds x="230" y="327.0" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="133.0" y="371.0" width="230" height="48"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A4_M41_di" bpmnElement="A4_M41" isMarkerVisible="true">
+        <dc:Bounds x="370" y="320.0" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A4_A41_di" bpmnElement="A4_A41">
+        <dc:Bounds x="500" y="300.0" width="190" height="90"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A4_G41_di" bpmnElement="A4_G41" isMarkerVisible="true">
+        <dc:Bounds x="820" y="320.0" width="50" height="50"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="730.0" y="265.0" width="230" height="48"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A4_A42_di" bpmnElement="A4_A42">
+        <dc:Bounds x="1020" y="300.0" width="190" height="90"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A4_A43_di" bpmnElement="A4_A43">
+        <dc:Bounds x="1490" y="600.0" width="190" height="90"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A4_End_di" bpmnElement="A4_End">
+        <dc:Bounds x="1840" y="627.0" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1743.0" y="671.0" width="230" height="48"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A4_Doc1_di" bpmnElement="A4_Doc1">
+        <dc:Bounds x="235.0" y="857.5" width="50" height="65"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="145.0" y="930.5" width="230" height="48"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A4_Doc2_di" bpmnElement="A4_Doc2">
+        <dc:Bounds x="710.0" y="857.5" width="50" height="65"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="620.0" y="930.5" width="230" height="48"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A4_Doc3_di" bpmnElement="A4_Doc3">
+        <dc:Bounds x="1185.0" y="857.5" width="50" height="65"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1095.0" y="930.5" width="230" height="48"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A4_Doc4_di" bpmnElement="A4_Doc4">
+        <dc:Bounds x="1660.0" y="857.5" width="50" height="65"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1570.0" y="930.5" width="230" height="48"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A4_Doc5_di" bpmnElement="A4_Doc5">
+        <dc:Bounds x="235.0" y="1007.5" width="50" height="65"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="145.0" y="1080.5" width="230" height="48"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A4_Store6_di" bpmnElement="A4_Store6">
+        <dc:Bounds x="710.0" y="1007.5" width="70" height="65"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="630.0" y="1080.5" width="230" height="48"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A4_Store7_di" bpmnElement="A4_Store7">
+        <dc:Bounds x="1185.0" y="1007.5" width="70" height="65"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1105.0" y="1080.5" width="230" height="48"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="A4_F1_di" bpmnElement="A4_F1">
+        <di:waypoint x="266" y="345.0"/>
+        <di:waypoint x="370" y="345.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="A4_F2_di" bpmnElement="A4_F2">
+        <di:waypoint x="420" y="345.0"/>
+        <di:waypoint x="500" y="345.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="A4_F3_di" bpmnElement="A4_F3">
+        <di:waypoint x="690" y="345.0"/>
+        <di:waypoint x="820" y="345.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="A4_F4_di" bpmnElement="A4_F4">
+        <di:waypoint x="870" y="345.0"/>
+        <di:waypoint x="1020" y="345.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="927.5" y="316.0" width="35" height="22"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="A4_F5_di" bpmnElement="A4_F5">
+        <di:waypoint x="845.0" y="370.0"/>
+        <di:waypoint x="845" y="470"/>
+        <di:waypoint x="395" y="470"/>
+        <di:waypoint x="395.0" y="370.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="563.0" y="425.0" width="114" height="38"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="A4_F6_di" bpmnElement="A4_F6">
+        <di:waypoint x="1210" y="345.0"/>
+        <di:waypoint x="1330" y="345"/>
+        <di:waypoint x="1330" y="645"/>
+        <di:waypoint x="1490" y="645.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="A4_F7_di" bpmnElement="A4_F7">
+        <di:waypoint x="1680" y="645.0"/>
+        <di:waypoint x="1840" y="645.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="A4_Data_1_di" bpmnElement="A4_Data_1">
+        <di:waypoint x="260.0" y="857.5"/>
+        <di:waypoint x="260.0" y="810"/>
+        <di:waypoint x="730" y="810"/>
+        <di:waypoint x="730" y="412.0"/>
+        <di:waypoint x="595.0" y="412.0"/>
+        <di:waypoint x="595.0" y="390.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="A4_Data_2_di" bpmnElement="A4_Data_2">
+        <di:waypoint x="735.0" y="857.5"/>
+        <di:waypoint x="735.0" y="817"/>
+        <di:waypoint x="738" y="817"/>
+        <di:waypoint x="738" y="412.0"/>
+        <di:waypoint x="595.0" y="412.0"/>
+        <di:waypoint x="595.0" y="390.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="A4_Data_3_di" bpmnElement="A4_Data_3">
+        <di:waypoint x="595.0" y="390.0"/>
+        <di:waypoint x="595.0" y="412.0"/>
+        <di:waypoint x="746" y="412.0"/>
+        <di:waypoint x="746" y="824"/>
+        <di:waypoint x="1210.0" y="824"/>
+        <di:waypoint x="1210.0" y="857.5"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="A4_Data_4_di" bpmnElement="A4_Data_4">
+        <di:waypoint x="1210.0" y="857.5"/>
+        <di:waypoint x="1210.0" y="831"/>
+        <di:waypoint x="1250" y="831"/>
+        <di:waypoint x="1250" y="412.0"/>
+        <di:waypoint x="1115.0" y="412.0"/>
+        <di:waypoint x="1115.0" y="390.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="A4_Data_5_di" bpmnElement="A4_Data_5">
+        <di:waypoint x="1210.0" y="857.5"/>
+        <di:waypoint x="1210.0" y="838"/>
+        <di:waypoint x="1728" y="838"/>
+        <di:waypoint x="1728" y="712.0"/>
+        <di:waypoint x="1585.0" y="712.0"/>
+        <di:waypoint x="1585.0" y="690.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="A4_Data_6_di" bpmnElement="A4_Data_6">
+        <di:waypoint x="1115.0" y="390.0"/>
+        <di:waypoint x="1115.0" y="412.0"/>
+        <di:waypoint x="1266" y="412.0"/>
+        <di:waypoint x="1266" y="845"/>
+        <di:waypoint x="1685.0" y="845"/>
+        <di:waypoint x="1685.0" y="857.5"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="A4_Data_7_di" bpmnElement="A4_Data_7">
+        <di:waypoint x="1685.0" y="857.5"/>
+        <di:waypoint x="1685.0" y="852"/>
+        <di:waypoint x="1720" y="852"/>
+        <di:waypoint x="1720" y="712.0"/>
+        <di:waypoint x="1585.0" y="712.0"/>
+        <di:waypoint x="1585.0" y="690.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="A4_Data_8_di" bpmnElement="A4_Data_8">
+        <di:waypoint x="1585.0" y="690.0"/>
+        <di:waypoint x="1585.0" y="712.0"/>
+        <di:waypoint x="1728" y="712.0"/>
+        <di:waypoint x="1728" y="810"/>
+        <di:waypoint x="260.0" y="810"/>
+        <di:waypoint x="260.0" y="1007.5"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="A4_Data_9_di" bpmnElement="A4_Data_9">
+        <di:waypoint x="745.0" y="1007.5"/>
+        <di:waypoint x="745.0" y="817"/>
+        <di:waypoint x="746" y="817"/>
+        <di:waypoint x="746" y="412.0"/>
+        <di:waypoint x="595.0" y="412.0"/>
+        <di:waypoint x="595.0" y="390.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="A4_Data_10_di" bpmnElement="A4_Data_10">
+        <di:waypoint x="1585.0" y="690.0"/>
+        <di:waypoint x="1585.0" y="712.0"/>
+        <di:waypoint x="1720" y="712.0"/>
+        <di:waypoint x="1720" y="824"/>
+        <di:waypoint x="745.0" y="824"/>
+        <di:waypoint x="745.0" y="1007.5"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="A4_Data_11_di" bpmnElement="A4_Data_11">
+        <di:waypoint x="1220.0" y="1007.5"/>
+        <di:waypoint x="1220.0" y="831"/>
+        <di:waypoint x="738" y="831"/>
+        <di:waypoint x="738" y="412.0"/>
+        <di:waypoint x="595.0" y="412.0"/>
+        <di:waypoint x="595.0" y="390.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="A4_Data_12_di" bpmnElement="A4_Data_12">
+        <di:waypoint x="1585.0" y="690.0"/>
+        <di:waypoint x="1585.0" y="712.0"/>
+        <di:waypoint x="1736" y="712.0"/>
+        <di:waypoint x="1736" y="838"/>
+        <di:waypoint x="1220.0" y="838"/>
+        <di:waypoint x="1220.0" y="1007.5"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Participant_S1_di" bpmnElement="Participant_S1" isHorizontal="true">
+        <dc:Bounds x="300" y="20" width="1900" height="85"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="A4_Message_1_di" bpmnElement="A4_Message_1">
+        <di:waypoint x="560.0" y="300.0"/>
+        <di:waypoint x="560.0" y="258.0"/>
+        <di:waypoint x="485.0" y="258.0"/>
+        <di:waypoint x="485.0" y="105"/>
+        <di:waypoint x="485.0" y="105"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="373.0" y="165" width="224" height="48"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="A4_Message_2_di" bpmnElement="A4_Message_2">
+        <di:waypoint x="740.0" y="105"/>
+        <di:waypoint x="740.0" y="105"/>
+        <di:waypoint x="740.0" y="258.0"/>
+        <di:waypoint x="630.0" y="258.0"/>
+        <di:waypoint x="630.0" y="300.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="628.0" y="115" width="224" height="48"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="A4_Message_3_di" bpmnElement="A4_Message_3">
+        <di:waypoint x="1550.0" y="600.0"/>
+        <di:waypoint x="1550.0" y="558.0"/>
+        <di:waypoint x="1475.0" y="558.0"/>
+        <di:waypoint x="1475.0" y="105"/>
+        <di:waypoint x="1475.0" y="105"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1363.0" y="165" width="224" height="48"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="A4_ResourcesNote_di" bpmnElement="A4_ResourcesNote">
+        <dc:Bounds x="200" y="1240" width="1120" height="85"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="A4_ResourcesNote_Association_di" bpmnElement="A4_ResourcesNote_Association">
+        <di:waypoint x="200" y="1282"/>
+        <di:waypoint x="160" y="1282"/>
+        <di:waypoint x="160" y="390.0"/>
+        <di:waypoint x="595.0" y="390.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

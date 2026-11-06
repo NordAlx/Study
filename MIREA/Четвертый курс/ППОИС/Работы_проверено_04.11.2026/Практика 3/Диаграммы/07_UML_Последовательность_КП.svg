@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1120" viewBox="0 0 1800 1120"><rect width="100%" height="100%" fill="white"/>
+<text x="566.015625" y="57.0" font-family="Arial" font-size="32" font-weight="700" fill="#17212B">UML Последовательность подготовки КП</text>
+<text x="603.5078125" y="1091.0" font-family="Arial" font-size="20" font-weight="400" fill="#17212B">Проектируемая модель сопровождения корпоративных продаж</text>
+<rect x="10" y="120" width="280" height="85" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="88.5078125" y="172.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">Менеджер</text>
+<polyline points="150,205 150,900" fill="none" stroke="#364152" stroke-width="2" stroke-dasharray="9 7"/>
+<rect x="375" y="120" width="280" height="85" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="456.0" y="172.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">Форма КП</text>
+<polyline points="515,205 515,900" fill="none" stroke="#364152" stroke-width="2" stroke-dasharray="9 7"/>
+<rect x="740" y="120" width="280" height="85" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="817.0" y="172.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">Сервис КП</text>
+<polyline points="880,205 880,900" fill="none" stroke="#364152" stroke-width="2" stroke-dasharray="9 7"/>
+<rect x="1105" y="120" width="280" height="85" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1176.5" y="172.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">Хранилище</text>
+<polyline points="1245,205 1245,900" fill="none" stroke="#364152" stroke-width="2" stroke-dasharray="9 7"/>
+<rect x="1470" y="120" width="280" height="85" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1528.0078125" y="172.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">Согласующий</text>
+<polyline points="1610,205 1610,900" fill="none" stroke="#364152" stroke-width="2" stroke-dasharray="9 7"/>
+<polyline points="150,270 515,270" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="501.30366589531536,276.11640679589357 515,270 501.30366589531536,263.88359320410643" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="178.0" y="223.5" width="309.0" height="39" fill="white"/>
+<text x="194.0" y="251.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">1 Подготовить версию КП</text>
+<polyline points="515,349 880,349" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="866.3036658953154,355.11640679589357 880,349 866.3036658953154,342.88359320410643" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="524.0078125" y="302.5" width="346.984375" height="39" fill="white"/>
+<text x="540.0078125" y="330.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">2 Рассчитать состав и сумму</text>
+<polyline points="880,428 1245,428" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1231.3036658953154,434.11640679589357 1245,428 1231.3036658953154,421.88359320410643" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="926.0" y="381.5" width="273.0" height="39" fill="white"/>
+<text x="942.0" y="409.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">3 Сохранить черновик</text>
+<polyline points="880,507 1610,507" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1596.3036658953154,513.1164067958936 1610,507 1596.3036658953154,500.88359320410643" fill="none" stroke="#364152" stroke-width="2"/>
+<rect x="1016.0" y="460.5" width="458.0" height="39" fill="white"/>
+<text x="1032.0" y="488.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">4 Запросить решение [особые условия]</text>
+<polyline points="1610,586 880,586" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="893.6963341046846,579.8835932041064 880,586 893.6963341046846,592.1164067958936" fill="none" stroke="#364152" stroke-width="2"/>
+<rect x="1124.0" y="539.5" width="242.0" height="39" fill="white"/>
+<text x="1140.0" y="567.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">5 Вернуть решение</text>
+<polyline points="880,665 1245,665" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1231.3036658953154,671.1164067958936 1245,665 1231.3036658953154,658.8835932041064" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="888.0" y="618.5" width="349.0" height="39" fill="white"/>
+<text x="904.0" y="646.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">6 Записать решение и статус</text>
+<polyline points="880,744 515,744" fill="none" stroke="#364152" stroke-width="2" stroke-dasharray="9 7"/>
+<polyline points="528.6963341046846,737.8835932041064 515,744 528.6963341046846,750.1164067958936" fill="none" stroke="#364152" stroke-width="2"/>
+<rect x="453.5078125" y="697.5" width="487.984375" height="39" fill="white"/>
+<text x="469.5078125" y="725.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">7 Показать согласованное КП / замечания</text>
+<text x="427.53125" y="1009.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">При отказе согласующего сохраняются замечания и черновик новой версии КП</text>
+</svg>

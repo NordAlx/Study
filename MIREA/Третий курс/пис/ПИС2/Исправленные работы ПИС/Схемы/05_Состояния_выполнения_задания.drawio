@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram name="05_Состояния_выполнения_задания">
+    <mxGraphModel pageWidth="1150" pageHeight="840">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="initial" value="" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;ellipse;fillColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="50" y="85" width="26" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="draft" value="Черновик" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="50" width="310" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="sent" value="Отправлена" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="50" width="310" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="revise" value="На доработке" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="355" width="310" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="review" value="На проверке" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="355" width="310" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="closed" value="Закрыта без зачёта" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="660" width="310" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="accepted" value="Принята" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="660" width="310" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="final" value="" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;ellipse;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="550" y="785" width="30" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="init" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=open;endFill=0;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.43636363636363634;entryPerimeter=0;" edge="1" parent="1" source="initial" target="draft">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="send" value="Отправить [V]&#10;/ создать версию" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=open;endFill=0;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="draft" target="sent">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"/>
+            <mxPoint x="0" y="-25" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="start" value="Начать проверку&#10;[назначенный наставник]" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=open;endFill=0;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="sent" target="review">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"/>
+            <mxPoint x="0" y="-25" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="return" value="Вернуть [R]&#10;/ сохранить рецензию" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=open;endFill=0;exitX=0.0;exitY=0.5;exitPerimeter=0;entryX=1.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="review" target="revise">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"/>
+            <mxPoint x="0" y="-25" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="resend" value="Отправить исправление [V]&#10;/ создать следующую версию" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=open;endFill=0;exitX=0.5;exitY=0.0;exitPerimeter=0;entryX=0.12903225806451613;entryY=1.0;entryPerimeter=0;" edge="1" parent="1" source="revise" target="sent">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="325" y="240"/>
+              <mxPoint x="800" y="240"/>
+            </Array>
+            <mxPoint x="0" y="-25" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="expire" value="Срок истёк&#10;/ закрыть" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=open;endFill=0;exitX=0.0;exitY=0.6818181818181818;exitPerimeter=0;entryX=0.0;entryY=0.49473684210526314;entryPerimeter=0;" edge="1" parent="1" source="draft" target="closed">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="105" y="125"/>
+              <mxPoint x="105" y="707"/>
+            </Array>
+            <mxPoint x="0" y="-25" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="close" value="when(C)&#10;/ закрыть" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=open;endFill=0;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="revise" target="closed">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"/>
+            <mxPoint x="0" y="-25" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="accept" value="Принять [P]&#10;/ сохранить результат" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=open;endFill=0;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="review" target="accepted">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"/>
+            <mxPoint x="0" y="-25" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="finish1" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=open;endFill=0;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="closed" target="final">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="325" y="800"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="finish2" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=open;endFill=0;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=1.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="accepted" target="final">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="915" y="800"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

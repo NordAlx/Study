@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram name="03_ER_Организация_обучения">
+    <mxGraphModel pageWidth="1150" pageHeight="830">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="user" value="Пользователь&#10;PK user_id&#10;email (уникальный)&#10;full_name, role, is_active" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;align=left;verticalAlign=top;spacing=10;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="30" y="60" width="310" height="175" as="geometry"/>
+        </mxCell>
+        <mxCell id="group" value="Учебная группа&#10;PK group_id&#10;FK course_id, mentor_id&#10;starts_at, capacity, status" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;align=left;verticalAlign=top;spacing=10;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="450" y="60" width="320" height="175" as="geometry"/>
+        </mxCell>
+        <mxCell id="course" value="Курс&#10;PK course_id&#10;title, description&#10;level, is_published" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;align=left;verticalAlign=top;spacing=10;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="30" y="355" width="310" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="enroll" value="Зачисление&#10;PK enrollment_id&#10;FK student_id, group_id&#10;status, applied_at" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;align=left;verticalAlign=top;spacing=10;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="450" y="355" width="320" height="175" as="geometry"/>
+        </mxCell>
+        <mxCell id="lesson" value="Занятие&#10;PK lesson_id&#10;FK group_id&#10;starts_at, ends_at, location" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;align=left;verticalAlign=top;spacing=10;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="840" y="355" width="280" height="175" as="geometry"/>
+        </mxCell>
+        <mxCell id="cert" value="Сертификат&#10;PK certificate_id&#10;FK enrollment_id (UNIQUE)&#10;number (UNIQUE), issued_at" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;align=left;verticalAlign=top;spacing=10;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="450" y="650" width="320" height="155" as="geometry"/>
+        </mxCell>
+        <mxCell id="mentor" value="наставник" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=none;endFill=0;exitX=1.0;exitY=0.4;exitPerimeter=0;entryX=0.0;entryY=0.4;entryPerimeter=0;" edge="1" parent="1" source="user" target="group">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"/>
+            <mxPoint x="0" y="-25" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mentor_card0" value="1" style="text;html=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="358.0" y="144" width="18" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="mentor_card1" value="0..*" style="text;html=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="400.0" y="144" width="40" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="coursegroup" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=none;endFill=0;exitX=0.5;exitY=0.0;exitPerimeter=0;entryX=0.21875;entryY=1.0;entryPerimeter=0;" edge="1" parent="1" source="course" target="group">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="185" y="290"/>
+              <mxPoint x="520" y="290"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="coursegroup_card0" value="1" style="text;html=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="196.0" y="325" width="18" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="coursegroup_card1" value="0..*" style="text;html=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="530.0" y="245" width="40" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="student" value="слушатель" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=none;endFill=0;exitX=0.0;exitY=0.8;exitPerimeter=0;entryX=0.15625;entryY=1.0;entryPerimeter=0;" edge="1" parent="1" source="user" target="enroll">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="10" y="200"/>
+              <mxPoint x="10" y="580"/>
+              <mxPoint x="500" y="580"/>
+            </Array>
+            <mxPoint x="0" y="-25" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="student_card0" value="1" style="text;html=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="31.0" y="260" width="18" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="student_card1" value="0..*" style="text;html=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="510.0" y="542" width="40" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ge" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=none;endFill=0;exitX=0.6875;exitY=1.0;exitPerimeter=0;entryX=0.6875;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="group" target="enroll">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ge_card0" value="1" style="text;html=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="686.0" y="245" width="18" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ge_card1" value="0..*" style="text;html=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="680.0" y="323" width="40" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="gl" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=none;endFill=0;exitX=1.0;exitY=0.6857142857142857;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="group" target="lesson">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="980" y="180"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gl_card0" value="1" style="text;html=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="786.0" y="190" width="18" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="gl_card1" value="0..*" style="text;html=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="990.0" y="320" width="40" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ec" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=none;endFill=0;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="enroll" target="cert">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ec_card0" value="1" style="text;html=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="626.0" y="540" width="18" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ec_card1" value="0..1" style="text;html=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="625.0" y="617" width="40" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="note0" value="PK — первичный ключ; FK — внешний ключ; 0..* — ноль или более" style="text;html=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="299.33854166666663" y="15.0" width="521.3229166666667" height="20" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

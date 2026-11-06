@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2100" height="1200" viewBox="0 0 2100 1200"><rect width="100%" height="100%" fill="white"/>
+<text x="863.0078125" y="57.0" font-family="Arial" font-size="32" font-weight="700" fill="#17212B">UML Состояния сделки</text>
+<text x="753.5078125" y="1171.0" font-family="Arial" font-size="20" font-weight="400" fill="#17212B">Проектируемая модель сопровождения корпоративных продаж</text>
+<rect x="140" y="180" width="420" height="105" rx="12" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="309.0" y="243.5" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">Новая</text>
+<rect x="740" y="180" width="420" height="105" rx="12" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="828.0" y="243.5" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">Квалифицирована</text>
+<rect x="1340" y="180" width="420" height="105" rx="12" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1438.03125" y="243.5" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">КП подготовлено</text>
+<rect x="1340" y="510" width="420" height="105" rx="12" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1446.0078125" y="573.5" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">КП согласовано</text>
+<rect x="740" y="510" width="420" height="105" rx="12" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="830.515625" y="573.5" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">Договор подписан</text>
+<rect x="140" y="510" width="420" height="105" rx="12" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="260.515625" y="573.5" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">Подключение</text>
+<rect x="140" y="840" width="420" height="105" rx="12" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="292.015625" y="903.5" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">Успешно</text>
+<rect x="1340" y="840" width="420" height="105" rx="12" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1427.5" y="903.5" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">Закрыта с отказом</text>
+<polyline points="560,232 740,232" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="726.3036658953154,238.11640679589354 740,232 726.3036658953154,225.88359320410646" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="558.5" y="176.0" width="183.0" height="38" fill="white"/>
+<text x="574.5" y="203.0" font-family="Arial" font-size="22" font-weight="400" fill="#17212B">Квалификация</text>
+<polyline points="1160,232 1340,232" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1326.3036658953154,238.11640679589354 1340,232 1326.3036658953154,225.88359320410646" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1158.0" y="176.0" width="184.0" height="38" fill="white"/>
+<text x="1174.0" y="203.0" font-family="Arial" font-size="22" font-weight="400" fill="#17212B">Подготовка КП</text>
+<polyline points="1550,285 1550,510" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1543.8835932041065,496.30366589531536 1550,510 1556.1164067958935,496.30366589531536" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1437.0078125" y="371.0" width="225.984375" height="38" fill="white"/>
+<text x="1453.0078125" y="398.0" font-family="Arial" font-size="22" font-weight="400" fill="#17212B">Условия одобрены</text>
+<polyline points="1340,562 1160,562" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1173.6963341046846,555.8835932041064 1160,562 1173.6963341046846,568.1164067958936" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1147.0" y="506.0" width="206.0" height="38" fill="white"/>
+<text x="1163.0" y="533.0" font-family="Arial" font-size="22" font-weight="400" fill="#17212B">Подпись клиента</text>
+<polyline points="740,562 560,562" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="573.6963341046846,555.8835932041064 560,562 573.6963341046846,568.1164067958936" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="567.5" y="506.0" width="165.0" height="38" fill="white"/>
+<text x="583.5" y="533.0" font-family="Arial" font-size="22" font-weight="400" fill="#17212B">Заказ принят</text>
+<polyline points="350,615 350,840" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="343.88359320410643,826.3036658953154 350,840 356.11640679589357,826.3036658953154" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="247.5" y="711.0" width="245.0" height="38" fill="white"/>
+<text x="263.5" y="738.0" font-family="Arial" font-size="22" font-weight="400" fill="#17212B">[все заказы активны]</text>
+<polyline points="1760,560 1830,560 1830,230 1760,230" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1773.6963341046846,223.88359320410643 1760,230 1773.6963341046846,236.11640679589354" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1796.0" y="371.0" width="208.0" height="38" fill="white"/>
+<text x="1812.0" y="398.0" font-family="Arial" font-size="22" font-weight="400" fill="#17212B">Новая версия КП</text>
+<polyline points="1760,260 2020,260 2020,892 1760,892" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1773.6963341046846,885.8835932041064 1760,892 1773.6963341046846,898.1164067958936" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1811.0" y="731.0" width="178.0" height="38" fill="white"/>
+<text x="1827.0" y="758.0" font-family="Arial" font-size="22" font-weight="400" fill="#17212B">Отказ клиента</text>
+<polyline points="950,285 1270,285 1270,760 1550,760 1550,840" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1543.8835932041065,826.3036658953154 1550,840 1556.1164067958935,826.3036658953154" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1031.0" y="716.0" width="178.0" height="38" fill="white"/>
+<text x="1047.0" y="743.0" font-family="Arial" font-size="22" font-weight="400" fill="#17212B">Отказ клиента</text>
+<ellipse cx="57.5" cy="232.5" rx="17.5" ry="17.5" fill="#17212B" stroke="#364152" stroke-width="2"/>
+<polyline points="75,232 140,232" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="126.30366589531538,238.11640679589354 140,232 126.30366589531538,225.88359320410646" fill="#364152" stroke="#364152" stroke-width="2"/>
+<text x="938.53125" y="1036.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">Ошибки исполнения сохраняют стадию Подключение</text>
+<text x="886.0234375" y="1067.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">Повторная отправка не создаёт новую сделку или новый заказ</text>
+<text x="911.015625" y="1098.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">Успешно и Закрыта с отказом — терминальные состояния</text>
+</svg>

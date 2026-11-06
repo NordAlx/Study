@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram name="02_Уточнение_прецедентов">
+    <mxGraphModel pageWidth="1100" pageHeight="670">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="system" value="Отправка работы и просмотр результата" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;verticalAlign=top;fontStyle=1;container=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="1060" height="630" as="geometry"/>
+        </mxCell>
+        <mxCell id="send" value="Отправить работу" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;ellipse;" vertex="1" parent="system">
+          <mxGeometry x="70" y="90" width="330" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="validate" value="Проверить файл&#10;и право сдачи" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;ellipse;" vertex="1" parent="system">
+          <mxGeometry x="660" y="90" width="340" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="resend" value="Отправить&#10;исправленную версию" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;ellipse;" vertex="1" parent="system">
+          <mxGeometry x="70" y="310" width="330" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="result" value="Просмотреть результат" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;ellipse;" vertex="1" parent="system">
+          <mxGeometry x="70" y="490" width="330" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="remarks" value="Просмотреть замечания" style="whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=18;ellipse;" vertex="1" parent="system">
+          <mxGeometry x="660" y="490" width="340" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="include" value="«include»" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=open;endFill=0;dashed=1;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="send" target="validate">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"/>
+            <mxPoint x="0" y="-25" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="special" value="обобщение" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=block;endFill=0;exitX=0.5;exitY=0.0;exitPerimeter=0;entryX=0.5;entryY=1.0;entryPerimeter=0;" edge="1" parent="1" source="resend" target="send">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"/>
+            <mxPoint x="0" y="-25" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="extend" value="«extend»" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=0;strokeColor=#000000;endArrow=open;endFill=0;dashed=1;exitX=0.0;exitY=0.5;exitPerimeter=0;entryX=1.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="remarks" target="result">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"/>
+            <mxPoint x="0" y="-25" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note0" value="[предыдущая версия возвращена;&#10;срок и число попыток позволяют сдачу]" style="text;html=0;fontSize=16;" vertex="1" parent="system">
+          <mxGeometry x="559.1796875" y="310.0" width="311.640625" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="note1" value="Расширение просмотра результата:&#10;[есть замечания] — показать замечания" style="text;html=0;fontSize=16;" vertex="1" parent="system">
+          <mxGeometry x="556.5130208333334" y="395.0" width="316.9739583333333" height="40" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,306 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="epc_TO_BE_A2" name="A2 — Разработать рекламную кампанию">
+    <mxGraphModel dx="2049" dy="1138" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="Бриф рекламной кампании&#xa;сформирован" epc-kind="event" source-id="d93db304-68db-4ce0-8169-e0fa2e0617b6" original-label="Бриф рекламной кампании сформирован" description="" id="epc_TO_BE_A2_d93db304_68db_4ce0_8169_e0fa2e0617b6">
+          <mxCell parent="1" style="shape=hexagon;size=.10;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="66" width="280" x="660" y="102" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="9jBpGpNhewKAeur-jLkS-1" edge="1" parent="1" source="epc_TO_BE_A2_524045e0_d3ee_4e87_a5f5_69511c6ab092" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="epc_TO_BE_A2_e041f4dc_3e40_40e1_a2af_20cb24f4602e">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Требуется повторное согласование&#xa;изменённых условий" epc-kind="event" source-id="524045e0-d3ee-4e87-a5f5-69511c6ab092" original-label="Требуется повторное согласование изменённых условий" description="" id="epc_TO_BE_A2_524045e0_d3ee_4e87_a5f5_69511c6ab092">
+          <mxCell parent="1" style="shape=hexagon;size=.10;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="66" width="280" x="1118" y="102" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Разработать концепцию в карточке&#xa;BPMSoft" epc-kind="function" source-id="f9731081-0e31-46f1-9f7e-342ee71fbd73" original-label="Разработать концепцию в карточке BPMSoft" description="Карточка, данные, версии и история коммуникаций ведутся в BPMSoft. Система назначает задачи и формирует представления; сотрудник проверяет содержание." id="epc_TO_BE_A2_f9731081_0e31_46f1_9f7e_342ee71fbd73">
+          <mxCell parent="1" style="rounded=1;arcSize=16;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#CFE2F3;strokeColor=#5685A7;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="76" width="280" x="660" y="188" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="BPMSoft" original-label="BPMSoft" epc-kind="application" source-id="epc_TO_BE_A2_f9731081_0e31_46f1_9f7e_342ee71fbd73_BPMSoft" description="Единая система ведения кампании, данных, документов, согласований, переписки и аналитики." id="epc_TO_BE_A2_f9731081_0e31_46f1_9f7e_342ee71fbd73_BPMSoft_at_1_at_1">
+          <mxCell parent="1" style="shape=process;size=.06;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=0;align=center;verticalAlign=middle;spacing=5;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="36" width="260" x="355" y="204" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="epc_TO_BE_A2_f9731081_0e31_46f1_9f7e_342ee71fbd73_supports_BPMSoft" edge="1" parent="1" source="epc_TO_BE_A2_f9731081_0e31_46f1_9f7e_342ee71fbd73_BPMSoft_at_1_at_1" style="html=1;strokeColor=#6C8EBF;strokeWidth=1;dashed=1;dashPattern=3 3;endArrow=none;endFill=0;endSize=6;rounded=0;curved=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;" target="epc_TO_BE_A2_f9731081_0e31_46f1_9f7e_342ee71fbd73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Менеджер рекламной кампании" epc-kind="role" source-id="d3591586-24e4-4fc7-b58c-6a7f9b0a07f5" original-label="Менеджер рекламной кампании" description="" id="epc_TO_BE_A2_d3591586_24e4_4fc7_b58c_6a7f9b0a07f5_at_4_at_2">
+          <mxCell parent="1" style="ellipse;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=0;align=center;verticalAlign=middle;spacing=5;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="36" width="260" x="985" y="204" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="epc_TO_BE_A2_edge_20" edge="1" parent="1" source="epc_TO_BE_A2_d3591586_24e4_4fc7_b58c_6a7f9b0a07f5_at_4_at_2" style="html=1;strokeColor=#936900;strokeWidth=1;dashed=1;dashPattern=3 3;endArrow=none;endFill=0;endSize=6;rounded=0;curved=0;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;" target="epc_TO_BE_A2_f9731081_0e31_46f1_9f7e_342ee71fbd73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Концепция рекламной кампании&#xa;подготовлена" epc-kind="event" source-id="6db26e05-e822-4d32-96f9-328940f54162" original-label="Концепция рекламной кампании подготовлена" description="" id="epc_TO_BE_A2_6db26e05_e822_4d32_96f9_328940f54162">
+          <mxCell parent="1" style="shape=hexagon;size=.10;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="66" width="280" x="660" y="284" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="XOR" epc-kind="rule" source-id="e041f4dc-3e40-40e1-a2af-20cb24f4602e" original-label="XOR" description="" id="epc_TO_BE_A2_e041f4dc_3e40_40e1_a2af_20cb24f4602e">
+          <mxCell parent="1" style="ellipse;aspect=fixed;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="44" width="44" x="778" y="370" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Сформировать электронный&#xa;медиаплан" epc-kind="function" source-id="839059a1-ad9b-4373-b95b-3835f454858f" original-label="Сформировать электронный медиаплан" description="Карточка, данные, версии и история коммуникаций ведутся в BPMSoft. Система назначает задачи и формирует представления; сотрудник проверяет содержание." id="epc_TO_BE_A2_839059a1_ad9b_4373_b95b_3835f454858f">
+          <mxCell parent="1" style="rounded=1;arcSize=16;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#CFE2F3;strokeColor=#5685A7;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="76" width="280" x="660" y="434" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="BPMSoft" epc-kind="application" source-id="f43f595c-2352-4d8b-b3d1-e3b109794fa9" original-label="BPMSoft" description="" id="epc_TO_BE_A2_f43f595c_2352_4d8b_b3d1_e3b109794fa9_at_5_at_3">
+          <mxCell parent="1" style="shape=process;size=.06;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=0;align=center;verticalAlign=middle;spacing=5;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="36" width="260" x="355" y="450" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="epc_TO_BE_A2_edge_23" edge="1" parent="1" source="epc_TO_BE_A2_f43f595c_2352_4d8b_b3d1_e3b109794fa9_at_5_at_3" style="html=1;strokeColor=#6C8EBF;strokeWidth=1;dashed=1;dashPattern=3 3;endArrow=none;endFill=0;endSize=6;rounded=0;curved=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;" target="epc_TO_BE_A2_839059a1_ad9b_4373_b95b_3835f454858f">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Менеджер рекламной кампании" epc-kind="role" source-id="db42fab9-f2b6-4253-8d49-4ac0723dc5b9" original-label="Менеджер рекламной кампании" description="" id="epc_TO_BE_A2_db42fab9_f2b6_4253_8d49_4ac0723dc5b9_at_11_at_4">
+          <mxCell parent="1" style="ellipse;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=0;align=center;verticalAlign=middle;spacing=5;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="36" width="260" x="985" y="450" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="epc_TO_BE_A2_edge_22" edge="1" parent="1" source="epc_TO_BE_A2_db42fab9_f2b6_4253_8d49_4ac0723dc5b9_at_11_at_4" style="html=1;strokeColor=#936900;strokeWidth=1;dashed=1;dashPattern=3 3;endArrow=none;endFill=0;endSize=6;rounded=0;curved=0;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;" target="epc_TO_BE_A2_839059a1_ad9b_4373_b95b_3835f454858f">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9jBpGpNhewKAeur-jLkS-2" edge="1" parent="1" source="epc_TO_BE_A2_9c0f081e_1e2c_4d68_b2fb_c993db79d835" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="epc_TO_BE_A2_b761af95_21f9_4ffd_a857_f2506678a4b6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jFy-49XuENUIeCYWpiau-2" edge="1" parent="1" source="epc_TO_BE_A2_9c0f081e_1e2c_4d68_b2fb_c993db79d835" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="epc_TO_BE_A2_41bcc864_48d2_4c45_b5ef_a1ca690e1e8c">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="XOR" epc-kind="rule" source-id="9c0f081e-1e2c-4d68-b2fb-c993db79d835" original-label="XOR" description="" id="epc_TO_BE_A2_9c0f081e_1e2c_4d68_b2fb_c993db79d835">
+          <mxCell parent="1" style="ellipse;aspect=fixed;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="44" width="44" x="778" y="530" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="9jBpGpNhewKAeur-jLkS-5" edge="1" parent="1" source="epc_TO_BE_A2_b761af95_21f9_4ffd_a857_f2506678a4b6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="epc_TO_BE_A2_7f20751c_c5d3_4a00_8f68_366e925a4538">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Медиаплан актуализирован;&#xa;материалы остаются актуальными" epc-kind="event" source-id="b761af95-21f9-4ffd-a857-f2506678a4b6" original-label="Медиаплан актуализирован; материалы остаются актуальными" description="" id="epc_TO_BE_A2_b761af95_21f9_4ffd_a857_f2506678a4b6">
+          <mxCell parent="1" style="shape=hexagon;size=.10;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="66" width="280" x="192" y="594" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="jFy-49XuENUIeCYWpiau-1" edge="1" parent="1" source="epc_TO_BE_A2_41bcc864_48d2_4c45_b5ef_a1ca690e1e8c" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="epc_TO_BE_A2_04ed7625_c883_4ec9_bd29_506e07a23dbe">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Медиаплан подготовлен; материалы&#xa;нужно подготовить или изменить" epc-kind="event" source-id="41bcc864-48d2-4c45-b5ef-a1ca690e1e8c" original-label="Медиаплан подготовлен; материалы нужно подготовить или изменить" description="" id="epc_TO_BE_A2_41bcc864_48d2_4c45_b5ef_a1ca690e1e8c">
+          <mxCell parent="1" style="shape=hexagon;size=.10;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="66" width="280" x="660" y="590" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="XOR" epc-kind="rule" source-id="04ed7625-c883-4ec9-bd29-506e07a23dbe" original-label="XOR" description="" id="epc_TO_BE_A2_04ed7625_c883_4ec9_bd29_506e07a23dbe">
+          <mxCell parent="1" style="ellipse;aspect=fixed;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="44" width="44" x="778" y="680" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Подготовить тексты и загрузить&#xa;макеты в BPMSoft" epc-kind="function" source-id="91ebcb9b-c0fe-4f02-8e70-f75c6213fa3d" original-label="Подготовить тексты и загрузить макеты в BPMSoft" description="Карточка, данные, версии и история коммуникаций ведутся в BPMSoft. Система назначает задачи и формирует представления; сотрудник проверяет содержание." id="epc_TO_BE_A2_91ebcb9b_c0fe_4f02_8e70_f75c6213fa3d">
+          <mxCell parent="1" style="rounded=1;arcSize=16;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#CFE2F3;strokeColor=#5685A7;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="76" width="280" x="660" y="750" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="BPMSoft" original-label="BPMSoft" epc-kind="application" source-id="epc_TO_BE_A2_91ebcb9b_c0fe_4f02_8e70_f75c6213fa3d_BPMSoft" description="Единая система ведения кампании, данных, документов, согласований, переписки и аналитики." id="epc_TO_BE_A2_91ebcb9b_c0fe_4f02_8e70_f75c6213fa3d_BPMSoft_at_12_at_5">
+          <mxCell parent="1" style="shape=process;size=.06;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=0;align=center;verticalAlign=middle;spacing=5;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="36" width="260" x="355" y="744" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="epc_TO_BE_A2_91ebcb9b_c0fe_4f02_8e70_f75c6213fa3d_supports_BPMSoft" edge="1" parent="1" source="epc_TO_BE_A2_91ebcb9b_c0fe_4f02_8e70_f75c6213fa3d_BPMSoft_at_12_at_5" style="html=1;strokeColor=#6C8EBF;strokeWidth=1;dashed=1;dashPattern=3 3;endArrow=none;endFill=0;endSize=6;rounded=0;curved=0;exitX=1;exitY=0.5;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;" target="epc_TO_BE_A2_91ebcb9b_c0fe_4f02_8e70_f75c6213fa3d">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Графический редактор" epc-kind="application" source-id="a5e156b3-700b-4627-b1cd-088948710c40" original-label="Графический редактор" description="" id="epc_TO_BE_A2_a5e156b3_700b_4627_b1cd_088948710c40_at_13_at_6">
+          <mxCell parent="1" style="shape=process;size=.06;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=0;align=center;verticalAlign=middle;spacing=5;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="36" width="260" x="355" y="788" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="epc_TO_BE_A2_edge_26" edge="1" parent="1" source="epc_TO_BE_A2_a5e156b3_700b_4627_b1cd_088948710c40_at_13_at_6" style="html=1;strokeColor=#6C8EBF;strokeWidth=1;dashed=1;dashPattern=3 3;endArrow=none;endFill=0;endSize=6;rounded=0;curved=0;exitX=1;exitY=0.5;entryX=0;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;" target="epc_TO_BE_A2_91ebcb9b_c0fe_4f02_8e70_f75c6213fa3d">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Специалист по разработке&#xa;рекламных материалов" epc-kind="role" source-id="72ceff2e-89b3-4234-a566-51a8ac315554" original-label="Специалист по разработке рекламных материалов" description="" id="epc_TO_BE_A2_72ceff2e_89b3_4234_a566_51a8ac315554_at_20_at_7">
+          <mxCell parent="1" style="ellipse;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=0;align=center;verticalAlign=middle;spacing=5;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="52" width="260" x="985" y="758" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="epc_TO_BE_A2_edge_24" edge="1" parent="1" source="epc_TO_BE_A2_72ceff2e_89b3_4234_a566_51a8ac315554_at_20_at_7" style="html=1;strokeColor=#936900;strokeWidth=1;dashed=1;dashPattern=3 3;endArrow=none;endFill=0;endSize=6;rounded=0;curved=0;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;" target="epc_TO_BE_A2_91ebcb9b_c0fe_4f02_8e70_f75c6213fa3d">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Рекламные материалы подготовлены" epc-kind="event" source-id="6ab6e0f3-8bcf-4446-be68-601c7fb37c35" original-label="Рекламные материалы подготовлены" description="" id="epc_TO_BE_A2_6ab6e0f3_8bcf_4446_be68_601c7fb37c35">
+          <mxCell parent="1" style="shape=hexagon;size=.10;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="66" width="280" x="660" y="852" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="XOR" epc-kind="rule" source-id="7f20751c-c5d3-4a00-8f68-366e925a4538" original-label="XOR" description="" id="epc_TO_BE_A2_7f20751c_c5d3_4a00_8f68_366e925a4538">
+          <mxCell parent="1" style="ellipse;aspect=fixed;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="44" width="44" x="778" y="938" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Согласовать версии плана и&#xa;материалов в BPMSoft" epc-kind="function" source-id="09c86f4a-d9be-4656-bf68-f9ced759b9b3" original-label="Согласовать версии плана и материалов в BPMSoft" description="Карточка, данные, версии и история коммуникаций ведутся в BPMSoft. Система назначает задачи и формирует представления; сотрудник проверяет содержание." id="epc_TO_BE_A2_09c86f4a_d9be_4656_bf68_f9ced759b9b3">
+          <mxCell parent="1" style="rounded=1;arcSize=16;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#CFE2F3;strokeColor=#5685A7;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="76" width="280" x="660" y="1016" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="BPMSoft" original-label="BPMSoft" epc-kind="application" source-id="epc_TO_BE_A2_09c86f4a_d9be_4656_bf68_f9ced759b9b3_BPMSoft" description="Единая система ведения кампании, данных, документов, согласований, переписки и аналитики." id="epc_TO_BE_A2_09c86f4a_d9be_4656_bf68_f9ced759b9b3_BPMSoft_at_21_at_8">
+          <mxCell parent="1" style="shape=process;size=.06;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=0;align=center;verticalAlign=middle;spacing=5;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="36" width="260" x="355" y="1032" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="epc_TO_BE_A2_09c86f4a_d9be_4656_bf68_f9ced759b9b3_supports_BPMSoft" edge="1" parent="1" source="epc_TO_BE_A2_09c86f4a_d9be_4656_bf68_f9ced759b9b3_BPMSoft_at_21_at_8" style="html=1;strokeColor=#6C8EBF;strokeWidth=1;dashed=1;dashPattern=3 3;endArrow=none;endFill=0;endSize=6;rounded=0;curved=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;" target="epc_TO_BE_A2_09c86f4a_d9be_4656_bf68_f9ced759b9b3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Директор департамента&#xa;маркетинга и рекламы" epc-kind="role" source-id="fc461e62-1775-4595-9bb3-f98a81d51373" original-label="Директор департамента маркетинга и рекламы" description="" id="epc_TO_BE_A2_fc461e62_1775_4595_9bb3_f98a81d51373_at_29_at_9">
+          <mxCell parent="1" style="ellipse;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=0;align=center;verticalAlign=middle;spacing=5;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="52" width="260" x="985" y="1002" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="epc_TO_BE_A2_edge_27" edge="1" parent="1" source="epc_TO_BE_A2_fc461e62_1775_4595_9bb3_f98a81d51373_at_29_at_9" style="html=1;strokeColor=#936900;strokeWidth=1;dashed=1;dashPattern=3 3;endArrow=none;endFill=0;endSize=6;rounded=0;curved=0;exitX=0;exitY=0.5;entryX=1;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;" target="epc_TO_BE_A2_09c86f4a_d9be_4656_bf68_f9ced759b9b3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Менеджер рекламной кампании" epc-kind="role" source-id="aa871095-bf19-4c58-b1c2-acfd15d19bba" original-label="Менеджер рекламной кампании" description="" id="epc_TO_BE_A2_aa871095_bf19_4c58_b1c2_acfd15d19bba_at_30_at_10">
+          <mxCell parent="1" style="ellipse;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=0;align=center;verticalAlign=middle;spacing=5;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="36" width="260" x="985" y="1062" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="epc_TO_BE_A2_edge_28" edge="1" parent="1" source="epc_TO_BE_A2_aa871095_bf19_4c58_b1c2_acfd15d19bba_at_30_at_10" style="html=1;strokeColor=#936900;strokeWidth=1;dashed=1;dashPattern=3 3;endArrow=none;endFill=0;endSize=6;rounded=0;curved=0;exitX=0;exitY=0.5;entryX=1;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;" target="epc_TO_BE_A2_09c86f4a_d9be_4656_bf68_f9ced759b9b3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9jBpGpNhewKAeur-jLkS-6" edge="1" parent="1" source="epc_TO_BE_A2_2576e140_f293_44ec_9393_742e620f5f2e" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="epc_TO_BE_A2_7072a121_e08d_467a_9b94_6aaf8abbb6a1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="987.8" y="1148" />
+              <mxPoint x="987.8" y="1223" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="XOR" epc-kind="rule" source-id="2576e140-f293-44ec-9393-742e620f5f2e" original-label="XOR" description="" id="epc_TO_BE_A2_2576e140_f293_44ec_9393_742e620f5f2e">
+          <mxCell parent="1" style="ellipse;aspect=fixed;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="44" width="44" x="778" y="1126" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Медиаплан и рекламные материалы&#xa;согласованы" epc-kind="event" source-id="74a6c8d3-7b99-413d-94e1-d2751d01a7e0" original-label="Медиаплан и рекламные материалы согласованы" description="" id="epc_TO_BE_A2_74a6c8d3_7b99_413d_94e1_d2751d01a7e0">
+          <mxCell parent="1" style="shape=hexagon;size=.10;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="66" width="280" x="660" y="1190" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Получены замечания только к&#xa;материалам" epc-kind="event" source-id="7072a121-e08d-467a-9b94-6aaf8abbb6a1" original-label="Получены замечания только к материалам" description="" id="epc_TO_BE_A2_7072a121_e08d_467a_9b94_6aaf8abbb6a1">
+          <mxCell parent="1" style="shape=hexagon;size=.10;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="66" width="280" x="1020" y="1190" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Получены замечания к медиаплану" epc-kind="event" source-id="41ac1f26-08ba-4e61-8d97-bb1adbcaf549" original-label="Получены замечания к медиаплану" description="" id="epc_TO_BE_A2_41ac1f26_08ba_4e61_8d97_bb1adbcaf549">
+          <mxCell parent="1" style="shape=hexagon;size=.10;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;spacing=5;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.2;" vertex="1">
+            <mxGeometry height="66" width="280" x="189" y="1190" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="epc_TO_BE_A2_edge_0" edge="1" parent="1" source="epc_TO_BE_A2_d93db304_68db_4ce0_8169_e0fa2e0617b6" style="html=1;strokeColor=#343B44;strokeWidth=1.6;endArrow=block;endFill=1;endSize=7;rounded=0;curved=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;" target="epc_TO_BE_A2_f9731081_0e31_46f1_9f7e_342ee71fbd73">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="180" />
+              <mxPoint x="800" y="176" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="epc_TO_BE_A2_edge_8" edge="1" parent="1" source="epc_TO_BE_A2_f9731081_0e31_46f1_9f7e_342ee71fbd73" style="html=1;strokeColor=#343B44;strokeWidth=1.6;endArrow=block;endFill=1;endSize=7;rounded=0;curved=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;" target="epc_TO_BE_A2_6db26e05_e822_4d32_96f9_328940f54162">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="276" />
+              <mxPoint x="800" y="272" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="epc_TO_BE_A2_edge_1" edge="1" parent="1" source="epc_TO_BE_A2_6db26e05_e822_4d32_96f9_328940f54162" style="html=1;strokeColor=#343B44;strokeWidth=1.6;endArrow=block;endFill=1;endSize=7;rounded=0;curved=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;" target="epc_TO_BE_A2_e041f4dc_3e40_40e1_a2af_20cb24f4602e">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="362" />
+              <mxPoint x="800" y="358" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="epc_TO_BE_A2_edge_5" edge="1" parent="1" source="epc_TO_BE_A2_6ab6e0f3_8bcf_4446_be68_601c7fb37c35" style="html=1;strokeColor=#343B44;strokeWidth=1.6;endArrow=block;endFill=1;endSize=7;rounded=0;curved=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;" target="epc_TO_BE_A2_7f20751c_c5d3_4a00_8f68_366e925a4538">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="930" />
+              <mxPoint x="800" y="926" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="epc_TO_BE_A2_edge_17" edge="1" parent="1" source="epc_TO_BE_A2_2576e140_f293_44ec_9393_742e620f5f2e" style="html=1;strokeColor=#343B44;strokeWidth=1.6;endArrow=block;endFill=1;endSize=7;rounded=0;curved=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;" target="epc_TO_BE_A2_74a6c8d3_7b99_413d_94e1_d2751d01a7e0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="1182" />
+              <mxPoint x="800" y="1178" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="epc_TO_BE_A2_edge_9" edge="1" parent="1" source="epc_TO_BE_A2_839059a1_ad9b_4373_b95b_3835f454858f" style="html=1;strokeColor=#343B44;strokeWidth=1.6;endArrow=block;endFill=1;endSize=7;rounded=0;curved=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;" target="epc_TO_BE_A2_9c0f081e_1e2c_4d68_b2fb_c993db79d835">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="522" />
+              <mxPoint x="800" y="518" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="epc_TO_BE_A2_edge_12" edge="1" parent="1" source="epc_TO_BE_A2_e041f4dc_3e40_40e1_a2af_20cb24f4602e" style="html=1;strokeColor=#343B44;strokeWidth=1.6;endArrow=block;endFill=1;endSize=7;rounded=0;curved=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;" target="epc_TO_BE_A2_839059a1_ad9b_4373_b95b_3835f454858f">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="426" />
+              <mxPoint x="800" y="422" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="epc_TO_BE_A2_edge_7" edge="1" parent="1" source="epc_TO_BE_A2_7072a121_e08d_467a_9b94_6aaf8abbb6a1" style="html=1;strokeColor=#343B44;strokeWidth=1.6;endArrow=block;endFill=1;endSize=7;rounded=0;curved=0;exitX=1;exitY=0.75;entryX=1;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;" target="epc_TO_BE_A2_04ed7625_c883_4ec9_bd29_506e07a23dbe">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1312" y="1239.5" />
+              <mxPoint x="1312" y="709.3333333333334" />
+              <mxPoint x="834" y="709.3333333333334" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="epc_TO_BE_A2_edge_10" edge="1" parent="1" source="epc_TO_BE_A2_91ebcb9b_c0fe_4f02_8e70_f75c6213fa3d" style="html=1;strokeColor=#343B44;strokeWidth=1.6;endArrow=block;endFill=1;endSize=7;rounded=0;curved=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;" target="epc_TO_BE_A2_6ab6e0f3_8bcf_4446_be68_601c7fb37c35">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="838" />
+              <mxPoint x="800" y="840" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="epc_TO_BE_A2_edge_13" edge="1" parent="1" source="epc_TO_BE_A2_04ed7625_c883_4ec9_bd29_506e07a23dbe" style="html=1;strokeColor=#343B44;strokeWidth=1.6;endArrow=block;endFill=1;endSize=7;rounded=0;curved=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;" target="epc_TO_BE_A2_91ebcb9b_c0fe_4f02_8e70_f75c6213fa3d">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="736" />
+              <mxPoint x="800" y="738" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="epc_TO_BE_A2_edge_11" edge="1" parent="1" source="epc_TO_BE_A2_09c86f4a_d9be_4656_bf68_f9ced759b9b3" style="html=1;strokeColor=#343B44;strokeWidth=1.6;endArrow=block;endFill=1;endSize=7;rounded=0;curved=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;" target="epc_TO_BE_A2_2576e140_f293_44ec_9393_742e620f5f2e">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="1104" />
+              <mxPoint x="800" y="1114" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="epc_TO_BE_A2_edge_14" edge="1" parent="1" source="epc_TO_BE_A2_7f20751c_c5d3_4a00_8f68_366e925a4538" style="html=1;strokeColor=#343B44;strokeWidth=1.6;endArrow=block;endFill=1;endSize=7;rounded=0;curved=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;" target="epc_TO_BE_A2_09c86f4a_d9be_4656_bf68_f9ced759b9b3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="994" />
+              <mxPoint x="800" y="1004" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9jBpGpNhewKAeur-jLkS-7" edge="1" parent="1" source="epc_TO_BE_A2_2576e140_f293_44ec_9393_742e620f5f2e" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.003;entryY=0.583;entryDx=0;entryDy=0;entryPerimeter=0;" target="epc_TO_BE_A2_41ac1f26_08ba_4e61_8d97_bb1adbcaf549">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9jBpGpNhewKAeur-jLkS-8" edge="1" parent="1" source="epc_TO_BE_A2_41ac1f26_08ba_4e61_8d97_bb1adbcaf549" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.015;entryY=0.742;entryDx=0;entryDy=0;entryPerimeter=0;" target="epc_TO_BE_A2_e041f4dc_3e40_40e1_a2af_20cb24f4602e">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

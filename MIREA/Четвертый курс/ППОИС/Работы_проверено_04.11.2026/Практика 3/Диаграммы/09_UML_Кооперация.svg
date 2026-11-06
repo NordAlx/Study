@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1120" viewBox="0 0 1800 1120"><rect width="100%" height="100%" fill="white"/>
+<text x="627.515625" y="57.0" font-family="Arial" font-size="32" font-weight="700" fill="#17212B">UML Кооперация передачи заказа</text>
+<text x="603.5078125" y="1091.0" font-family="Arial" font-size="20" font-weight="400" fill="#17212B">Проектируемая модель сопровождения корпоративных продаж</text>
+<rect x="70" y="260" width="420" height="110" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="210.0078125" y="326.5" font-family="Arial" font-size="29" font-weight="400" fill="#17212B">Менеджер</text>
+<rect x="540" y="260" width="420" height="110" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="657.4921875" y="326.5" font-family="Arial" font-size="29" font-weight="400" fill="#17212B">Форма заказа</text>
+<rect x="1050" y="260" width="420" height="110" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1162.9921875" y="326.5" font-family="Arial" font-size="29" font-weight="400" fill="#17212B">Сервис заказа</text>
+<rect x="1050" y="810" width="420" height="110" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1182.0" y="876.5" font-family="Arial" font-size="29" font-weight="400" fill="#17212B">Хранилище</text>
+<rect x="90" y="810" width="420" height="110" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="147.515625" y="876.5" font-family="Arial" font-size="29" font-weight="400" fill="#17212B">Система подключения</text>
+<polyline points="490,315 540,315" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="526.3036658953154,321.11640679589357 540,315 526.3036658953154,308.88359320410643" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="493.0" y="256.5" width="44.0" height="37" fill="white"/>
+<text x="509.0" y="282.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">1</text>
+<polyline points="960,315 1050,315" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1036.3036658953154,321.11640679589357 1050,315 1036.3036658953154,308.88359320410643" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="942.0" y="251.5" width="116.0" height="37" fill="white"/>
+<text x="958.0" y="277.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">2 → 9 ←</text>
+<polyline points="1260,370 1260,810" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1253.8835932041065,796.3036658953154 1260,810 1266.1164067958935,796.3036658953154" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1346.5" y="561.5" width="107.0" height="37" fill="white"/>
+<text x="1362.5" y="587.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">3 4 8 →</text>
+<polyline points="1160,370 1160,650 300,650 300,810" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="293.88359320410643,796.3036658953154 300,810 306.11640679589357,796.3036658953154" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="635.5" y="583.0" width="89.0" height="64" fill="white"/>
+<text x="660.5" y="609.0" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">5 →</text>
+<text x="651.5" y="636.0" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">6 7 ←</text>
+<text x="381.5390625" y="134.0" font-family="Arial" font-size="26" font-weight="400" fill="#17212B">Номера сообщений совпадают с диаграммой последовательности передачи заказа</text>
+<text x="503.53125" y="166.0" font-family="Arial" font-size="26" font-weight="400" fill="#17212B">Полные имена и типы сообщений приведены в таблице отчёта</text>
+</svg>

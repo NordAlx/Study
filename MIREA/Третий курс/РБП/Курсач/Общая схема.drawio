@@ -1,0 +1,264 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Страница-1" id="x2Jb1zxSxEKTbvCo4gry">
+    <mxGraphModel dx="2241" dy="785" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-29" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="fAaKxUzzm7ncFlLwxT5y-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" value="Формирование задачи на проведение рекламной кампании" vertex="1">
+          <mxGeometry height="40" width="170" x="335" y="46.09" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-5" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="fAaKxUzzm7ncFlLwxT5y-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="Сбор исходных данных" vertex="1">
+          <mxGeometry height="30" width="168.5" x="335" y="106.09" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-115" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="fAaKxUzzm7ncFlLwxT5y-113">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-4" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="Формирование брифа рекламной кампании" vertex="1">
+          <mxGeometry height="40" width="190" x="324.25" y="156.09" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-9" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="fAaKxUzzm7ncFlLwxT5y-8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-6" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="Разработка концепции рекламной кампании" vertex="1">
+          <mxGeometry height="30" width="190" x="323.75" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-11" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="fAaKxUzzm7ncFlLwxT5y-10" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-8" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="Формирование медиаплана" vertex="1">
+          <mxGeometry height="30" width="190" x="323.75" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-13" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="fAaKxUzzm7ncFlLwxT5y-12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-10" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" value="Разработка рекламных материалов" vertex="1">
+          <mxGeometry height="30" width="185" x="326.25" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-15" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="fAaKxUzzm7ncFlLwxT5y-14" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-12" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" value="Согласование рекламной кампании" vertex="1">
+          <mxGeometry height="30" width="160.75" x="338.88" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-17" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="fAaKxUzzm7ncFlLwxT5y-16" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-14" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="Подготовка каналов размещения" vertex="1">
+          <mxGeometry height="30" width="161.12" x="339.44" y="465" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-19" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="fAaKxUzzm7ncFlLwxT5y-18" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-16" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="Размещение и запуск рекламной кампании" vertex="1">
+          <mxGeometry height="30" width="160.75" x="337.63" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-21" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="fAaKxUzzm7ncFlLwxT5y-20" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-18" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="Мониторинг проведения рекламной кампании" vertex="1">
+          <mxGeometry height="30" width="161.12" x="337.63" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-23" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="fAaKxUzzm7ncFlLwxT5y-22" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-20" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#cdeb8b;strokeColor=#36393d;" value="Сбор результатов рекламной кампании" vertex="1">
+          <mxGeometry height="30" width="160.75" x="337.63" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-25" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="fAaKxUzzm7ncFlLwxT5y-24" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-22" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#cdeb8b;strokeColor=#36393d;" value="Анализ эффективности рекламной кампании" vertex="1">
+          <mxGeometry height="30" width="150" x="343" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-24" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="Формирование итогового отчета" vertex="1">
+          <mxGeometry height="30" width="150" x="343" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-77" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="fAaKxUzzm7ncFlLwxT5y-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-78" connectable="0" parent="fAaKxUzzm7ncFlLwxT5y-77" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Цели, сроки и требования" vertex="1">
+          <mxGeometry relative="1" x="0.071" y="2" as="geometry">
+            <mxPoint x="-17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-26" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;align=center;" value="Директор департамента маркетинга и рекламы" vertex="1">
+          <mxGeometry height="60" width="30" x="145.37" y="46.09" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-89" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="fAaKxUzzm7ncFlLwxT5y-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-90" connectable="0" parent="fAaKxUzzm7ncFlLwxT5y-89" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Данные по digital- и CRM-размещениям" vertex="1">
+          <mxGeometry relative="1" x="-0.0247" y="2" as="geometry">
+            <mxPoint x="31" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-32" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Специалист digital- и CRM-коммуникаций" vertex="1">
+          <mxGeometry height="60" width="30" x="77" y="465" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-91" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="fAaKxUzzm7ncFlLwxT5y-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-92" connectable="0" parent="fAaKxUzzm7ncFlLwxT5y-91" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Данные по размещению в магазинах" vertex="1">
+          <mxGeometry relative="1" x="0.0963" y="-3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-40" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Trade-маркетолог" vertex="1">
+          <mxGeometry height="60" width="30" x="698.75" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-95" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="fAaKxUzzm7ncFlLwxT5y-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-96" connectable="0" parent="fAaKxUzzm7ncFlLwxT5y-95" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="аналитика эффективности" vertex="1">
+          <mxGeometry relative="1" x="0.5733" as="geometry">
+            <mxPoint x="35" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-42" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Маркетинговый аналитик" vertex="1">
+          <mxGeometry height="60" width="30" x="693.12" y="596.09" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-46" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="133.75" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-47" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Директор департамента маркетинга и рекламы" vertex="1">
+          <mxGeometry height="30" width="60" x="163.75" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-48" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="283.75" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-49" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Выполняет менеджер рекламных кампаний" vertex="1">
+          <mxGeometry height="30" width="60" x="313.75" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-50" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="433.75" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-51" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Выполняет специалист по разработке рекламных материалов" vertex="1">
+          <mxGeometry height="30" width="90" x="448.75" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-52" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#cdeb8b;strokeColor=#36393d;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="583.75" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-53" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Выполняет маркетинговый аналитик" vertex="1">
+          <mxGeometry height="30" width="60" x="613.75" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-98" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="fAaKxUzzm7ncFlLwxT5y-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-55" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=16;" value="" vertex="1">
+          <mxGeometry height="52.19" width="41.75" x="580" y="39.999999999999986" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-56" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Задача на проведение рекламной кампании" vertex="1">
+          <mxGeometry height="30" width="60" x="640" y="50.30999999999999" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-57" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=16;" value="" vertex="1">
+          <mxGeometry height="52.19" width="38.75" x="693.12" y="97.80000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-58" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Исходные данные" vertex="1">
+          <mxGeometry height="30" width="60" x="740.12" y="107.80000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-60" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=16;" value="" vertex="1">
+          <mxGeometry height="52.19" width="41.75" x="595" y="149.99" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-61" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Бриф рекламной кампании" vertex="1">
+          <mxGeometry height="30" width="60" x="645" y="159.99" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-83" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="fAaKxUzzm7ncFlLwxT5y-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-63" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=16;" value="" vertex="1">
+          <mxGeometry height="52.19" width="41.75" x="592" y="368.9" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-65" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Рекламные материалы" vertex="1">
+          <mxGeometry height="30" width="60" x="643.75" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-102" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="fAaKxUzzm7ncFlLwxT5y-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-66" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=16;" value="" vertex="1">
+          <mxGeometry height="52.19" width="41.75" x="205.37" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-68" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Согласованные материалы" vertex="1">
+          <mxGeometry height="30" width="60" x="130.37" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-107" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="fAaKxUzzm7ncFlLwxT5y-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-73" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=16;" value="" vertex="1">
+          <mxGeometry height="52.19" width="41.75" x="223.75" y="600.0000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-74" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Результат кампании" vertex="1">
+          <mxGeometry height="30" width="60" x="158.75" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-75" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Итоговый отчет" vertex="1">
+          <mxGeometry height="30" width="60" x="158.75" y="712.19" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-76" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=16;" value="" vertex="1">
+          <mxGeometry height="52.19" width="41.75" x="223.75" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-82" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="fAaKxUzzm7ncFlLwxT5y-63">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-85" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="fAaKxUzzm7ncFlLwxT5y-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-86" connectable="0" parent="fAaKxUzzm7ncFlLwxT5y-85" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Материалы для digital- и CRM-каналов" vertex="1">
+          <mxGeometry relative="1" x="-0.0667" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-87" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="fAaKxUzzm7ncFlLwxT5y-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-88" connectable="0" parent="fAaKxUzzm7ncFlLwxT5y-87" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Материалы для розничной сети" vertex="1">
+          <mxGeometry relative="1" x="-0.1956" y="-2" as="geometry">
+            <mxPoint x="8" y="-7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-93" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="fAaKxUzzm7ncFlLwxT5y-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-94" connectable="0" parent="fAaKxUzzm7ncFlLwxT5y-93" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Данные о результатах кампании" vertex="1">
+          <mxGeometry relative="1" x="-0.3594" y="-4" as="geometry">
+            <mxPoint x="28" y="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-97" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="fAaKxUzzm7ncFlLwxT5y-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-101" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=41.75;entryDy=34.095;entryPerimeter=0;" target="fAaKxUzzm7ncFlLwxT5y-66">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-106" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=41.75;entryDy=34.095;entryPerimeter=0;" target="fAaKxUzzm7ncFlLwxT5y-73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-109" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=41.75;entryDy=34.095;entryPerimeter=0;" target="fAaKxUzzm7ncFlLwxT5y-76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-114" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="fAaKxUzzm7ncFlLwxT5y-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-113" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="Определение KPI, бюджета, целевой аудитории и сроков" vertex="1">
+          <mxGeometry height="30" width="186.25" x="324.25" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-116" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;" value="БД компании" vertex="1">
+          <mxGeometry height="60" width="60" x="77" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-117" edge="1" parent="1" source="fAaKxUzzm7ncFlLwxT5y-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="fAaKxUzzm7ncFlLwxT5y-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-118" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=16;" value="" vertex="1">
+          <mxGeometry height="52.19" width="41.75" x="590" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="fAaKxUzzm7ncFlLwxT5y-119" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Параметры рекламной&amp;nbsp;" vertex="1">
+          <mxGeometry height="30" width="60" x="650" y="240" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram id="campaign-technology" name="Технология рекламной кампании">
+    <mxGraphModel dx="2357" dy="1308" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="2460" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="campaign_legend-R1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#182433;fillColor=#fff2cc;strokeColor=#ad8a21;strokeWidth=1.6;spacing=5;" value="R1 — Директор департамента маркетинга и рекламы" vertex="1">
+          <mxGeometry height="50" width="490" x="40" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_legend-R2" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#182433;fillColor=#dae8fc;strokeColor=#5276a7;strokeWidth=1.6;spacing=5;" value="R2 — Менеджер рекламной кампании" vertex="1">
+          <mxGeometry height="50" width="490" x="550" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_legend-R3" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#182433;fillColor=#ffe6cc;strokeColor=#b87822;strokeWidth=1.6;spacing=5;" value="R3 — Специалист по разработке рекламных материалов" vertex="1">
+          <mxGeometry height="50" width="490" x="1060" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_legend-R4" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#182433;fillColor=#d5e8d4;strokeColor=#638d4e;strokeWidth=1.6;spacing=5;" value="R4 — Специалист digital-коммуникаций" vertex="1">
+          <mxGeometry height="50" width="490" x="40" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_legend-R5" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#182433;fillColor=#e1d5e7;strokeColor=#86639b;strokeWidth=1.6;spacing=5;" value="R5 — Trade-маркетолог" vertex="1">
+          <mxGeometry height="50" width="490" x="550" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_legend-R6" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#182433;fillColor=#d4eef1;strokeColor=#428893;strokeWidth=1.6;spacing=5;" value="R6 — Маркетинговый аналитик" vertex="1">
+          <mxGeometry height="50" width="490" x="1060" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_legend-note" parent="1" style="text;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#182433;fillColor=none;strokeColor=none;strokeWidth=1.6;spacing=5;" value="S1 — категорийный менеджер; S2 — руководитель магазина. Сплошные стрелки — ход работ; пунктирные — обмен информацией." vertex="1">
+          <mxGeometry height="40" width="1520" x="40" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_head-left" parent="1" style="text;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#182433;fillColor=none;strokeColor=none;strokeWidth=1.6;spacing=5;fontStyle=1;" value="ИСТОЧНИКИ И СМЕЖНЫЕ РАБОТЫ" vertex="1">
+          <mxGeometry height="30" width="350" x="40" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_head-main" parent="1" style="text;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#182433;fillColor=none;strokeColor=none;strokeWidth=1.6;spacing=5;fontStyle=1;" value="ОПЕРАЦИИ И ОТВЕТСТВЕННЫЕ" vertex="1">
+          <mxGeometry height="30" width="720" x="450" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_head-right" parent="1" style="text;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#182433;fillColor=none;strokeColor=none;strokeWidth=1.6;spacing=5;fontStyle=1;" value="ДОКУМЕНТЫ И РЕЗУЛЬТАТЫ" vertex="1">
+          <mxGeometry height="30" width="320" x="1240" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_start" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=20;fontColor=#182433;fillColor=#f5f5f5;strokeColor=#707780;strokeWidth=1.6;spacing=5;" value="Возникла потребность в кампании" vertex="1">
+          <mxGeometry height="60" width="440" x="560" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_assess" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=20;fontColor=#182433;fillColor=#fff2cc;strokeColor=#ad8a21;strokeWidth=1.6;spacing=5;" value="Оценить необходимость кампании&lt;br&gt;R1" vertex="1">
+          <mxGeometry height="70" width="440" x="560" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_needed" parent="1" style="rhombus;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=20;fontColor=#182433;fillColor=#fff2cc;strokeColor=#ad8a21;strokeWidth=1.6;spacing=5;" value="Проводить&lt;br&gt;кампанию?" vertex="1">
+          <mxGeometry height="90" width="260" x="650" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_task" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=20;fontColor=#182433;fillColor=#fff2cc;strokeColor=#ad8a21;strokeWidth=1.6;spacing=5;" value="Поставить задачу на кампанию&lt;br&gt;R1" vertex="1">
+          <mxGeometry height="80" width="440" x="560" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_brief" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=20;fontColor=#182433;fillColor=#dae8fc;strokeColor=#5276a7;strokeWidth=1.6;spacing=5;" value="Собрать и уточнить исходные данные;&lt;br&gt;подготовить бриф&lt;br&gt;R2" vertex="1">
+          <mxGeometry height="90" width="440" x="560" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_plan" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=20;fontColor=#182433;fillColor=#dae8fc;strokeColor=#5276a7;strokeWidth=1.6;spacing=5;" value="Разработать концепцию и медиаплан&lt;br&gt;R2" vertex="1">
+          <mxGeometry height="80" width="440" x="560" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_materials" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=20;fontColor=#182433;fillColor=#ffe6cc;strokeColor=#b87822;strokeWidth=1.6;spacing=5;" value="Подготовить тексты и макеты&lt;br&gt;R3" vertex="1">
+          <mxGeometry height="80" width="440" x="560" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_approval" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=20;fontColor=#182433;fillColor=#fff2cc;strokeColor=#ad8a21;strokeWidth=1.6;spacing=5;" value="Проверить и согласовать&lt;br&gt;медиаплан и материалы&lt;br&gt;R1" vertex="1">
+          <mxGeometry height="90" width="440" x="560" y="1170" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_approved" parent="1" style="rhombus;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=20;fontColor=#182433;fillColor=#fff2cc;strokeColor=#ad8a21;strokeWidth=1.6;spacing=5;" value="Согласовано?" vertex="1">
+          <mxGeometry height="90" width="260" x="650" y="1300" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_fork" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=20;fontColor=#182433;fillColor=#344354;strokeColor=#344354;strokeWidth=1.6;spacing=5;" value="" vertex="1">
+          <mxGeometry height="10" width="480" x="540" y="1440" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_parallel-label" parent="1" style="text;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=17;fontColor=#182433;fillColor=none;strokeColor=none;strokeWidth=1.6;spacing=5;" value="Параллельное выполнение&lt;br&gt;в сроки медиаплана" vertex="1">
+          <mxGeometry height="50" width="350" x="40" y="1420" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_digital" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fontColor=#182433;fillColor=#d5e8d4;strokeColor=#638d4e;strokeWidth=1.6;spacing=5;" value="Отобрать адресатов вручную (Excel);&lt;br&gt;отправить email-рассылки (почта);&lt;br&gt;выполнить цифровые размещения&lt;br&gt;R4" vertex="1">
+          <mxGeometry height="120" width="360" x="390" y="1500" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_retail" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fontColor=#182433;fillColor=#e1d5e7;strokeColor=#86639b;strokeWidth=1.6;spacing=5;" value="Передать магазинам материалы&lt;br&gt;и инструкции; получить&lt;br&gt;подтверждения размещения&lt;br&gt;R5" vertex="1">
+          <mxGeometry height="120" width="360" x="810" y="1500" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_join" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=20;fontColor=#182433;fillColor=#344354;strokeColor=#344354;strokeWidth=1.6;spacing=5;" value="" vertex="1">
+          <mxGeometry height="10" width="480" x="540" y="1670" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_monitor" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=20;fontColor=#182433;fillColor=#dae8fc;strokeColor=#5276a7;strokeWidth=1.6;spacing=5;" value="Контролировать сроки, статусы и отклонения&lt;br&gt;R2 — координация; R4 и R5 — данные&lt;br&gt;и корректировки в своих каналах" vertex="1">
+          <mxGeometry height="120" width="440" x="560" y="1740" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_period" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=20;fontColor=#182433;fillColor=#f5f5f5;strokeColor=#707780;strokeWidth=1.6;spacing=5;" value="Период кампании завершён" vertex="1">
+          <mxGeometry height="60" width="440" x="560" y="1910" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_analysis" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#182433;fillColor=#d4eef1;strokeColor=#428893;strokeWidth=1.6;spacing=5;" value="Сопоставить продажи, цифровые показатели&lt;br&gt;и подтверждения размещения с планом;&lt;br&gt;подготовить аналитику&lt;br&gt;R6" vertex="1">
+          <mxGeometry height="100" width="440" x="560" y="2030" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_report" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=20;fontColor=#182433;fillColor=#dae8fc;strokeColor=#5276a7;strokeWidth=1.6;spacing=5;" value="Сформировать и передать итоговый отчёт&lt;br&gt;директору маркетинга и категорийному менеджеру&lt;br&gt;R2" vertex="1">
+          <mxGeometry height="100" width="440" x="560" y="2180" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_end" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=20;fontColor=#182433;fillColor=#f5f5f5;strokeColor=#707780;strokeWidth=1.6;spacing=5;" value="Итоговый отчёт передан" vertex="1">
+          <mxGeometry height="60" width="440" x="560" y="2330" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_refusal" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=20;fontColor=#182433;fillColor=#fff2cc;strokeColor=#ad8a21;strokeWidth=1.6;spacing=5;" value="Зафиксировать решение об отказе&lt;br&gt;R1" vertex="1">
+          <mxGeometry height="90" width="350" x="40" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_refused" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=20;fontColor=#182433;fillColor=#f5f5f5;strokeColor=#707780;strokeWidth=1.6;spacing=5;" value="Кампания не проводится" vertex="1">
+          <mxGeometry height="60" width="350" x="40" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_s1-input" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fontColor=#182433;fillColor=#f5f5f5;strokeColor=#707780;strokeWidth=1.6;spacing=5;" value="S1 — категорийный менеджер&lt;br&gt;Товары, наличие, цены&lt;br&gt;и утверждённые условия акции" vertex="1">
+          <mxGeometry height="110" width="350" x="40" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_channel-req" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fontColor=#182433;fillColor=#f5f5f5;strokeColor=#707780;strokeWidth=1.6;spacing=5;" value="R4 и R5&lt;br&gt;Требования цифровых&lt;br&gt;и розничных каналов" vertex="1">
+          <mxGeometry height="100" width="350" x="40" y="980" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_rework" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fontColor=#182433;fillColor=#dae8fc;strokeColor=#5276a7;strokeWidth=1.6;spacing=5;" value="Доработать медиаплан — R2;&lt;br&gt;доработать материалы — R3&lt;br&gt;по замечаниям R1" vertex="1">
+          <mxGeometry height="130" width="350" x="40" y="1260" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_client-data" parent="1" style="shape=note;size=18;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#182433;fillColor=#ffffff;strokeColor=#7b8794;strokeWidth=1.6;spacing=5;" value="Список клиентских контактов&lt;br&gt;в Excel&lt;br&gt;Ручной отбор адресатов" vertex="1">
+          <mxGeometry height="100" width="300" x="40" y="1500" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_s1-sales" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fontColor=#182433;fillColor=#f5f5f5;strokeColor=#707780;strokeWidth=1.6;spacing=5;" value="S1 — категорийный менеджер&lt;br&gt;Данные о продажах&lt;br&gt;за период кампании" vertex="1">
+          <mxGeometry height="100" width="350" x="40" y="2030" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_store" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#182433;fillColor=#f5f5f5;strokeColor=#707780;strokeWidth=1.6;spacing=5;" value="S2 — руководитель магазина&lt;br&gt;Организовать размещение&lt;br&gt;и подтвердить выполнение&lt;br&gt;(смежный процесс)" vertex="1">
+          <mxGeometry height="140" width="300" x="1260" y="1510" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_monitor-rule" parent="1" style="shape=note;size=18;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#182433;fillColor=#ffffff;strokeColor=#7b8794;strokeWidth=1.6;spacing=5;" value="В течение кампании: R4 и R5&lt;br&gt;передают статусы и показатели.&lt;br&gt;Изменение согласованных условий&lt;br&gt;требует повторного решения R1." vertex="1">
+          <mxGeometry height="140" width="300" x="1260" y="1740" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_task-doc" parent="1" style="shape=note;size=18;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fontColor=#182433;fillColor=#ffffff;strokeColor=#7b8794;strokeWidth=1.6;spacing=5;" value="Задача на кампанию:&lt;br&gt;цель, сроки, лимит бюджета" vertex="1">
+          <mxGeometry height="80" width="300" x="1260" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_brief-doc" parent="1" style="shape=note;size=18;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fontColor=#182433;fillColor=#ffffff;strokeColor=#7b8794;strokeWidth=1.6;spacing=5;" value="Бриф" vertex="1">
+          <mxGeometry height="70" width="300" x="1260" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_plan-doc" parent="1" style="shape=note;size=18;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fontColor=#182433;fillColor=#ffffff;strokeColor=#7b8794;strokeWidth=1.6;spacing=5;" value="Концепция и медиаплан" vertex="1">
+          <mxGeometry height="80" width="300" x="1260" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_materials-doc" parent="1" style="shape=note;size=18;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fontColor=#182433;fillColor=#ffffff;strokeColor=#7b8794;strokeWidth=1.6;spacing=5;" value="Комплект рекламных материалов" vertex="1">
+          <mxGeometry height="80" width="300" x="1260" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_approval-doc" parent="1" style="shape=note;size=18;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fontColor=#182433;fillColor=#ffffff;strokeColor=#7b8794;strokeWidth=1.6;spacing=5;" value="Решение о согласовании&lt;br&gt;или замечания" vertex="1">
+          <mxGeometry height="90" width="300" x="1260" y="1300" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_analysis-doc" parent="1" style="shape=note;size=18;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fontColor=#182433;fillColor=#ffffff;strokeColor=#7b8794;strokeWidth=1.6;spacing=5;" value="Результаты кампании:&lt;br&gt;план / факт, выводы" vertex="1">
+          <mxGeometry height="100" width="300" x="1260" y="2030" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_report-doc" parent="1" style="shape=note;size=18;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fontColor=#182433;fillColor=#ffffff;strokeColor=#7b8794;strokeWidth=1.6;spacing=5;" value="Итоговый отчёт&lt;br&gt;Получатели: R1 и S1" vertex="1">
+          <mxGeometry height="100" width="300" x="1260" y="2180" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-1" edge="1" parent="1" source="campaign_start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#344354;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" target="campaign_assess" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-2" edge="1" parent="1" source="campaign_assess" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#344354;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" target="campaign_needed" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-3" edge="1" parent="1" source="campaign_needed" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#344354;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" target="campaign_task" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_label-3" parent="1" style="text;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=17;fontColor=#182433;fillColor=none;strokeColor=none;strokeWidth=1.6;spacing=5;" value="Да" vertex="1">
+          <mxGeometry height="30" width="60" x="800" y="647" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-4" edge="1" parent="1" source="campaign_needed" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#344354;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;exitPerimeter=0;entryX=1;entryY=0.5;entryPerimeter=0;" target="campaign_refusal" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460" y="595" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="campaign_label-4" parent="1" style="text;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=17;fontColor=#182433;fillColor=none;strokeColor=none;strokeWidth=1.6;spacing=5;" value="Нет" vertex="1">
+          <mxGeometry height="30" width="70" x="470" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-5" edge="1" parent="1" source="campaign_refusal" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#344354;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" target="campaign_refused" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-6" edge="1" parent="1" source="campaign_task" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#344354;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" target="campaign_brief" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-7" edge="1" parent="1" source="campaign_brief" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#344354;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" target="campaign_plan" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-8" edge="1" parent="1" source="campaign_plan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#344354;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" target="campaign_materials" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-9" edge="1" parent="1" source="campaign_materials" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#344354;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" target="campaign_approval" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-10" edge="1" parent="1" source="campaign_approval" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#344354;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" target="campaign_approved" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-11" edge="1" parent="1" source="campaign_approved" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#344354;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" target="campaign_fork" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_label-11" parent="1" style="text;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=17;fontColor=#182433;fillColor=none;strokeColor=none;strokeWidth=1.6;spacing=5;" value="Да" vertex="1">
+          <mxGeometry height="30" width="60" x="800" y="1395" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-12" edge="1" parent="1" source="campaign_approved" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#344354;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;exitPerimeter=0;entryX=1;entryY=0.5;entryPerimeter=0;" target="campaign_rework" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_label-12" parent="1" style="text;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=17;fontColor=#182433;fillColor=none;strokeColor=none;strokeWidth=1.6;spacing=5;" value="Нет" vertex="1">
+          <mxGeometry height="30" width="60" x="480" y="1310" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-13" edge="1" parent="1" source="campaign_rework" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#344354;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=1;exitY=0.2;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;" target="campaign_approval" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="430" y="1286" />
+              <mxPoint x="430" y="1215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="campaign_flow-14" edge="1" parent="1" source="campaign_fork" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#344354;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=0.0625;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" target="campaign_digital" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-15" edge="1" parent="1" source="campaign_fork" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#344354;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=0.9375;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" target="campaign_retail" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-16" edge="1" parent="1" source="campaign_digital" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#344354;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.0625;entryY=0;entryPerimeter=0;" target="campaign_join" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-17" edge="1" parent="1" source="campaign_retail" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#344354;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.9375;entryY=0;entryPerimeter=0;" target="campaign_join" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-18" edge="1" parent="1" source="campaign_join" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#344354;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" target="campaign_monitor" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-19" edge="1" parent="1" source="campaign_monitor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#344354;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" target="campaign_period" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-20" edge="1" parent="1" source="campaign_period" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#344354;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" target="campaign_analysis" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-21" edge="1" parent="1" source="campaign_analysis" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#344354;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" target="campaign_report" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-22" edge="1" parent="1" source="campaign_report" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#344354;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" target="campaign_end" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-23" edge="1" parent="1" source="campaign_task" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#738398;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;dashed=1;dashPattern=5 4;" target="campaign_task-doc" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-24" edge="1" parent="1" source="campaign_brief" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#738398;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;dashed=1;dashPattern=5 4;" target="campaign_brief-doc" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-25" edge="1" parent="1" source="campaign_plan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#738398;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;dashed=1;dashPattern=5 4;" target="campaign_plan-doc" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-26" edge="1" parent="1" source="campaign_materials" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#738398;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;dashed=1;dashPattern=5 4;" target="campaign_materials-doc" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-27" edge="1" parent="1" source="campaign_approved" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#738398;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;dashed=1;dashPattern=5 4;" target="campaign_approval-doc" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-28" edge="1" parent="1" source="campaign_analysis" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#738398;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;dashed=1;dashPattern=5 4;" target="campaign_analysis-doc" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-29" edge="1" parent="1" source="campaign_report" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#738398;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;dashed=1;dashPattern=5 4;" target="campaign_report-doc" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-30" edge="1" parent="1" source="campaign_s1-input" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#738398;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.61;entryPerimeter=0;dashed=1;dashPattern=5 4;" target="campaign_brief" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-31" edge="1" parent="1" source="campaign_brief" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#738398;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=0;exitY=0.25;exitPerimeter=0;entryX=1;entryY=0.18;entryPerimeter=0;dashed=1;dashPattern=5 4;" target="campaign_s1-input" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="822.5" />
+              <mxPoint x="450" y="819.8" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="campaign_label-31" parent="1" style="text;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=17;fontColor=#182433;fillColor=none;strokeColor=none;strokeWidth=1.6;spacing=5;" value="Уточнение" vertex="1">
+          <mxGeometry height="30" width="130" x="400" y="773" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-32" edge="1" parent="1" source="campaign_channel-req" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#738398;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.82;entryPerimeter=0;dashed=1;dashPattern=5 4;" target="campaign_brief" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="480" y="1030" />
+              <mxPoint x="480" y="873.8" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="campaign_flow-33" edge="1" parent="1" source="campaign_client-data" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#738398;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.42;entryPerimeter=0;dashed=1;dashPattern=5 4;" target="campaign_digital" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-34" edge="1" parent="1" source="campaign_retail" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#738398;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=1;exitY=0.25;exitPerimeter=0;entryX=0;entryY=0.29;entryPerimeter=0;dashed=1;dashPattern=5 4;" target="campaign_store" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-35" edge="1" parent="1" source="campaign_store" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#738398;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=0;exitY=0.64;exitPerimeter=0;entryX=1;entryY=0.83;entryPerimeter=0;dashed=1;dashPattern=5 4;" target="campaign_retail" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-36" edge="1" parent="1" source="campaign_monitor-rule" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#738398;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;exitPerimeter=0;entryX=1;entryY=0.58;entryPerimeter=0;dashed=1;dashPattern=5 4;" target="campaign_monitor" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_flow-37" edge="1" parent="1" source="campaign_s1-sales" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endSize=8;endFill=1;strokeWidth=1.8;strokeColor=#738398;fontColor=#344354;fontFamily=Arial;fontSize=17;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;dashed=1;dashPattern=5 4;" target="campaign_analysis" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
