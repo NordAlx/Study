@@ -1,0 +1,144 @@
+{
+  "title": "Логическая ERD Предложения",
+  "width": 1900,
+  "height": 1120,
+  "nodes": [
+    {
+      "id": "product",
+      "label": "product\nPK id\ncode\nname\nunit\nmonthly_price\none_time_price\nis_active",
+      "x": 70,
+      "y": 150,
+      "w": 535,
+      "h": 258,
+      "shape": "table",
+      "fill": "#FFFFFF",
+      "size": 24
+    },
+    {
+      "id": "offer",
+      "label": "offer\nPK id\ncode\nFK deal_id\nversion\nstatus_code\nFK created_by\ncreated_at",
+      "x": 690,
+      "y": 150,
+      "w": 535,
+      "h": 258,
+      "shape": "table",
+      "fill": "#FFFFFF",
+      "size": 24
+    },
+    {
+      "id": "offer_line",
+      "label": "offer_line\nPK id\nFK offer_id\nFK product_id\nquantity\nmonthly_price\none_time_price\ndiscount\nmonthly_amount\none_time_amount",
+      "x": 1310,
+      "y": 150,
+      "w": 535,
+      "h": 316,
+      "shape": "table",
+      "fill": "#FFFFFF",
+      "size": 24
+    },
+    {
+      "id": "approval",
+      "label": "approval\nPK id\nFK offer_id\nFK approver_id\ndecision\ncomment\ndecided_at",
+      "x": 70,
+      "y": 670,
+      "w": 535,
+      "h": 229,
+      "shape": "table",
+      "fill": "#FFFFFF",
+      "size": 24
+    },
+    {
+      "id": "note",
+      "label": "Связи с точными кратностями приведены в таблице связей и исходной модели.\nPK — первичный ключ; FK — внешний ключ. Все представления относятся к одной схеме.",
+      "x": 70,
+      "y": 1010,
+      "w": 1750,
+      "h": 58,
+      "shape": "rect",
+      "fill": "#F2F5F7",
+      "size": 18
+    }
+  ],
+  "edges": [
+    {
+      "a": "offer",
+      "b": "offer_line",
+      "label": "1 : 0..*",
+      "points": [
+        [
+          1225,
+          279.0
+        ],
+        [
+          1310,
+          279.0
+        ]
+      ],
+      "dash": false,
+      "arrow": false,
+      "labelpos": [
+        1228,
+        251.0
+      ]
+    },
+    {
+      "a": "product",
+      "b": "offer_line",
+      "label": "1 : 0..*",
+      "points": [
+        [
+          337.5,
+          150
+        ],
+        [
+          337.5,
+          112
+        ],
+        [
+          1577.5,
+          112
+        ],
+        [
+          1577.5,
+          150
+        ]
+      ],
+      "dash": false,
+      "arrow": false,
+      "labelpos": [
+        690.0,
+        87
+      ]
+    },
+    {
+      "a": "offer",
+      "b": "approval",
+      "label": "1 : 0..1",
+      "points": [
+        [
+          957.5,
+          408
+        ],
+        [
+          957.5,
+          630
+        ],
+        [
+          337.5,
+          630
+        ],
+        [
+          337.5,
+          670
+        ]
+      ],
+      "dash": false,
+      "arrow": false,
+      "labelpos": [
+        420.0,
+        602
+      ]
+    }
+  ],
+  "lines": []
+}

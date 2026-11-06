@@ -1,0 +1,105 @@
+{
+  "practice": 2,
+  "title": "Целевой процесс и архитектура",
+  "topic": "Проектирование информационной системы поддержки бизнес-процесса сопровождения продаж корпоративным клиентам на примере компании ПАО «Вымпел-Коммуникации»",
+  "author": "Полиэктов М. А.",
+  "group": "ИНБО-12-23",
+  "teacher": "Трушин Степан Михайлович",
+  "slides": [
+    {
+      "kind": "cover"
+    },
+    {
+      "kind": "list",
+      "title": "TO BE объединяет данные и контроль исполнения",
+      "items": [
+        "Карточка клиента объединяет сделки, предложения, договоры и заявки.",
+        "Согласование относится к неизменяемой версии предложения.",
+        "Фактическое подписание и оказание услуг выполняются вне проектируемой ИС."
+      ]
+    },
+    {
+      "kind": "diagram",
+      "key": "IDEF0_TO_BE_A-0",
+      "practice": null
+    },
+    {
+      "kind": "diagram",
+      "key": "Function_Tree",
+      "practice": null
+    },
+    {
+      "kind": "diagram",
+      "key": "UML_Components",
+      "practice": null
+    },
+    {
+      "kind": "table",
+      "title": "Сценарии связывают роли и функции",
+      "headers": [
+        "Сценарий",
+        "Участники",
+        "Результат"
+      ],
+      "rows": [
+        [
+          "UC-01",
+          "Менеджер",
+          "Клиент и новая сделка"
+        ],
+        [
+          "UC-02",
+          "Менеджер, руководитель",
+          "Решение по версии предложения"
+        ],
+        [
+          "UC-03",
+          "Менеджер, специалист, внешний сервис",
+          "Подтверждённое подключение"
+        ],
+        [
+          "UC-05",
+          "Менеджер",
+          "Прежний и новый срок договора"
+        ]
+      ],
+      "widths": [
+        160,
+        430,
+        562
+      ]
+    },
+    {
+      "kind": "diagram",
+      "key": "BPMN_TO_BE_connect",
+      "practice": null
+    },
+    {
+      "kind": "list",
+      "title": "Результат второй практики",
+      "items": [
+        "Построены TO BE, дерево функций и компонентная архитектура.",
+        "Определены семь сценариев и допустимые переходы сделки.",
+        "Модульный монолит Django использует PostgreSQL и устойчивую очередь обмена."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Object Management Group. Business Process Model and Notation 2.0.2",
+      "url": "https://www.omg.org/spec/BPMN/2.0.2/"
+    },
+    {
+      "title": "Object Management Group. Unified Modeling Language 2.5.1",
+      "url": "https://www.omg.org/spec/UML/2.5.1/"
+    },
+    {
+      "title": "Django Software Foundation. Getting started with Django",
+      "url": "https://www.djangoproject.com/start/"
+    },
+    {
+      "title": "Django 5.2. User authentication",
+      "url": "https://docs.djangoproject.com/en/5.2/topics/auth/"
+    }
+  ]
+}

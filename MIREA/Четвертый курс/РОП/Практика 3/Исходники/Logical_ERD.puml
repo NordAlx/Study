@@ -1,0 +1,206 @@
+@startuml
+skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam backgroundColor white
+hide circle
+skinparam linetype ortho
+title Логическая модель данных
+entity "department\nПодразделение" as department {
+  id <<PK>>
+  name
+}
+entity "role\nРоль" as role {
+  code <<PK>>
+  name
+}
+entity "employee\nСотрудник" as employee {
+  id <<PK>>
+  sso_subject
+  display_name
+  department_id <<FK>>
+  role_code <<FK>>
+  is_active
+  created_at
+}
+entity "client\nЮридическое лицо" as client {
+  id <<PK>>
+  code
+  legal_name
+  inn
+  manager_id <<FK>>
+  created_at
+}
+entity "contact\nКонтактное лицо" as contact {
+  id <<PK>>
+  client_id <<FK>>
+  full_name
+  email
+  phone
+  created_at
+}
+entity "deal_status\nСтадия сделки" as deal_status {
+  code <<PK>>
+  name
+}
+entity "request_type\nТип заявки" as request_type {
+  code <<PK>>
+  name
+}
+entity "request_status\nСтатус заявки" as request_status {
+  code <<PK>>
+  name
+}
+entity "deal\nСделка" as deal {
+  id <<PK>>
+  code
+  client_id <<FK>>
+  owner_id <<FK>>
+  title
+  status_code <<FK>>
+  opened_at
+  closed_at
+  loss_reason
+}
+entity "product\nПродукт каталога" as product {
+  id <<PK>>
+  code
+  name
+  unit
+  monthly_price
+  one_time_price
+  is_active
+}
+entity "offer\nВерсия предложения" as offer {
+  id <<PK>>
+  code
+  deal_id <<FK>>
+  version
+  status_code
+  created_by <<FK>>
+  created_at
+}
+entity "offer_line\nПозиция предложения" as offer_line {
+  id <<PK>>
+  offer_id <<FK>>
+  product_id <<FK>>
+  quantity
+  monthly_price
+  one_time_price
+  discount
+  monthly_amount
+  one_time_amount
+}
+entity "approval\nРешение согласования" as approval {
+  id <<PK>>
+  offer_id <<FK>>
+  approver_id <<FK>>
+  decision
+  comment
+  decided_at
+}
+entity "contract\nДоговор" as contract {
+  id <<PK>>
+  code
+  deal_id <<FK>>
+  offer_id
+  external_number
+  document_ref
+  signed_on
+  starts_on
+  ends_on
+  status_code
+  created_at
+}
+entity "contract_service\nВерсия услуги договора" as contract_service {
+  id <<PK>>
+  contract_id <<FK>>
+  product_id <<FK>>
+  service_label
+  quantity
+  monthly_unit_price
+  valid_from
+  valid_to
+}
+entity "service_request\nЗаявка сопровождения" as service_request {
+  id <<PK>>
+  code
+  contract_id <<FK>>
+  type_code <<FK>>
+  status_code <<FK>>
+  owner_id <<FK>>
+  assignee_id <<FK>>
+  details
+  requested_at
+  target_at
+  closed_at
+  external_ref
+}
+entity "renewal\nРешение о продлении" as renewal {
+  id <<PK>>
+  contract_id <<FK>>
+  previous_end
+  new_end
+  decision
+  decided_at
+  document_ref
+  owner_id <<FK>>
+  created_at
+}
+entity "integration_job\nУстойчивая очередь обмена" as integration_job {
+  id <<PK>>
+  request_id <<FK>>
+  idempotency_key
+  operation_code
+  status_code
+  attempts
+  next_attempt_at
+  last_error
+  created_at
+}
+entity "notification_log\nЖурнал напоминаний" as notification_log {
+  id <<PK>>
+  contract_id <<FK>>
+  recipient_id <<FK>>
+  due_on
+  event_key
+  sent_at
+  created_at
+}
+entity "audit_event\nЖурнал аудита" as audit_event {
+  id <<PK>>
+  actor_id <<FK>>
+  entity_type
+  entity_id
+  action
+  occurred_at
+  details
+}
+department ||--o{ employee : department_id
+role ||--o{ employee : role_code
+employee ||--o{ client : manager_id
+client ||--o{ contact : client_id
+client ||--o{ deal : client_id
+employee ||--o{ deal : owner_id
+deal_status ||--o{ deal : status_code
+deal ||--o{ offer : deal_id
+employee ||--o{ offer : created_by
+offer ||--o{ offer_line : offer_id
+product ||--o{ offer_line : product_id
+offer ||--o| approval : offer_id
+employee ||--o{ approval : approver_id
+deal ||--o{ contract : deal_id
+contract ||--o{ contract_service : contract_id
+product ||--o{ contract_service : product_id
+contract ||--o{ service_request : contract_id
+request_type ||--o{ service_request : type_code
+request_status ||--o{ service_request : status_code
+employee ||--o{ service_request : owner_id
+employee ||--o{ service_request : assignee_id
+contract ||--o{ renewal : contract_id
+employee ||--o{ renewal : owner_id
+service_request ||--o{ integration_job : request_id
+contract ||--o{ notification_log : contract_id
+employee ||--o{ notification_log : recipient_id
+employee |o--o{ audit_event : actor_id
+offer ||--o| contract : offer_id + deal_id
+@enduml

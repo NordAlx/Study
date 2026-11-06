@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1060" viewBox="0 0 1800 1060"><rect width="100%" height="100%" fill="white"/>
+<text x="576.0234375" y="57.0" font-family="Arial" font-size="32" font-weight="700" fill="#17212B">IDEF0 A2 Подготовка и согласование КП</text>
+<text x="603.5078125" y="1031.0" font-family="Arial" font-size="20" font-weight="400" fill="#17212B">Проектируемая модель сопровождения корпоративных продаж</text>
+<rect x="180" y="300" width="270" height="115" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="196.5078125" y="367.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">A21 Выбрать услуги</text>
+<rect x="570" y="430" width="270" height="115" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="612.515625" y="466.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">A22 Рассчитать</text>
+<text x="657.0" y="497.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">условия</text>
+<text x="625.5078125" y="528.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">предложения</text>
+<rect x="960" y="560" width="270" height="115" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="996.0" y="611.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">A23 Проверить и</text>
+<text x="972.015625" y="642.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">согласовать условия</text>
+<rect x="1350" y="690" width="270" height="115" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1368.5078125" y="741.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">A24 Зафиксировать</text>
+<text x="1377.5078125" y="772.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">согласованное КП</text>
+<polyline points="30,357 180,357" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="166.30366589531536,363.11640679589357 180,357 166.30366589531536,350.88359320410643" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="48.0078125" y="306.5" width="103.984375" height="37" fill="white"/>
+<text x="64.0078125" y="332.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">Сделка</text>
+<polyline points="450,357 500,357 500,487 570,487" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="556.3036658953154,493.11640679589357 570,487 556.3036658953154,480.88359320410643" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="454.0" y="376.5" width="162.0" height="37" fill="white"/>
+<text x="470.0" y="402.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">Состав услуг</text>
+<polyline points="840,487 890,487 890,617 960,617" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="946.3036658953154,623.1164067958936 960,617 946.3036658953154,610.8835932041064" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="857.5078125" y="506.5" width="134.984375" height="37" fill="white"/>
+<text x="873.5078125" y="532.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">Расчёт КП</text>
+<polyline points="1230,617 1280,617 1280,747 1350,747" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1336.3036658953154,753.1164067958936 1350,747 1336.3036658953154,740.8835932041064" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1173.0078125" y="636.5" width="283.984375" height="37" fill="white"/>
+<text x="1189.0078125" y="662.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">Решение о согласовании</text>
+<polyline points="1620,747 1780,747" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1766.3036658953154,753.1164067958936 1780,747 1766.3036658953154,740.8835932041064" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1658.5" y="691.5" width="93.0" height="37" fill="white"/>
+<text x="1674.5" y="717.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">O1 КП</text>
+<polyline points="1210,560 1210,250 700,250 700,430" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="693.8835932041064,416.30366589531536 700,430 706.1164067958936,416.30366589531536" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="851.0078125" y="203.5" width="297.984375" height="37" fill="white"/>
+<text x="867.0078125" y="229.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">Замечания и новая версия</text>
+<polyline points="275,170 275,300" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="268.88359320410643,286.30366589531536 275,300 281.11640679589357,286.30366589531536" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="212.5" y="126.5" width="125.0" height="37" fill="white"/>
+<text x="228.5" y="152.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">C1 C2 C3</text>
+<polyline points="340,945 340,415" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="346.11640679589357,428.69633410468464 340,415 333.88359320410643,428.69633410468464" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="291.0" y="961.5" width="98.0" height="37" fill="white"/>
+<text x="307.0" y="987.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">M1 M2</text>
+<polyline points="665,170 665,430" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="658.8835932041064,416.30366589531536 665,430 671.1164067958936,416.30366589531536" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="602.5" y="126.5" width="125.0" height="37" fill="white"/>
+<text x="618.5" y="152.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">C1 C2 C3</text>
+<polyline points="730,945 730,545" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="736.1164067958936,558.6963341046846 730,545 723.8835932041064,558.6963341046846" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="681.0" y="961.5" width="98.0" height="37" fill="white"/>
+<text x="697.0" y="987.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">M1 M2</text>
+<polyline points="1055,170 1055,560" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1048.8835932041065,546.3036658953154 1055,560 1061.1164067958935,546.3036658953154" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="992.5" y="126.5" width="125.0" height="37" fill="white"/>
+<text x="1008.5" y="152.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">C1 C2 C3</text>
+<polyline points="1120,945 1120,675" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1126.1164067958935,688.6963341046846 1120,675 1113.8835932041065,688.6963341046846" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1071.0" y="961.5" width="98.0" height="37" fill="white"/>
+<text x="1087.0" y="987.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">M1 M2</text>
+<polyline points="1445,170 1445,690" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1438.8835932041065,676.3036658953154 1445,690 1451.1164067958935,676.3036658953154" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1399.0" y="126.5" width="92.0" height="37" fill="white"/>
+<text x="1415.0" y="152.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">C2 C3</text>
+<polyline points="1510,945 1510,805" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1516.1164067958935,818.6963341046846 1510,805 1503.8835932041065,818.6963341046846" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1461.0" y="961.5" width="98.0" height="37" fill="white"/>
+<text x="1477.0" y="987.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">M1 M2</text>
+<text x="488.546875" y="111.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">Вход Сделка и выход O1 КП сбалансированы с блоком A2 диаграммы A0</text>
+</svg>

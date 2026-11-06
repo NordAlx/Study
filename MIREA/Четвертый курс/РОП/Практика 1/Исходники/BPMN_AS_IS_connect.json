@@ -1,0 +1,348 @@
+{
+  "title": "BPMN 2.0 AS_IS Подключение",
+  "width": 1900,
+  "height": 1080,
+  "nodes": [
+    {
+      "id": "pool",
+      "label": "Сопровождение",
+      "x": 40,
+      "y": 120,
+      "w": 1820,
+      "h": 900,
+      "shape": "pool",
+      "fill": "#FFFFFF",
+      "size": 21
+    },
+    {
+      "id": "lane_manager",
+      "label": "Менеджер",
+      "x": 120,
+      "y": 120,
+      "w": 1740,
+      "h": 280,
+      "shape": "lane",
+      "fill": "#FBFCFD",
+      "size": 21
+    },
+    {
+      "id": "lane_tech",
+      "label": "Технический\nспециалист",
+      "x": 120,
+      "y": 400,
+      "w": 1740,
+      "h": 280,
+      "shape": "lane",
+      "fill": "#FBFCFD",
+      "size": 21
+    },
+    {
+      "id": "lane_is",
+      "label": "Почта / таблица",
+      "x": 120,
+      "y": 680,
+      "w": 1740,
+      "h": 320,
+      "shape": "lane",
+      "fill": "#FBFCFD",
+      "size": 21
+    },
+    {
+      "id": "start",
+      "label": "Договор учтён",
+      "x": 205,
+      "y": 220,
+      "w": 48,
+      "h": 48,
+      "shape": "start",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "create",
+      "label": "Создать заявку\nи плановый срок",
+      "x": 315,
+      "y": 195,
+      "w": 230,
+      "h": 95,
+      "shape": "task",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "check",
+      "label": "Проверить данные\nи основание",
+      "x": 620,
+      "y": 475,
+      "w": 215,
+      "h": 95,
+      "shape": "task",
+      "fill": "#FFFFFF",
+      "size": 22
+    },
+    {
+      "id": "valid",
+      "label": "Данные верны?",
+      "x": 900,
+      "y": 490,
+      "w": 60,
+      "h": 60,
+      "shape": "gateway",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "clarify",
+      "label": "Вернуть\nна уточнение",
+      "x": 1000,
+      "y": 195,
+      "w": 220,
+      "h": 95,
+      "shape": "task",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "stop",
+      "label": "Уточнить данные",
+      "x": 1320,
+      "y": 220,
+      "w": 48,
+      "h": 48,
+      "shape": "end",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "send",
+      "label": "Отправить заявку\nпо почте",
+      "x": 1020,
+      "y": 755,
+      "w": 230,
+      "h": 100,
+      "shape": "task",
+      "fill": "#FFFFFF",
+      "size": 24
+    },
+    {
+      "id": "result",
+      "label": "Результат?",
+      "x": 1340,
+      "y": 775,
+      "w": 60,
+      "h": 60,
+      "shape": "gateway",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "status",
+      "label": "Сверить статус\nвыполнения",
+      "x": 1460,
+      "y": 475,
+      "w": 215,
+      "h": 95,
+      "shape": "task",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "end",
+      "label": "DONE / WON",
+      "x": 1770,
+      "y": 500,
+      "w": 48,
+      "h": 48,
+      "shape": "end",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "fail",
+      "label": "FAILED",
+      "x": 1770,
+      "y": 790,
+      "w": 48,
+      "h": 48,
+      "shape": "end",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "unknown",
+      "label": "Уточнить ответ\nу исполнителя",
+      "x": 1270,
+      "y": 900,
+      "w": 330,
+      "h": 95,
+      "shape": "task",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "limit",
+      "label": "Статус уточняется вручную. История разбросана по переписке.",
+      "x": 220,
+      "y": 620,
+      "w": 650,
+      "h": 95,
+      "shape": "rect",
+      "fill": "#F1F4F6",
+      "size": 23
+    }
+  ],
+  "edges": [
+    {
+      "a": "start",
+      "b": "create",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": true
+    },
+    {
+      "a": "create",
+      "b": "check",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": true
+    },
+    {
+      "a": "check",
+      "b": "valid",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": true
+    },
+    {
+      "a": "clarify",
+      "b": "stop",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": true
+    },
+    {
+      "a": "send",
+      "b": "result",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": true
+    },
+    {
+      "a": "status",
+      "b": "end",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": true
+    },
+    {
+      "a": "valid",
+      "b": "clarify",
+      "label": "Нет",
+      "points": null,
+      "dash": false,
+      "arrow": true
+    },
+    {
+      "a": "valid",
+      "b": "send",
+      "label": "Да",
+      "points": null,
+      "dash": false,
+      "arrow": true,
+      "labelpos": [
+        955,
+        625
+      ]
+    },
+    {
+      "a": "result",
+      "b": "status",
+      "label": "Принята",
+      "points": [
+        [
+          1370,
+          775
+        ],
+        [
+          1370,
+          522
+        ],
+        [
+          1460,
+          522
+        ]
+      ],
+      "dash": false,
+      "arrow": true,
+      "labelpos": [
+        1378,
+        610
+      ]
+    },
+    {
+      "a": "result",
+      "b": "fail",
+      "label": "Бизнес-отказ",
+      "points": null,
+      "dash": false,
+      "arrow": true
+    },
+    {
+      "a": "result",
+      "b": "unknown",
+      "label": "Тайм-аут",
+      "points": [
+        [
+          1370,
+          835
+        ],
+        [
+          1370,
+          900
+        ]
+      ],
+      "dash": false,
+      "arrow": true,
+      "labelpos": [
+        1420,
+        855
+      ]
+    },
+    {
+      "a": "unknown",
+      "b": "send",
+      "label": "Исход не подтверждён",
+      "points": [
+        [
+          1270,
+          947
+        ],
+        [
+          970,
+          947
+        ],
+        [
+          970,
+          805
+        ],
+        [
+          1020,
+          805
+        ]
+      ],
+      "dash": false,
+      "arrow": true,
+      "labelpos": [
+        980,
+        905
+      ]
+    }
+  ],
+  "lines": []
+}

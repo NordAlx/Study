@@ -1,0 +1,187 @@
+{
+  "title": "Физическая ERD Доступ и служебные сущности",
+  "width": 1900,
+  "height": 1120,
+  "nodes": [
+    {
+      "id": "department",
+      "label": "department\nPK id BIGINT\nname VARCHAR(120)",
+      "x": 70,
+      "y": 150,
+      "w": 535,
+      "h": 113,
+      "shape": "table",
+      "fill": "#FFFFFF",
+      "size": 22
+    },
+    {
+      "id": "role",
+      "label": "role\nPK code VARCHAR(16)\nname VARCHAR(120)",
+      "x": 690,
+      "y": 150,
+      "w": 535,
+      "h": 113,
+      "shape": "table",
+      "fill": "#FFFFFF",
+      "size": 22
+    },
+    {
+      "id": "employee",
+      "label": "employee\nPK id BIGINT\nsso_subject VARCHAR(255)\ndisplay_name VARCHAR(150)\nFK department_id BIGINT\nFK role_code VARCHAR(16)\nis_active BOOLEAN\ncreated_at TIMESTAMPTZ",
+      "x": 1310,
+      "y": 150,
+      "w": 535,
+      "h": 258,
+      "shape": "table",
+      "fill": "#FFFFFF",
+      "size": 22
+    },
+    {
+      "id": "integration_job",
+      "label": "integration_job\nPK id BIGINT\nFK request_id BIGINT\nidempotency_key UUID\noperation_code VARCHAR(16)\nstatus_code VARCHAR(16)\nattempts SMALLINT\nnext_attempt_at TIMESTAMPTZ\nlast_error VARCHAR(1000)\ncreated_at TIMESTAMPTZ",
+      "x": 70,
+      "y": 670,
+      "w": 535,
+      "h": 316,
+      "shape": "table",
+      "fill": "#FFFFFF",
+      "size": 22
+    },
+    {
+      "id": "notification_log",
+      "label": "notification_log\nPK id BIGINT\nFK contract_id BIGINT\nFK recipient_id BIGINT\ndue_on DATE\nevent_key VARCHAR(40)\nsent_at TIMESTAMPTZ\ncreated_at TIMESTAMPTZ",
+      "x": 690,
+      "y": 670,
+      "w": 535,
+      "h": 258,
+      "shape": "table",
+      "fill": "#FFFFFF",
+      "size": 22
+    },
+    {
+      "id": "audit_event",
+      "label": "audit_event\nPK id BIGINT\nFK actor_id BIGINT\nentity_type VARCHAR(40)\nentity_id BIGINT\naction VARCHAR(50)\noccurred_at TIMESTAMPTZ\ndetails JSONB",
+      "x": 1310,
+      "y": 670,
+      "w": 535,
+      "h": 258,
+      "shape": "table",
+      "fill": "#FFFFFF",
+      "size": 22
+    },
+    {
+      "id": "note",
+      "label": "Связи с точными кратностями приведены в таблице связей и исходной модели.\nPK — первичный ключ; FK — внешний ключ. Все представления относятся к одной схеме.",
+      "x": 70,
+      "y": 1010,
+      "w": 1750,
+      "h": 58,
+      "shape": "rect",
+      "fill": "#F2F5F7",
+      "size": 18
+    }
+  ],
+  "edges": [
+    {
+      "a": "department",
+      "b": "employee",
+      "label": "1 : 0..*",
+      "points": [
+        [
+          337.5,
+          150
+        ],
+        [
+          337.5,
+          112
+        ],
+        [
+          1577.5,
+          112
+        ],
+        [
+          1577.5,
+          150
+        ]
+      ],
+      "dash": false,
+      "arrow": false,
+      "labelpos": [
+        690.0,
+        87
+      ]
+    },
+    {
+      "a": "role",
+      "b": "employee",
+      "label": "1 : 0..*",
+      "points": [
+        [
+          1225,
+          210
+        ],
+        [
+          1310,
+          210
+        ]
+      ],
+      "dash": false,
+      "arrow": false,
+      "labelpos": [
+        1228,
+        182
+      ]
+    },
+    {
+      "a": "employee",
+      "b": "notification_log",
+      "label": "1 : 0..*",
+      "points": [
+        [
+          1577.5,
+          408
+        ],
+        [
+          1577.5,
+          630
+        ],
+        [
+          957.5,
+          630
+        ],
+        [
+          957.5,
+          670
+        ]
+      ],
+      "dash": false,
+      "arrow": false,
+      "labelpos": [
+        1040.0,
+        602
+      ]
+    },
+    {
+      "a": "employee",
+      "b": "audit_event",
+      "label": "0..1 : 0..*",
+      "points": [
+        [
+          1577.5,
+          408
+        ],
+        [
+          1577.5,
+          670
+        ]
+      ],
+      "dash": false,
+      "arrow": false,
+      "labelpos": [
+        1585.5,
+        539.0
+      ]
+    }
+  ],
+  "lines": []
+}

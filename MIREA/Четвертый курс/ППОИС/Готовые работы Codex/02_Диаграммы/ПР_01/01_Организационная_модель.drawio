@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="24.7.17">
+  <diagram name="Организационная модель проектного контура" id="01_Организационная_модель">
+    <mxGraphModel dx="1600" dy="980" grid="1" gridSize="10" page="1" pageWidth="1600" pageHeight="980">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" vertex="1" value="Организационная модель проектного контура" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=32;fontStyle=1;strokeColor=none;fillColor=none;">
+          <mxGeometry as="geometry" x="40" y="20" width="1520" height="48" />
+        </mxCell>
+        <mxCell id="3" parent="1" vertex="1" value="Проектируемая модель сопровождения корпоративных продаж" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=20;fontStyle=0;strokeColor=none;fillColor=none;">
+          <mxGeometry as="geometry" x="40" y="928" width="1520" height="32" />
+        </mxCell>
+        <mxCell id="4" parent="1" vertex="1" value="Руководитель корпоративных продаж&#10;Цели и контроль воронки" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=24;fontColor=#17212B;strokeWidth=2;rounded=0;fillColor=#F3F5F7;strokeColor=#364152;">
+          <mxGeometry as="geometry" x="535" y="115" width="530" height="110" />
+        </mxCell>
+        <mxCell id="5" parent="1" edge="1" style="endArrow=none;html=0;strokeColor=#364152;strokeWidth=2;dashed=0;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="800" y="225" />
+            <mxPoint as="targetPoint" x="305" y="390" />
+            <Array as="points">
+              <mxPoint x="800" y="310" />
+              <mxPoint x="305" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6" parent="1" edge="1" style="endArrow=none;html=0;strokeColor=#364152;strokeWidth=2;dashed=0;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="800" y="225" />
+            <mxPoint as="targetPoint" x="800" y="390" />
+            <Array as="points">
+              <mxPoint x="800" y="310" />
+              <mxPoint x="800" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7" parent="1" edge="1" style="endArrow=none;html=0;strokeColor=#364152;strokeWidth=2;dashed=0;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="800" y="225" />
+            <mxPoint as="targetPoint" x="1295" y="390" />
+            <Array as="points">
+              <mxPoint x="800" y="310" />
+              <mxPoint x="1295" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8" parent="1" vertex="1" value="Группа продаж&#10;Клиенты, сделки, КП" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=24;fontColor=#17212B;strokeWidth=2;rounded=0;fillColor=#F3F5F7;strokeColor=#364152;">
+          <mxGeometry as="geometry" x="80" y="390" width="450" height="130" />
+        </mxCell>
+        <mxCell id="9" parent="1" vertex="1" value="Согласование условий&#10;Руководитель и юрист" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=24;fontColor=#17212B;strokeWidth=2;rounded=0;fillColor=#F3F5F7;strokeColor=#364152;">
+          <mxGeometry as="geometry" x="575" y="390" width="450" height="130" />
+        </mxCell>
+        <mxCell id="10" parent="1" vertex="1" value="Группа подключения&#10;Заказы и статусы" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=24;fontColor=#17212B;strokeWidth=2;rounded=0;fillColor=#F3F5F7;strokeColor=#364152;">
+          <mxGeometry as="geometry" x="1070" y="390" width="450" height="130" />
+        </mxCell>
+        <mxCell id="11" parent="1" vertex="1" value="Администратор системы&#10;Доступ и справочники" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=24;fontColor=#17212B;strokeWidth=2;rounded=0;fillColor=#F3F5F7;strokeColor=#364152;">
+          <mxGeometry as="geometry" x="240" y="700" width="450" height="115" />
+        </mxCell>
+        <mxCell id="12" parent="1" vertex="1" value="Служба эксплуатации&#10;Обмен и восстановление" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=24;fontColor=#17212B;strokeWidth=2;rounded=0;fillColor=#F3F5F7;strokeColor=#364152;">
+          <mxGeometry as="geometry" x="900" y="700" width="450" height="115" />
+        </mxCell>
+        <mxCell id="13" parent="1" vertex="1" value="Показаны предлагаемые функциональные группы и зоны ответственности&#10;Организационное подчинение в компании не устанавливается" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=25;fontStyle=0;strokeColor=none;fillColor=none;">
+          <mxGeometry as="geometry" x="130" y="570" width="1340" height="65" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

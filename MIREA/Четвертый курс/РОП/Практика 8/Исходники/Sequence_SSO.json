@@ -1,0 +1,421 @@
+{
+  "title": "UML Sequence Корпоративный вход",
+  "width": 1900,
+  "height": 1480,
+  "nodes": [
+    {
+      "id": "p0",
+      "label": "Браузер",
+      "x": 65,
+      "y": 100,
+      "w": 210,
+      "h": 85,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 23
+    },
+    {
+      "id": "p1",
+      "label": "Django / SSO",
+      "x": 585,
+      "y": 100,
+      "w": 210,
+      "h": 85,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 23
+    },
+    {
+      "id": "p2",
+      "label": "Корпоративный IdP",
+      "x": 1105,
+      "y": 100,
+      "w": 210,
+      "h": 85,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 23
+    },
+    {
+      "id": "p3",
+      "label": "PostgreSQL",
+      "x": 1625,
+      "y": 100,
+      "w": 210,
+      "h": 85,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 23
+    },
+    {
+      "id": "alt",
+      "label": "alt [все проверки токена пройдены]",
+      "x": 50,
+      "y": 845,
+      "w": 1795,
+      "h": 450,
+      "shape": "group",
+      "fill": "#FFFFFF",
+      "size": 22
+    },
+    {
+      "id": "guard1140",
+      "label": "[отказ IdP, неверный токен или техническая ошибка]",
+      "x": 70,
+      "y": 1148,
+      "w": 650,
+      "h": 38,
+      "shape": "rect",
+      "fill": "#F2F4F6",
+      "size": 21
+    },
+    {
+      "id": "note",
+      "label": "Пароль IdP и токены не записываются в журнал.\nРоль назначается локально; новый sub не получает доступ автоматически.",
+      "x": 170,
+      "y": 1320,
+      "w": 1550,
+      "h": 90,
+      "shape": "rect",
+      "fill": "#F2F4F6",
+      "size": 23
+    }
+  ],
+  "edges": [],
+  "lines": [
+    {
+      "pts": [
+        [
+          170,
+          185
+        ],
+        [
+          170,
+          1360
+        ]
+      ],
+      "label": "",
+      "dash": true,
+      "arrow": false,
+      "size": 23,
+      "labelpos": null
+    },
+    {
+      "pts": [
+        [
+          690,
+          185
+        ],
+        [
+          690,
+          1360
+        ]
+      ],
+      "label": "",
+      "dash": true,
+      "arrow": false,
+      "size": 23,
+      "labelpos": null
+    },
+    {
+      "pts": [
+        [
+          1210,
+          185
+        ],
+        [
+          1210,
+          1360
+        ]
+      ],
+      "label": "",
+      "dash": true,
+      "arrow": false,
+      "size": 23,
+      "labelpos": null
+    },
+    {
+      "pts": [
+        [
+          1730,
+          185
+        ],
+        [
+          1730,
+          1360
+        ]
+      ],
+      "label": "",
+      "dash": true,
+      "arrow": false,
+      "size": 23,
+      "labelpos": null
+    },
+    {
+      "pts": [
+        [
+          170,
+          250
+        ],
+        [
+          690,
+          250
+        ]
+      ],
+      "label": "1 Войти",
+      "dash": false,
+      "arrow": true,
+      "size": 22,
+      "labelpos": [
+        188,
+        216
+      ]
+    },
+    {
+      "pts": [
+        [
+          690,
+          325
+        ],
+        [
+          170,
+          325
+        ]
+      ],
+      "label": "2 Redirect: state, nonce, PKCE challenge",
+      "dash": true,
+      "arrow": true,
+      "size": 22,
+      "labelpos": [
+        188,
+        291
+      ]
+    },
+    {
+      "pts": [
+        [
+          170,
+          400
+        ],
+        [
+          1210,
+          400
+        ]
+      ],
+      "label": "3 HTTPS / вход в IdP",
+      "dash": false,
+      "arrow": true,
+      "size": 22,
+      "labelpos": [
+        188,
+        366
+      ]
+    },
+    {
+      "pts": [
+        [
+          1210,
+          475
+        ],
+        [
+          170,
+          475
+        ]
+      ],
+      "label": "4 Код + state либо отказ IdP",
+      "dash": true,
+      "arrow": true,
+      "size": 22,
+      "labelpos": [
+        188,
+        441
+      ]
+    },
+    {
+      "pts": [
+        [
+          170,
+          550
+        ],
+        [
+          690,
+          550
+        ]
+      ],
+      "label": "5 Код + state",
+      "dash": false,
+      "arrow": true,
+      "size": 22,
+      "labelpos": [
+        188,
+        516
+      ]
+    },
+    {
+      "pts": [
+        [
+          690,
+          625
+        ],
+        [
+          1210,
+          625
+        ]
+      ],
+      "label": "6 state проверен → HTTPS: код + verifier",
+      "dash": false,
+      "arrow": true,
+      "size": 22,
+      "labelpos": [
+        708,
+        591
+      ]
+    },
+    {
+      "pts": [
+        [
+          1210,
+          700
+        ],
+        [
+          690,
+          700
+        ]
+      ],
+      "label": "7 Токены JSON либо ошибка обмена",
+      "dash": true,
+      "arrow": true,
+      "size": 22,
+      "labelpos": [
+        708,
+        666
+      ]
+    },
+    {
+      "pts": [
+        [
+          690,
+          775
+        ],
+        [
+          810,
+          775
+        ],
+        [
+          810,
+          810
+        ],
+        [
+          690,
+          810
+        ]
+      ],
+      "label": "8 Проверить подпись, iss, aud, exp, nonce",
+      "dash": false,
+      "arrow": true,
+      "size": 22,
+      "labelpos": [
+        708,
+        741
+      ],
+      "labelwidth": 950
+    },
+    {
+      "pts": [
+        [
+          690,
+          920
+        ],
+        [
+          1730,
+          920
+        ]
+      ],
+      "label": "9 Найти активного employee по стабильному sub",
+      "dash": false,
+      "arrow": true,
+      "size": 22,
+      "labelpos": [
+        708,
+        886
+      ]
+    },
+    {
+      "pts": [
+        [
+          1730,
+          995
+        ],
+        [
+          690,
+          995
+        ]
+      ],
+      "label": "10 Локальная роль / сотрудник не найден",
+      "dash": true,
+      "arrow": true,
+      "size": 22,
+      "labelpos": [
+        708,
+        961
+      ]
+    },
+    {
+      "pts": [
+        [
+          690,
+          1070
+        ],
+        [
+          170,
+          1070
+        ]
+      ],
+      "label": "11 Сеанс только активному сотруднику; иначе отказ",
+      "dash": true,
+      "arrow": true,
+      "size": 22,
+      "labelpos": [
+        188,
+        1036
+      ]
+    },
+    {
+      "pts": [
+        [
+          60,
+          1140
+        ],
+        [
+          1835,
+          1140
+        ]
+      ],
+      "label": "",
+      "dash": true,
+      "arrow": false,
+      "size": 23,
+      "labelpos": null
+    },
+    {
+      "pts": [
+        [
+          690,
+          1230
+        ],
+        [
+          170,
+          1230
+        ]
+      ],
+      "label": "12 Отказ без сеанса, безопасное сообщение и аудит",
+      "dash": true,
+      "arrow": true,
+      "size": 22,
+      "labelpos": [
+        188,
+        1196
+      ]
+    }
+  ]
+}

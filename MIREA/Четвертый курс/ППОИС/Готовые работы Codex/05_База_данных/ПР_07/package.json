@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node \u043f\u0440\u043e\u0432\u0435\u0440\u0438\u0442\u044c.mjs"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "0.5.12"
+  }
+}

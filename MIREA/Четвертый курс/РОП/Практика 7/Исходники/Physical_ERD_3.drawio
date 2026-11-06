@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="24.7.17">
+  <diagram id="Physical_ERD_3" name="Физическая ERD Договоры и сопровождение">
+    <mxGraphModel dx="1900" dy="1120" grid="1" page="1" pageWidth="1900" pageHeight="1120">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="contract" value="contract&lt;br&gt;PK id BIGINT&lt;br&gt;code VARCHAR(14)&lt;br&gt;FK deal_id BIGINT&lt;br&gt;FK offer_id BIGINT&lt;br&gt;external_number VARCHAR(100)&lt;br&gt;document_ref VARCHAR(500)&lt;br&gt;signed_on DATE&lt;br&gt;starts_on DATE&lt;br&gt;ends_on DATE&lt;br&gt;status_code VARCHAR(16)&lt;br&gt;created_at TIMESTAMPTZ" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=22;align=left;verticalAlign=top;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="70" y="150" width="535" height="374" as="geometry" />
+        </mxCell>
+        <mxCell id="contract_service" value="contract_service&lt;br&gt;PK id BIGINT&lt;br&gt;FK contract_id BIGINT&lt;br&gt;FK product_id BIGINT&lt;br&gt;service_label VARCHAR(120)&lt;br&gt;quantity NUMERIC(12,3)&lt;br&gt;monthly_unit_price NUMERIC(14,2)&lt;br&gt;valid_from TIMESTAMPTZ&lt;br&gt;valid_to TIMESTAMPTZ" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=22;align=left;verticalAlign=top;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="690" y="150" width="535" height="287" as="geometry" />
+        </mxCell>
+        <mxCell id="service_request" value="service_request&lt;br&gt;PK id BIGINT&lt;br&gt;code VARCHAR(14)&lt;br&gt;FK contract_id BIGINT&lt;br&gt;FK type_code VARCHAR(16)&lt;br&gt;FK status_code VARCHAR(16)&lt;br&gt;FK owner_id BIGINT&lt;br&gt;FK assignee_id BIGINT&lt;br&gt;details TEXT&lt;br&gt;requested_at TIMESTAMPTZ&lt;br&gt;target_at TIMESTAMPTZ&lt;br&gt;closed_at TIMESTAMPTZ&lt;br&gt;external_ref VARCHAR(120)" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=22;align=left;verticalAlign=top;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="150" width="535" height="403" as="geometry" />
+        </mxCell>
+        <mxCell id="renewal" value="renewal&lt;br&gt;PK id BIGINT&lt;br&gt;FK contract_id BIGINT&lt;br&gt;previous_end DATE&lt;br&gt;new_end DATE&lt;br&gt;decision VARCHAR(16)&lt;br&gt;decided_at TIMESTAMPTZ&lt;br&gt;document_ref VARCHAR(500)&lt;br&gt;FK owner_id BIGINT&lt;br&gt;created_at TIMESTAMPTZ" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=22;align=left;verticalAlign=top;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="70" y="670" width="535" height="316" as="geometry" />
+        </mxCell>
+        <mxCell id="request_type" value="request_type&lt;br&gt;PK code VARCHAR(16)&lt;br&gt;name VARCHAR(120)" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=22;align=left;verticalAlign=top;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="690" y="670" width="535" height="113" as="geometry" />
+        </mxCell>
+        <mxCell id="request_status" value="request_status&lt;br&gt;PK code VARCHAR(16)&lt;br&gt;name VARCHAR(120)" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=22;align=left;verticalAlign=top;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="670" width="535" height="113" as="geometry" />
+        </mxCell>
+        <mxCell id="note" value="Связи с точными кратностями приведены в таблице связей и исходной модели.&lt;br&gt;PK — первичный ключ; FK — внешний ключ. Все представления относятся к одной схеме." style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#F2F5F7;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1010" width="1750" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_0" value="1 : 0..*" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=none;" edge="1" parent="1" source="contract" target="contract_service">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="605" y="293.5" as="sourcePoint" />
+            <mxPoint x="690" y="293.5" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_1" value="1 : 0..*" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=none;" edge="1" parent="1" source="contract" target="service_request">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="337.5" y="150" as="sourcePoint" />
+            <mxPoint x="1577.5" y="150" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="337.5" y="112" />
+              <mxPoint x="1577.5" y="112" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_2" value="1 : 0..*" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=none;" edge="1" parent="1" source="request_type" target="service_request">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1577.5" y="553" as="sourcePoint" />
+            <mxPoint x="957.5" y="670" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1577.5" y="630" />
+              <mxPoint x="957.5" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_3" value="1 : 0..*" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=none;" edge="1" parent="1" source="request_status" target="service_request">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1577.5" y="670" as="sourcePoint" />
+            <mxPoint x="1577.5" y="553" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_4" value="1 : 0..*" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=none;" edge="1" parent="1" source="contract" target="renewal">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="337.5" y="524" as="sourcePoint" />
+            <mxPoint x="337.5" y="670" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

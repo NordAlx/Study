@@ -1,0 +1,243 @@
+{
+  "title": "Инфраструктура учебного решения",
+  "width": 1800,
+  "height": 1100,
+  "nodes": [
+    {
+      "id": "users",
+      "label": "Пользовательский сегмент / VPN",
+      "x": 50,
+      "y": 130,
+      "w": 390,
+      "h": 800,
+      "shape": "group",
+      "fill": "#F7F9FA",
+      "size": 22
+    },
+    {
+      "id": "dmz",
+      "label": "Зона шлюза",
+      "x": 490,
+      "y": 130,
+      "w": 350,
+      "h": 800,
+      "shape": "group",
+      "fill": "#F7F9FA",
+      "size": 22
+    },
+    {
+      "id": "appzone",
+      "label": "Серверная зона приложения",
+      "x": 890,
+      "y": 130,
+      "w": 390,
+      "h": 800,
+      "shape": "group",
+      "fill": "#F7F9FA",
+      "size": 22
+    },
+    {
+      "id": "datazone",
+      "label": "Защищённая зона данных",
+      "x": 1330,
+      "y": 130,
+      "w": 420,
+      "h": 800,
+      "shape": "group",
+      "fill": "#F7F9FA",
+      "size": 22
+    },
+    {
+      "id": "pc",
+      "label": "«device» Рабочая станция\nБраузер",
+      "x": 85,
+      "y": 280,
+      "w": 320,
+      "h": 130,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "proxy",
+      "label": "«node» VM шлюза\n«artifact» nginx.conf\nNginx / TLS",
+      "x": 515,
+      "y": 280,
+      "w": 300,
+      "h": 160,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 25
+    },
+    {
+      "id": "app",
+      "label": "«node» VM приложения\n«executionEnvironment» Docker\n«artifact» crm-web:1.0\nDjango / Gunicorn",
+      "x": 910,
+      "y": 280,
+      "w": 350,
+      "h": 190,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 24
+    },
+    {
+      "id": "worker",
+      "label": "«artifact» crm-worker:1.0\nПланировщик / worker\nОчередь в PostgreSQL",
+      "x": 910,
+      "y": 650,
+      "w": 350,
+      "h": 150,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 24
+    },
+    {
+      "id": "db",
+      "label": "«node» VM данных\n«artifact» schema.sql\nPostgreSQL 18\nTCP 5432 / TLS",
+      "x": 1350,
+      "y": 280,
+      "w": 370,
+      "h": 190,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 24
+    },
+    {
+      "id": "backup",
+      "label": "«node» Резервное хранилище\nКопии БД и документов\nОтдельный носитель / ключ",
+      "x": 1350,
+      "y": 650,
+      "w": 370,
+      "h": 150,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 24
+    },
+    {
+      "id": "ext",
+      "label": "Внешние сервисы: IdP, подключение/биллинг, почтовый шлюз",
+      "x": 480,
+      "y": 970,
+      "w": 1230,
+      "h": 65,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 25
+    }
+  ],
+  "edges": [
+    {
+      "a": "pc",
+      "b": "proxy",
+      "label": "HTTPS 443",
+      "points": null,
+      "dash": false,
+      "arrow": true,
+      "labelpos": [
+        380,
+        235
+      ],
+      "labelwidth": 250
+    },
+    {
+      "a": "proxy",
+      "b": "app",
+      "label": "HTTPS 8443",
+      "points": null,
+      "dash": false,
+      "arrow": true,
+      "labelpos": [
+        780,
+        235
+      ],
+      "labelwidth": 250
+    },
+    {
+      "a": "app",
+      "b": "db",
+      "label": "SQL/TLS 5432",
+      "points": null,
+      "dash": false,
+      "arrow": true,
+      "labelpos": [
+        1225,
+        235
+      ],
+      "labelwidth": 250
+    },
+    {
+      "a": "worker",
+      "b": "db",
+      "label": "SQL/TLS 5432",
+      "points": null,
+      "dash": false,
+      "arrow": true,
+      "labelpos": [
+        1320,
+        570
+      ],
+      "labelwidth": 250
+    },
+    {
+      "a": "db",
+      "b": "backup",
+      "label": "SFTP 22 / копии",
+      "points": null,
+      "dash": false,
+      "arrow": true,
+      "labelpos": [
+        1550,
+        535
+      ],
+      "labelwidth": 250
+    },
+    {
+      "a": "app",
+      "b": "ext",
+      "label": "OIDC / HTTPS 443",
+      "points": [
+        [
+          910,
+          375
+        ],
+        [
+          870,
+          375
+        ],
+        [
+          870,
+          945
+        ],
+        [
+          1095,
+          945
+        ],
+        [
+          1095,
+          970
+        ]
+      ],
+      "dash": false,
+      "arrow": true,
+      "labelpos": [
+        615,
+        815
+      ],
+      "labelwidth": 250
+    },
+    {
+      "a": "worker",
+      "b": "ext",
+      "label": "HTTPS 443 / SMTP TLS 465",
+      "points": null,
+      "dash": false,
+      "arrow": true,
+      "labelpos": [
+        1100,
+        830
+      ],
+      "labelwidth": 250
+    }
+  ],
+  "lines": []
+}

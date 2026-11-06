@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='utf-8'?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_BPMN_AS_IS_sales" targetNamespace="https://example.invalid/rop/educational">
+  <bpmn:process id="Process_BPMN_AS_IS_sales" isExecutable="false" name="BPMN 2.0 AS_IS Обращение и договор">
+    <bpmn:laneSet id="LaneSet">
+      <bpmn:lane id="lane_manager" name="Менеджер">
+        <bpmn:flowNodeRef>start</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>register</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>qualify</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>offer</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>clientdecision</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>agree</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="lane_head" name="Руководитель">
+        <bpmn:flowNodeRef>approve</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>approved</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>lost</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="lane_is" name="Средства работы">
+        <bpmn:flowNodeRef>contract</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>next</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>end</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="start" name="Обращение">
+      <bpmn:outgoing>flow_0</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="msgdef_start" />
+    </bpmn:startEvent>
+    <bpmn:userTask id="register" name="Записать клиента в таблицу">
+      <bpmn:incoming>flow_0</bpmn:incoming>
+      <bpmn:outgoing>flow_1</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="qualify" name="Уточнить потребность">
+      <bpmn:incoming>flow_1</bpmn:incoming>
+      <bpmn:outgoing>flow_2</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="offer" name="Подготовить предложение">
+      <bpmn:incoming>flow_2</bpmn:incoming>
+      <bpmn:incoming>flow_9</bpmn:incoming>
+      <bpmn:outgoing>flow_3</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="approve" name="Согласовать предложение">
+      <bpmn:incoming>flow_3</bpmn:incoming>
+      <bpmn:outgoing>flow_4</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="approved" name="Согласовано?">
+      <bpmn:incoming>flow_4</bpmn:incoming>
+      <bpmn:outgoing>flow_8</bpmn:outgoing>
+      <bpmn:outgoing>flow_9</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="clientdecision" name="Зафиксировать решение клиента">
+      <bpmn:incoming>flow_8</bpmn:incoming>
+      <bpmn:outgoing>flow_5</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="agree" name="Принято?">
+      <bpmn:incoming>flow_5</bpmn:incoming>
+      <bpmn:outgoing>flow_10</bpmn:outgoing>
+      <bpmn:outgoing>flow_11</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="contract" name="Учесть подписанный вне ИС договор">
+      <bpmn:incoming>flow_10</bpmn:incoming>
+      <bpmn:outgoing>flow_6</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:subProcess id="next" name="Подключение и сопровождение">
+      <bpmn:incoming>flow_6</bpmn:incoming>
+      <bpmn:outgoing>flow_7</bpmn:outgoing>
+    </bpmn:subProcess>
+    <bpmn:endEvent id="end" name="Договор учтён">
+      <bpmn:incoming>flow_7</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:endEvent id="lost" name="Отказ клиента">
+      <bpmn:incoming>flow_11</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="flow_0" sourceRef="start" targetRef="register" name="" />
+    <bpmn:sequenceFlow id="flow_1" sourceRef="register" targetRef="qualify" name="" />
+    <bpmn:sequenceFlow id="flow_2" sourceRef="qualify" targetRef="offer" name="" />
+    <bpmn:sequenceFlow id="flow_3" sourceRef="offer" targetRef="approve" name="" />
+    <bpmn:sequenceFlow id="flow_4" sourceRef="approve" targetRef="approved" name="" />
+    <bpmn:sequenceFlow id="flow_5" sourceRef="clientdecision" targetRef="agree" name="" />
+    <bpmn:sequenceFlow id="flow_6" sourceRef="contract" targetRef="next" name="" />
+    <bpmn:sequenceFlow id="flow_7" sourceRef="next" targetRef="end" name="" />
+    <bpmn:sequenceFlow id="flow_8" sourceRef="approved" targetRef="clientdecision" name="Да" />
+    <bpmn:sequenceFlow id="flow_9" sourceRef="approved" targetRef="offer" name="Доработать" />
+    <bpmn:sequenceFlow id="flow_10" sourceRef="agree" targetRef="contract" name="Да, документ подписан" />
+    <bpmn:sequenceFlow id="flow_11" sourceRef="agree" targetRef="lost" name="Нет" />
+  </bpmn:process>
+  <bpmn:collaboration id="Collaboration">
+    <bpmn:participant id="Participant" name="Сопровождение" processRef="Process_BPMN_AS_IS_sales" />
+    <bpmn:participant id="Client" name="Корпоративный клиент" />
+    <bpmn:messageFlow id="message_0" sourceRef="Client" targetRef="start" name="Обращение" />
+    <bpmn:messageFlow id="message_1" sourceRef="offer" targetRef="Client" name="Предложение" />
+    <bpmn:messageFlow id="message_2" sourceRef="Client" targetRef="clientdecision" name="Решение и подписанный документ" />
+  </bpmn:collaboration>
+  <bpmndi:BPMNDiagram id="Diagram">
+    <bpmndi:BPMNPlane id="Plane" bpmnElement="Collaboration">
+      <bpmndi:BPMNShape id="Participant_di" bpmnElement="Participant" isHorizontal="true">
+        <dc:Bounds x="40" y="270" width="1820" height="700" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Client_di" bpmnElement="Client" isHorizontal="true">
+        <dc:Bounds x="40" y="100" width="1820" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="lane_manager_di" bpmnElement="lane_manager" isHorizontal="true">
+        <dc:Bounds x="120" y="270" width="1740" height="290" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="lane_head_di" bpmnElement="lane_head" isHorizontal="true">
+        <dc:Bounds x="120" y="560" width="1740" height="190" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="lane_is_di" bpmnElement="lane_is" isHorizontal="true">
+        <dc:Bounds x="120" y="750" width="1740" height="220" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="start_di" bpmnElement="start">
+        <dc:Bounds x="210" y="370" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="register_di" bpmnElement="register">
+        <dc:Bounds x="300" y="345" width="210" height="95" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="qualify_di" bpmnElement="qualify">
+        <dc:Bounds x="570" y="345" width="190" height="95" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="offer_di" bpmnElement="offer">
+        <dc:Bounds x="810" y="345" width="190" height="95" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="approve_di" bpmnElement="approve">
+        <dc:Bounds x="1020" y="600" width="200" height="85" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="approved_di" bpmnElement="approved">
+        <dc:Bounds x="1280" y="615" width="60" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="clientdecision_di" bpmnElement="clientdecision">
+        <dc:Bounds x="1350" y="345" width="215" height="95" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="agree_di" bpmnElement="agree">
+        <dc:Bounds x="1640" y="365" width="60" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="contract_di" bpmnElement="contract">
+        <dc:Bounds x="1480" y="810" width="225" height="95" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="next_di" bpmnElement="next" isExpanded="false">
+        <dc:Bounds x="1180" y="810" width="225" height="95" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="end_di" bpmnElement="end">
+        <dc:Bounds x="1070" y="835" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="lost_di" bpmnElement="lost">
+        <dc:Bounds x="1750" y="610" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="flow_0_di" bpmnElement="flow_0">
+        <di:waypoint x="258.0" y="394.0" />
+        <di:waypoint x="279.0" y="394.0" />
+        <di:waypoint x="279.0" y="392.5" />
+        <di:waypoint x="300.0" y="392.5" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_1_di" bpmnElement="flow_1">
+        <di:waypoint x="510.0" y="392.5" />
+        <di:waypoint x="540.0" y="392.5" />
+        <di:waypoint x="540.0" y="392.5" />
+        <di:waypoint x="570.0" y="392.5" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_2_di" bpmnElement="flow_2">
+        <di:waypoint x="760.0" y="392.5" />
+        <di:waypoint x="785.0" y="392.5" />
+        <di:waypoint x="785.0" y="392.5" />
+        <di:waypoint x="810.0" y="392.5" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_3_di" bpmnElement="flow_3">
+        <di:waypoint x="905.0" y="440.0" />
+        <di:waypoint x="905.0" y="520.0" />
+        <di:waypoint x="1120.0" y="520.0" />
+        <di:waypoint x="1120.0" y="600.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_4_di" bpmnElement="flow_4">
+        <di:waypoint x="1220.0" y="642.5" />
+        <di:waypoint x="1250.0" y="642.5" />
+        <di:waypoint x="1250.0" y="645.0" />
+        <di:waypoint x="1280.0" y="645.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_5_di" bpmnElement="flow_5">
+        <di:waypoint x="1565.0" y="392.5" />
+        <di:waypoint x="1602.5" y="392.5" />
+        <di:waypoint x="1602.5" y="395.0" />
+        <di:waypoint x="1640.0" y="395.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_6_di" bpmnElement="flow_6">
+        <di:waypoint x="1480.0" y="857.5" />
+        <di:waypoint x="1442.5" y="857.5" />
+        <di:waypoint x="1442.5" y="857.5" />
+        <di:waypoint x="1405.0" y="857.5" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_7_di" bpmnElement="flow_7">
+        <di:waypoint x="1180.0" y="857.5" />
+        <di:waypoint x="1149.0" y="857.5" />
+        <di:waypoint x="1149.0" y="859.0" />
+        <di:waypoint x="1118.0" y="859.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_8_di" bpmnElement="flow_8">
+        <di:waypoint x="1310.0" y="615.0" />
+        <di:waypoint x="1310.0" y="527.5" />
+        <di:waypoint x="1457.5" y="527.5" />
+        <di:waypoint x="1457.5" y="440.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_9_di" bpmnElement="flow_9">
+        <di:waypoint x="1280" y="645" />
+        <di:waypoint x="1260" y="645" />
+        <di:waypoint x="1260" y="470" />
+        <di:waypoint x="905" y="470" />
+        <di:waypoint x="905" y="440" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_10_di" bpmnElement="flow_10">
+        <di:waypoint x="1670" y="425" />
+        <di:waypoint x="1670" y="780" />
+        <di:waypoint x="1590" y="780" />
+        <di:waypoint x="1590" y="810" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_11_di" bpmnElement="flow_11">
+        <di:waypoint x="1700" y="395" />
+        <di:waypoint x="1774" y="395" />
+        <di:waypoint x="1774" y="610" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="message_0_di" bpmnElement="message_0">
+        <di:waypoint x="234.0" y="220" />
+        <di:waypoint x="234.0" y="370" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="message_1_di" bpmnElement="message_1">
+        <di:waypoint x="905.0" y="345" />
+        <di:waypoint x="905.0" y="220" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="message_2_di" bpmnElement="message_2">
+        <di:waypoint x="1457.5" y="220" />
+        <di:waypoint x="1457.5" y="345" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

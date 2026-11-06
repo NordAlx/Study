@@ -1,0 +1,82 @@
+﻿Таблица;Поле;Описание;Тип;NOT NULL;Ограничение
+app_user;id;Идентификатор;uuid;True;PRIMARY KEY DEFAULT gen_random_uuid()
+app_user;login;Логин;varchar(80);True;UNIQUE
+app_user;full_name;Имя сотрудника;varchar(160);True;
+app_user;active;Признак активности;boolean;True;DEFAULT true
+app_role;code;Код роли;varchar(30);True;PRIMARY KEY
+app_role;name;Наименование;varchar(80);True;UNIQUE
+user_role;user_id;Пользователь;uuid;True;REFERENCES crm.app_user(id) ON DELETE RESTRICT
+user_role;role_code;Роль;varchar(30);True;REFERENCES crm.app_role(code) ON DELETE RESTRICT
+client;id;Идентификатор;uuid;True;PRIMARY KEY DEFAULT gen_random_uuid()
+client;inn;ИНН юридического лица;varchar(10);True;UNIQUE CHECK (inn ~ '^[0-9]{10}$')
+client;name;Наименование;varchar(200);True;
+client;active;Признак активности;boolean;True;DEFAULT true
+contact;id;Идентификатор;uuid;True;PRIMARY KEY DEFAULT gen_random_uuid()
+contact;client_id;Клиент;uuid;True;REFERENCES crm.client(id) ON DELETE RESTRICT
+contact;full_name;ФИО контакта;varchar(160);True;
+contact;email;Электронная почта;varchar(160);False;
+contact;phone;Телефон;varchar(30);False;
+deal;id;Идентификатор;uuid;True;PRIMARY KEY DEFAULT gen_random_uuid()
+deal;client_id;Клиент;uuid;True;REFERENCES crm.client(id) ON DELETE RESTRICT
+deal;owner_id;Ответственный менеджер;uuid;True;REFERENCES crm.app_user(id) ON DELETE RESTRICT
+deal;title;Предмет сделки;varchar(200);True;
+deal;stage;Стадия;varchar(20);True;CHECK (stage IN ('new','qualification','proposal','contract','won','lost'))
+deal;created_at;Время регистрации;timestamptz;True;DEFAULT CURRENT_TIMESTAMP
+deal;next_action_at;Срок следующего действия;timestamptz;False;
+deal;version;Версия для конкурентного изменения;integer;True;DEFAULT 1 CHECK (version > 0)
+product;id;Идентификатор;uuid;True;PRIMARY KEY DEFAULT gen_random_uuid()
+product;code;Код услуги;varchar(30);True;UNIQUE
+product;name;Наименование;varchar(160);True;
+product;active;Доступна для новых предложений;boolean;True;DEFAULT true
+offer;id;Идентификатор;uuid;True;PRIMARY KEY DEFAULT gen_random_uuid()
+offer;deal_id;Сделка;uuid;True;REFERENCES crm.deal(id) ON DELETE RESTRICT
+offer;author_id;Автор;uuid;True;REFERENCES crm.app_user(id) ON DELETE RESTRICT
+offer;version_no;Номер версии;integer;True;CHECK (version_no > 0)
+offer;status;Состояние;varchar(20);True;CHECK (status IN ('draft','review','approved','rejected'))
+offer;created_at;Время создания;timestamptz;True;DEFAULT CURRENT_TIMESTAMP
+offer_line;offer_id;Владелец КП;uuid;True;REFERENCES crm.offer(id) ON DELETE RESTRICT
+offer_line;line_no;Частичный ключ;smallint;True;CHECK (line_no > 0)
+offer_line;product_id;Услуга;uuid;True;REFERENCES crm.product(id) ON DELETE RESTRICT
+offer_line;quantity;Количество;numeric(12,3);True;CHECK (quantity > 0)
+offer_line;unit_price;Цена за единицу;numeric(14,2);True;CHECK (unit_price >= 0)
+offer_line;discount_pct;Скидка, %;numeric(5,2);True;DEFAULT 0 CHECK (discount_pct BETWEEN 0 AND 100)
+offer_line;currency;Валюта;char(3);True;CHECK (currency IN ('RUB','USD','EUR'))
+offer_line;billing_period;Период начисления;varchar(12);True;CHECK (billing_period IN ('once','month'))
+approval;id;Идентификатор;uuid;True;PRIMARY KEY DEFAULT gen_random_uuid()
+approval;offer_id;Версия КП;uuid;True;REFERENCES crm.offer(id) ON DELETE RESTRICT
+approval;approver_id;Согласующий;uuid;True;REFERENCES crm.app_user(id) ON DELETE RESTRICT
+approval;decision;Решение;varchar(12);True;CHECK (decision IN ('approved','rejected'))
+approval;note;Комментарий;text;False;
+approval;decided_at;Время решения;timestamptz;True;DEFAULT CURRENT_TIMESTAMP
+contract;id;Идентификатор;uuid;True;PRIMARY KEY DEFAULT gen_random_uuid()
+contract;offer_id;Версия КП;uuid;True;REFERENCES crm.offer(id) ON DELETE RESTRICT
+contract;number;Номер договора;varchar(60);True;UNIQUE
+contract;signed_at;Дата подписания;date;False;
+contract;file_ref;Ссылка на файл;varchar(240);False;
+contract;status;Состояние;varchar(12);True;CHECK (status IN ('draft','signed'))
+service_order;id;Идентификатор;uuid;True;PRIMARY KEY DEFAULT gen_random_uuid()
+service_order;contract_id;Договор;uuid;True;REFERENCES crm.contract(id) ON DELETE RESTRICT
+service_order;request_key;Ключ повторной команды;uuid;True;UNIQUE
+service_order;external_ref;Внешний номер;varchar(80);False;UNIQUE
+service_order;status;Текущий статус;varchar(16);True;CHECK (status IN ('created','sent','in_progress','completed','failed'))
+service_order;created_at;Время создания;timestamptz;True;DEFAULT CURRENT_TIMESTAMP
+service_order;updated_at;Время обновления;timestamptz;True;DEFAULT CURRENT_TIMESTAMP
+status_event;id;Идентификатор;uuid;True;PRIMARY KEY DEFAULT gen_random_uuid()
+status_event;order_id;Заказ;uuid;True;REFERENCES crm.service_order(id) ON DELETE RESTRICT
+status_event;external_event_id;Внешний идентификатор события;varchar(100);True;UNIQUE
+status_event;status;Полученный статус;varchar(16);True;CHECK (status IN ('sent','in_progress','completed','failed'))
+status_event;received_at;Время получения;timestamptz;True;DEFAULT CURRENT_TIMESTAMP
+activity;id;Идентификатор;uuid;True;PRIMARY KEY DEFAULT gen_random_uuid()
+activity;deal_id;Сделка;uuid;True;REFERENCES crm.deal(id) ON DELETE RESTRICT
+activity;author_id;Автор;uuid;True;REFERENCES crm.app_user(id) ON DELETE RESTRICT
+activity;channel;Канал;varchar(12);True;CHECK (channel IN ('call','email','meeting'))
+activity;result;Результат;text;True;
+activity;performed_at;Время взаимодействия;timestamptz;True;DEFAULT CURRENT_TIMESTAMP
+activity;next_due_at;Следующий контакт;timestamptz;False;
+audit_event;id;Идентификатор;uuid;True;PRIMARY KEY DEFAULT gen_random_uuid()
+audit_event;actor_id;Автор действия;uuid;True;REFERENCES crm.app_user(id) ON DELETE RESTRICT
+audit_event;object_type;Вид объекта;varchar(30);True;
+audit_event;object_id;Идентификатор объекта;uuid;True;
+audit_event;action;Действие;varchar(40);True;
+audit_event;occurred_at;Время события;timestamptz;True;DEFAULT CURRENT_TIMESTAMP
+audit_event;details;Детали изменения;jsonb;True;DEFAULT '{}'::jsonb

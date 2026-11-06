@@ -1,0 +1,948 @@
+[
+  {
+    "name": "department",
+    "label": "Подразделение",
+    "columns": [
+      {
+        "name": "id",
+        "type": "BIGINT",
+        "constraint": "GENERATED ALWAYS AS IDENTITY PRIMARY KEY",
+        "description": "Первичный внутренний ключ"
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(120)",
+        "constraint": "NOT NULL UNIQUE",
+        "description": "Название подразделения"
+      }
+    ],
+    "constraints": []
+  },
+  {
+    "name": "role",
+    "label": "Роль",
+    "columns": [
+      {
+        "name": "code",
+        "type": "VARCHAR(16)",
+        "constraint": "PRIMARY KEY",
+        "description": "Код роли"
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(120)",
+        "constraint": "NOT NULL UNIQUE",
+        "description": "Название роли"
+      }
+    ],
+    "constraints": []
+  },
+  {
+    "name": "employee",
+    "label": "Сотрудник",
+    "columns": [
+      {
+        "name": "id",
+        "type": "BIGINT",
+        "constraint": "GENERATED ALWAYS AS IDENTITY PRIMARY KEY",
+        "description": "Первичный внутренний ключ"
+      },
+      {
+        "name": "sso_subject",
+        "type": "VARCHAR(255)",
+        "constraint": "NOT NULL UNIQUE",
+        "description": "Стабильный sub внешнего IdP"
+      },
+      {
+        "name": "display_name",
+        "type": "VARCHAR(150)",
+        "constraint": "NOT NULL",
+        "description": "Отображаемое имя"
+      },
+      {
+        "name": "department_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL REFERENCES department(id) ON DELETE RESTRICT",
+        "description": "Подразделение"
+      },
+      {
+        "name": "role_code",
+        "type": "VARCHAR(16)",
+        "constraint": "NOT NULL REFERENCES role(code)",
+        "description": "Одна прикладная роль сотрудника"
+      },
+      {
+        "name": "is_active",
+        "type": "BOOLEAN",
+        "constraint": "NOT NULL DEFAULT TRUE",
+        "description": "Допуск к входу"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL DEFAULT CURRENT_TIMESTAMP",
+        "description": "Момент создания"
+      }
+    ],
+    "constraints": []
+  },
+  {
+    "name": "client",
+    "label": "Юридическое лицо",
+    "columns": [
+      {
+        "name": "id",
+        "type": "BIGINT",
+        "constraint": "GENERATED ALWAYS AS IDENTITY PRIMARY KEY",
+        "description": "Первичный внутренний ключ"
+      },
+      {
+        "name": "code",
+        "type": "VARCHAR(14)",
+        "constraint": "NOT NULL UNIQUE CHECK (code ~ '^CL-[0-9]{4}-[0-9]{6}$')",
+        "description": "Уникальный пользовательский код"
+      },
+      {
+        "name": "legal_name",
+        "type": "VARCHAR(250)",
+        "constraint": "NOT NULL",
+        "description": "Наименование юридического лица"
+      },
+      {
+        "name": "inn",
+        "type": "VARCHAR(10)",
+        "constraint": "NOT NULL UNIQUE CHECK (inn ~ '^[0-9]{10}$')",
+        "description": "ИНН юридического лица; контрольная сумма проверяется приложением"
+      },
+      {
+        "name": "manager_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL REFERENCES employee(id) ON DELETE RESTRICT",
+        "description": "Закреплённый менеджер"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL DEFAULT CURRENT_TIMESTAMP",
+        "description": "Момент создания"
+      }
+    ],
+    "constraints": []
+  },
+  {
+    "name": "contact",
+    "label": "Контактное лицо",
+    "columns": [
+      {
+        "name": "id",
+        "type": "BIGINT",
+        "constraint": "GENERATED ALWAYS AS IDENTITY PRIMARY KEY",
+        "description": "Первичный внутренний ключ"
+      },
+      {
+        "name": "client_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL REFERENCES client(id) ON DELETE RESTRICT",
+        "description": "Организация контакта"
+      },
+      {
+        "name": "full_name",
+        "type": "VARCHAR(150)",
+        "constraint": "NOT NULL",
+        "description": "Имя контактного лица"
+      },
+      {
+        "name": "email",
+        "type": "VARCHAR(254)",
+        "constraint": "",
+        "description": "Электронная почта, если предоставлена"
+      },
+      {
+        "name": "phone",
+        "type": "VARCHAR(32)",
+        "constraint": "",
+        "description": "Телефон, если предоставлен"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL DEFAULT CURRENT_TIMESTAMP",
+        "description": "Момент создания"
+      }
+    ],
+    "constraints": [
+      "CHECK (email IS NOT NULL OR phone IS NOT NULL)"
+    ]
+  },
+  {
+    "name": "deal_status",
+    "label": "Стадия сделки",
+    "columns": [
+      {
+        "name": "code",
+        "type": "VARCHAR(16)",
+        "constraint": "PRIMARY KEY",
+        "description": "Машинный код"
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(120)",
+        "constraint": "NOT NULL UNIQUE",
+        "description": "Название"
+      }
+    ],
+    "constraints": []
+  },
+  {
+    "name": "request_type",
+    "label": "Тип заявки",
+    "columns": [
+      {
+        "name": "code",
+        "type": "VARCHAR(16)",
+        "constraint": "PRIMARY KEY",
+        "description": "Машинный код"
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(120)",
+        "constraint": "NOT NULL UNIQUE",
+        "description": "Название"
+      }
+    ],
+    "constraints": []
+  },
+  {
+    "name": "request_status",
+    "label": "Статус заявки",
+    "columns": [
+      {
+        "name": "code",
+        "type": "VARCHAR(16)",
+        "constraint": "PRIMARY KEY",
+        "description": "Машинный код"
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(120)",
+        "constraint": "NOT NULL UNIQUE",
+        "description": "Название"
+      }
+    ],
+    "constraints": []
+  },
+  {
+    "name": "deal",
+    "label": "Сделка",
+    "columns": [
+      {
+        "name": "id",
+        "type": "BIGINT",
+        "constraint": "GENERATED ALWAYS AS IDENTITY PRIMARY KEY",
+        "description": "Первичный внутренний ключ"
+      },
+      {
+        "name": "code",
+        "type": "VARCHAR(14)",
+        "constraint": "NOT NULL UNIQUE CHECK (code ~ '^DL-[0-9]{4}-[0-9]{6}$')",
+        "description": "Уникальный пользовательский код"
+      },
+      {
+        "name": "client_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL REFERENCES client(id) ON DELETE RESTRICT",
+        "description": "Клиент"
+      },
+      {
+        "name": "owner_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL REFERENCES employee(id) ON DELETE RESTRICT",
+        "description": "Ответственный менеджер"
+      },
+      {
+        "name": "title",
+        "type": "VARCHAR(200)",
+        "constraint": "NOT NULL",
+        "description": "Суть обращения"
+      },
+      {
+        "name": "status_code",
+        "type": "VARCHAR(16)",
+        "constraint": "NOT NULL DEFAULT 'NEW' REFERENCES deal_status(code)",
+        "description": "Стадия сделки"
+      },
+      {
+        "name": "opened_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL DEFAULT CURRENT_TIMESTAMP",
+        "description": "Момент регистрации обращения"
+      },
+      {
+        "name": "closed_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "",
+        "description": "Момент закрытия, только для WON/LOST"
+      },
+      {
+        "name": "loss_reason",
+        "type": "VARCHAR(500)",
+        "constraint": "",
+        "description": "Обязательна при LOST"
+      }
+    ],
+    "constraints": [
+      "CHECK ((status_code IN ('WON','LOST')) = (closed_at IS NOT NULL))",
+      "CHECK (closed_at IS NULL OR closed_at >= opened_at)",
+      "CHECK (status_code <> 'LOST' OR length(trim(loss_reason)) > 0 AND loss_reason IS NOT NULL)"
+    ]
+  },
+  {
+    "name": "product",
+    "label": "Продукт каталога",
+    "columns": [
+      {
+        "name": "id",
+        "type": "BIGINT",
+        "constraint": "GENERATED ALWAYS AS IDENTITY PRIMARY KEY",
+        "description": "Первичный внутренний ключ"
+      },
+      {
+        "name": "code",
+        "type": "VARCHAR(30)",
+        "constraint": "NOT NULL UNIQUE",
+        "description": "Код продукта"
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(150)",
+        "constraint": "NOT NULL",
+        "description": "Учебное наименование услуги"
+      },
+      {
+        "name": "unit",
+        "type": "VARCHAR(30)",
+        "constraint": "NOT NULL",
+        "description": "Единица количества"
+      },
+      {
+        "name": "monthly_price",
+        "type": "NUMERIC(14,2)",
+        "constraint": "NOT NULL CHECK (monthly_price >= 0)",
+        "description": "Цена за единицу в месяц"
+      },
+      {
+        "name": "one_time_price",
+        "type": "NUMERIC(14,2)",
+        "constraint": "NOT NULL CHECK (one_time_price >= 0)",
+        "description": "Разовая цена за единицу"
+      },
+      {
+        "name": "is_active",
+        "type": "BOOLEAN",
+        "constraint": "NOT NULL DEFAULT TRUE",
+        "description": "Доступность в каталоге"
+      }
+    ],
+    "constraints": []
+  },
+  {
+    "name": "offer",
+    "label": "Версия предложения",
+    "columns": [
+      {
+        "name": "id",
+        "type": "BIGINT",
+        "constraint": "GENERATED ALWAYS AS IDENTITY PRIMARY KEY",
+        "description": "Первичный внутренний ключ"
+      },
+      {
+        "name": "code",
+        "type": "VARCHAR(14)",
+        "constraint": "NOT NULL UNIQUE CHECK (code ~ '^OF-[0-9]{4}-[0-9]{6}$')",
+        "description": "Уникальный пользовательский код"
+      },
+      {
+        "name": "deal_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL REFERENCES deal(id) ON DELETE RESTRICT",
+        "description": "Сделка"
+      },
+      {
+        "name": "version",
+        "type": "INTEGER",
+        "constraint": "NOT NULL CHECK (version > 0)",
+        "description": "Номер версии в сделке"
+      },
+      {
+        "name": "status_code",
+        "type": "VARCHAR(16)",
+        "constraint": "NOT NULL DEFAULT 'DRAFT' CHECK (status_code IN ('DRAFT','SUBMITTED','APPROVED','REJECTED'))",
+        "description": "Состояние согласования"
+      },
+      {
+        "name": "created_by",
+        "type": "BIGINT",
+        "constraint": "NOT NULL REFERENCES employee(id) ON DELETE RESTRICT",
+        "description": "Автор версии"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL DEFAULT CURRENT_TIMESTAMP",
+        "description": "Момент создания"
+      }
+    ],
+    "constraints": [
+      "UNIQUE (deal_id, version)",
+      "UNIQUE (id, deal_id)"
+    ]
+  },
+  {
+    "name": "offer_line",
+    "label": "Позиция предложения",
+    "columns": [
+      {
+        "name": "id",
+        "type": "BIGINT",
+        "constraint": "GENERATED ALWAYS AS IDENTITY PRIMARY KEY",
+        "description": "Первичный внутренний ключ"
+      },
+      {
+        "name": "offer_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL REFERENCES offer(id) ON DELETE RESTRICT",
+        "description": "Версия предложения"
+      },
+      {
+        "name": "product_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL REFERENCES product(id) ON DELETE RESTRICT",
+        "description": "Продукт"
+      },
+      {
+        "name": "quantity",
+        "type": "NUMERIC(12,3)",
+        "constraint": "NOT NULL CHECK (quantity > 0)",
+        "description": "Количество единиц"
+      },
+      {
+        "name": "monthly_price",
+        "type": "NUMERIC(14,2)",
+        "constraint": "NOT NULL CHECK (monthly_price >= 0)",
+        "description": "Снимок абонентской цены за единицу"
+      },
+      {
+        "name": "one_time_price",
+        "type": "NUMERIC(14,2)",
+        "constraint": "NOT NULL CHECK (one_time_price >= 0)",
+        "description": "Снимок разовой цены за единицу"
+      },
+      {
+        "name": "discount",
+        "type": "NUMERIC(5,4)",
+        "constraint": "NOT NULL DEFAULT 0 CHECK (discount BETWEEN 0 AND 1)",
+        "description": "Скидка только на абонентскую часть"
+      },
+      {
+        "name": "monthly_amount",
+        "type": "NUMERIC(20,2)",
+        "constraint": "GENERATED ALWAYS AS (round(quantity * monthly_price * (1-discount),2)) STORED",
+        "description": "Расчёт строки за месяц"
+      },
+      {
+        "name": "one_time_amount",
+        "type": "NUMERIC(20,2)",
+        "constraint": "GENERATED ALWAYS AS (round(quantity * one_time_price,2)) STORED",
+        "description": "Разовая сумма строки"
+      }
+    ],
+    "constraints": []
+  },
+  {
+    "name": "approval",
+    "label": "Решение согласования",
+    "columns": [
+      {
+        "name": "id",
+        "type": "BIGINT",
+        "constraint": "GENERATED ALWAYS AS IDENTITY PRIMARY KEY",
+        "description": "Первичный внутренний ключ"
+      },
+      {
+        "name": "offer_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL UNIQUE REFERENCES offer(id)",
+        "description": "Одна резолюция на версию"
+      },
+      {
+        "name": "approver_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL REFERENCES employee(id) ON DELETE RESTRICT",
+        "description": "Руководитель, не автор"
+      },
+      {
+        "name": "decision",
+        "type": "VARCHAR(16)",
+        "constraint": "NOT NULL CHECK (decision IN ('APPROVED','REJECTED'))",
+        "description": "Решение"
+      },
+      {
+        "name": "comment",
+        "type": "VARCHAR(1000)",
+        "constraint": "",
+        "description": "Пояснение"
+      },
+      {
+        "name": "decided_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL DEFAULT CURRENT_TIMESTAMP",
+        "description": "Момент решения"
+      }
+    ],
+    "constraints": []
+  },
+  {
+    "name": "contract",
+    "label": "Договор",
+    "columns": [
+      {
+        "name": "id",
+        "type": "BIGINT",
+        "constraint": "GENERATED ALWAYS AS IDENTITY PRIMARY KEY",
+        "description": "Первичный внутренний ключ"
+      },
+      {
+        "name": "code",
+        "type": "VARCHAR(14)",
+        "constraint": "NOT NULL UNIQUE CHECK (code ~ '^CT-[0-9]{4}-[0-9]{6}$')",
+        "description": "Уникальный пользовательский код"
+      },
+      {
+        "name": "deal_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL REFERENCES deal(id) ON DELETE RESTRICT",
+        "description": "Сделка"
+      },
+      {
+        "name": "offer_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL UNIQUE",
+        "description": "Согласованное предложение той же сделки"
+      },
+      {
+        "name": "external_number",
+        "type": "VARCHAR(100)",
+        "constraint": "NOT NULL",
+        "description": "Номер подписанного документа"
+      },
+      {
+        "name": "document_ref",
+        "type": "VARCHAR(500)",
+        "constraint": "NOT NULL",
+        "description": "Внутренняя ссылка на файл, не произвольный URL"
+      },
+      {
+        "name": "signed_on",
+        "type": "DATE",
+        "constraint": "NOT NULL",
+        "description": "Дата подписания вне ИС"
+      },
+      {
+        "name": "starts_on",
+        "type": "DATE",
+        "constraint": "NOT NULL",
+        "description": "Начало действия"
+      },
+      {
+        "name": "ends_on",
+        "type": "DATE",
+        "constraint": "NOT NULL",
+        "description": "Текущий конец действия"
+      },
+      {
+        "name": "status_code",
+        "type": "VARCHAR(16)",
+        "constraint": "NOT NULL DEFAULT 'ACTIVE' CHECK (status_code IN ('ACTIVE','EXPIRED','TERMINATED'))",
+        "description": "Состояние договора"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL DEFAULT CURRENT_TIMESTAMP",
+        "description": "Момент создания"
+      }
+    ],
+    "constraints": [
+      "FOREIGN KEY (offer_id,deal_id) REFERENCES offer(id,deal_id) ON DELETE RESTRICT",
+      "CHECK (ends_on >= starts_on)"
+    ]
+  },
+  {
+    "name": "contract_service",
+    "label": "Версия услуги договора",
+    "columns": [
+      {
+        "name": "id",
+        "type": "BIGINT",
+        "constraint": "GENERATED ALWAYS AS IDENTITY PRIMARY KEY",
+        "description": "Первичный внутренний ключ"
+      },
+      {
+        "name": "contract_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL REFERENCES contract(id) ON DELETE RESTRICT",
+        "description": "Договор"
+      },
+      {
+        "name": "product_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL REFERENCES product(id) ON DELETE RESTRICT",
+        "description": "Продукт"
+      },
+      {
+        "name": "service_label",
+        "type": "VARCHAR(120)",
+        "constraint": "NOT NULL",
+        "description": "Площадка или обозначение услуги"
+      },
+      {
+        "name": "quantity",
+        "type": "NUMERIC(12,3)",
+        "constraint": "NOT NULL CHECK (quantity > 0)",
+        "description": "Количество единиц"
+      },
+      {
+        "name": "monthly_unit_price",
+        "type": "NUMERIC(14,2)",
+        "constraint": "NOT NULL CHECK (monthly_unit_price >= 0)",
+        "description": "Согласованная цена за единицу после скидки"
+      },
+      {
+        "name": "valid_from",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL",
+        "description": "Начало интервала условий"
+      },
+      {
+        "name": "valid_to",
+        "type": "TIMESTAMPTZ",
+        "constraint": "",
+        "description": "Исключённая правая граница; NULL для текущих условий"
+      }
+    ],
+    "constraints": [
+      "CHECK (valid_to IS NULL OR valid_to > valid_from)"
+    ]
+  },
+  {
+    "name": "service_request",
+    "label": "Заявка сопровождения",
+    "columns": [
+      {
+        "name": "id",
+        "type": "BIGINT",
+        "constraint": "GENERATED ALWAYS AS IDENTITY PRIMARY KEY",
+        "description": "Первичный внутренний ключ"
+      },
+      {
+        "name": "code",
+        "type": "VARCHAR(14)",
+        "constraint": "NOT NULL UNIQUE CHECK (code ~ '^RQ-[0-9]{4}-[0-9]{6}$')",
+        "description": "Уникальный пользовательский код"
+      },
+      {
+        "name": "contract_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL REFERENCES contract(id) ON DELETE RESTRICT",
+        "description": "Договор"
+      },
+      {
+        "name": "type_code",
+        "type": "VARCHAR(16)",
+        "constraint": "NOT NULL REFERENCES request_type(code)",
+        "description": "CONNECT либо CHANGE"
+      },
+      {
+        "name": "status_code",
+        "type": "VARCHAR(16)",
+        "constraint": "NOT NULL DEFAULT 'NEW' REFERENCES request_status(code)",
+        "description": "Статус исполнения"
+      },
+      {
+        "name": "owner_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL REFERENCES employee(id) ON DELETE RESTRICT",
+        "description": "Менеджер заявки"
+      },
+      {
+        "name": "assignee_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL REFERENCES employee(id) ON DELETE RESTRICT",
+        "description": "Назначенный технический специалист"
+      },
+      {
+        "name": "details",
+        "type": "TEXT",
+        "constraint": "NOT NULL",
+        "description": "Потребность, условия и подписанное основание изменения"
+      },
+      {
+        "name": "requested_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL DEFAULT CURRENT_TIMESTAMP",
+        "description": "Момент регистрации"
+      },
+      {
+        "name": "target_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL",
+        "description": "Плановый срок исполнения"
+      },
+      {
+        "name": "closed_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "",
+        "description": "Момент терминального состояния"
+      },
+      {
+        "name": "external_ref",
+        "type": "VARCHAR(120)",
+        "constraint": "UNIQUE",
+        "description": "Идентификатор внешней операции"
+      }
+    ],
+    "constraints": [
+      "CHECK (target_at >= requested_at)",
+      "CHECK (closed_at IS NULL OR closed_at >= requested_at)",
+      "CHECK ((status_code IN ('DONE','FAILED','CANCELLED')) = (closed_at IS NOT NULL))"
+    ]
+  },
+  {
+    "name": "renewal",
+    "label": "Решение о продлении",
+    "columns": [
+      {
+        "name": "id",
+        "type": "BIGINT",
+        "constraint": "GENERATED ALWAYS AS IDENTITY PRIMARY KEY",
+        "description": "Первичный внутренний ключ"
+      },
+      {
+        "name": "contract_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL REFERENCES contract(id) ON DELETE RESTRICT",
+        "description": "Договор"
+      },
+      {
+        "name": "previous_end",
+        "type": "DATE",
+        "constraint": "NOT NULL",
+        "description": "Прежний конец действия, основа выборки показателя"
+      },
+      {
+        "name": "new_end",
+        "type": "DATE",
+        "constraint": "",
+        "description": "Предлагаемый новый конец"
+      },
+      {
+        "name": "decision",
+        "type": "VARCHAR(16)",
+        "constraint": "NOT NULL DEFAULT 'PENDING' CHECK (decision IN ('PENDING','ACCEPTED','DECLINED'))",
+        "description": "Решение клиента по подписанному основанию"
+      },
+      {
+        "name": "decided_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "",
+        "description": "Момент принятия решения"
+      },
+      {
+        "name": "document_ref",
+        "type": "VARCHAR(500)",
+        "constraint": "",
+        "description": "Основание принятого продления"
+      },
+      {
+        "name": "owner_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL REFERENCES employee(id) ON DELETE RESTRICT",
+        "description": "Ответственный менеджер"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL DEFAULT CURRENT_TIMESTAMP",
+        "description": "Момент создания"
+      }
+    ],
+    "constraints": [
+      "UNIQUE (contract_id,previous_end)",
+      "CHECK (decision <> 'ACCEPTED' OR (new_end IS NOT NULL AND new_end > previous_end AND document_ref IS NOT NULL))",
+      "CHECK ((decision <> 'PENDING') = (decided_at IS NOT NULL))"
+    ]
+  },
+  {
+    "name": "integration_job",
+    "label": "Устойчивая очередь обмена",
+    "columns": [
+      {
+        "name": "id",
+        "type": "BIGINT",
+        "constraint": "GENERATED ALWAYS AS IDENTITY PRIMARY KEY",
+        "description": "Первичный внутренний ключ"
+      },
+      {
+        "name": "request_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL REFERENCES service_request(id) ON DELETE RESTRICT",
+        "description": "Исходная заявка"
+      },
+      {
+        "name": "idempotency_key",
+        "type": "UUID",
+        "constraint": "NOT NULL UNIQUE",
+        "description": "Генерируется приложением один раз на операцию"
+      },
+      {
+        "name": "operation_code",
+        "type": "VARCHAR(16)",
+        "constraint": "NOT NULL CHECK (operation_code IN ('CONNECT','CHANGE'))",
+        "description": "Смысл внешней операции"
+      },
+      {
+        "name": "status_code",
+        "type": "VARCHAR(16)",
+        "constraint": "NOT NULL DEFAULT 'PENDING' CHECK (status_code IN ('PENDING','PROCESSING','RETRY','DONE','ERROR'))",
+        "description": "Состояние доставки"
+      },
+      {
+        "name": "attempts",
+        "type": "SMALLINT",
+        "constraint": "NOT NULL DEFAULT 0 CHECK (attempts BETWEEN 0 AND 5)",
+        "description": "Число выполненных попыток"
+      },
+      {
+        "name": "next_attempt_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL DEFAULT CURRENT_TIMESTAMP",
+        "description": "Ближайшая разрешённая попытка"
+      },
+      {
+        "name": "last_error",
+        "type": "VARCHAR(1000)",
+        "constraint": "",
+        "description": "Санитизированное описание ошибки"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL DEFAULT CURRENT_TIMESTAMP",
+        "description": "Момент создания"
+      }
+    ],
+    "constraints": [
+      "UNIQUE (request_id,operation_code)"
+    ]
+  },
+  {
+    "name": "notification_log",
+    "label": "Журнал напоминаний",
+    "columns": [
+      {
+        "name": "id",
+        "type": "BIGINT",
+        "constraint": "GENERATED ALWAYS AS IDENTITY PRIMARY KEY",
+        "description": "Первичный внутренний ключ"
+      },
+      {
+        "name": "contract_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL REFERENCES contract(id) ON DELETE RESTRICT",
+        "description": "Договор"
+      },
+      {
+        "name": "recipient_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL REFERENCES employee(id) ON DELETE RESTRICT",
+        "description": "Получатель"
+      },
+      {
+        "name": "due_on",
+        "type": "DATE",
+        "constraint": "NOT NULL",
+        "description": "Срок договора, к которому относится напоминание"
+      },
+      {
+        "name": "event_key",
+        "type": "VARCHAR(40)",
+        "constraint": "NOT NULL DEFAULT 'RENEWAL_30_DAYS'",
+        "description": "Тип уведомления"
+      },
+      {
+        "name": "sent_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "",
+        "description": "Момент подтверждения почтовым шлюзом"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL DEFAULT CURRENT_TIMESTAMP",
+        "description": "Момент создания"
+      }
+    ],
+    "constraints": [
+      "UNIQUE (contract_id,recipient_id,due_on,event_key)"
+    ]
+  },
+  {
+    "name": "audit_event",
+    "label": "Журнал аудита",
+    "columns": [
+      {
+        "name": "id",
+        "type": "BIGINT",
+        "constraint": "GENERATED ALWAYS AS IDENTITY PRIMARY KEY",
+        "description": "Первичный внутренний ключ"
+      },
+      {
+        "name": "actor_id",
+        "type": "BIGINT",
+        "constraint": "REFERENCES employee(id) ON DELETE RESTRICT",
+        "description": "Автор, NULL для фонового процесса"
+      },
+      {
+        "name": "entity_type",
+        "type": "VARCHAR(40)",
+        "constraint": "NOT NULL",
+        "description": "Тип бизнес-объекта"
+      },
+      {
+        "name": "entity_id",
+        "type": "BIGINT",
+        "constraint": "",
+        "description": "Ключ объекта; полиморфная ссылка без FK"
+      },
+      {
+        "name": "action",
+        "type": "VARCHAR(50)",
+        "constraint": "NOT NULL",
+        "description": "Действие и результат"
+      },
+      {
+        "name": "occurred_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL DEFAULT CURRENT_TIMESTAMP",
+        "description": "Время события"
+      },
+      {
+        "name": "details",
+        "type": "JSONB",
+        "constraint": "NOT NULL DEFAULT '{}'::jsonb",
+        "description": "Технические сведения без токенов и лишних персональных данных"
+      }
+    ],
+    "constraints": []
+  }
+]

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1120" viewBox="0 0 1800 1120"><rect width="100%" height="100%" fill="white"/>
+<text x="552.515625" y="57.0" font-family="Arial" font-size="32" font-weight="700" fill="#17212B">UML Последовательность передачи заказа</text>
+<text x="603.5078125" y="1091.0" font-family="Arial" font-size="20" font-weight="400" fill="#17212B">Проектируемая модель сопровождения корпоративных продаж</text>
+<rect x="10" y="120" width="280" height="85" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="88.5078125" y="172.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">Менеджер</text>
+<polyline points="150,205 150,1030" fill="none" stroke="#364152" stroke-width="2" stroke-dasharray="9 7"/>
+<rect x="375" y="120" width="280" height="85" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="434.9921875" y="172.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">Форма заказа</text>
+<polyline points="515,205 515,1030" fill="none" stroke="#364152" stroke-width="2" stroke-dasharray="9 7"/>
+<rect x="740" y="120" width="280" height="85" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="795.9921875" y="172.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">Сервис заказа</text>
+<polyline points="880,205 880,1030" fill="none" stroke="#364152" stroke-width="2" stroke-dasharray="9 7"/>
+<rect x="1105" y="120" width="280" height="85" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1176.5" y="172.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">Хранилище</text>
+<polyline points="1245,205 1245,1030" fill="none" stroke="#364152" stroke-width="2" stroke-dasharray="9 7"/>
+<rect x="1470" y="120" width="280" height="85" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1559.5" y="156.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">Система</text>
+<text x="1531.515625" y="187.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">подключения</text>
+<polyline points="1610,205 1610,1030" fill="none" stroke="#364152" stroke-width="2" stroke-dasharray="9 7"/>
+<polyline points="150,270 515,270" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="501.30366589531536,276.11640679589357 515,270 501.30366589531536,263.88359320410643" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="222.5" y="223.5" width="220.0" height="39" fill="white"/>
+<text x="238.5" y="251.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">1 Передать заказ</text>
+<polyline points="515,349 880,349" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="866.3036658953154,355.11640679589357 880,349 866.3036658953154,342.88359320410643" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="511.5" y="302.5" width="372.0" height="39" fill="white"/>
+<text x="527.5" y="330.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">2 Создать заказ(contractId, key)</text>
+<polyline points="880,428 1245,428" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1231.3036658953154,434.11640679589357 1245,428 1231.3036658953154,421.88359320410643" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="825.5" y="381.5" width="474.0" height="39" fill="white"/>
+<text x="841.5" y="409.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">3 Проверить договор и уникальность key</text>
+<polyline points="880,507 1245,507" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1231.3036658953154,513.1164067958936 1245,507 1231.3036658953154,500.88359320410643" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="899.0" y="460.5" width="327.0" height="39" fill="white"/>
+<text x="915.0" y="488.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">4 Сохранить заказ и outbox</text>
+<polyline points="880,586 1610,586" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1596.3036658953154,592.1164067958936 1610,586 1596.3036658953154,579.8835932041064" fill="none" stroke="#364152" stroke-width="2"/>
+<rect x="1099.5" y="539.5" width="291.0" height="39" fill="white"/>
+<text x="1115.5" y="567.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">5 Отправить заказ с key</text>
+<polyline points="1610,665 880,665" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="893.6963341046846,658.8835932041064 880,665 893.6963341046846,671.1164067958936" fill="none" stroke="#364152" stroke-width="2"/>
+<rect x="1058.5" y="618.5" width="373.0" height="39" fill="white"/>
+<text x="1074.5" y="646.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">6 Подтвердить приём externalId</text>
+<polyline points="1610,744 880,744" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="893.6963341046846,737.8835932041064 880,744 893.6963341046846,750.1164067958936" fill="none" stroke="#364152" stroke-width="2"/>
+<rect x="1041.5" y="697.5" width="407.0" height="39" fill="white"/>
+<text x="1057.5" y="725.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">7 Передать новый статус с eventId</text>
+<polyline points="880,823 1245,823" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1231.3036658953154,829.1164067958936 1245,823 1231.3036658953154,816.8835932041064" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="905.0078125" y="776.5" width="314.984375" height="39" fill="white"/>
+<text x="921.0078125" y="804.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">8 Записать статус и аудит</text>
+<polyline points="880,902 515,902" fill="none" stroke="#364152" stroke-width="2" stroke-dasharray="9 7"/>
+<polyline points="528.6963341046846,895.8835932041064 515,902 528.6963341046846,908.1164067958936" fill="none" stroke="#364152" stroke-width="2"/>
+<rect x="498.5" y="855.5" width="398.0" height="39" fill="white"/>
+<text x="514.5" y="883.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">9 Показать актуальное состояние</text>
+<text x="401.515625" y="1058.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">Повторная команда возвращает существующий заказ; повтор eventId не меняет состояние</text>
+</svg>

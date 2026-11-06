@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2100" height="1490" viewBox="0 0 2100 1490"><rect width="100%" height="100%" fill="white"/>
+<text x="746.0078125" y="57.0" font-family="Arial" font-size="32" font-weight="700" fill="#17212B">UML Классы проектируемой системы</text>
+<text x="753.5078125" y="1461.0" font-family="Arial" font-size="20" font-weight="400" fill="#17212B">Проектируемая модель сопровождения корпоративных продаж</text>
+<rect x="70" y="160" width="565" height="210" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="82" y="228.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">Client</text>
+<text x="82" y="259.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">-id: Guid; -inn: String</text>
+<text x="82" y="290.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">-name: String</text>
+<text x="82" y="321.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">+updateDetails(): Void</text>
+<line x1="70" y1="233.0" x2="635" y2="233.0" stroke="#364152" stroke-width="1.5"/>
+<line x1="70" y1="295.0" x2="635" y2="295.0" stroke="#364152" stroke-width="1.5"/>
+<rect x="760" y="160" width="565" height="210" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="772" y="228.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">Deal</text>
+<text x="772" y="259.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">-id: Guid; -stage: DealStage</text>
+<text x="772" y="290.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">-version: Int32; -ownerId: Guid</text>
+<text x="772" y="321.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">+advance(): Void; +closeLost(): Void</text>
+<line x1="760" y1="233.0" x2="1325" y2="233.0" stroke="#364152" stroke-width="1.5"/>
+<line x1="760" y1="295.0" x2="1325" y2="295.0" stroke="#364152" stroke-width="1.5"/>
+<rect x="1450" y="160" width="565" height="210" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1462" y="228.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">User</text>
+<text x="1462" y="259.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">-id: Guid; -login: String</text>
+<text x="1462" y="290.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">-roles: Set&lt;Role&gt;</text>
+<text x="1462" y="321.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">+hasPermission(): Boolean</text>
+<line x1="1450" y1="233.0" x2="2015" y2="233.0" stroke="#364152" stroke-width="1.5"/>
+<line x1="1450" y1="295.0" x2="2015" y2="295.0" stroke="#364152" stroke-width="1.5"/>
+<rect x="70" y="545" width="565" height="210" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="82" y="613.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">Contact</text>
+<text x="82" y="644.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">-id: Guid; -clientId: Guid</text>
+<text x="82" y="675.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">-name: String; -email: String</text>
+<text x="82" y="706.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">+update(): Void</text>
+<line x1="70" y1="618.0" x2="635" y2="618.0" stroke="#364152" stroke-width="1.5"/>
+<line x1="70" y1="680.0" x2="635" y2="680.0" stroke="#364152" stroke-width="1.5"/>
+<rect x="760" y="545" width="565" height="210" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="772" y="597.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">Offer</text>
+<text x="772" y="628.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">-id: Guid; -version: Int32</text>
+<text x="772" y="659.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">-status: OfferStatus</text>
+<text x="772" y="690.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">+calculate(): Decimal</text>
+<text x="772" y="721.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">+submit(): Void; +approve(): Void</text>
+<line x1="760" y1="602.5" x2="1325" y2="602.5" stroke="#364152" stroke-width="1.5"/>
+<line x1="760" y1="664.5" x2="1325" y2="664.5" stroke="#364152" stroke-width="1.5"/>
+<rect x="1450" y="545" width="565" height="210" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1462" y="597.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">Approval</text>
+<text x="1462" y="628.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">-id: Guid; -approverId: Guid</text>
+<text x="1462" y="659.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">-decision: Decision; -comment: String</text>
+<text x="1462" y="690.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">-decidedAt: DateTime?</text>
+<text x="1462" y="721.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">+recordDecision(): Void</text>
+<line x1="1450" y1="602.5" x2="2015" y2="602.5" stroke="#364152" stroke-width="1.5"/>
+<line x1="1450" y1="695.5" x2="2015" y2="695.5" stroke="#364152" stroke-width="1.5"/>
+<rect x="70" y="930" width="565" height="210" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="82" y="998.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">Product</text>
+<text x="82" y="1029.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">-id: Guid; -code: String</text>
+<text x="82" y="1060.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">-name: String; -active: Boolean</text>
+<text x="82" y="1091.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">+archive(): Void</text>
+<line x1="70" y1="1003.0" x2="635" y2="1003.0" stroke="#364152" stroke-width="1.5"/>
+<line x1="70" y1="1065.0" x2="635" y2="1065.0" stroke="#364152" stroke-width="1.5"/>
+<rect x="760" y="930" width="565" height="210" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="772" y="982.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">OfferLine</text>
+<text x="772" y="1013.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">-id: Guid; -qty: Int32</text>
+<text x="772" y="1044.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">-unitPrice: Decimal; -discount: Decimal</text>
+<text x="772" y="1075.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">-currency: String; -billingPeriod: String</text>
+<text x="772" y="1106.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">+amount(): Decimal</text>
+<line x1="760" y1="987.5" x2="1325" y2="987.5" stroke="#364152" stroke-width="1.5"/>
+<line x1="760" y1="1080.5" x2="1325" y2="1080.5" stroke="#364152" stroke-width="1.5"/>
+<rect x="1450" y="930" width="565" height="210" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1462" y="998.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">Contract</text>
+<text x="1462" y="1029.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">-id: Guid; -number: String</text>
+<text x="1462" y="1060.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">-signedAt: DateTime?; -fileId: Guid</text>
+<text x="1462" y="1091.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">+registerSignature(): Void</text>
+<line x1="1450" y1="1003.0" x2="2015" y2="1003.0" stroke="#364152" stroke-width="1.5"/>
+<line x1="1450" y1="1065.0" x2="2015" y2="1065.0" stroke="#364152" stroke-width="1.5"/>
+<rect x="1450" y="1220" width="565" height="155" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1462" y="1260.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">ServiceOrder</text>
+<text x="1462" y="1291.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">-id: Guid; -key: String; -externalId: String?</text>
+<text x="1462" y="1322.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">-status: OrderStatus</text>
+<text x="1462" y="1353.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">+markSent(): Void; +applyStatus(): Void</text>
+<line x1="1450" y1="1265.5" x2="2015" y2="1265.5" stroke="#364152" stroke-width="1.5"/>
+<line x1="1450" y1="1327.5" x2="2015" y2="1327.5" stroke="#364152" stroke-width="1.5"/>
+<polyline points="635,230 760,230" fill="none" stroke="#364152" stroke-width="2"/>
+<text x="664.0" y="211.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">1</text>
+<text x="692.0" y="261.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">0..*</text>
+<polyline points="352,370 352,545" fill="none" stroke="#364152" stroke-width="2"/>
+<text x="410.5" y="404.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">1</text>
+<text x="399.0" y="528.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">0..*</text>
+<polyline points="1325,230 1450,230" fill="none" stroke="#364152" stroke-width="2"/>
+<text x="1342.5" y="211.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">0..*</text>
+<text x="1393.5" y="261.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">1</text>
+<polyline points="1042,370 1042,545" fill="none" stroke="#364152" stroke-width="2"/>
+<text x="1100.5" y="404.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">1</text>
+<text x="1089.0" y="528.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">0..*</text>
+<polyline points="1325,630 1450,630" fill="none" stroke="#364152" stroke-width="2"/>
+<text x="1354.0" y="611.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">1</text>
+<text x="1382.0" y="661.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">0..*</text>
+<polyline points="1042,755 1042,930" fill="none" stroke="#364152" stroke-width="2"/>
+<text x="1100.5" y="789.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">1</text>
+<text x="1089.0" y="913.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">1..*</text>
+<polyline points="635,1010 760,1010" fill="none" stroke="#364152" stroke-width="2"/>
+<text x="664.0" y="991.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">1</text>
+<text x="692.0" y="1041.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">0..*</text>
+<polyline points="1325,700 1400,700 1400,1000 1450,1000" fill="none" stroke="#364152" stroke-width="2"/>
+<text x="1354.0" y="681.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">1</text>
+<text x="1380.0" y="1031.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">0..1</text>
+<polyline points="1732,1140 1732,1220" fill="none" stroke="#364152" stroke-width="2"/>
+<text x="1790.5" y="1174.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">1</text>
+<text x="1779.0" y="1203.5" font-family="Arial" font-size="24" font-weight="400" fill="#17212B">0..*</text>
+<text x="461.0703125" y="119.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">Типы и методы заданы для проектирования; кратность читается у соответствующего конца связи</text>
+</svg>

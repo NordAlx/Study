@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="24.7.17">
+  <diagram id="Logical_ERD_2" name="Логическая ERD Предложения">
+    <mxGraphModel dx="1900" dy="1120" grid="1" page="1" pageWidth="1900" pageHeight="1120">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="product" value="product&lt;br&gt;PK id&lt;br&gt;code&lt;br&gt;name&lt;br&gt;unit&lt;br&gt;monthly_price&lt;br&gt;one_time_price&lt;br&gt;is_active" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=24;align=left;verticalAlign=top;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="70" y="150" width="535" height="258" as="geometry" />
+        </mxCell>
+        <mxCell id="offer" value="offer&lt;br&gt;PK id&lt;br&gt;code&lt;br&gt;FK deal_id&lt;br&gt;version&lt;br&gt;status_code&lt;br&gt;FK created_by&lt;br&gt;created_at" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=24;align=left;verticalAlign=top;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="690" y="150" width="535" height="258" as="geometry" />
+        </mxCell>
+        <mxCell id="offer_line" value="offer_line&lt;br&gt;PK id&lt;br&gt;FK offer_id&lt;br&gt;FK product_id&lt;br&gt;quantity&lt;br&gt;monthly_price&lt;br&gt;one_time_price&lt;br&gt;discount&lt;br&gt;monthly_amount&lt;br&gt;one_time_amount" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=24;align=left;verticalAlign=top;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="150" width="535" height="316" as="geometry" />
+        </mxCell>
+        <mxCell id="approval" value="approval&lt;br&gt;PK id&lt;br&gt;FK offer_id&lt;br&gt;FK approver_id&lt;br&gt;decision&lt;br&gt;comment&lt;br&gt;decided_at" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=24;align=left;verticalAlign=top;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="70" y="670" width="535" height="229" as="geometry" />
+        </mxCell>
+        <mxCell id="note" value="Связи с точными кратностями приведены в таблице связей и исходной модели.&lt;br&gt;PK — первичный ключ; FK — внешний ключ. Все представления относятся к одной схеме." style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#F2F5F7;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1010" width="1750" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_0" value="1 : 0..*" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=none;" edge="1" parent="1" source="offer" target="offer_line">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1225" y="279.0" as="sourcePoint" />
+            <mxPoint x="1310" y="279.0" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_1" value="1 : 0..*" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=none;" edge="1" parent="1" source="product" target="offer_line">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="337.5" y="150" as="sourcePoint" />
+            <mxPoint x="1577.5" y="150" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="337.5" y="112" />
+              <mxPoint x="1577.5" y="112" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_2" value="1 : 0..1" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=none;" edge="1" parent="1" source="offer" target="approval">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="957.5" y="408" as="sourcePoint" />
+            <mxPoint x="337.5" y="670" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="957.5" y="630" />
+              <mxPoint x="337.5" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

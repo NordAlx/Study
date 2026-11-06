@@ -1,0 +1,6 @@
+offer.deal_id → deal (1 : 0..*)
+offer.created_by → employee (1 : 0..*)
+offer_line.offer_id → offer (1 : 0..*)
+offer_line.product_id → product (1 : 0..*)
+approval.offer_id → offer (1 : 0..1)
+approval.approver_id → employee (1 : 0..*)

@@ -1,0 +1,1 @@
+﻿Авторский набор PBR-карт окрашенного металла, 1024 x 1024. BaseColor: sRGB. Roughness, Metallic, AO, Height, NormalGL: Non-Color. NormalGL: tangent-space +Y. AO описывает микровпадины покрытия; это не запеченное затенение всей сборки. Studio.exr - авторская HDR-панорама студийных софтбоксов.

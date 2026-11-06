@@ -1,0 +1,9 @@
+﻿Из;В;Условие
+NEW;QUALIFIED;Обращение квалифицировано
+NEW;LOST;Отказ с причиной
+QUALIFIED;PROPOSAL;Создана версия предложения
+QUALIFIED;LOST;Отказ с причиной
+PROPOSAL;CONTRACT;Предложение APPROVED, договор подписан
+PROPOSAL;LOST;Отказ с причиной
+CONTRACT;WON;Подключение DONE
+CONTRACT;LOST;Отмена с причиной

@@ -1,0 +1,37 @@
+[
+  [
+    "Q01",
+    "Воронка по менеджерам и стадиям",
+    "SELECT u.login, d.stage, count(*) AS deals FROM crm.deal d JOIN crm.app_user u ON u.id=d.owner_id GROUP BY u.login,d.stage ORDER BY u.login,d.stage;"
+  ],
+  [
+    "Q02",
+    "Сумма каждой версии КП по валюте и периоду",
+    "SELECT d.title, o.version_no, o.status, a.currency, a.billing_period, a.amount FROM crm.offer o JOIN crm.deal d ON d.id=o.deal_id JOIN crm.v_offer_amount a ON a.offer_id=o.id ORDER BY d.title,o.version_no,a.billing_period;"
+  ],
+  [
+    "Q03",
+    "Просроченные действия по открытым сделкам на 28.10.2026",
+    "SELECT d.title, c.name AS client, u.login, d.next_action_at FROM crm.deal d JOIN crm.client c ON c.id=d.client_id JOIN crm.app_user u ON u.id=d.owner_id WHERE d.stage NOT IN ('won','lost') AND d.next_action_at < TIMESTAMPTZ '2026-10-28 00:00:00+03' ORDER BY d.next_action_at,d.title;"
+  ],
+  [
+    "Q04",
+    "Подключения по договорам и клиентам",
+    "SELECT c.name AS client, d.title, ct.number, so.external_ref, so.status FROM crm.service_order so JOIN crm.contract ct ON ct.id=so.contract_id JOIN crm.offer o ON o.id=ct.offer_id JOIN crm.deal d ON d.id=o.deal_id JOIN crm.client c ON c.id=d.client_id ORDER BY ct.number;"
+  ],
+  [
+    "Q05",
+    "Предложения, ожидающие решения",
+    "SELECT d.title,o.version_no,o.status FROM crm.offer o JOIN crm.deal d ON d.id=o.deal_id WHERE o.status='review' AND NOT EXISTS (SELECT 1 FROM crm.approval a WHERE a.offer_id=o.id) ORDER BY d.title;"
+  ],
+  [
+    "Q06",
+    "История контактов выбранной сделки",
+    "SELECT a.performed_at,u.login,a.channel,a.result,a.next_due_at FROM crm.activity a JOIN crm.app_user u ON u.id=a.author_id WHERE a.deal_id='00000000-0000-4000-8000-000000000031' ORDER BY a.performed_at;"
+  ],
+  [
+    "Q07",
+    "Проверка повторного заказа без создания дубликата",
+    "SELECT id,external_ref,status FROM crm.service_order WHERE request_key='00000000-0000-4000-8000-000000000181';"
+  ]
+]

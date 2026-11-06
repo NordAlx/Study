@@ -1,0 +1,23 @@
+PostgreSQL Global Development Group. PostgreSQL License. URL: https://www.postgresql.org/about/licence/ (дата обращения: 20.10.2026).
+
+PostgreSQL 18. Constraints. URL: https://www.postgresql.org/docs/18/ddl-constraints.html (дата обращения: 20.10.2026).
+
+PostgreSQL 18. Row Security Policies. URL: https://www.postgresql.org/docs/18/ddl-rowsecurity.html (дата обращения: 20.10.2026).
+
+PostgreSQL 18. Backup and Restore. URL: https://www.postgresql.org/docs/18/backup.html (дата обращения: 20.10.2026).
+
+Oracle. MySQL Community Edition. URL: https://www.mysql.com/products/community/ (дата обращения: 20.10.2026).
+
+SQLite. Appropriate Uses For SQLite. URL: https://www.sqlite.org/whentouse.html (дата обращения: 20.10.2026).
+
+Microsoft. Python in Visual Studio Code. URL: https://code.visualstudio.com/docs/languages/python/ (дата обращения: 20.10.2026).
+
+Microsoft. Visual Studio Code License. URL: https://code.visualstudio.com/license (дата обращения: 20.10.2026).
+
+JetBrains. Unified PyCharm overview. URL: https://www.jetbrains.com/help/pycharm/unified-pycharm.html (дата обращения: 20.10.2026).
+
+JetBrains. PyCharm editions. URL: https://www.jetbrains.com/pycharm/editions/ (дата обращения: 20.10.2026).
+
+PyDev. Features. URL: https://www.pydev.org/manual_adv_features.html (дата обращения: 20.10.2026).
+
+Django Software Foundation. Getting started with Django. URL: https://www.djangoproject.com/start/ (дата обращения: 20.10.2026).

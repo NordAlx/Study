@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1200" viewBox="0 0 1900 1200"><rect width="100%" height="100%" fill="white"/>
+<text x="614.0078125" y="57.0" font-family="Arial" font-size="32" font-weight="700" fill="#17212B">UML Прикладные сервисы и интерфейсы</text>
+<text x="653.5078125" y="1171.0" font-family="Arial" font-size="20" font-weight="400" fill="#17212B">Проектируемая модель сопровождения корпоративных продаж</text>
+<rect x="80" y="190" width="520" height="230" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="92" y="268.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">OfferService</text>
+<text x="92" y="299.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">+prepare(dealId, lines): Guid</text>
+<text x="92" y="330.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">+submit(offerId): Void</text>
+<text x="92" y="361.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">+decide(offerId, decision): Void</text>
+<line x1="80" y1="273.0" x2="600" y2="273.0" stroke="#364152" stroke-width="1.5"/>
+<line x1="80" y1="273.0" x2="600" y2="273.0" stroke="#364152" stroke-width="1.5"/>
+<rect x="690" y="190" width="520" height="230" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="702" y="268.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">OrderService</text>
+<text x="702" y="299.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">+create(contractId, key): Guid</text>
+<text x="702" y="330.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">+dispatch(orderId): Void</text>
+<text x="702" y="361.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">+apply(eventId, status): Void</text>
+<line x1="690" y1="273.0" x2="1210" y2="273.0" stroke="#364152" stroke-width="1.5"/>
+<line x1="690" y1="273.0" x2="1210" y2="273.0" stroke="#364152" stroke-width="1.5"/>
+<rect x="1300" y="190" width="520" height="230" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1312" y="283.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">ReportService</text>
+<text x="1312" y="314.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">+funnel(period, ownerId): Report</text>
+<text x="1312" y="345.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">+export(report): File</text>
+<line x1="1300" y1="288.5" x2="1820" y2="288.5" stroke="#364152" stroke-width="1.5"/>
+<line x1="1300" y1="288.5" x2="1820" y2="288.5" stroke="#364152" stroke-width="1.5"/>
+<rect x="80" y="750" width="520" height="230" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="92" y="843.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">«interface» IUnitOfWork</text>
+<text x="92" y="874.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">+commit(): Void</text>
+<text x="92" y="905.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">+rollback(): Void</text>
+<line x1="80" y1="848.5" x2="600" y2="848.5" stroke="#364152" stroke-width="1.5"/>
+<line x1="80" y1="848.5" x2="600" y2="848.5" stroke="#364152" stroke-width="1.5"/>
+<rect x="690" y="750" width="520" height="230" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="702" y="843.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">«interface» IProvisioningGateway</text>
+<text x="702" y="874.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">+send(orderId, key): Ack</text>
+<text x="702" y="905.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">+getStatus(externalId): Status</text>
+<line x1="690" y1="848.5" x2="1210" y2="848.5" stroke="#364152" stroke-width="1.5"/>
+<line x1="690" y1="848.5" x2="1210" y2="848.5" stroke="#364152" stroke-width="1.5"/>
+<rect x="1300" y="750" width="520" height="230" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1312" y="859.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">«interface» IAccessPolicy</text>
+<text x="1312" y="890.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">+check(userId, action, objectId): Void</text>
+<line x1="1300" y1="864.0" x2="1820" y2="864.0" stroke="#364152" stroke-width="1.5"/>
+<line x1="1300" y1="864.0" x2="1820" y2="864.0" stroke="#364152" stroke-width="1.5"/>
+<polyline points="340,420 340,750" fill="none" stroke="#364152" stroke-width="2" stroke-dasharray="9 7"/>
+<polyline points="333.88359320410643,736.3036658953154 340,750 346.11640679589357,736.3036658953154" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="950,420 950,750" fill="none" stroke="#364152" stroke-width="2" stroke-dasharray="9 7"/>
+<polyline points="943.8835932041064,736.3036658953154 950,750 956.1164067958936,736.3036658953154" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1560,420 1560,750" fill="none" stroke="#364152" stroke-width="2" stroke-dasharray="9 7"/>
+<polyline points="1553.8835932041065,736.3036658953154 1560,750 1566.1164067958935,736.3036658953154" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="950,420 950,590 340,590 340,750" fill="none" stroke="#364152" stroke-width="2" stroke-dasharray="9 7"/>
+<polyline points="333.88359320410643,736.3036658953154 340,750 346.11640679589357,736.3036658953154" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1560,420 1560,650 340,650 340,750" fill="none" stroke="#364152" stroke-width="2" stroke-dasharray="9 7"/>
+<polyline points="333.88359320410643,736.3036658953154 340,750 346.11640679589357,736.3036658953154" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="340,420 340,530 1740,530 1740,750" fill="none" stroke="#364152" stroke-width="2" stroke-dasharray="9 7"/>
+<polyline points="1733.8835932041065,736.3036658953154 1740,750 1746.1164067958935,736.3036658953154" fill="none" stroke="#364152" stroke-width="2"/>
+<text x="405.5390625" y="1049.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">Команда изменения данных выполняется в транзакции; внешний обмен использует outbox</text>
+<text x="571.03125" y="1080.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">Привязка к технологиям и СУБД является проектным выбором</text>
+</svg>

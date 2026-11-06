@@ -1,0 +1,17 @@
+{
+  "app_user": 5,
+  "app_role": 3,
+  "user_role": 5,
+  "client": 4,
+  "contact": 4,
+  "deal": 6,
+  "product": 3,
+  "offer": 5,
+  "offer_line": 8,
+  "approval": 3,
+  "contract": 3,
+  "service_order": 2,
+  "status_event": 3,
+  "activity": 4,
+  "audit_event": 2
+}

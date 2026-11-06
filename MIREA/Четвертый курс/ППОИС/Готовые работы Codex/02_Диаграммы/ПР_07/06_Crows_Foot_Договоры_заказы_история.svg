@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="1600" viewBox="0 0 2200 1600"><rect width="100%" height="100%" fill="white"/>
+<text x="657.0" y="57.0" font-family="Arial" font-size="32" font-weight="700" fill="#17212B">Договоры заказы история — логическая модель (3НФ)</text>
+<text x="803.5078125" y="1571.0" font-family="Arial" font-size="20" font-weight="400" fill="#17212B">Проектируемая модель сопровождения корпоративных продаж</text>
+<text x="589.515625" y="107.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">PK — первичный ключ; FK — внешний ключ; ? — NULL. Концы связей: || = 1; o&lt; = 0..N.</text>
+<rect x="150" y="180" width="570" height="244" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="162" y="218.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">offer | КП</text>
+<text x="162" y="249.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">PK id</text>
+<text x="162" y="280.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">FK deal_id</text>
+<text x="162" y="311.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">FK author_id</text>
+<text x="162" y="342.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">version_no</text>
+<text x="162" y="373.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">status</text>
+<text x="162" y="404.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">created_at</text>
+<line x1="150" y1="223.5" x2="720" y2="223.5" stroke="#364152" stroke-width="1.5"/>
+<rect x="1480" y="180" width="570" height="244" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1492" y="218.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">contract | Договор</text>
+<text x="1492" y="249.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">PK id</text>
+<text x="1492" y="280.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">FK offer_id</text>
+<text x="1492" y="311.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">number</text>
+<text x="1492" y="342.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">signed_at ?</text>
+<text x="1492" y="373.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">file_ref ?</text>
+<text x="1492" y="404.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">status</text>
+<line x1="1480" y1="223.5" x2="2050" y2="223.5" stroke="#364152" stroke-width="1.5"/>
+<rect x="150" y="680" width="570" height="180" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="162" y="717.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">app_user | Пользователь</text>
+<text x="162" y="748.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">PK id</text>
+<text x="162" y="779.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">login</text>
+<text x="162" y="810.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">full_name</text>
+<text x="162" y="841.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">active</text>
+<line x1="150" y1="722.5" x2="720" y2="722.5" stroke="#364152" stroke-width="1.5"/>
+<rect x="1480" y="650" width="570" height="276" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1492" y="689.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">service_order | Заказ</text>
+<text x="1492" y="720.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">PK id</text>
+<text x="1492" y="751.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">FK contract_id</text>
+<text x="1492" y="782.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">request_key</text>
+<text x="1492" y="813.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">external_ref ?</text>
+<text x="1492" y="844.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">status</text>
+<text x="1492" y="875.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">created_at</text>
+<text x="1492" y="906.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">updated_at</text>
+<line x1="1480" y1="694.0" x2="2050" y2="694.0" stroke="#364152" stroke-width="1.5"/>
+<rect x="150" y="1090" width="570" height="276" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="162" y="1129.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">audit_event | Событие аудита</text>
+<text x="162" y="1160.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">PK id</text>
+<text x="162" y="1191.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">FK actor_id</text>
+<text x="162" y="1222.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">object_type</text>
+<text x="162" y="1253.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">object_id</text>
+<text x="162" y="1284.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">action</text>
+<text x="162" y="1315.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">occurred_at</text>
+<text x="162" y="1346.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">details</text>
+<line x1="150" y1="1134.0" x2="720" y2="1134.0" stroke="#364152" stroke-width="1.5"/>
+<rect x="1480" y="1120" width="570" height="212" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1492" y="1158.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">status_event | Событие статуса</text>
+<text x="1492" y="1189.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">PK id</text>
+<text x="1492" y="1220.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">FK order_id</text>
+<text x="1492" y="1251.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">external_event_id</text>
+<text x="1492" y="1282.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">status</text>
+<text x="1492" y="1313.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">received_at</text>
+<line x1="1480" y1="1163.0" x2="2050" y2="1163.0" stroke="#364152" stroke-width="1.5"/>
+<polyline points="720,302.0 1480,302.0" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="733.0,287.0 733.0,317.0" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="758.0,287.0 758.0,317.0" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1480.0,317.0 1455.0,302.0" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1480.0,302.0 1455.0,302.0" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1480.0,287.0 1455.0,302.0" fill="none" stroke="#364152" stroke-width="2"/>
+<ellipse cx="1441.0" cy="302.0" rx="8.0" ry="8.0" fill="white" stroke="#364152" stroke-width="2"/>
+<polyline points="1765.0,424 1765.0,650" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1780.0,437.0 1750.0,437.0" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1780.0,462.0 1750.0,462.0" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1750.0,650.0 1765.0,625.0" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1765.0,650.0 1765.0,625.0" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1780.0,650.0 1765.0,625.0" fill="none" stroke="#364152" stroke-width="2"/>
+<ellipse cx="1765.0" cy="611.0" rx="8.0" ry="8.0" fill="white" stroke="#364152" stroke-width="2"/>
+<polyline points="1765.0,926 1765.0,1120" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1780.0,939.0 1750.0,939.0" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1780.0,964.0 1750.0,964.0" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1750.0,1120.0 1765.0,1095.0" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1765.0,1120.0 1765.0,1095.0" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1780.0,1120.0 1765.0,1095.0" fill="none" stroke="#364152" stroke-width="2"/>
+<ellipse cx="1765.0" cy="1081.0" rx="8.0" ry="8.0" fill="white" stroke="#364152" stroke-width="2"/>
+<polyline points="435.0,860 435.0,1090" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="450.0,873.0 420.0,873.0" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="450.0,898.0 420.0,898.0" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="420.0,1090.0 435.0,1065.0" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="435.0,1090.0 435.0,1065.0" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="450.0,1090.0 435.0,1065.0" fill="none" stroke="#364152" stroke-width="2"/>
+<ellipse cx="435.0" cy="1051.0" rx="8.0" ry="8.0" fill="white" stroke="#364152" stroke-width="2"/>
+<text x="253.515625" y="1476.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">UNIQUE request_key предотвращает повтор заказа; UNIQUE external_event_id — повтор внешнего события. Связь с договором проверяется FK, требование</text>
+<text x="962.5" y="1505.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">подписания — триггером.</text>
+</svg>

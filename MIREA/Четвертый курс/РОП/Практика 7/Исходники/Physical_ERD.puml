@@ -1,0 +1,206 @@
+@startuml
+skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam backgroundColor white
+hide circle
+skinparam linetype ortho
+title Физическая модель PostgreSQL
+entity "department\nПодразделение" as department {
+  id : BIGINT <<PK>>
+  name : VARCHAR(120)
+}
+entity "role\nРоль" as role {
+  code : VARCHAR(16) <<PK>>
+  name : VARCHAR(120)
+}
+entity "employee\nСотрудник" as employee {
+  id : BIGINT <<PK>>
+  sso_subject : VARCHAR(255)
+  display_name : VARCHAR(150)
+  department_id : BIGINT <<FK>>
+  role_code : VARCHAR(16) <<FK>>
+  is_active : BOOLEAN
+  created_at : TIMESTAMPTZ
+}
+entity "client\nЮридическое лицо" as client {
+  id : BIGINT <<PK>>
+  code : VARCHAR(14)
+  legal_name : VARCHAR(250)
+  inn : VARCHAR(10)
+  manager_id : BIGINT <<FK>>
+  created_at : TIMESTAMPTZ
+}
+entity "contact\nКонтактное лицо" as contact {
+  id : BIGINT <<PK>>
+  client_id : BIGINT <<FK>>
+  full_name : VARCHAR(150)
+  email : VARCHAR(254)
+  phone : VARCHAR(32)
+  created_at : TIMESTAMPTZ
+}
+entity "deal_status\nСтадия сделки" as deal_status {
+  code : VARCHAR(16) <<PK>>
+  name : VARCHAR(120)
+}
+entity "request_type\nТип заявки" as request_type {
+  code : VARCHAR(16) <<PK>>
+  name : VARCHAR(120)
+}
+entity "request_status\nСтатус заявки" as request_status {
+  code : VARCHAR(16) <<PK>>
+  name : VARCHAR(120)
+}
+entity "deal\nСделка" as deal {
+  id : BIGINT <<PK>>
+  code : VARCHAR(14)
+  client_id : BIGINT <<FK>>
+  owner_id : BIGINT <<FK>>
+  title : VARCHAR(200)
+  status_code : VARCHAR(16) <<FK>>
+  opened_at : TIMESTAMPTZ
+  closed_at : TIMESTAMPTZ
+  loss_reason : VARCHAR(500)
+}
+entity "product\nПродукт каталога" as product {
+  id : BIGINT <<PK>>
+  code : VARCHAR(30)
+  name : VARCHAR(150)
+  unit : VARCHAR(30)
+  monthly_price : NUMERIC(14,2)
+  one_time_price : NUMERIC(14,2)
+  is_active : BOOLEAN
+}
+entity "offer\nВерсия предложения" as offer {
+  id : BIGINT <<PK>>
+  code : VARCHAR(14)
+  deal_id : BIGINT <<FK>>
+  version : INTEGER
+  status_code : VARCHAR(16)
+  created_by : BIGINT <<FK>>
+  created_at : TIMESTAMPTZ
+}
+entity "offer_line\nПозиция предложения" as offer_line {
+  id : BIGINT <<PK>>
+  offer_id : BIGINT <<FK>>
+  product_id : BIGINT <<FK>>
+  quantity : NUMERIC(12,3)
+  monthly_price : NUMERIC(14,2)
+  one_time_price : NUMERIC(14,2)
+  discount : NUMERIC(5,4)
+  monthly_amount : NUMERIC(20,2)
+  one_time_amount : NUMERIC(20,2)
+}
+entity "approval\nРешение согласования" as approval {
+  id : BIGINT <<PK>>
+  offer_id : BIGINT <<FK>>
+  approver_id : BIGINT <<FK>>
+  decision : VARCHAR(16)
+  comment : VARCHAR(1000)
+  decided_at : TIMESTAMPTZ
+}
+entity "contract\nДоговор" as contract {
+  id : BIGINT <<PK>>
+  code : VARCHAR(14)
+  deal_id : BIGINT <<FK>>
+  offer_id : BIGINT
+  external_number : VARCHAR(100)
+  document_ref : VARCHAR(500)
+  signed_on : DATE
+  starts_on : DATE
+  ends_on : DATE
+  status_code : VARCHAR(16)
+  created_at : TIMESTAMPTZ
+}
+entity "contract_service\nВерсия услуги договора" as contract_service {
+  id : BIGINT <<PK>>
+  contract_id : BIGINT <<FK>>
+  product_id : BIGINT <<FK>>
+  service_label : VARCHAR(120)
+  quantity : NUMERIC(12,3)
+  monthly_unit_price : NUMERIC(14,2)
+  valid_from : TIMESTAMPTZ
+  valid_to : TIMESTAMPTZ
+}
+entity "service_request\nЗаявка сопровождения" as service_request {
+  id : BIGINT <<PK>>
+  code : VARCHAR(14)
+  contract_id : BIGINT <<FK>>
+  type_code : VARCHAR(16) <<FK>>
+  status_code : VARCHAR(16) <<FK>>
+  owner_id : BIGINT <<FK>>
+  assignee_id : BIGINT <<FK>>
+  details : TEXT
+  requested_at : TIMESTAMPTZ
+  target_at : TIMESTAMPTZ
+  closed_at : TIMESTAMPTZ
+  external_ref : VARCHAR(120)
+}
+entity "renewal\nРешение о продлении" as renewal {
+  id : BIGINT <<PK>>
+  contract_id : BIGINT <<FK>>
+  previous_end : DATE
+  new_end : DATE
+  decision : VARCHAR(16)
+  decided_at : TIMESTAMPTZ
+  document_ref : VARCHAR(500)
+  owner_id : BIGINT <<FK>>
+  created_at : TIMESTAMPTZ
+}
+entity "integration_job\nУстойчивая очередь обмена" as integration_job {
+  id : BIGINT <<PK>>
+  request_id : BIGINT <<FK>>
+  idempotency_key : UUID
+  operation_code : VARCHAR(16)
+  status_code : VARCHAR(16)
+  attempts : SMALLINT
+  next_attempt_at : TIMESTAMPTZ
+  last_error : VARCHAR(1000)
+  created_at : TIMESTAMPTZ
+}
+entity "notification_log\nЖурнал напоминаний" as notification_log {
+  id : BIGINT <<PK>>
+  contract_id : BIGINT <<FK>>
+  recipient_id : BIGINT <<FK>>
+  due_on : DATE
+  event_key : VARCHAR(40)
+  sent_at : TIMESTAMPTZ
+  created_at : TIMESTAMPTZ
+}
+entity "audit_event\nЖурнал аудита" as audit_event {
+  id : BIGINT <<PK>>
+  actor_id : BIGINT <<FK>>
+  entity_type : VARCHAR(40)
+  entity_id : BIGINT
+  action : VARCHAR(50)
+  occurred_at : TIMESTAMPTZ
+  details : JSONB
+}
+department ||--o{ employee : department_id
+role ||--o{ employee : role_code
+employee ||--o{ client : manager_id
+client ||--o{ contact : client_id
+client ||--o{ deal : client_id
+employee ||--o{ deal : owner_id
+deal_status ||--o{ deal : status_code
+deal ||--o{ offer : deal_id
+employee ||--o{ offer : created_by
+offer ||--o{ offer_line : offer_id
+product ||--o{ offer_line : product_id
+offer ||--o| approval : offer_id
+employee ||--o{ approval : approver_id
+deal ||--o{ contract : deal_id
+contract ||--o{ contract_service : contract_id
+product ||--o{ contract_service : product_id
+contract ||--o{ service_request : contract_id
+request_type ||--o{ service_request : type_code
+request_status ||--o{ service_request : status_code
+employee ||--o{ service_request : owner_id
+employee ||--o{ service_request : assignee_id
+contract ||--o{ renewal : contract_id
+employee ||--o{ renewal : owner_id
+service_request ||--o{ integration_job : request_id
+contract ||--o{ notification_log : contract_id
+employee ||--o{ notification_log : recipient_id
+employee |o--o{ audit_event : actor_id
+offer ||--o| contract : offer_id + deal_id
+@enduml

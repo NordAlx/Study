@@ -1,0 +1,35 @@
+@startuml
+skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam backgroundColor white
+
+title Корпоративный вход
+actor "Сотрудник / браузер" as browser
+participant "Django / SSO" as app
+participant "Корпоративный IdP" as idp
+database "PostgreSQL" as db
+browser -> app : Войти
+activate app
+app --> browser : Redirect: state, nonce, PKCE challenge
+browser -> idp : HTTPS / аутентификация
+idp --> browser : Код + state либо отказ
+browser -> app : Код + state
+app -> app : Проверить state callback до обмена
+app -> idp : HTTPS: код + verifier
+idp --> app : Токены JSON либо ошибка
+app -> app : Проверить подпись, iss, aud, exp, nonce
+alt Токен корректен
+ app -> db : Найти активного сотрудника по sub
+ db --> app : Сотрудник и локальная роль / не найден
+ alt Сотрудник активен
+  app --> browser : Secure / HttpOnly cookie сеанса
+ else Нет локального допуска
+  app --> browser : Отказ без автоматической выдачи роли
+ end
+else Отказ IdP, неверный токен или ошибка
+ app --> browser : Безопасное сообщение, сеанс не создан
+end
+app -> db : Добавить событие аудита без токенов
+deactivate app
+
+@enduml

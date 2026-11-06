@@ -1,0 +1,154 @@
+{
+  "НАЧНИ_ЗДЕСЬ.txt": {
+    "bytes": 2484,
+    "sha256": "0c5785cde85a92922f7b924fb503ed70669fc396207dedd9714f2e4c46bc4093"
+  },
+  "Отчёт_Тема_02.pdf": {
+    "bytes": 15573282,
+    "sha256": "0eab687719e45618d73bc99e3a628dfa9e375f4e3b99d9194cf80349d2e630cd"
+  },
+  "Референс_дрона.png": {
+    "bytes": 1884957,
+    "sha256": "4493ba56f28dabec79ef632f5b2bad1d186cc86569b29dee82c493ea48af26a2"
+  },
+  "Тема_02_Полный_проект.blend": {
+    "bytes": 5009061,
+    "sha256": "1a47194313ccd2b43e32ffad674380b4528a105cf27525b242abb8dbd866ec77"
+  },
+  "Анимация\\SCOUT_02.mp4": {
+    "bytes": 756382,
+    "sha256": "697d6105aa80d1da7d4044a32afda75ccf652586eec138a7549c2316ee2e8ec2"
+  },
+  "Анимация\\video_check.json": {
+    "bytes": 48,
+    "sha256": "204c4c5856f451f05fb405fc50eca011c882adb09161efb6b311821602fc34e9"
+  },
+  "Рендеры\\01_Cycles.png": {
+    "bytes": 2212175,
+    "sha256": "8f852ea87f13b48e35d4d8459422379cb596ab4f07e9a2b07d783e73edfa324b"
+  },
+  "Рендеры\\02_Eevee.png": {
+    "bytes": 2247398,
+    "sha256": "1150510e6125a80aa60ff3e73fa8bc757f5e005fc37ed1fcffff960fac00cce5"
+  },
+  "Рендеры\\03_Спереди.png": {
+    "bytes": 1220806,
+    "sha256": "adcfddadbdf66a881996ca720d0ba5a3b3adac72ffba955d91de37c04695236a"
+  },
+  "Рендеры\\04_Сбоку.png": {
+    "bytes": 1251257,
+    "sha256": "84cfad71efdc0295533b5c6860eeed5beb935aa0aaea932074f3e228258072d4"
+  },
+  "Рендеры\\05_Сверху.png": {
+    "bytes": 1471528,
+    "sha256": "14ec17daa0390c313ca0d1fa145ca50996237801b0b419e87a823567923b1ee7"
+  },
+  "Рендеры\\06_Сзади.png": {
+    "bytes": 1507818,
+    "sha256": "cc40e699e1651e1c6b0346de79a6747355a772f8095fc5b9f908fb75a4897b41"
+  },
+  "Рендеры\\07_Оптика.png": {
+    "bytes": 1588185,
+    "sha256": "e9c11f66371b0b1e4af3f5aa8ff21c4fff73a1d3858e2b7e05ae1f3b5e91bac5"
+  },
+  "Рендеры\\08_После_импорта_GLB.png": {
+    "bytes": 1285264,
+    "sha256": "5d3a0630e0954a1d77174d2ea7525cd6a7767e6d87e82d1fe37034fb55a80af5"
+  },
+  "Рендеры\\09_После_импорта_FBX.png": {
+    "bytes": 1284964,
+    "sha256": "644f65d3068cad8daa7d894c5dbd758d14d651633f79d5aec845c5a4bf523c93"
+  },
+  "Схемы\\01_Топология.png": {
+    "bytes": 49820,
+    "sha256": "41b5e2479f8b5cbfc6e2665bb357eefd7c832b15ceb876b8408cec02f287295c"
+  },
+  "Схемы\\02_UV.png": {
+    "bytes": 39791,
+    "sha256": "8ccf4cd5443c195dd07688994232479a2fc941771698b770554c0cb18bdd40d2"
+  },
+  "Схемы\\03_PBR.png": {
+    "bytes": 657467,
+    "sha256": "45929310cc022cea3fd78aefe1834ad3b245eafad76e7fed4cbabada56c06600"
+  },
+  "Схемы\\04_Анимация.png": {
+    "bytes": 64698,
+    "sha256": "6b53d9a913c5d0f3ebfa0fa53b532aaa46d9d2cf015bd202b27395b86f38e15b"
+  },
+  "Схемы\\validation.json": {
+    "bytes": 25924,
+    "sha256": "36722f459fa643b95f934a30976971b341ba87f81f80e0a1d74979c8783d8063"
+  },
+  "Текстуры\\Paint_AO.png": {
+    "bytes": 9203,
+    "sha256": "6c9b2850fef4e66a80225ceef64a29ed32b7f7a8215d00c10b67eba6920bc7c4"
+  },
+  "Текстуры\\Paint_BaseColor.png": {
+    "bytes": 221117,
+    "sha256": "212b501171d471efb0c4d98e7d6a8b70ac724ba1dea1d08d1fe4eb8299318703"
+  },
+  "Текстуры\\Paint_Height.png": {
+    "bytes": 335584,
+    "sha256": "cf0d0898dae8be40457b92ea926b21a4542899270e74c06fdc1d3fe7bdef4b1a"
+  },
+  "Текстуры\\Paint_Metallic.png": {
+    "bytes": 10455,
+    "sha256": "988f8a07324ecd5478f5390db6c068cd18702ae90d84348d41e34fa954bc1eb8"
+  },
+  "Текстуры\\Paint_NormalGL.png": {
+    "bytes": 1060469,
+    "sha256": "49d2e3ef4c20e4038c155860d0206cac483dd69cc8a3c98436b440de5274cc0f"
+  },
+  "Текстуры\\Paint_Roughness.png": {
+    "bytes": 152795,
+    "sha256": "c48ff61398fd73b0bc4670d68136927b03f836ad8333650604e03ab1890d80ae"
+  },
+  "Текстуры\\Studio.exr": {
+    "bytes": 6300066,
+    "sha256": "a334cfb1736098c968d474958b3ec4de562ba3d6be3750abb471ed1e8417057b"
+  },
+  "Текстуры\\Описание.txt": {
+    "bytes": 432,
+    "sha256": "60b9515164cc2a49c9aa67736f8db14f428e190c771ae8b7a69dbc171862e577"
+  },
+  "Экспорт\\SCOUT_02.fbx": {
+    "bytes": 8024188,
+    "sha256": "c3fa3d2f58974d582f5c04cc7a93898b909e38941ee0f2b31981475973f74e37"
+  },
+  "Экспорт\\SCOUT_02.glb": {
+    "bytes": 8522460,
+    "sha256": "b475a3767a759d1f553bb0d46215b77e2b7f8eba9a71c84fe41296f20901f768"
+  },
+  "Экспорт\\SCOUT_BaseColor.png": {
+    "bytes": 875207,
+    "sha256": "fe5af7151504bfb22202da15e59314159fa2a3e9945c70ec464efd98c09c26f5"
+  },
+  "Экспорт\\SCOUT_Emission.png": {
+    "bytes": 71203,
+    "sha256": "f471355e2c28765cfe54e17f6093fdd18f3958c90086cbcd4d1973e69284681f"
+  },
+  "Экспорт\\SCOUT_Metallic.png": {
+    "bytes": 622155,
+    "sha256": "26e83fba49361097f9ebd8b3cbfe9c3dfb2f16937e6d482d5e0ebe1a2c643501"
+  },
+  "Экспорт\\SCOUT_NormalGL.png": {
+    "bytes": 1402974,
+    "sha256": "b56f24a92efb205ec4069eb70d744a2da172b099ab945b9bb2e93f15c213e4ca"
+  },
+  "Экспорт\\SCOUT_Roughness.png": {
+    "bytes": 1415632,
+    "sha256": "bbcf4635ff3e4415912a7b26afb6bf1532dc8d5933ea5441550c838e0e49b5b4"
+  },
+  "Экспорт\\Проверка_импорта_FBX.blend": {
+    "bytes": 6215459,
+    "sha256": "aee387a160bb50fbf485a9c356746c0861e4d75a26c13d2dcae37272548e1f5a"
+  },
+  "Экспорт\\Проверка_импорта_GLB.blend": {
+    "bytes": 6173673,
+    "sha256": "2bdfef229bd75982536d74128eea1439152841a0d41cee1b27ffa62ce5c0fb84"
+  },
+  "Экспорт\\Проверка_экспорта.json": {
+    "bytes": 12706,
+    "sha256": "7a64428fc76f72e8960786deeacc54cec72bf4bcecf83d16dca45d3f5ab98f32"
+  }
+}

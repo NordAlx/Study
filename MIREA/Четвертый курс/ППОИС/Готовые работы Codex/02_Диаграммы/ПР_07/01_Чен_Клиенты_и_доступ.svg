@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="1600" viewBox="0 0 2200 1600"><rect width="100%" height="100%" fill="white"/>
+<text x="691.984375" y="57.0" font-family="Arial" font-size="32" font-weight="700" fill="#17212B">Клиенты и доступ — концептуальная модель Чена</text>
+<text x="803.5078125" y="1571.0" font-family="Arial" font-size="20" font-weight="400" fill="#17212B">Проектируемая модель сопровождения корпоративных продаж</text>
+<text x="657.5" y="101.0" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">Прямоугольник — сущность; овал — атрибут; ромб — связь; (min,max) — участие</text>
+<rect x="315" y="248" width="310" height="84" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="424.0" y="300.0" font-family="Arial" font-size="26" font-weight="700" fill="#17212B">Клиент</text>
+<polyline points="470,248 285,170" fill="none" stroke="#364152" stroke-width="2"/>
+<ellipse cx="285.0" cy="140.0" rx="150.0" ry="30.0" fill="white" stroke="#364152" stroke-width="2"/>
+<text x="276.0" y="148.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">id</text>
+<polyline points="273.0,157 297.0,157" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="470,248 655,170" fill="none" stroke="#364152" stroke-width="2"/>
+<ellipse cx="655.0" cy="140.0" rx="150.0" ry="30.0" fill="white" stroke="#364152" stroke-width="2"/>
+<text x="629.5" y="148.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">ИНН</text>
+<polyline points="637.0,157 673.0,157" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="470,332 470,390" fill="none" stroke="#364152" stroke-width="2"/>
+<ellipse cx="470.0" cy="420.0" rx="150.0" ry="30.0" fill="white" stroke="#364152" stroke-width="2"/>
+<text x="389.0" y="428.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">Наименование</text>
+<rect x="1575" y="248" width="310" height="84" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1679.5" y="300.0" font-family="Arial" font-size="26" font-weight="700" fill="#17212B">Контакт</text>
+<polyline points="1730,248 1545,170" fill="none" stroke="#364152" stroke-width="2"/>
+<ellipse cx="1545.0" cy="140.0" rx="150.0" ry="30.0" fill="white" stroke="#364152" stroke-width="2"/>
+<text x="1536.0" y="148.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">id</text>
+<polyline points="1533.0,157 1557.0,157" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1730,248 1915,170" fill="none" stroke="#364152" stroke-width="2"/>
+<ellipse cx="1915.0" cy="140.0" rx="150.0" ry="30.0" fill="white" stroke="#364152" stroke-width="2"/>
+<text x="1889.0" y="148.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">ФИО</text>
+<polyline points="1730,332 1730,390" fill="none" stroke="#364152" stroke-width="2"/>
+<ellipse cx="1730.0" cy="420.0" rx="150.0" ry="30.0" fill="white" stroke="#364152" stroke-width="2"/>
+<text x="1644.515625" y="428.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">Телефон / email</text>
+<rect x="315" y="708" width="310" height="84" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="423.0" y="760.0" font-family="Arial" font-size="26" font-weight="700" fill="#17212B">Сделка</text>
+<polyline points="470,708 285,630" fill="none" stroke="#364152" stroke-width="2"/>
+<ellipse cx="285.0" cy="600.0" rx="150.0" ry="30.0" fill="white" stroke="#364152" stroke-width="2"/>
+<text x="276.0" y="608.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">id</text>
+<polyline points="273.0,617 297.0,617" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="470,708 655,630" fill="none" stroke="#364152" stroke-width="2"/>
+<ellipse cx="655.0" cy="600.0" rx="150.0" ry="30.0" fill="white" stroke="#364152" stroke-width="2"/>
+<text x="615.5" y="608.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">Стадия</text>
+<polyline points="470,792 470,850" fill="none" stroke="#364152" stroke-width="2"/>
+<ellipse cx="470.0" cy="880.0" rx="150.0" ry="30.0" fill="white" stroke="#364152" stroke-width="2"/>
+<text x="382.015625" y="888.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">Предмет сделки</text>
+<rect x="1575" y="708" width="310" height="84" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1612.0" y="760.0" font-family="Arial" font-size="26" font-weight="700" fill="#17212B">Контакт по сделке</text>
+<polyline points="1730,708 1545,630" fill="none" stroke="#364152" stroke-width="2"/>
+<ellipse cx="1545.0" cy="600.0" rx="150.0" ry="30.0" fill="white" stroke="#364152" stroke-width="2"/>
+<text x="1536.0" y="608.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">id</text>
+<polyline points="1533.0,617 1557.0,617" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1730,708 1915,630" fill="none" stroke="#364152" stroke-width="2"/>
+<ellipse cx="1915.0" cy="600.0" rx="150.0" ry="30.0" fill="white" stroke="#364152" stroke-width="2"/>
+<text x="1882.5" y="608.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">Канал</text>
+<polyline points="1730,792 1730,850" fill="none" stroke="#364152" stroke-width="2"/>
+<ellipse cx="1730.0" cy="880.0" rx="150.0" ry="30.0" fill="white" stroke="#364152" stroke-width="2"/>
+<text x="1674.5234375" y="888.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">Результат</text>
+<rect x="315" y="1168" width="310" height="84" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="376.515625" y="1220.0" font-family="Arial" font-size="26" font-weight="700" fill="#17212B">Пользователь</text>
+<polyline points="470,1168 285,1090" fill="none" stroke="#364152" stroke-width="2"/>
+<ellipse cx="285.0" cy="1060.0" rx="150.0" ry="30.0" fill="white" stroke="#364152" stroke-width="2"/>
+<text x="276.0" y="1068.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">id</text>
+<polyline points="273.0,1077 297.0,1077" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="470,1168 655,1090" fill="none" stroke="#364152" stroke-width="2"/>
+<ellipse cx="655.0" cy="1060.0" rx="150.0" ry="30.0" fill="white" stroke="#364152" stroke-width="2"/>
+<text x="624.0" y="1068.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">Логин</text>
+<polyline points="625.0,1077 685.0,1077" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="470,1252 470,1310" fill="none" stroke="#364152" stroke-width="2"/>
+<ellipse cx="470.0" cy="1340.0" rx="150.0" ry="30.0" fill="white" stroke="#364152" stroke-width="2"/>
+<text x="444.0" y="1348.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">ФИО</text>
+<rect x="1575" y="1168" width="310" height="84" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1697.015625" y="1220.0" font-family="Arial" font-size="26" font-weight="700" fill="#17212B">Роль</text>
+<polyline points="1730,1168 1545,1090" fill="none" stroke="#364152" stroke-width="2"/>
+<ellipse cx="1545.0" cy="1060.0" rx="150.0" ry="30.0" fill="white" stroke="#364152" stroke-width="2"/>
+<text x="1496.5" y="1068.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">Код роли</text>
+<polyline points="1497.0,1077 1593.0,1077" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1730,1168 1915,1090" fill="none" stroke="#364152" stroke-width="2"/>
+<ellipse cx="1915.0" cy="1060.0" rx="150.0" ry="30.0" fill="white" stroke="#364152" stroke-width="2"/>
+<text x="1862.5" y="1068.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">Название</text>
+<polyline points="625,290 985.0,290" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1215.0,290 1575,290" fill="none" stroke="#364152" stroke-width="2"/>
+<polygon points="1100.0,235.0 1215.0,290.0 1100.0,345.0 985.0,290.0" fill="white" stroke="#364152" stroke-width="2"/>
+<text x="1069.5078125" y="298.0" font-family="Arial" font-size="22" font-weight="400" fill="#17212B">имеет</text>
+<text x="689.0" y="261.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">(0,N)</text>
+<text x="1461.0" y="261.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">(1,1)</text>
+<polyline points="625,750 985.0,750" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1215.0,750 1575,750" fill="none" stroke="#364152" stroke-width="2"/>
+<polygon points="1100.0,695.0 1215.0,750.0 1100.0,805.0 985.0,750.0" fill="white" stroke="#364152" stroke-width="2"/>
+<text x="1051.5" y="758.0" font-family="Arial" font-size="22" font-weight="400" fill="#17212B">содержит</text>
+<text x="689.0" y="721.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">(0,N)</text>
+<text x="1461.0" y="721.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">(1,1)</text>
+<polyline points="315,290 100,290 100,470.0" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="100,570.0 100,750 315,750" fill="none" stroke="#364152" stroke-width="2"/>
+<polygon points="100.0,470.0 190.0,520.0 100.0,570.0 10.0,520.0" fill="white" stroke="#364152" stroke-width="2"/>
+<text x="50.0078125" y="528.0" font-family="Arial" font-size="22" font-weight="400" fill="#17212B">участвует</text>
+<text x="174.0" y="353.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">(0,N)</text>
+<text x="176.0" y="703.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">(1,1)</text>
+<polyline points="315,750 100,750 100,930.0" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="100,1030.0 100,1210 315,1210" fill="none" stroke="#364152" stroke-width="2"/>
+<polygon points="100.0,930.0 190.0,980.0 100.0,1030.0 10.0,980.0" fill="white" stroke="#364152" stroke-width="2"/>
+<text x="59.0" y="988.0" font-family="Arial" font-size="22" font-weight="400" fill="#17212B">ведётся</text>
+<text x="176.0" y="813.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">(1,1)</text>
+<text x="174.0" y="1163.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">(0,N)</text>
+<polyline points="625,1210 985.0,1210" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1215.0,1210 1575,1210" fill="none" stroke="#364152" stroke-width="2"/>
+<polygon points="1100.0,1155.0 1215.0,1210.0 1100.0,1265.0 985.0,1210.0" fill="white" stroke="#364152" stroke-width="2"/>
+<text x="1047.5" y="1218.0" font-family="Arial" font-size="22" font-weight="400" fill="#17212B">назначена</text>
+<text x="689.0" y="1181.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">(0,N)</text>
+<text x="1459.0" y="1181.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">(0,N)</text>
+<text x="233.0390625" y="1476.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">Связь Пользователь—Роль M:N преобразуется в user_role. Автор активности показан на отдельном листе «Авторство и решения». Атрибутный состав раскрыт</text>
+<text x="1043.5" y="1505.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">в словаре.</text>
+</svg>

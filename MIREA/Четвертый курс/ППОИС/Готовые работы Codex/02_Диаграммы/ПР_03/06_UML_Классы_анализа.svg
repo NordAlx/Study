@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1050" viewBox="0 0 1800 1050"><rect width="100%" height="100%" fill="white"/>
+<text x="731.0078125" y="57.0" font-family="Arial" font-size="32" font-weight="700" fill="#17212B">UML Классы анализа</text>
+<text x="603.5078125" y="1021.0" font-family="Arial" font-size="20" font-weight="400" fill="#17212B">Проектируемая модель сопровождения корпоративных продаж</text>
+<rect x="80" y="170" width="390" height="110" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="199.5" y="219.0" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">«boundary»</text>
+<text x="182.0078125" y="253.0" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">Форма сделки</text>
+<rect x="590" y="170" width="390" height="110" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="726.5" y="219.0" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">«control»</text>
+<text x="615.015625" y="253.0" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">Контроллер предложения</text>
+<rect x="1110" y="170" width="390" height="110" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1255.0" y="202.0" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">«entity»</text>
+<text x="1209.5078125" y="236.0" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">Коммерческое</text>
+<text x="1216.5078125" y="270.0" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">предложение</text>
+<rect x="80" y="490" width="390" height="110" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="199.5" y="539.0" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">«boundary»</text>
+<text x="166.5078125" y="573.0" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">Форма договора</text>
+<rect x="590" y="490" width="390" height="110" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="726.5" y="539.0" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">«control»</text>
+<text x="660.0" y="573.0" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">Контроллер заказа</text>
+<rect x="1110" y="490" width="390" height="110" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1255.0" y="539.0" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">«entity»</text>
+<text x="1251.0078125" y="573.0" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">Договор</text>
+<rect x="80" y="810" width="390" height="110" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="225.0" y="859.0" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">«entity»</text>
+<text x="124.0078125" y="893.0" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">Корпоративный клиент</text>
+<rect x="590" y="810" width="390" height="110" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="735.0" y="859.0" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">«entity»</text>
+<text x="737.0" y="893.0" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">Сделка</text>
+<rect x="1110" y="810" width="390" height="110" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1255.0" y="859.0" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">«entity»</text>
+<text x="1177.5078125" y="893.0" font-family="Arial" font-size="28" font-weight="400" fill="#17212B">Заказ подключения</text>
+<polyline points="470,225 590,225" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="980,225 1110,225" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="470,545 590,545" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="980,545 1110,545" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="785,600 785,810" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="980,865 1110,865" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="470,865 590,865" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1305,280 1305,490" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="980,260 1040,260 1040,865 1110,865" fill="none" stroke="#364152" stroke-width="2"/>
+<text x="357.0078125" y="131.0" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">Граничные и управляющие классы задают взаимодействие сущностей без выбора технологий</text>
+</svg>

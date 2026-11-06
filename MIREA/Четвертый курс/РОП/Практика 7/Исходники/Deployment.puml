@@ -1,0 +1,26 @@
+@startuml
+skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam backgroundColor white
+
+title Развёртывание учебного решения
+node "Рабочая станция" <<device>> { artifact "Браузер" as browser }
+node "VM шлюза" as gateway { artifact "Nginx\nnginx.conf" as nginx }
+node "VM приложения" as host {
+ node "Docker" <<executionEnvironment>> {
+  artifact "crm-web:1.0\nDjango / Gunicorn" as web
+  artifact "crm-worker:1.0\nworker и планировщик" as worker
+ }
+}
+node "VM данных" as data { database "PostgreSQL 18\nschema.sql" as db }
+node "Резервное хранилище\nОтдельный носитель и ключ" as backup
+cloud "IdP / подключение / почта" as ext
+browser --> nginx : HTTPS 443
+nginx --> web : HTTPS 8443
+web --> db : SQL/TLS 5432
+worker --> db : SQL/TLS 5432
+db --> backup : SFTP 22, согласованные копии
+web --> ext : OIDC / HTTPS 443
+worker --> ext : HTTPS 443 / SMTP TLS 465
+
+@enduml

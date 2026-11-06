@@ -1,0 +1,398 @@
+{
+  "engine": "PostgreSQL 18.6 (PGlite 0.5.12) on wasm32-unknown-emscripten, compiled by emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 3.1.74 (1092ec30a3fb1d46b1782ff1b4db5094d3d06ae5), 32-bit",
+  "steps": [
+    {
+      "file": "01_DDL_схема.sql",
+      "statements": 32,
+      "result": "OK"
+    },
+    {
+      "file": "02_Тестовые_данные.sql",
+      "statements": 17,
+      "result": "OK"
+    },
+    {
+      "file": "03_DCL_права.sql",
+      "statements": 17,
+      "result": "OK"
+    }
+  ],
+  "counts": [
+    {
+      "table": "activity",
+      "rows": 4
+    },
+    {
+      "table": "app_role",
+      "rows": 3
+    },
+    {
+      "table": "app_user",
+      "rows": 5
+    },
+    {
+      "table": "approval",
+      "rows": 3
+    },
+    {
+      "table": "audit_event",
+      "rows": 2
+    },
+    {
+      "table": "client",
+      "rows": 4
+    },
+    {
+      "table": "contact",
+      "rows": 4
+    },
+    {
+      "table": "contract",
+      "rows": 3
+    },
+    {
+      "table": "deal",
+      "rows": 6
+    },
+    {
+      "table": "offer",
+      "rows": 5
+    },
+    {
+      "table": "offer_line",
+      "rows": 8
+    },
+    {
+      "table": "product",
+      "rows": 3
+    },
+    {
+      "table": "service_order",
+      "rows": 2
+    },
+    {
+      "table": "status_event",
+      "rows": 3
+    },
+    {
+      "table": "user_role",
+      "rows": 5
+    }
+  ],
+  "queries": [
+    {
+      "id": "Q01",
+      "title": "Воронка по менеджерам и стадиям",
+      "sql": "SELECT u.login, d.stage, count(*) AS deals FROM crm.deal d JOIN crm.app_user u ON u.id=d.owner_id GROUP BY u.login,d.stage ORDER BY u.login,d.stage;",
+      "rows": [
+        {
+          "login": "manager_a",
+          "stage": "contract",
+          "deals": 1
+        },
+        {
+          "login": "manager_a",
+          "stage": "lost",
+          "deals": 1
+        },
+        {
+          "login": "manager_a",
+          "stage": "qualification",
+          "deals": 1
+        },
+        {
+          "login": "manager_b",
+          "stage": "proposal",
+          "deals": 2
+        },
+        {
+          "login": "manager_b",
+          "stage": "won",
+          "deals": 1
+        }
+      ]
+    },
+    {
+      "id": "Q02",
+      "title": "Сумма каждой версии КП по валюте и периоду",
+      "sql": "SELECT d.title, o.version_no, o.status, a.currency, a.billing_period, a.amount FROM crm.offer o JOIN crm.deal d ON d.id=o.deal_id JOIN crm.v_offer_amount a ON a.offer_id=o.id ORDER BY d.title,o.version_no,a.billing_period;",
+      "rows": [
+        {
+          "title": "Учебная сделка 2",
+          "version_no": 1,
+          "status": "rejected",
+          "currency": "RUB",
+          "billing_period": "month",
+          "amount": "5000.00"
+        },
+        {
+          "title": "Учебная сделка 2",
+          "version_no": 2,
+          "status": "review",
+          "currency": "RUB",
+          "billing_period": "month",
+          "amount": "12000.00"
+        },
+        {
+          "title": "Учебная сделка 3",
+          "version_no": 1,
+          "status": "approved",
+          "currency": "RUB",
+          "billing_period": "month",
+          "amount": "17100.00"
+        },
+        {
+          "title": "Учебная сделка 3",
+          "version_no": 1,
+          "status": "approved",
+          "currency": "RUB",
+          "billing_period": "once",
+          "amount": "5000.00"
+        },
+        {
+          "title": "Учебная сделка 4",
+          "version_no": 1,
+          "status": "approved",
+          "currency": "RUB",
+          "billing_period": "month",
+          "amount": "10000.00"
+        },
+        {
+          "title": "Учебная сделка 6",
+          "version_no": 1,
+          "status": "draft",
+          "currency": "RUB",
+          "billing_period": "month",
+          "amount": "2000.00"
+        }
+      ]
+    },
+    {
+      "id": "Q03",
+      "title": "Просроченные действия по открытым сделкам на 28.10.2026",
+      "sql": "SELECT d.title, c.name AS client, u.login, d.next_action_at FROM crm.deal d JOIN crm.client c ON c.id=d.client_id JOIN crm.app_user u ON u.id=d.owner_id WHERE d.stage NOT IN ('won','lost') AND d.next_action_at < TIMESTAMPTZ '2026-10-28 00:00:00+03' ORDER BY d.next_action_at,d.title;",
+      "rows": [
+        {
+          "title": "Учебная сделка 1",
+          "client": "УЧЕБНЫЙ КЛИЕНТ 1",
+          "login": "manager_a",
+          "next_action_at": "2026-10-25T07:00:00.000Z"
+        },
+        {
+          "title": "Учебная сделка 2",
+          "client": "УЧЕБНЫЙ КЛИЕНТ 2",
+          "login": "manager_b",
+          "next_action_at": "2026-10-25T07:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "Q04",
+      "title": "Подключения по договорам и клиентам",
+      "sql": "SELECT c.name AS client, d.title, ct.number, so.external_ref, so.status FROM crm.service_order so JOIN crm.contract ct ON ct.id=so.contract_id JOIN crm.offer o ON o.id=ct.offer_id JOIN crm.deal d ON d.id=o.deal_id JOIN crm.client c ON c.id=d.client_id ORDER BY ct.number;",
+      "rows": [
+        {
+          "client": "УЧЕБНЫЙ КЛИЕНТ 3",
+          "title": "Учебная сделка 3",
+          "number": "TEST-2026-001",
+          "external_ref": "TEST-EXT-001",
+          "status": "in_progress"
+        },
+        {
+          "client": "УЧЕБНЫЙ КЛИЕНТ 4",
+          "title": "Учебная сделка 4",
+          "number": "TEST-2026-002",
+          "external_ref": "TEST-EXT-002",
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "id": "Q05",
+      "title": "Предложения, ожидающие решения",
+      "sql": "SELECT d.title,o.version_no,o.status FROM crm.offer o JOIN crm.deal d ON d.id=o.deal_id WHERE o.status='review' AND NOT EXISTS (SELECT 1 FROM crm.approval a WHERE a.offer_id=o.id) ORDER BY d.title;",
+      "rows": [
+        {
+          "title": "Учебная сделка 2",
+          "version_no": 2,
+          "status": "review"
+        }
+      ]
+    },
+    {
+      "id": "Q06",
+      "title": "История контактов выбранной сделки",
+      "sql": "SELECT a.performed_at,u.login,a.channel,a.result,a.next_due_at FROM crm.activity a JOIN crm.app_user u ON u.id=a.author_id WHERE a.deal_id='00000000-0000-4000-8000-000000000031' ORDER BY a.performed_at;",
+      "rows": [
+        {
+          "performed_at": "2026-10-20T06:00:00.000Z",
+          "login": "manager_a",
+          "channel": "call",
+          "result": "Учебный звонок: уточнена потребность",
+          "next_due_at": "2026-10-25T07:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "Q07",
+      "title": "Проверка повторного заказа без создания дубликата",
+      "sql": "SELECT id,external_ref,status FROM crm.service_order WHERE request_key='00000000-0000-4000-8000-000000000181';",
+      "rows": [
+        {
+          "id": "00000000-0000-4000-8000-000000000081",
+          "external_ref": "TEST-EXT-001",
+          "status": "in_progress"
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "name": "Повторный ИНН",
+      "role": "владелец",
+      "expected": "23505",
+      "actual": "23505",
+      "ok": true
+    },
+    {
+      "name": "Несуществующий клиент",
+      "role": "владелец",
+      "expected": "23503",
+      "actual": "23503",
+      "ok": true
+    },
+    {
+      "name": "Отрицательное количество",
+      "role": "владелец",
+      "expected": "23514",
+      "actual": "23514",
+      "ok": true
+    },
+    {
+      "name": "Скидка больше 100%",
+      "role": "владелец",
+      "expected": "23514",
+      "actual": "23514",
+      "ok": true
+    },
+    {
+      "name": "Повтор номера позиции внутри КП",
+      "role": "владелец",
+      "expected": "23505",
+      "actual": "23505",
+      "ok": true
+    },
+    {
+      "name": "Повтор версии КП",
+      "role": "владелец",
+      "expected": "23505",
+      "actual": "23505",
+      "ok": true
+    },
+    {
+      "name": "Самосогласование",
+      "role": "владелец",
+      "expected": "23514",
+      "actual": "23514",
+      "ok": true
+    },
+    {
+      "name": "Договор по несогласованному КП",
+      "role": "владелец",
+      "expected": "23514",
+      "actual": "23514",
+      "ok": true
+    },
+    {
+      "name": "Подписание без файла",
+      "role": "владелец",
+      "expected": "23514",
+      "actual": "23514",
+      "ok": true
+    },
+    {
+      "name": "Заказ по неподписанному договору",
+      "role": "владелец",
+      "expected": "23514",
+      "actual": "23514",
+      "ok": true
+    },
+    {
+      "name": "Повтор ключа заказа",
+      "role": "владелец",
+      "expected": "23505",
+      "actual": "23505",
+      "ok": true
+    },
+    {
+      "name": "Повтор внешнего события",
+      "role": "владелец",
+      "expected": "23505",
+      "actual": "23505",
+      "ok": true
+    },
+    {
+      "name": "Читатель читает представление",
+      "role": "crm_reader",
+      "expected": "успех",
+      "actual": "успех",
+      "ok": true
+    },
+    {
+      "name": "Читатель не читает контакты",
+      "role": "crm_reader",
+      "expected": "42501",
+      "actual": "42501",
+      "ok": true
+    },
+    {
+      "name": "Менеджер не пишет решения",
+      "role": "crm_sales",
+      "expected": "42501",
+      "actual": "42501",
+      "ok": true
+    },
+    {
+      "name": "Администратор не пишет решения",
+      "role": "crm_admin",
+      "expected": "42501",
+      "actual": "42501",
+      "ok": true
+    },
+    {
+      "name": "Согласующий записывает решение",
+      "role": "crm_approver",
+      "expected": "успех",
+      "actual": "успех",
+      "ok": true
+    },
+    {
+      "name": "Менеджер не изменяет аудит",
+      "role": "crm_sales",
+      "expected": "42501",
+      "actual": "42501",
+      "ok": true
+    },
+    {
+      "name": "Сумма ежемесячного КП: 12000 RUB",
+      "role": "владелец",
+      "expected": "успех",
+      "actual": "успех",
+      "ok": true
+    },
+    {
+      "name": "Воронка содержит все 6 сделок",
+      "role": "владелец",
+      "expected": "успех",
+      "actual": "успех",
+      "ok": true
+    },
+    {
+      "name": "Разные периоды не суммируются",
+      "role": "владелец",
+      "expected": "успех",
+      "actual": "успех",
+      "ok": true
+    }
+  ]
+}

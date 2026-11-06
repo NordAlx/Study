@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="24.7.17">
+  <diagram name="UML Состояния сделки" id="13_UML_Состояния_сделки">
+    <mxGraphModel dx="2100" dy="1200" grid="1" gridSize="10" page="1" pageWidth="2100" pageHeight="1200">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" vertex="1" value="UML Состояния сделки" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=32;fontStyle=1;strokeColor=none;fillColor=none;">
+          <mxGeometry as="geometry" x="40" y="20" width="2020" height="48" />
+        </mxCell>
+        <mxCell id="3" parent="1" vertex="1" value="Проектируемая модель сопровождения корпоративных продаж" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=20;fontStyle=0;strokeColor=none;fillColor=none;">
+          <mxGeometry as="geometry" x="40" y="1148" width="2020" height="32" />
+        </mxCell>
+        <mxCell id="4" parent="1" vertex="1" value="Новая" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fontColor=#17212B;strokeWidth=2;rounded=1;fillColor=#F3F5F7;strokeColor=#364152;">
+          <mxGeometry as="geometry" x="140" y="180" width="420" height="105" />
+        </mxCell>
+        <mxCell id="5" parent="1" vertex="1" value="Квалифицирована" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fontColor=#17212B;strokeWidth=2;rounded=1;fillColor=#F3F5F7;strokeColor=#364152;">
+          <mxGeometry as="geometry" x="740" y="180" width="420" height="105" />
+        </mxCell>
+        <mxCell id="6" parent="1" vertex="1" value="КП подготовлено" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fontColor=#17212B;strokeWidth=2;rounded=1;fillColor=#F3F5F7;strokeColor=#364152;">
+          <mxGeometry as="geometry" x="1340" y="180" width="420" height="105" />
+        </mxCell>
+        <mxCell id="7" parent="1" vertex="1" value="КП согласовано" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fontColor=#17212B;strokeWidth=2;rounded=1;fillColor=#F3F5F7;strokeColor=#364152;">
+          <mxGeometry as="geometry" x="1340" y="510" width="420" height="105" />
+        </mxCell>
+        <mxCell id="8" parent="1" vertex="1" value="Договор подписан" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fontColor=#17212B;strokeWidth=2;rounded=1;fillColor=#F3F5F7;strokeColor=#364152;">
+          <mxGeometry as="geometry" x="740" y="510" width="420" height="105" />
+        </mxCell>
+        <mxCell id="9" parent="1" vertex="1" value="Подключение" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fontColor=#17212B;strokeWidth=2;rounded=1;fillColor=#F3F5F7;strokeColor=#364152;">
+          <mxGeometry as="geometry" x="140" y="510" width="420" height="105" />
+        </mxCell>
+        <mxCell id="10" parent="1" vertex="1" value="Успешно" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fontColor=#17212B;strokeWidth=2;rounded=1;fillColor=#F3F5F7;strokeColor=#364152;">
+          <mxGeometry as="geometry" x="140" y="840" width="420" height="105" />
+        </mxCell>
+        <mxCell id="11" parent="1" vertex="1" value="Закрыта с отказом" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fontColor=#17212B;strokeWidth=2;rounded=1;fillColor=#F3F5F7;strokeColor=#364152;">
+          <mxGeometry as="geometry" x="1340" y="840" width="420" height="105" />
+        </mxCell>
+        <mxCell id="12" parent="1" edge="1" style="endArrow=block;html=0;strokeColor=#364152;strokeWidth=2;dashed=0;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="560" y="232" />
+            <mxPoint as="targetPoint" x="740" y="232" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="12label" parent="1" vertex="1" value="Квалификация" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=22;fontStyle=0;strokeColor=none;fillColor=none;">
+          <mxGeometry as="geometry" x="558.5" y="176.0" width="183.0" height="38" />
+        </mxCell>
+        <mxCell id="13" parent="1" edge="1" style="endArrow=block;html=0;strokeColor=#364152;strokeWidth=2;dashed=0;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1160" y="232" />
+            <mxPoint as="targetPoint" x="1340" y="232" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="13label" parent="1" vertex="1" value="Подготовка КП" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=22;fontStyle=0;strokeColor=none;fillColor=none;">
+          <mxGeometry as="geometry" x="1158.0" y="176.0" width="184.0" height="38" />
+        </mxCell>
+        <mxCell id="14" parent="1" edge="1" style="endArrow=block;html=0;strokeColor=#364152;strokeWidth=2;dashed=0;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1550" y="285" />
+            <mxPoint as="targetPoint" x="1550" y="510" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14label" parent="1" vertex="1" value="Условия одобрены" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=22;fontStyle=0;strokeColor=none;fillColor=none;">
+          <mxGeometry as="geometry" x="1437.0078125" y="371.0" width="225.984375" height="38" />
+        </mxCell>
+        <mxCell id="15" parent="1" edge="1" style="endArrow=block;html=0;strokeColor=#364152;strokeWidth=2;dashed=0;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1340" y="562" />
+            <mxPoint as="targetPoint" x="1160" y="562" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="15label" parent="1" vertex="1" value="Подпись клиента" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=22;fontStyle=0;strokeColor=none;fillColor=none;">
+          <mxGeometry as="geometry" x="1147.0" y="506.0" width="206.0" height="38" />
+        </mxCell>
+        <mxCell id="16" parent="1" edge="1" style="endArrow=block;html=0;strokeColor=#364152;strokeWidth=2;dashed=0;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="740" y="562" />
+            <mxPoint as="targetPoint" x="560" y="562" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="16label" parent="1" vertex="1" value="Заказ принят" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=22;fontStyle=0;strokeColor=none;fillColor=none;">
+          <mxGeometry as="geometry" x="567.5" y="506.0" width="165.0" height="38" />
+        </mxCell>
+        <mxCell id="17" parent="1" edge="1" style="endArrow=block;html=0;strokeColor=#364152;strokeWidth=2;dashed=0;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="350" y="615" />
+            <mxPoint as="targetPoint" x="350" y="840" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="17label" parent="1" vertex="1" value="[все заказы активны]" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=22;fontStyle=0;strokeColor=none;fillColor=none;">
+          <mxGeometry as="geometry" x="247.5" y="711.0" width="245.0" height="38" />
+        </mxCell>
+        <mxCell id="18" parent="1" edge="1" style="endArrow=block;html=0;strokeColor=#364152;strokeWidth=2;dashed=0;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1760" y="560" />
+            <mxPoint as="targetPoint" x="1760" y="230" />
+            <Array as="points">
+              <mxPoint x="1830" y="560" />
+              <mxPoint x="1830" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="18label" parent="1" vertex="1" value="Новая версия КП" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=22;fontStyle=0;strokeColor=none;fillColor=none;">
+          <mxGeometry as="geometry" x="1796.0" y="371.0" width="208.0" height="38" />
+        </mxCell>
+        <mxCell id="19" parent="1" edge="1" style="endArrow=block;html=0;strokeColor=#364152;strokeWidth=2;dashed=0;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1760" y="260" />
+            <mxPoint as="targetPoint" x="1760" y="892" />
+            <Array as="points">
+              <mxPoint x="2020" y="260" />
+              <mxPoint x="2020" y="892" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="19label" parent="1" vertex="1" value="Отказ клиента" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=22;fontStyle=0;strokeColor=none;fillColor=none;">
+          <mxGeometry as="geometry" x="1811.0" y="731.0" width="178.0" height="38" />
+        </mxCell>
+        <mxCell id="20" parent="1" edge="1" style="endArrow=block;html=0;strokeColor=#364152;strokeWidth=2;dashed=0;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="950" y="285" />
+            <mxPoint as="targetPoint" x="1550" y="840" />
+            <Array as="points">
+              <mxPoint x="1270" y="285" />
+              <mxPoint x="1270" y="760" />
+              <mxPoint x="1550" y="760" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="20label" parent="1" vertex="1" value="Отказ клиента" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=22;fontStyle=0;strokeColor=none;fillColor=none;">
+          <mxGeometry as="geometry" x="1031.0" y="716.0" width="178.0" height="38" />
+        </mxCell>
+        <mxCell id="21" parent="1" vertex="1" value="" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=24;fontColor=#17212B;strokeWidth=2;ellipse;fillColor=#17212B;">
+          <mxGeometry as="geometry" x="40" y="215" width="35" height="35" />
+        </mxCell>
+        <mxCell id="22" parent="1" edge="1" style="endArrow=block;html=0;strokeColor=#364152;strokeWidth=2;dashed=0;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="75" y="232" />
+            <mxPoint as="targetPoint" x="140" y="232" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="23" parent="1" vertex="1" value="Ошибки исполнения сохраняют стадию Подключение&#10;Повторная отправка не создаёт новую сделку или новый заказ&#10;Успешно и Закрыта с отказом — терминальные состояния" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=25;fontStyle=0;strokeColor=none;fillColor=none;">
+          <mxGeometry as="geometry" x="700" y="1000" width="1110" height="115" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

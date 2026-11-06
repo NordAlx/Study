@@ -1,0 +1,689 @@
+[
+  {
+    "name": "app_user",
+    "ru": "Пользователь",
+    "desc": "Сотрудник проектируемого контура; пароли здесь не хранятся.",
+    "fields": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "desc": "Идентификатор",
+        "rule": "PRIMARY KEY DEFAULT gen_random_uuid()",
+        "nullable": false
+      },
+      {
+        "name": "login",
+        "type": "varchar(80)",
+        "desc": "Логин",
+        "rule": "UNIQUE",
+        "nullable": false
+      },
+      {
+        "name": "full_name",
+        "type": "varchar(160)",
+        "desc": "Имя сотрудника",
+        "rule": "",
+        "nullable": false
+      },
+      {
+        "name": "active",
+        "type": "boolean",
+        "desc": "Признак активности",
+        "rule": "DEFAULT true",
+        "nullable": false
+      }
+    ],
+    "extra": ""
+  },
+  {
+    "name": "app_role",
+    "ru": "Роль",
+    "desc": "Прикладная роль сотрудника; отличается от роли СУБД.",
+    "fields": [
+      {
+        "name": "code",
+        "type": "varchar(30)",
+        "desc": "Код роли",
+        "rule": "PRIMARY KEY",
+        "nullable": false
+      },
+      {
+        "name": "name",
+        "type": "varchar(80)",
+        "desc": "Наименование",
+        "rule": "UNIQUE",
+        "nullable": false
+      }
+    ],
+    "extra": ""
+  },
+  {
+    "name": "user_role",
+    "ru": "Назначение роли",
+    "desc": "Разрешает одному сотруднику иметь несколько прикладных ролей.",
+    "fields": [
+      {
+        "name": "user_id",
+        "type": "uuid",
+        "desc": "Пользователь",
+        "rule": "REFERENCES crm.app_user(id) ON DELETE RESTRICT",
+        "nullable": false
+      },
+      {
+        "name": "role_code",
+        "type": "varchar(30)",
+        "desc": "Роль",
+        "rule": "REFERENCES crm.app_role(code) ON DELETE RESTRICT",
+        "nullable": false
+      }
+    ],
+    "extra": "PRIMARY KEY (user_id, role_code)"
+  },
+  {
+    "name": "client",
+    "ru": "Клиент",
+    "desc": "Юридическое лицо, участвующее в корпоративной продаже.",
+    "fields": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "desc": "Идентификатор",
+        "rule": "PRIMARY KEY DEFAULT gen_random_uuid()",
+        "nullable": false
+      },
+      {
+        "name": "inn",
+        "type": "varchar(10)",
+        "desc": "ИНН юридического лица",
+        "rule": "UNIQUE CHECK (inn ~ '^[0-9]{10}$')",
+        "nullable": false
+      },
+      {
+        "name": "name",
+        "type": "varchar(200)",
+        "desc": "Наименование",
+        "rule": "",
+        "nullable": false
+      },
+      {
+        "name": "active",
+        "type": "boolean",
+        "desc": "Признак активности",
+        "rule": "DEFAULT true",
+        "nullable": false
+      }
+    ],
+    "extra": ""
+  },
+  {
+    "name": "contact",
+    "ru": "Контакт",
+    "desc": "Контактное лицо конкретного клиента.",
+    "fields": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "desc": "Идентификатор",
+        "rule": "PRIMARY KEY DEFAULT gen_random_uuid()",
+        "nullable": false
+      },
+      {
+        "name": "client_id",
+        "type": "uuid",
+        "desc": "Клиент",
+        "rule": "REFERENCES crm.client(id) ON DELETE RESTRICT",
+        "nullable": false
+      },
+      {
+        "name": "full_name",
+        "type": "varchar(160)",
+        "desc": "ФИО контакта",
+        "rule": "",
+        "nullable": false
+      },
+      {
+        "name": "email",
+        "type": "varchar(160)",
+        "desc": "Электронная почта",
+        "rule": "",
+        "nullable": true
+      },
+      {
+        "name": "phone",
+        "type": "varchar(30)",
+        "desc": "Телефон",
+        "rule": "",
+        "nullable": true
+      }
+    ],
+    "extra": "CHECK (email IS NOT NULL OR phone IS NOT NULL)"
+  },
+  {
+    "name": "deal",
+    "ru": "Сделка",
+    "desc": "Заявка на услуги и её продвижение по стадиям.",
+    "fields": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "desc": "Идентификатор",
+        "rule": "PRIMARY KEY DEFAULT gen_random_uuid()",
+        "nullable": false
+      },
+      {
+        "name": "client_id",
+        "type": "uuid",
+        "desc": "Клиент",
+        "rule": "REFERENCES crm.client(id) ON DELETE RESTRICT",
+        "nullable": false
+      },
+      {
+        "name": "owner_id",
+        "type": "uuid",
+        "desc": "Ответственный менеджер",
+        "rule": "REFERENCES crm.app_user(id) ON DELETE RESTRICT",
+        "nullable": false
+      },
+      {
+        "name": "title",
+        "type": "varchar(200)",
+        "desc": "Предмет сделки",
+        "rule": "",
+        "nullable": false
+      },
+      {
+        "name": "stage",
+        "type": "varchar(20)",
+        "desc": "Стадия",
+        "rule": "CHECK (stage IN ('new','qualification','proposal','contract','won','lost'))",
+        "nullable": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamptz",
+        "desc": "Время регистрации",
+        "rule": "DEFAULT CURRENT_TIMESTAMP",
+        "nullable": false
+      },
+      {
+        "name": "next_action_at",
+        "type": "timestamptz",
+        "desc": "Срок следующего действия",
+        "rule": "",
+        "nullable": true
+      },
+      {
+        "name": "version",
+        "type": "integer",
+        "desc": "Версия для конкурентного изменения",
+        "rule": "DEFAULT 1 CHECK (version > 0)",
+        "nullable": false
+      }
+    ],
+    "extra": ""
+  },
+  {
+    "name": "product",
+    "ru": "Услуга",
+    "desc": "Каталог услуг учебного проекта.",
+    "fields": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "desc": "Идентификатор",
+        "rule": "PRIMARY KEY DEFAULT gen_random_uuid()",
+        "nullable": false
+      },
+      {
+        "name": "code",
+        "type": "varchar(30)",
+        "desc": "Код услуги",
+        "rule": "UNIQUE",
+        "nullable": false
+      },
+      {
+        "name": "name",
+        "type": "varchar(160)",
+        "desc": "Наименование",
+        "rule": "",
+        "nullable": false
+      },
+      {
+        "name": "active",
+        "type": "boolean",
+        "desc": "Доступна для новых предложений",
+        "rule": "DEFAULT true",
+        "nullable": false
+      }
+    ],
+    "extra": ""
+  },
+  {
+    "name": "offer",
+    "ru": "КП",
+    "desc": "Отдельная версия коммерческого предложения по сделке.",
+    "fields": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "desc": "Идентификатор",
+        "rule": "PRIMARY KEY DEFAULT gen_random_uuid()",
+        "nullable": false
+      },
+      {
+        "name": "deal_id",
+        "type": "uuid",
+        "desc": "Сделка",
+        "rule": "REFERENCES crm.deal(id) ON DELETE RESTRICT",
+        "nullable": false
+      },
+      {
+        "name": "author_id",
+        "type": "uuid",
+        "desc": "Автор",
+        "rule": "REFERENCES crm.app_user(id) ON DELETE RESTRICT",
+        "nullable": false
+      },
+      {
+        "name": "version_no",
+        "type": "integer",
+        "desc": "Номер версии",
+        "rule": "CHECK (version_no > 0)",
+        "nullable": false
+      },
+      {
+        "name": "status",
+        "type": "varchar(20)",
+        "desc": "Состояние",
+        "rule": "CHECK (status IN ('draft','review','approved','rejected'))",
+        "nullable": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamptz",
+        "desc": "Время создания",
+        "rule": "DEFAULT CURRENT_TIMESTAMP",
+        "nullable": false
+      }
+    ],
+    "extra": "UNIQUE (deal_id, version_no)"
+  },
+  {
+    "name": "offer_line",
+    "ru": "Позиция КП",
+    "desc": "Слабая сущность: номер позиции уникален только внутри КП.",
+    "fields": [
+      {
+        "name": "offer_id",
+        "type": "uuid",
+        "desc": "Владелец КП",
+        "rule": "REFERENCES crm.offer(id) ON DELETE RESTRICT",
+        "nullable": false
+      },
+      {
+        "name": "line_no",
+        "type": "smallint",
+        "desc": "Частичный ключ",
+        "rule": "CHECK (line_no > 0)",
+        "nullable": false
+      },
+      {
+        "name": "product_id",
+        "type": "uuid",
+        "desc": "Услуга",
+        "rule": "REFERENCES crm.product(id) ON DELETE RESTRICT",
+        "nullable": false
+      },
+      {
+        "name": "quantity",
+        "type": "numeric(12,3)",
+        "desc": "Количество",
+        "rule": "CHECK (quantity > 0)",
+        "nullable": false
+      },
+      {
+        "name": "unit_price",
+        "type": "numeric(14,2)",
+        "desc": "Цена за единицу",
+        "rule": "CHECK (unit_price >= 0)",
+        "nullable": false
+      },
+      {
+        "name": "discount_pct",
+        "type": "numeric(5,2)",
+        "desc": "Скидка, %",
+        "rule": "DEFAULT 0 CHECK (discount_pct BETWEEN 0 AND 100)",
+        "nullable": false
+      },
+      {
+        "name": "currency",
+        "type": "char(3)",
+        "desc": "Валюта",
+        "rule": "CHECK (currency IN ('RUB','USD','EUR'))",
+        "nullable": false
+      },
+      {
+        "name": "billing_period",
+        "type": "varchar(12)",
+        "desc": "Период начисления",
+        "rule": "CHECK (billing_period IN ('once','month'))",
+        "nullable": false
+      }
+    ],
+    "extra": "PRIMARY KEY (offer_id, line_no)"
+  },
+  {
+    "name": "approval",
+    "ru": "Решение",
+    "desc": "Решение согласующего по конкретной версии КП.",
+    "fields": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "desc": "Идентификатор",
+        "rule": "PRIMARY KEY DEFAULT gen_random_uuid()",
+        "nullable": false
+      },
+      {
+        "name": "offer_id",
+        "type": "uuid",
+        "desc": "Версия КП",
+        "rule": "REFERENCES crm.offer(id) ON DELETE RESTRICT",
+        "nullable": false
+      },
+      {
+        "name": "approver_id",
+        "type": "uuid",
+        "desc": "Согласующий",
+        "rule": "REFERENCES crm.app_user(id) ON DELETE RESTRICT",
+        "nullable": false
+      },
+      {
+        "name": "decision",
+        "type": "varchar(12)",
+        "desc": "Решение",
+        "rule": "CHECK (decision IN ('approved','rejected'))",
+        "nullable": false
+      },
+      {
+        "name": "note",
+        "type": "text",
+        "desc": "Комментарий",
+        "rule": "",
+        "nullable": true
+      },
+      {
+        "name": "decided_at",
+        "type": "timestamptz",
+        "desc": "Время решения",
+        "rule": "DEFAULT CURRENT_TIMESTAMP",
+        "nullable": false
+      }
+    ],
+    "extra": "UNIQUE (offer_id, approver_id)"
+  },
+  {
+    "name": "contract",
+    "ru": "Договор",
+    "desc": "Зарегистрированный договор на основании согласованной версии КП.",
+    "fields": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "desc": "Идентификатор",
+        "rule": "PRIMARY KEY DEFAULT gen_random_uuid()",
+        "nullable": false
+      },
+      {
+        "name": "offer_id",
+        "type": "uuid",
+        "desc": "Версия КП",
+        "rule": "REFERENCES crm.offer(id) ON DELETE RESTRICT",
+        "nullable": false
+      },
+      {
+        "name": "number",
+        "type": "varchar(60)",
+        "desc": "Номер договора",
+        "rule": "UNIQUE",
+        "nullable": false
+      },
+      {
+        "name": "signed_at",
+        "type": "date",
+        "desc": "Дата подписания",
+        "rule": "",
+        "nullable": true
+      },
+      {
+        "name": "file_ref",
+        "type": "varchar(240)",
+        "desc": "Ссылка на файл",
+        "rule": "",
+        "nullable": true
+      },
+      {
+        "name": "status",
+        "type": "varchar(12)",
+        "desc": "Состояние",
+        "rule": "CHECK (status IN ('draft','signed'))",
+        "nullable": false
+      }
+    ],
+    "extra": "CHECK (status <> 'signed' OR (signed_at IS NOT NULL AND file_ref IS NOT NULL))"
+  },
+  {
+    "name": "service_order",
+    "ru": "Заказ",
+    "desc": "Заказ подключения по подписанному договору.",
+    "fields": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "desc": "Идентификатор",
+        "rule": "PRIMARY KEY DEFAULT gen_random_uuid()",
+        "nullable": false
+      },
+      {
+        "name": "contract_id",
+        "type": "uuid",
+        "desc": "Договор",
+        "rule": "REFERENCES crm.contract(id) ON DELETE RESTRICT",
+        "nullable": false
+      },
+      {
+        "name": "request_key",
+        "type": "uuid",
+        "desc": "Ключ повторной команды",
+        "rule": "UNIQUE",
+        "nullable": false
+      },
+      {
+        "name": "external_ref",
+        "type": "varchar(80)",
+        "desc": "Внешний номер",
+        "rule": "UNIQUE",
+        "nullable": true
+      },
+      {
+        "name": "status",
+        "type": "varchar(16)",
+        "desc": "Текущий статус",
+        "rule": "CHECK (status IN ('created','sent','in_progress','completed','failed'))",
+        "nullable": false
+      },
+      {
+        "name": "created_at",
+        "type": "timestamptz",
+        "desc": "Время создания",
+        "rule": "DEFAULT CURRENT_TIMESTAMP",
+        "nullable": false
+      },
+      {
+        "name": "updated_at",
+        "type": "timestamptz",
+        "desc": "Время обновления",
+        "rule": "DEFAULT CURRENT_TIMESTAMP",
+        "nullable": false
+      }
+    ],
+    "extra": "CHECK (updated_at >= created_at)"
+  },
+  {
+    "name": "status_event",
+    "ru": "Событие статуса",
+    "desc": "Полученный внешний статус; идентификатор защищает от дубликатов.",
+    "fields": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "desc": "Идентификатор",
+        "rule": "PRIMARY KEY DEFAULT gen_random_uuid()",
+        "nullable": false
+      },
+      {
+        "name": "order_id",
+        "type": "uuid",
+        "desc": "Заказ",
+        "rule": "REFERENCES crm.service_order(id) ON DELETE RESTRICT",
+        "nullable": false
+      },
+      {
+        "name": "external_event_id",
+        "type": "varchar(100)",
+        "desc": "Внешний идентификатор события",
+        "rule": "UNIQUE",
+        "nullable": false
+      },
+      {
+        "name": "status",
+        "type": "varchar(16)",
+        "desc": "Полученный статус",
+        "rule": "CHECK (status IN ('sent','in_progress','completed','failed'))",
+        "nullable": false
+      },
+      {
+        "name": "received_at",
+        "type": "timestamptz",
+        "desc": "Время получения",
+        "rule": "DEFAULT CURRENT_TIMESTAMP",
+        "nullable": false
+      }
+    ],
+    "extra": ""
+  },
+  {
+    "name": "activity",
+    "ru": "Контакт по сделке",
+    "desc": "Факт взаимодействия и срок следующего действия.",
+    "fields": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "desc": "Идентификатор",
+        "rule": "PRIMARY KEY DEFAULT gen_random_uuid()",
+        "nullable": false
+      },
+      {
+        "name": "deal_id",
+        "type": "uuid",
+        "desc": "Сделка",
+        "rule": "REFERENCES crm.deal(id) ON DELETE RESTRICT",
+        "nullable": false
+      },
+      {
+        "name": "author_id",
+        "type": "uuid",
+        "desc": "Автор",
+        "rule": "REFERENCES crm.app_user(id) ON DELETE RESTRICT",
+        "nullable": false
+      },
+      {
+        "name": "channel",
+        "type": "varchar(12)",
+        "desc": "Канал",
+        "rule": "CHECK (channel IN ('call','email','meeting'))",
+        "nullable": false
+      },
+      {
+        "name": "result",
+        "type": "text",
+        "desc": "Результат",
+        "rule": "",
+        "nullable": false
+      },
+      {
+        "name": "performed_at",
+        "type": "timestamptz",
+        "desc": "Время взаимодействия",
+        "rule": "DEFAULT CURRENT_TIMESTAMP",
+        "nullable": false
+      },
+      {
+        "name": "next_due_at",
+        "type": "timestamptz",
+        "desc": "Следующий контакт",
+        "rule": "",
+        "nullable": true
+      }
+    ],
+    "extra": ""
+  },
+  {
+    "name": "audit_event",
+    "ru": "Событие аудита",
+    "desc": "Неизменяемая для прикладных ролей запись существенного действия.",
+    "fields": [
+      {
+        "name": "id",
+        "type": "uuid",
+        "desc": "Идентификатор",
+        "rule": "PRIMARY KEY DEFAULT gen_random_uuid()",
+        "nullable": false
+      },
+      {
+        "name": "actor_id",
+        "type": "uuid",
+        "desc": "Автор действия",
+        "rule": "REFERENCES crm.app_user(id) ON DELETE RESTRICT",
+        "nullable": false
+      },
+      {
+        "name": "object_type",
+        "type": "varchar(30)",
+        "desc": "Вид объекта",
+        "rule": "",
+        "nullable": false
+      },
+      {
+        "name": "object_id",
+        "type": "uuid",
+        "desc": "Идентификатор объекта",
+        "rule": "",
+        "nullable": false
+      },
+      {
+        "name": "action",
+        "type": "varchar(40)",
+        "desc": "Действие",
+        "rule": "",
+        "nullable": false
+      },
+      {
+        "name": "occurred_at",
+        "type": "timestamptz",
+        "desc": "Время события",
+        "rule": "DEFAULT CURRENT_TIMESTAMP",
+        "nullable": false
+      },
+      {
+        "name": "details",
+        "type": "jsonb",
+        "desc": "Детали изменения",
+        "rule": "DEFAULT '{}'::jsonb",
+        "nullable": false
+      }
+    ],
+    "extra": ""
+  }
+]

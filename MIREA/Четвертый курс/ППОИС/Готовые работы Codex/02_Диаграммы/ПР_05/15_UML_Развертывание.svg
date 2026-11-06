@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1300" viewBox="0 0 1900 1300"><rect width="100%" height="100%" fill="white"/>
+<text x="629.015625" y="57.0" font-family="Arial" font-size="32" font-weight="700" fill="#17212B">UML Развёртывание проектного пилота</text>
+<text x="653.5078125" y="1271.0" font-family="Arial" font-size="20" font-weight="400" fill="#17212B">Проектируемая модель сопровождения корпоративных продаж</text>
+<rect x="70" y="180" width="450" height="180" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="128.515625" y="247.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">«device» Рабочая станция</text>
+<text x="243.0" y="280.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">Браузер</text>
+<text x="183.0234375" y="313.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">Пользователь ИС</text>
+<rect x="690" y="180" width="520" height="180" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="776.5" y="247.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">«node» Контур приложения</text>
+<text x="792.5078125" y="280.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">Reverse proxy и Web API</text>
+<text x="838.0" y="313.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">Integration Worker</text>
+<rect x="1370" y="180" width="450" height="180" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1443.0" y="264.0" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">«node» Внешний контур</text>
+<text x="1419.015625" y="297.0" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">IdP и система подключения</text>
+<rect x="70" y="780" width="450" height="200" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="197.5" y="857.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">«node» Данные</text>
+<text x="221.0" y="890.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">PostgreSQL</text>
+<text x="108.015625" y="923.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">Клиенты сделки outbox аудит</text>
+<rect x="690" y="780" width="520" height="200" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="858.0" y="857.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">«node» Файлы</text>
+<text x="807.5" y="890.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">Хранилище версий КП</text>
+<text x="777.0078125" y="923.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">и подписанных документов</text>
+<rect x="1370" y="780" width="450" height="200" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1457.5078125" y="857.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">«node» Эксплуатация</text>
+<text x="1520.5" y="890.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">Мониторинг</text>
+<text x="1486.015625" y="923.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">Резервные копии</text>
+<polyline points="520,270 690,270" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="676.3036658953154,276.11640679589357 690,270 676.3036658953154,263.88359320410643" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="529.0" y="210.5" width="152.0" height="39" fill="white"/>
+<text x="545.0" y="238.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">HTTPS 443</text>
+<polyline points="1210,270 1370,270" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1356.3036658953154,276.11640679589357 1370,270 1356.3036658953154,263.88359320410643" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1214.0" y="210.5" width="152.0" height="39" fill="white"/>
+<text x="1230.0" y="238.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">HTTPS 443</text>
+<polyline points="850,360 850,590 295,590 295,780" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="288.88359320410643,766.3036658953154 295,780 301.11640679589357,766.3036658953154" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="402.0078125" y="530.5" width="195.984375" height="39" fill="white"/>
+<text x="418.0078125" y="558.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">SQL / TLS 5432</text>
+<polyline points="950,360 950,780" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="943.8835932041064,766.3036658953154 950,780 956.1164067958936,766.3036658953154" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="997.5078125" y="560.5" width="244.984375" height="39" fill="white"/>
+<text x="1013.5078125" y="588.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">Файловый API / TLS</text>
+<polyline points="1210,310 1290,310 1290,880 1370,880" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1356.3036658953154,886.1164067958936 1370,880 1356.3036658953154,873.8835932041064" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1337.5078125" y="570.5" width="244.984375" height="39" fill="white"/>
+<text x="1353.5078125" y="598.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">Метрики и журналы</text>
+<polyline points="520,930 600,930 600,1080 1580,1080 1580,980" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1586.1164067958935,993.6963341046846 1580,980 1573.8835932041065,993.6963341046846" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="904.0078125" y="1030.5" width="291.984375" height="39" fill="white"/>
+<text x="920.0078125" y="1058.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">Резервное копирование</text>
+<polyline points="1210,930 1290,930 1290,1030 1510,1030 1510,980" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1516.1164067958935,993.6963341046846 1510,980 1503.8835932041065,993.6963341046846" fill="#364152" stroke="#364152" stroke-width="2"/>
+<text x="603.9921875" y="1179.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">Размеры узлов и нагрузка задаются как проектная оценка</text>
+<text x="430.03125" y="1210.0" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">Внешние системы представлены логически без сведений об инфраструктуре компании</text>
+</svg>

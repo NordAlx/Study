@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="24.7.17">
+  <diagram id="UML_Deployment" name="UML Deployment Размещение артефактов">
+    <mxGraphModel dx="1800" dy="1100" grid="1" page="1" pageWidth="1800" pageHeight="1100">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="users" value="Пользовательский сегмент / VPN" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#F7F9FA;fontSize=22;align=left;verticalAlign=top;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="130" width="390" height="800" as="geometry" />
+        </mxCell>
+        <mxCell id="dmz" value="Зона шлюза" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#F7F9FA;fontSize=22;align=left;verticalAlign=top;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="130" width="350" height="800" as="geometry" />
+        </mxCell>
+        <mxCell id="appzone" value="Серверная зона приложения" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#F7F9FA;fontSize=22;align=left;verticalAlign=top;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="890" y="130" width="390" height="800" as="geometry" />
+        </mxCell>
+        <mxCell id="datazone" value="Защищённая зона данных" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#F7F9FA;fontSize=22;align=left;verticalAlign=top;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1330" y="130" width="420" height="800" as="geometry" />
+        </mxCell>
+        <mxCell id="pc" value="«device» Рабочая станция&lt;br&gt;Браузер" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=26;" vertex="1" parent="1">
+          <mxGeometry x="85" y="280" width="320" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="proxy" value="«node» VM шлюза&lt;br&gt;«artifact» nginx.conf&lt;br&gt;Nginx / TLS" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=25;" vertex="1" parent="1">
+          <mxGeometry x="515" y="280" width="300" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="app" value="«node» VM приложения&lt;br&gt;«executionEnvironment» Docker&lt;br&gt;«artifact» crm-web:1.0&lt;br&gt;Django / Gunicorn" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="910" y="280" width="350" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="worker" value="«artifact» crm-worker:1.0&lt;br&gt;Планировщик / worker&lt;br&gt;Очередь в PostgreSQL" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="910" y="650" width="350" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="db" value="«node» VM данных&lt;br&gt;«artifact» schema.sql&lt;br&gt;PostgreSQL 18&lt;br&gt;TCP 5432 / TLS" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="280" width="370" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="backup" value="«node» Резервное хранилище&lt;br&gt;Копии БД и документов&lt;br&gt;Отдельный носитель / ключ" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="650" width="370" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="ext" value="Внешние сервисы: IdP, подключение/биллинг, почтовый шлюз" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=25;" vertex="1" parent="1">
+          <mxGeometry x="480" y="970" width="1230" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_0" value="HTTPS 443" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;" edge="1" parent="1" source="pc" target="proxy">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="405.0" y="345.0" as="sourcePoint" />
+            <mxPoint x="515.0" y="360.0" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="460.0" y="345.0" />
+              <mxPoint x="460.0" y="360.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_1" value="HTTPS 8443" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;" edge="1" parent="1" source="proxy" target="app">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="815.0" y="360.0" as="sourcePoint" />
+            <mxPoint x="910.0" y="375.0" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="862.5" y="360.0" />
+              <mxPoint x="862.5" y="375.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_2" value="SQL/TLS 5432" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;" edge="1" parent="1" source="app" target="db">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1260.0" y="375.0" as="sourcePoint" />
+            <mxPoint x="1350.0" y="375.0" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1305.0" y="375.0" />
+              <mxPoint x="1305.0" y="375.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_3" value="SQL/TLS 5432" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;" edge="1" parent="1" source="worker" target="db">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1260.0" y="725.0" as="sourcePoint" />
+            <mxPoint x="1350.0" y="375.0" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1305.0" y="725.0" />
+              <mxPoint x="1305.0" y="375.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_4" value="SFTP 22 / копии" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;" edge="1" parent="1" source="db" target="backup">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1535.0" y="470.0" as="sourcePoint" />
+            <mxPoint x="1535.0" y="650.0" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1535.0" y="560.0" />
+              <mxPoint x="1535.0" y="560.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_5" value="OIDC / HTTPS 443" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;" edge="1" parent="1" source="app" target="ext">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="910" y="375" as="sourcePoint" />
+            <mxPoint x="1095" y="970" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="870" y="375" />
+              <mxPoint x="870" y="945" />
+              <mxPoint x="1095" y="945" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_6" value="HTTPS 443 / SMTP TLS 465" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;" edge="1" parent="1" source="worker" target="ext">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1085.0" y="800.0" as="sourcePoint" />
+            <mxPoint x="1095.0" y="970.0" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1085.0" y="885.0" />
+              <mxPoint x="1095.0" y="885.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

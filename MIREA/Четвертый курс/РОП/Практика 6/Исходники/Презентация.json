@@ -1,0 +1,187 @@
+{
+  "practice": 6,
+  "title": "Инфраструктура и выбор программных средств",
+  "topic": "Проектирование информационной системы поддержки бизнес-процесса сопровождения продаж корпоративным клиентам на примере компании ПАО «Вымпел-Коммуникации»",
+  "author": "Полиэктов М. А.",
+  "group": "ИНБО-12-23",
+  "teacher": "Трушин Степан Михайлович",
+  "slides": [
+    {
+      "kind": "cover"
+    },
+    {
+      "kind": "list",
+      "title": "Внутренняя веб-система разделяет сетевые зоны",
+      "items": [
+        "Рабочие места сотрудников подключаются через корпоративную сеть или VPN.",
+        "Шлюз, приложение, база данных и резервное хранилище имеют разные роли.",
+        "IdP, подключение/биллинг и почта представлены проектными внешними сервисами."
+      ]
+    },
+    {
+      "kind": "diagram",
+      "key": "Infrastructure",
+      "practice": null
+    },
+    {
+      "kind": "table",
+      "title": "PostgreSQL соответствует требованиям модели",
+      "headers": [
+        "Вариант",
+        "Преимущество для проекта",
+        "Ограничение выбора"
+      ],
+      "rows": [
+        [
+          "PostgreSQL",
+          "Целостность и RLS, свободная лицензия",
+          "Нужны настройка и испытания"
+        ],
+        [
+          "MySQL Community",
+          "Серверная СУБД, транзакции",
+          "Нужные механизмы сверяются с версией"
+        ],
+        [
+          "SQLite",
+          "Простота локального прототипа",
+          "Один писатель, иной сценарий эксплуатации"
+        ]
+      ],
+      "widths": [
+        240,
+        460,
+        452
+      ]
+    },
+    {
+      "kind": "table",
+      "title": "VS Code выбран без обязательной подписки",
+      "headers": [
+        "Средство",
+        "Python и Django",
+        "Условия"
+      ],
+      "rows": [
+        [
+          "VS Code",
+          "Python extension, отладка, тесты",
+          "Отдельная настройка расширений"
+        ],
+        [
+          "PyCharm",
+          "Специализированные средства Django",
+          "Расширенные функции Pro"
+        ],
+        [
+          "Eclipse / PyDev",
+          "Python-разработка в Eclipse",
+          "Удобен при опыте команды"
+        ]
+      ],
+      "widths": [
+        240,
+        450,
+        462
+      ]
+    },
+    {
+      "kind": "table",
+      "title": "Ресурсы служат начальной гипотезой для теста",
+      "headers": [
+        "Узел",
+        "Учебная конфигурация"
+      ],
+      "rows": [
+        [
+          "Шлюз",
+          "2 vCPU, 2 ГБ RAM"
+        ],
+        [
+          "Приложение и worker",
+          "4 vCPU, 8 ГБ RAM"
+        ],
+        [
+          "PostgreSQL",
+          "4 vCPU, 8 ГБ RAM, SSD 100 ГБ"
+        ],
+        [
+          "Резервное хранение",
+          "Отдельный носитель и ключ шифрования"
+        ]
+      ],
+      "widths": [
+        450,
+        702
+      ]
+    },
+    {
+      "kind": "list",
+      "title": "Восстановление подтверждается испытанием",
+      "items": [
+        "Ежедневная успешная копия поддерживает целевой RPO 24 часа.",
+        "RTO 4 часа проверяется восстановлением БД, документов и секретов.",
+        "Доступность 99,5% и отклик p95 ≤ 2 с остаются критериями будущей приёмки."
+      ]
+    },
+    {
+      "kind": "list",
+      "title": "Результат шестой практики",
+      "items": [
+        "Выбраны Django, PostgreSQL и VS Code.",
+        "Инфраструктура согласована с компонентной моделью и внешними границами.",
+        "Численная производительность без измерений не приписывается ни одному продукту."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "PostgreSQL Global Development Group. PostgreSQL License",
+      "url": "https://www.postgresql.org/about/licence/"
+    },
+    {
+      "title": "PostgreSQL 18. Constraints",
+      "url": "https://www.postgresql.org/docs/18/ddl-constraints.html"
+    },
+    {
+      "title": "PostgreSQL 18. Row Security Policies",
+      "url": "https://www.postgresql.org/docs/18/ddl-rowsecurity.html"
+    },
+    {
+      "title": "PostgreSQL 18. Backup and Restore",
+      "url": "https://www.postgresql.org/docs/18/backup.html"
+    },
+    {
+      "title": "Oracle. MySQL Community Edition",
+      "url": "https://www.mysql.com/products/community/"
+    },
+    {
+      "title": "SQLite. Appropriate Uses For SQLite",
+      "url": "https://www.sqlite.org/whentouse.html"
+    },
+    {
+      "title": "Microsoft. Python in Visual Studio Code",
+      "url": "https://code.visualstudio.com/docs/languages/python/"
+    },
+    {
+      "title": "Microsoft. Visual Studio Code License",
+      "url": "https://code.visualstudio.com/license"
+    },
+    {
+      "title": "JetBrains. Unified PyCharm overview",
+      "url": "https://www.jetbrains.com/help/pycharm/unified-pycharm.html"
+    },
+    {
+      "title": "JetBrains. PyCharm editions",
+      "url": "https://www.jetbrains.com/pycharm/editions/"
+    },
+    {
+      "title": "PyDev. Features",
+      "url": "https://www.pydev.org/manual_adv_features.html"
+    },
+    {
+      "title": "Django Software Foundation. Getting started with Django",
+      "url": "https://www.djangoproject.com/start/"
+    }
+  ]
+}

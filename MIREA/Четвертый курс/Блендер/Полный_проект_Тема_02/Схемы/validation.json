@@ -1,0 +1,1088 @@
+{
+  "geometry": [
+    {
+      "name": "ДРОН | Корпус и общий Origin",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 3.7862948559406493,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Броня | Mirror + Bevel",
+      "vertices": 112,
+      "faces": 114,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 3.9784317808821235,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Верхняя панель",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.2894287262038896,
+      "uv": 1,
+      "uv_zero_area": 14
+    },
+    {
+      "name": "Передний блок камер",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.1953171788372963,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Камера | Обод",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.03125646179540053,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Камера | Линза",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.009226010164697648,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Камера | Световое кольцо",
+      "vertices": 576,
+      "faces": 576,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.0009046031505950522,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Камера | Обод.001",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.018754317134248945,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Камера | Линза.001",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.004771978959023046,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Камера | Световое кольцо.001",
+      "vertices": 576,
+      "faces": 576,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.0006543937384692312,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л1 | Тазовый шарнир",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.06817768496390544,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л1 | Верхнее звено",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.2536945714298166,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л1 | Коленный шарнир",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.09313072595471038,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л1 | Нижнее звено",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.04782106035316593,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л1 | Голеностоп",
+      "vertices": 266,
+      "faces": 288,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.013738114304462267,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л1 | Стопа",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.0652689830392115,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л1 | Крышка колена",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.006742753500079341,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л1 | Винт колена",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.0002564169930982944,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л1 | Крышка колена.001",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.006742753500079341,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л1 | Винт колена.001",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.0002564169930982944,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л1 | Крышка бедра",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.01079434862982576,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л1 | Протектор",
+      "vertices": 480,
+      "faces": 490,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.001983310172121132,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л2 | Тазовый шарнир",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.06817768496390544,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л2 | Верхнее звено",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.2316528742974133,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л2 | Коленный шарнир",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.09313072595471038,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л2 | Нижнее звено",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.04642827727242655,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л2 | Голеностоп",
+      "vertices": 266,
+      "faces": 288,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.013738114304462272,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л2 | Стопа",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.0652689830392115,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л2 | Крышка колена",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.006742753500079341,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л2 | Винт колена",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.0002564169930982944,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л2 | Крышка колена.001",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.006742753500079341,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л2 | Винт колена.001",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.0002564169930982944,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л2 | Крышка бедра",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.01079434862982576,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л2 | Протектор",
+      "vertices": 480,
+      "faces": 490,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.001983310172121132,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л3 | Тазовый шарнир",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.06817768496390544,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л3 | Верхнее звено",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.25369457273963664,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л3 | Коленный шарнир",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.09313072595471038,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л3 | Нижнее звено",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.04782105685476587,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л3 | Голеностоп",
+      "vertices": 266,
+      "faces": 288,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.01373811430446227,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л3 | Стопа",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.0652689830392115,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л3 | Крышка колена",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.006742753500079341,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л3 | Винт колена",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.0002564169930982944,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л3 | Крышка колена.001",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.006742753500079341,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л3 | Винт колена.001",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.0002564169930982944,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л3 | Крышка бедра",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.01079434862982576,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Л3 | Протектор",
+      "vertices": 480,
+      "faces": 490,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.001983310172121132,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П1 | Тазовый шарнир",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.06817768496390544,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П1 | Верхнее звено",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.2536945714298166,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П1 | Коленный шарнир",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.09313072595471038,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П1 | Нижнее звено",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.04782106019508704,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П1 | Голеностоп",
+      "vertices": 266,
+      "faces": 288,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.01373811430446227,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П1 | Стопа",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.0652689830392115,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П1 | Крышка колена",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.006742753500079341,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П1 | Винт колена",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.0002564169930982944,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П1 | Крышка колена.001",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.006742753500079341,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П1 | Винт колена.001",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.0002564169930982944,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П1 | Крышка бедра",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.01079434862982576,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П1 | Протектор",
+      "vertices": 480,
+      "faces": 490,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.001983310172121132,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П2 | Тазовый шарнир",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.06817768496390544,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П2 | Верхнее звено",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.2316528742974133,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П2 | Коленный шарнир",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.09313072595471038,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П2 | Нижнее звено",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.04642827720203977,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П2 | Голеностоп",
+      "vertices": 266,
+      "faces": 288,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.013738114304462272,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П2 | Стопа",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.0652689830392115,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П2 | Крышка колена",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.006742753500079341,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П2 | Винт колена",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.0002564169930982944,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П2 | Крышка колена.001",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.006742753500079341,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П2 | Винт колена.001",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.0002564169930982944,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П2 | Крышка бедра",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.01079434862982576,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П2 | Протектор",
+      "vertices": 480,
+      "faces": 490,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.001983310172121132,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П3 | Тазовый шарнир",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.06817768496390544,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П3 | Верхнее звено",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.25369457273963664,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П3 | Коленный шарнир",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.09313072595471038,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П3 | Нижнее звено",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.04782105698493893,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П3 | Голеностоп",
+      "vertices": 266,
+      "faces": 288,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.013738114304462272,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П3 | Стопа",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.0652689830392115,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П3 | Крышка колена",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.006742753500079341,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П3 | Винт колена",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.0002564169930982944,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П3 | Крышка колена.001",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.006742753500079341,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П3 | Винт колена.001",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.0002564169930982944,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П3 | Крышка бедра",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.01079434862982576,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "П3 | Протектор",
+      "vertices": 480,
+      "faces": 490,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.001983310172121132,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Лидар | Поворотное основание",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.07476516876299669,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Лидар | Сканирующий барабан",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.11962143877877154,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Лидар | Кольцо",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.03208318141926518,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Лидар | Кольцо.001",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.03208318141926518,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Лидар | Окно сенсора",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.00035827173868778196,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Лидар | Окно сенсора.001",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.00035827173868778196,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Лидар | Окно сенсора.002",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.00035827173868778196,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Лидар | Окно сенсора.003",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.00035827173868778196,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Вентиляция | Углубление",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.04314310534695163,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Вентиляция | Array x 8",
+      "vertices": 768,
+      "faces": 784,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.017861200772593087,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Антенна | Основание",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.011800085909893985,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Антенна | Bend + Taper",
+      "vertices": 12480,
+      "faces": 11858,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.0038034223179587083,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Крепеж брони",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.00011575180908809365,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Крепеж брони.001",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.00011575180908809365,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Крепеж брони.002",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.00011575180908809365,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Крепеж брони.003",
+      "vertices": 384,
+      "faces": 338,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.00011575180908809365,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Задняя защита | Solidify",
+      "vertices": 96,
+      "faces": 98,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.02511307357443974,
+      "uv": 1,
+      "uv_zero_area": 21
+    },
+    {
+      "name": "Топология | Перфорированная панель",
+      "vertices": 2974,
+      "faces": 2992,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.0025140822798996004,
+      "uv": 1,
+      "uv_zero_area": 432
+    },
+    {
+      "name": "Маркировка | SCOUT / 02",
+      "vertices": 1182,
+      "faces": 1749,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 2.3012727873440217e-05,
+      "uv": 1,
+      "uv_zero_area": 0
+    },
+    {
+      "name": "Маркировка | HEXAPOD RECON",
+      "vertices": 1126,
+      "faces": 1665,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 1.0663144513858348e-05,
+      "uv": 1,
+      "uv_zero_area": 0
+    }
+  ],
+  "animation": {
+    "frames_checked": 144,
+    "min_contacts": 3,
+    "max_joint_gap": 9.973764735866494e-07
+  },
+  "images": [
+    {
+      "name": "Paint_AO.png",
+      "packed": true,
+      "path": "//Текстуры\\Paint_AO.png",
+      "colorspace": "Non-Color"
+    },
+    {
+      "name": "Paint_BaseColor.png",
+      "packed": true,
+      "path": "//Текстуры\\Paint_BaseColor.png",
+      "colorspace": "sRGB"
+    },
+    {
+      "name": "Paint_Height.png",
+      "packed": true,
+      "path": "//Текстуры\\Paint_Height.png",
+      "colorspace": "Non-Color"
+    },
+    {
+      "name": "Paint_Metallic.png",
+      "packed": true,
+      "path": "//Текстуры\\Paint_Metallic.png",
+      "colorspace": "Non-Color"
+    },
+    {
+      "name": "Paint_NormalGL.png",
+      "packed": true,
+      "path": "//Текстуры\\Paint_NormalGL.png",
+      "colorspace": "Non-Color"
+    },
+    {
+      "name": "Paint_Roughness.png",
+      "packed": true,
+      "path": "//Текстуры\\Paint_Roughness.png",
+      "colorspace": "Non-Color"
+    },
+    {
+      "name": "Studio | HDR-панорама",
+      "packed": true,
+      "path": "//Текстуры\\Studio.exr",
+      "colorspace": "Linear Rec.709"
+    },
+    {
+      "name": "РЕФЕРЕНС | Шестиногий дрон",
+      "packed": true,
+      "path": "//Референс_дрона.png",
+      "colorspace": "sRGB"
+    }
+  ],
+  "modifier_types": [
+    "ARRAY",
+    "BEVEL",
+    "DISPLACE",
+    "MIRROR",
+    "SIMPLE_DEFORM",
+    "SOLIDIFY",
+    "SUBSURF"
+  ]
+}

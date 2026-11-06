@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="24.7.17">
+  <diagram id="Algorithm_Offer" name="Алгоритм расчёта предложения">
+    <mxGraphModel dx="1600" dy="1150" grid="1" page="1" pageWidth="1600" pageHeight="1150">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" value="Начало" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=26;ellipse;" vertex="1" parent="1">
+          <mxGeometry x="730" y="100" width="70" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="input" value="Получить позиции и цены" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=26;" vertex="1" parent="1">
+          <mxGeometry x="460" y="200" width="630" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="check" value="Все q &amp;gt; 0, p и a ≥ 0, 0 ≤ d ≤ 1?" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=26;rhombus;" vertex="1" parent="1">
+          <mxGeometry x="500" y="360" width="550" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="error" value="Показать ошибку&lt;br&gt;Расчёт не выполнять" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=26;" vertex="1" parent="1">
+          <mxGeometry x="60" y="390" width="320" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="calc" value="Для каждой строки: round(q × p × (1−d),2)&lt;br&gt;и round(q × a,2)" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=26;" vertex="1" parent="1">
+          <mxGeometry x="460" y="550" width="630" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sum" value="Суммировать строки: Sм и Sр; Sп = Sм + Sр" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=26;" vertex="1" parent="1">
+          <mxGeometry x="460" y="710" width="630" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="output" value="Вывести три суммы и валюту" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=26;" vertex="1" parent="1">
+          <mxGeometry x="460" y="870" width="630" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="end" value="Конец" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=26;ellipse;strokeWidth=4;" vertex="1" parent="1">
+          <mxGeometry x="730" y="1030" width="70" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_0" value="" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;" edge="1" parent="1" source="start" target="input">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="765.0" y="145.0" as="sourcePoint" />
+            <mxPoint x="775.0" y="200.0" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="765.0" y="172.5" />
+              <mxPoint x="775.0" y="172.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_1" value="" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;" edge="1" parent="1" source="input" target="check">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="775.0" y="295.0" as="sourcePoint" />
+            <mxPoint x="775.0" y="360.0" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="775.0" y="327.5" />
+              <mxPoint x="775.0" y="327.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_2" value="" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;" edge="1" parent="1" source="calc" target="sum">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="775.0" y="650.0" as="sourcePoint" />
+            <mxPoint x="775.0" y="710.0" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="775.0" y="680.0" />
+              <mxPoint x="775.0" y="680.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_3" value="" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;" edge="1" parent="1" source="sum" target="output">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="775.0" y="810.0" as="sourcePoint" />
+            <mxPoint x="775.0" y="870.0" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="775.0" y="840.0" />
+              <mxPoint x="775.0" y="840.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_4" value="" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;" edge="1" parent="1" source="output" target="end">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="775.0" y="965.0" as="sourcePoint" />
+            <mxPoint x="765.0" y="1030.0" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="775.0" y="997.5" />
+              <mxPoint x="765.0" y="997.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_5" value="Да" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;" edge="1" parent="1" source="check" target="calc">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="775.0" y="500.0" as="sourcePoint" />
+            <mxPoint x="775.0" y="550.0" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="775.0" y="525.0" />
+              <mxPoint x="775.0" y="525.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_6" value="Нет" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;" edge="1" parent="1" source="check" target="error">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="500.0" y="430.0" as="sourcePoint" />
+            <mxPoint x="380.0" y="445.0" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="440.0" y="430.0" />
+              <mxPoint x="440.0" y="445.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_7" value="" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;" edge="1" parent="1" source="error" target="end">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="500" as="sourcePoint" />
+            <mxPoint x="730" y="1052" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="220" y="1052" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

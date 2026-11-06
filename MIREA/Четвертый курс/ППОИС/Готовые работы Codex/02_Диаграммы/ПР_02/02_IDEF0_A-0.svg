@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980"><rect width="100%" height="100%" fill="white"/>
+<text x="447.0078125" y="57.0" font-family="Arial" font-size="32" font-weight="700" fill="#17212B">IDEF0 A−0 Контекст сопровождения продаж</text>
+<text x="503.5078125" y="951.0" font-family="Arial" font-size="20" font-weight="400" fill="#17212B">Проектируемая модель сопровождения корпоративных продаж</text>
+<rect x="545" y="310" width="520" height="270" rx="0" fill="#E7EEF6" stroke="#364152" stroke-width="2"/>
+<text x="634.015625" y="402.0" font-family="Arial" font-size="31" font-weight="400" fill="#17212B">Сопровождать продажи</text>
+<text x="621.5078125" y="439.0" font-family="Arial" font-size="31" font-weight="400" fill="#17212B">корпоративным клиентам</text>
+<text x="805.0" y="476.0" font-family="Arial" font-size="31" font-weight="400" fill="#17212B"></text>
+<text x="786.0" y="513.0" font-family="Arial" font-size="31" font-weight="400" fill="#17212B">A0</text>
+<polyline points="65,355 545,355" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="531.3036658953154,361.11640679589357 545,355 531.3036658953154,348.88359320410643" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="164.5" y="308.5" width="251.0" height="37" fill="white"/>
+<text x="180.5" y="334.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">I1 Заявка и реквизиты</text>
+<polyline points="65,445 545,445" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="531.3036658953154,451.11640679589357 545,445 531.3036658953154,438.88359320410643" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="138.5078125" y="370.0" width="302.984375" height="64" fill="white"/>
+<text x="154.5078125" y="396.0" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">I2 Решение и подписанные</text>
+<text x="194.0" y="423.0" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">документы клиента</text>
+<polyline points="65,535 545,535" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="531.3036658953154,541.1164067958936 545,535 531.3036658953154,528.8835932041064" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="152.0" y="488.5" width="276.0" height="37" fill="white"/>
+<text x="168.0" y="514.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">I3 Статусы подключения</text>
+<polyline points="635,180 635,310" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="628.8835932041064,296.30366589531536 635,310 641.1164067958936,296.30366589531536" fill="#364152" stroke="#364152" stroke-width="2"/>
+<text x="583.0" y="129.0" font-family="Arial" font-size="20" font-weight="400" fill="#17212B">C1 Каталог</text>
+<text x="590.5" y="155.0" font-family="Arial" font-size="20" font-weight="400" fill="#17212B">и тарифы</text>
+<polyline points="805,180 805,310" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="798.8835932041064,296.30366589531536 805,310 811.1164067958936,296.30366589531536" fill="#364152" stroke="#364152" stroke-width="2"/>
+<text x="749.0" y="129.0" font-family="Arial" font-size="20" font-weight="400" fill="#17212B">C2 Правила</text>
+<text x="741.5" y="155.0" font-family="Arial" font-size="20" font-weight="400" fill="#17212B">согласования</text>
+<polyline points="975,180 975,310" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="968.8835932041064,296.30366589531536 975,310 981.1164067958936,296.30366589531536" fill="#364152" stroke="#364152" stroke-width="2"/>
+<text x="919.0" y="129.0" font-family="Arial" font-size="20" font-weight="400" fill="#17212B">C3 Правила</text>
+<text x="938.0" y="155.0" font-family="Arial" font-size="20" font-weight="400" fill="#17212B">доступа</text>
+<polyline points="1065,355 1530,355" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1516.3036658953154,361.11640679589357 1530,355 1516.3036658953154,348.88359320410643" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1174.0" y="309.5" width="252.0" height="37" fill="white"/>
+<text x="1190.0" y="335.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">O1 Согласованное КП</text>
+<polyline points="1065,425 1530,425" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1516.3036658953154,431.11640679589357 1530,425 1516.3036658953154,418.88359320410643" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1226.5" y="379.5" width="147.0" height="37" fill="white"/>
+<text x="1242.5" y="405.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">O2 Договор</text>
+<polyline points="1065,495 1530,495" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1516.3036658953154,501.11640679589357 1530,495 1516.3036658953154,488.88359320410643" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1155.5" y="449.5" width="289.0" height="37" fill="white"/>
+<text x="1171.5" y="475.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">O3 Заказ на подключение</text>
+<polyline points="1065,565 1530,565" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="1516.3036658953154,571.1164067958936 1530,565 1516.3036658953154,558.8835932041064" fill="#364152" stroke="#364152" stroke-width="2"/>
+<rect x="1170.5" y="519.5" width="259.0" height="37" fill="white"/>
+<text x="1186.5" y="545.5" font-family="Arial" font-size="21" font-weight="400" fill="#17212B">O4 Отчёт по продажам</text>
+<polyline points="690,810 690,580" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="696.1164067958936,593.6963341046846 690,580 683.8835932041064,593.6963341046846" fill="#364152" stroke="#364152" stroke-width="2"/>
+<text x="561.5078125" y="859.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">M1 Участники продаж</text>
+<polyline points="930,810 930,580" fill="none" stroke="#364152" stroke-width="2"/>
+<polyline points="936.1164067958936,593.6963341046846 930,580 923.8835932041064,593.6963341046846" fill="#364152" stroke="#364152" stroke-width="2"/>
+<text x="915.5" y="774.5" font-family="Arial" font-size="25" font-weight="400" fill="#17212B">M2 ИС и интеграционные адаптеры</text>
+</svg>

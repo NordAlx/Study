@@ -1,0 +1,462 @@
+{
+  "title": "UML Sequence Подключение и безопасный повтор",
+  "width": 1900,
+  "height": 1480,
+  "nodes": [
+    {
+      "id": "p0",
+      "label": "Техспециалист",
+      "x": 65,
+      "y": 100,
+      "w": 210,
+      "h": 85,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 23
+    },
+    {
+      "id": "p1",
+      "label": "Django / worker",
+      "x": 585,
+      "y": 100,
+      "w": 210,
+      "h": 85,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 23
+    },
+    {
+      "id": "p2",
+      "label": "PostgreSQL",
+      "x": 1105,
+      "y": 100,
+      "w": 210,
+      "h": 85,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 23
+    },
+    {
+      "id": "p3",
+      "label": "Внешнее подключение",
+      "x": 1625,
+      "y": 100,
+      "w": 210,
+      "h": 85,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 23
+    },
+    {
+      "id": "alt",
+      "label": "alt",
+      "x": 50,
+      "y": 545,
+      "w": 1795,
+      "h": 740,
+      "shape": "group",
+      "fill": "#FFFFFF",
+      "size": 23
+    },
+    {
+      "id": "accepted",
+      "label": "[операция принята]",
+      "x": 70,
+      "y": 580,
+      "w": 500,
+      "h": 38,
+      "shape": "rect",
+      "fill": "#F2F4F6",
+      "size": 21
+    },
+    {
+      "id": "guard755",
+      "label": "[подтверждён бизнес-отказ]",
+      "x": 70,
+      "y": 763,
+      "w": 650,
+      "h": 38,
+      "shape": "rect",
+      "fill": "#F2F4F6",
+      "size": 21
+    },
+    {
+      "id": "guard935",
+      "label": "[тайм-аут или техническая ошибка]",
+      "x": 70,
+      "y": 943,
+      "w": 650,
+      "h": 38,
+      "shape": "rect",
+      "fill": "#F2F4F6",
+      "size": 21
+    },
+    {
+      "id": "loop",
+      "label": "loop [исход неизвестен, attempts < 5]",
+      "x": 620,
+      "y": 1110,
+      "w": 1190,
+      "h": 150,
+      "shape": "group",
+      "fill": "#FFFFFF",
+      "size": 21
+    },
+    {
+      "id": "limit",
+      "label": "После пятой технической неудачи: ERROR очереди и ручная сверка.\nЕсли внешняя система не поддерживает ключ и поиск исхода, автоматический повтор запрещён.",
+      "x": 170,
+      "y": 1320,
+      "w": 1550,
+      "h": 90,
+      "shape": "rect",
+      "fill": "#F2F4F6",
+      "size": 23
+    }
+  ],
+  "edges": [],
+  "lines": [
+    {
+      "pts": [
+        [
+          170,
+          185
+        ],
+        [
+          170,
+          1360
+        ]
+      ],
+      "label": "",
+      "dash": true,
+      "arrow": false,
+      "size": 23,
+      "labelpos": null
+    },
+    {
+      "pts": [
+        [
+          690,
+          185
+        ],
+        [
+          690,
+          1360
+        ]
+      ],
+      "label": "",
+      "dash": true,
+      "arrow": false,
+      "size": 23,
+      "labelpos": null
+    },
+    {
+      "pts": [
+        [
+          1210,
+          185
+        ],
+        [
+          1210,
+          1360
+        ]
+      ],
+      "label": "",
+      "dash": true,
+      "arrow": false,
+      "size": 23,
+      "labelpos": null
+    },
+    {
+      "pts": [
+        [
+          1730,
+          185
+        ],
+        [
+          1730,
+          1360
+        ]
+      ],
+      "label": "",
+      "dash": true,
+      "arrow": false,
+      "size": 23,
+      "labelpos": null
+    },
+    {
+      "pts": [
+        [
+          170,
+          260
+        ],
+        [
+          690,
+          260
+        ]
+      ],
+      "label": "1 Подтвердить отправку READY",
+      "dash": false,
+      "arrow": true,
+      "size": 22,
+      "labelpos": [
+        188,
+        226
+      ]
+    },
+    {
+      "pts": [
+        [
+          690,
+          340
+        ],
+        [
+          1210,
+          340
+        ]
+      ],
+      "label": "2 Транзакция: SENT + задача с ключом",
+      "dash": false,
+      "arrow": true,
+      "size": 22,
+      "labelpos": [
+        708,
+        306
+      ]
+    },
+    {
+      "pts": [
+        [
+          1210,
+          420
+        ],
+        [
+          690,
+          420
+        ]
+      ],
+      "label": "3 Commit и захват задачи",
+      "dash": true,
+      "arrow": true,
+      "size": 22,
+      "labelpos": [
+        708,
+        386
+      ]
+    },
+    {
+      "pts": [
+        [
+          690,
+          500
+        ],
+        [
+          1730,
+          500
+        ]
+      ],
+      "label": "4 HTTPS / JSON + постоянный ключ операции",
+      "dash": false,
+      "arrow": true,
+      "size": 22,
+      "labelpos": [
+        708,
+        466
+      ]
+    },
+    {
+      "pts": [
+        [
+          1730,
+          650
+        ],
+        [
+          690,
+          650
+        ]
+      ],
+      "label": "5 Внешний id и подтверждённый статус",
+      "dash": true,
+      "arrow": true,
+      "size": 22,
+      "labelpos": [
+        708,
+        616
+      ]
+    },
+    {
+      "pts": [
+        [
+          690,
+          715
+        ],
+        [
+          1210,
+          715
+        ]
+      ],
+      "label": "6 Сохранить IN_PROGRESS либо DONE",
+      "dash": false,
+      "arrow": true,
+      "size": 22,
+      "labelpos": [
+        708,
+        681
+      ]
+    },
+    {
+      "pts": [
+        [
+          60,
+          755
+        ],
+        [
+          1835,
+          755
+        ]
+      ],
+      "label": "",
+      "dash": true,
+      "arrow": false,
+      "size": 23,
+      "labelpos": null
+    },
+    {
+      "pts": [
+        [
+          1730,
+          830
+        ],
+        [
+          690,
+          830
+        ]
+      ],
+      "label": "7 Причина отказа",
+      "dash": true,
+      "arrow": true,
+      "size": 22,
+      "labelpos": [
+        708,
+        796
+      ]
+    },
+    {
+      "pts": [
+        [
+          690,
+          895
+        ],
+        [
+          1210,
+          895
+        ]
+      ],
+      "label": "8 Сохранить FAILED и аудит",
+      "dash": false,
+      "arrow": true,
+      "size": 22,
+      "labelpos": [
+        708,
+        861
+      ]
+    },
+    {
+      "pts": [
+        [
+          60,
+          935
+        ],
+        [
+          1835,
+          935
+        ]
+      ],
+      "label": "",
+      "dash": true,
+      "arrow": false,
+      "size": 23,
+      "labelpos": null
+    },
+    {
+      "pts": [
+        [
+          690,
+          1010
+        ],
+        [
+          1730,
+          1010
+        ]
+      ],
+      "label": "9 Уточнить исход по прежнему ключу",
+      "dash": false,
+      "arrow": true,
+      "size": 22,
+      "labelpos": [
+        708,
+        976
+      ]
+    },
+    {
+      "pts": [
+        [
+          1730,
+          1075
+        ],
+        [
+          690,
+          1075
+        ]
+      ],
+      "label": "10 Операция найдена / исход неизвестен",
+      "dash": true,
+      "arrow": true,
+      "size": 22,
+      "labelpos": [
+        708,
+        1041
+      ]
+    },
+    {
+      "pts": [
+        [
+          690,
+          1175
+        ],
+        [
+          1210,
+          1175
+        ]
+      ],
+      "label": "11 RETRY: ожидание 1, 5, 15, 60 минут",
+      "dash": false,
+      "arrow": true,
+      "size": 22,
+      "labelpos": [
+        708,
+        1141
+      ]
+    },
+    {
+      "pts": [
+        [
+          690,
+          1240
+        ],
+        [
+          1730,
+          1240
+        ]
+      ],
+      "label": "12 Повтор с тем же ключом при отсутствии результата",
+      "dash": false,
+      "arrow": true,
+      "size": 22,
+      "labelpos": [
+        708,
+        1206
+      ]
+    }
+  ]
+}

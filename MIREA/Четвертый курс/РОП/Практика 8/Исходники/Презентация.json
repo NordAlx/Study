@@ -1,0 +1,135 @@
+{
+  "practice": 8,
+  "title": "Интеграции и информационная безопасность",
+  "topic": "Проектирование информационной системы поддержки бизнес-процесса сопровождения продаж корпоративным клиентам на примере компании ПАО «Вымпел-Коммуникации»",
+  "author": "Полиэктов М. А.",
+  "group": "ИНБО-12-23",
+  "teacher": "Трушин Степан Михайлович",
+  "slides": [
+    {
+      "kind": "cover"
+    },
+    {
+      "kind": "list",
+      "title": "Два сценария показывают внешние границы",
+      "items": [
+        "Корпоративный вход: браузер, Django, IdP и локальные роли.",
+        "Подключение: сотрудник, worker, PostgreSQL и внешний сервис.",
+        "Указываются HTTPS и JSON, ветви ошибок и условия безопасного повтора. Собственная спецификация API не создаётся."
+      ]
+    },
+    {
+      "kind": "image",
+      "title": "Вход через IdP начинается с защищённого обмена",
+      "path": "Практика 8/Материалы/Sequence_SSO_part1.png"
+    },
+    {
+      "kind": "image",
+      "title": "Проверки токена предшествуют созданию сеанса",
+      "path": "Практика 8/Материалы/Sequence_SSO_part2.png"
+    },
+    {
+      "kind": "image",
+      "title": "Подтверждённый отказ отделён от принятой операции",
+      "path": "Практика 8/Материалы/Sequence_Connection_part1.png"
+    },
+    {
+      "kind": "image",
+      "title": "Неопределённый результат требует сверки по ключу",
+      "path": "Практика 8/Материалы/Sequence_Connection_part2.png"
+    },
+    {
+      "kind": "table",
+      "title": "RBAC сочетает роль и принадлежность объекта",
+      "headers": [
+        "Ресурс",
+        "Менеджер",
+        "Руководитель",
+        "Специалист",
+        "Администратор"
+      ],
+      "rows": [
+        [
+          "Клиенты",
+          "C/R/U свои",
+          "R/U отдела",
+          "Минимум заявки",
+          "Запрет"
+        ],
+        [
+          "Предложения",
+          "C/R/U черновик",
+          "R/X согласовать",
+          "Запрет",
+          "Запрет"
+        ],
+        [
+          "Заявки",
+          "C/R, U до отправки",
+          "R, назначение",
+          "R/U/X свои",
+          "Запрет"
+        ],
+        [
+          "Пользователи",
+          "Запрет",
+          "R состава",
+          "Запрет",
+          "C/R/U/X"
+        ]
+      ],
+      "widths": [
+        215,
+        235,
+        240,
+        240,
+        222
+      ]
+    },
+    {
+      "kind": "list",
+      "title": "Меры защиты связаны с угрозами",
+      "items": [
+        "OIDC Code + PKCE, проверка подписи, issuer, audience, срока и nonce.",
+        "Серверная проверка CRUDX, владельца объекта и запрета самосогласования.",
+        "TLS, шифрование носителей и копий, секреты вне кода.",
+        "Аудит без токенов и паролей, 5 попыток обмена, затем ручная сверка."
+      ]
+    },
+    {
+      "kind": "list",
+      "title": "Результат восьмой практики",
+      "items": [
+        "Две Sequence Diagram содержат сообщения, протоколы и альтернативы.",
+        "Матрица RBAC запрещает удаление бизнес-записей и доступ администратора к коммерческим данным.",
+        "План негативных проверок подготовлен для будущей реализации."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "OpenID Foundation. OpenID Connect Core 1.0",
+      "url": "https://openid.net/specs/openid-connect-core-1_0.html"
+    },
+    {
+      "title": "IETF. RFC 9700 OAuth 2.0 Security Best Current Practice",
+      "url": "https://www.rfc-editor.org/rfc/rfc9700.html"
+    },
+    {
+      "title": "IETF. RFC 8446 The Transport Layer Security Protocol Version 1.3",
+      "url": "https://www.rfc-editor.org/rfc/rfc8446.html"
+    },
+    {
+      "title": "PostgreSQL 18. Row Security Policies",
+      "url": "https://www.postgresql.org/docs/18/ddl-rowsecurity.html"
+    },
+    {
+      "title": "Django 5.2. User authentication",
+      "url": "https://docs.djangoproject.com/en/5.2/topics/auth/"
+    },
+    {
+      "title": "Object Management Group. Unified Modeling Language 2.5.1",
+      "url": "https://www.omg.org/spec/UML/2.5.1/"
+    }
+  ]
+}

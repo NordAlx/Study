@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="24.7.17">
+  <diagram id="Physical_ERD_4" name="Физическая ERD Доступ и служебные сущности">
+    <mxGraphModel dx="1900" dy="1120" grid="1" page="1" pageWidth="1900" pageHeight="1120">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="department" value="department&lt;br&gt;PK id BIGINT&lt;br&gt;name VARCHAR(120)" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=22;align=left;verticalAlign=top;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="70" y="150" width="535" height="113" as="geometry" />
+        </mxCell>
+        <mxCell id="role" value="role&lt;br&gt;PK code VARCHAR(16)&lt;br&gt;name VARCHAR(120)" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=22;align=left;verticalAlign=top;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="690" y="150" width="535" height="113" as="geometry" />
+        </mxCell>
+        <mxCell id="employee" value="employee&lt;br&gt;PK id BIGINT&lt;br&gt;sso_subject VARCHAR(255)&lt;br&gt;display_name VARCHAR(150)&lt;br&gt;FK department_id BIGINT&lt;br&gt;FK role_code VARCHAR(16)&lt;br&gt;is_active BOOLEAN&lt;br&gt;created_at TIMESTAMPTZ" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=22;align=left;verticalAlign=top;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="150" width="535" height="258" as="geometry" />
+        </mxCell>
+        <mxCell id="integration_job" value="integration_job&lt;br&gt;PK id BIGINT&lt;br&gt;FK request_id BIGINT&lt;br&gt;idempotency_key UUID&lt;br&gt;operation_code VARCHAR(16)&lt;br&gt;status_code VARCHAR(16)&lt;br&gt;attempts SMALLINT&lt;br&gt;next_attempt_at TIMESTAMPTZ&lt;br&gt;last_error VARCHAR(1000)&lt;br&gt;created_at TIMESTAMPTZ" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=22;align=left;verticalAlign=top;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="70" y="670" width="535" height="316" as="geometry" />
+        </mxCell>
+        <mxCell id="notification_log" value="notification_log&lt;br&gt;PK id BIGINT&lt;br&gt;FK contract_id BIGINT&lt;br&gt;FK recipient_id BIGINT&lt;br&gt;due_on DATE&lt;br&gt;event_key VARCHAR(40)&lt;br&gt;sent_at TIMESTAMPTZ&lt;br&gt;created_at TIMESTAMPTZ" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=22;align=left;verticalAlign=top;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="690" y="670" width="535" height="258" as="geometry" />
+        </mxCell>
+        <mxCell id="audit_event" value="audit_event&lt;br&gt;PK id BIGINT&lt;br&gt;FK actor_id BIGINT&lt;br&gt;entity_type VARCHAR(40)&lt;br&gt;entity_id BIGINT&lt;br&gt;action VARCHAR(50)&lt;br&gt;occurred_at TIMESTAMPTZ&lt;br&gt;details JSONB" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=22;align=left;verticalAlign=top;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="670" width="535" height="258" as="geometry" />
+        </mxCell>
+        <mxCell id="note" value="Связи с точными кратностями приведены в таблице связей и исходной модели.&lt;br&gt;PK — первичный ключ; FK — внешний ключ. Все представления относятся к одной схеме." style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#F2F5F7;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1010" width="1750" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_0" value="1 : 0..*" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=none;" edge="1" parent="1" source="department" target="employee">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="337.5" y="150" as="sourcePoint" />
+            <mxPoint x="1577.5" y="150" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="337.5" y="112" />
+              <mxPoint x="1577.5" y="112" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_1" value="1 : 0..*" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=none;" edge="1" parent="1" source="role" target="employee">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1225" y="210" as="sourcePoint" />
+            <mxPoint x="1310" y="210" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_2" value="1 : 0..*" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=none;" edge="1" parent="1" source="employee" target="notification_log">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1577.5" y="408" as="sourcePoint" />
+            <mxPoint x="957.5" y="670" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1577.5" y="630" />
+              <mxPoint x="957.5" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_3" value="0..1 : 0..*" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=none;" edge="1" parent="1" source="employee" target="audit_event">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1577.5" y="408" as="sourcePoint" />
+            <mxPoint x="1577.5" y="670" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

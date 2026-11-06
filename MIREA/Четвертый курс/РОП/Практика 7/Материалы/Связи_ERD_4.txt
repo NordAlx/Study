@@ -1,0 +1,6 @@
+employee.department_id → department (1 : 0..*)
+employee.role_code → role (1 : 0..*)
+integration_job.request_id → service_request (1 : 0..*)
+notification_log.contract_id → contract (1 : 0..*)
+notification_log.recipient_id → employee (1 : 0..*)
+audit_event.actor_id → employee (0..1 : 0..*)

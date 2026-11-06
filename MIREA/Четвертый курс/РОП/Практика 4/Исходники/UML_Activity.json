@@ -1,0 +1,271 @@
+{
+  "title": "UML Activity Регистрация договора и подключение",
+  "width": 1800,
+  "height": 1100,
+  "nodes": [
+    {
+      "id": "start",
+      "label": "",
+      "x": 870,
+      "y": 100,
+      "w": 42,
+      "h": 42,
+      "shape": "start",
+      "fill": "#26333E",
+      "size": 26
+    },
+    {
+      "id": "contract",
+      "label": "Открыть согласованное предложение\nи ввести подписанный договор",
+      "x": 620,
+      "y": 190,
+      "w": 540,
+      "h": 100,
+      "shape": "activity",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "valid",
+      "label": "Данные\nкорректны?",
+      "x": 755,
+      "y": 350,
+      "w": 270,
+      "h": 130,
+      "shape": "decision",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "error",
+      "label": "Показать ошибки\nи сохранить введённое",
+      "x": 100,
+      "y": 365,
+      "w": 440,
+      "h": 100,
+      "shape": "activity",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "request",
+      "label": "Создать CONNECT и integration_job\nв одной транзакции",
+      "x": 620,
+      "y": 550,
+      "w": 540,
+      "h": 100,
+      "shape": "activity",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "send",
+      "label": "Исполнитель запускает отправку;\nworker передаёт заявку по HTTPS",
+      "x": 620,
+      "y": 735,
+      "w": 540,
+      "h": 100,
+      "shape": "activity",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "result",
+      "label": "Ответ\nподтверждён?",
+      "x": 1280,
+      "y": 720,
+      "w": 280,
+      "h": 130,
+      "shape": "decision",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "unknown",
+      "label": "Уточнить исход по прежнему ключу;\nповтор по политике, затем ручная сверка",
+      "x": 1170,
+      "y": 925,
+      "w": 550,
+      "h": 90,
+      "shape": "activity",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "finish",
+      "label": "Зафиксировать статус\nDONE либо бизнес-отказ FAILED",
+      "x": 150,
+      "y": 745,
+      "w": 350,
+      "h": 100,
+      "shape": "activity",
+      "fill": "#FFFFFF",
+      "size": 24
+    },
+    {
+      "id": "end",
+      "label": "",
+      "x": 300,
+      "y": 960,
+      "w": 50,
+      "h": 50,
+      "shape": "activityfinal",
+      "fill": "#FFFFFF",
+      "size": 26
+    }
+  ],
+  "edges": [
+    {
+      "a": "start",
+      "b": "contract",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": true
+    },
+    {
+      "a": "contract",
+      "b": "valid",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": true
+    },
+    {
+      "a": "request",
+      "b": "send",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": true
+    },
+    {
+      "a": "send",
+      "b": "result",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": true
+    },
+    {
+      "a": "finish",
+      "b": "end",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": true
+    },
+    {
+      "a": "valid",
+      "b": "request",
+      "label": "Да",
+      "points": null,
+      "dash": false,
+      "arrow": true,
+      "labelpos": [
+        910,
+        500
+      ]
+    },
+    {
+      "a": "valid",
+      "b": "error",
+      "label": "Нет",
+      "points": null,
+      "dash": false,
+      "arrow": true
+    },
+    {
+      "a": "error",
+      "b": "contract",
+      "label": "Исправить",
+      "points": [
+        [
+          320,
+          365
+        ],
+        [
+          320,
+          240
+        ],
+        [
+          620,
+          240
+        ]
+      ],
+      "dash": false,
+      "arrow": true
+    },
+    {
+      "a": "result",
+      "b": "unknown",
+      "label": "Нет",
+      "points": null,
+      "dash": false,
+      "arrow": true,
+      "labelpos": [
+        1450,
+        875
+      ]
+    },
+    {
+      "a": "result",
+      "b": "finish",
+      "label": "Да",
+      "points": [
+        [
+          1280,
+          785
+        ],
+        [
+          1170,
+          785
+        ],
+        [
+          1170,
+          880
+        ],
+        [
+          520,
+          880
+        ],
+        [
+          520,
+          795
+        ],
+        [
+          500,
+          795
+        ]
+      ],
+      "dash": false,
+      "arrow": true
+    },
+    {
+      "a": "unknown",
+      "b": "end",
+      "label": "",
+      "points": [
+        [
+          1445,
+          1015
+        ],
+        [
+          1445,
+          1035
+        ],
+        [
+          325,
+          1035
+        ],
+        [
+          325,
+          1010
+        ]
+      ],
+      "dash": false,
+      "arrow": true
+    }
+  ],
+  "lines": []
+}

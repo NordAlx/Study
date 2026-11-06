@@ -1,0 +1,7 @@
+Object Management Group. Business Process Model and Notation 2.0.2. URL: https://www.omg.org/spec/BPMN/2.0.2/ (дата обращения: 20.10.2026).
+
+Object Management Group. Unified Modeling Language 2.5.1. URL: https://www.omg.org/spec/UML/2.5.1/ (дата обращения: 20.10.2026).
+
+Django Software Foundation. Getting started with Django. URL: https://www.djangoproject.com/start/ (дата обращения: 20.10.2026).
+
+Django 5.2. User authentication. URL: https://docs.djangoproject.com/en/5.2/topics/auth/ (дата обращения: 20.10.2026).

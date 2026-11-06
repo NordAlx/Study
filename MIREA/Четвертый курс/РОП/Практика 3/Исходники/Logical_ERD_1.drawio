@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="24.7.17">
+  <diagram id="Logical_ERD_1" name="Логическая ERD Клиенты и сделки">
+    <mxGraphModel dx="1900" dy="1120" grid="1" page="1" pageWidth="1900" pageHeight="1120">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="client" value="client&lt;br&gt;PK id&lt;br&gt;code&lt;br&gt;legal_name&lt;br&gt;inn&lt;br&gt;FK manager_id&lt;br&gt;created_at" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=24;align=left;verticalAlign=top;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="70" y="150" width="535" height="229" as="geometry" />
+        </mxCell>
+        <mxCell id="contact" value="contact&lt;br&gt;PK id&lt;br&gt;FK client_id&lt;br&gt;full_name&lt;br&gt;email&lt;br&gt;phone&lt;br&gt;created_at" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=24;align=left;verticalAlign=top;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="690" y="150" width="535" height="229" as="geometry" />
+        </mxCell>
+        <mxCell id="deal" value="deal&lt;br&gt;PK id&lt;br&gt;code&lt;br&gt;FK client_id&lt;br&gt;FK owner_id&lt;br&gt;title&lt;br&gt;FK status_code&lt;br&gt;opened_at&lt;br&gt;closed_at&lt;br&gt;loss_reason" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=24;align=left;verticalAlign=top;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="150" width="535" height="316" as="geometry" />
+        </mxCell>
+        <mxCell id="deal_status" value="deal_status&lt;br&gt;PK code&lt;br&gt;name" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=24;align=left;verticalAlign=top;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="70" y="670" width="535" height="113" as="geometry" />
+        </mxCell>
+        <mxCell id="note" value="Связи с точными кратностями приведены в таблице связей и исходной модели.&lt;br&gt;PK — первичный ключ; FK — внешний ключ. Все представления относятся к одной схеме." style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#F2F5F7;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1010" width="1750" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_0" value="1 : 0..*" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=none;" edge="1" parent="1" source="client" target="contact">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="605" y="264.5" as="sourcePoint" />
+            <mxPoint x="690" y="264.5" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_1" value="1 : 0..*" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=none;" edge="1" parent="1" source="client" target="deal">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="337.5" y="150" as="sourcePoint" />
+            <mxPoint x="1577.5" y="150" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="337.5" y="112" />
+              <mxPoint x="1577.5" y="112" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_2" value="1 : 0..*" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=none;" edge="1" parent="1" source="deal_status" target="deal">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1577.5" y="466" as="sourcePoint" />
+            <mxPoint x="337.5" y="670" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1577.5" y="630" />
+              <mxPoint x="337.5" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

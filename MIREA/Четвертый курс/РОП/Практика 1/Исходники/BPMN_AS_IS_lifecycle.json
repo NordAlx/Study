@@ -1,0 +1,397 @@
+{
+  "title": "BPMN 2.0 AS_IS Изменения и продление",
+  "width": 1900,
+  "height": 1080,
+  "nodes": [
+    {
+      "id": "client_pool",
+      "label": "Корпоративный\nклиент",
+      "x": 40,
+      "y": 95,
+      "w": 1820,
+      "h": 110,
+      "shape": "pool",
+      "fill": "#F6F7F8",
+      "size": 21
+    },
+    {
+      "id": "pool",
+      "label": "Сопровождение",
+      "x": 40,
+      "y": 255,
+      "w": 1820,
+      "h": 710,
+      "shape": "pool",
+      "fill": "#FFFFFF",
+      "size": 21
+    },
+    {
+      "id": "lane_manager",
+      "label": "Менеджер",
+      "x": 120,
+      "y": 255,
+      "w": 1740,
+      "h": 320,
+      "shape": "lane",
+      "fill": "#FBFCFD",
+      "size": 21
+    },
+    {
+      "id": "lane_tech",
+      "label": "Технический\nспециалист",
+      "x": 120,
+      "y": 575,
+      "w": 1740,
+      "h": 170,
+      "shape": "lane",
+      "fill": "#FBFCFD",
+      "size": 21
+    },
+    {
+      "id": "lane_is",
+      "label": "Ручной контроль",
+      "x": 120,
+      "y": 745,
+      "w": 1740,
+      "h": 220,
+      "shape": "lane",
+      "fill": "#FBFCFD",
+      "size": 21
+    },
+    {
+      "id": "change_start",
+      "label": "Изменение",
+      "x": 210,
+      "y": 330,
+      "w": 48,
+      "h": 48,
+      "shape": "message",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "change",
+      "label": "Зарегистрировать\nCHANGE и основание",
+      "x": 330,
+      "y": 305,
+      "w": 260,
+      "h": 100,
+      "shape": "task",
+      "fill": "#FFFFFF",
+      "size": 24
+    },
+    {
+      "id": "verify",
+      "label": "Проверить подписанное\nоснование изменения",
+      "x": 700,
+      "y": 610,
+      "w": 300,
+      "h": 90,
+      "shape": "task",
+      "fill": "#FFFFFF",
+      "size": 24
+    },
+    {
+      "id": "execute",
+      "label": "Применить изменение\nпосле подтверждения",
+      "x": 1130,
+      "y": 610,
+      "w": 290,
+      "h": 90,
+      "shape": "subprocess",
+      "fill": "#FFFFFF",
+      "size": 24
+    },
+    {
+      "id": "change_end",
+      "label": "Условия изменены",
+      "x": 1610,
+      "y": 630,
+      "w": 48,
+      "h": 48,
+      "shape": "end",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "timer",
+      "label": "Проверка дат",
+      "x": 210,
+      "y": 810,
+      "w": 48,
+      "h": 48,
+      "shape": "start",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "select",
+      "label": "Найти окончания\nв ближайшие 30 дней",
+      "x": 340,
+      "y": 780,
+      "w": 260,
+      "h": 105,
+      "shape": "task",
+      "fill": "#FFFFFF",
+      "size": 25
+    },
+    {
+      "id": "contact",
+      "label": "Связаться с клиентом\nпо продлению",
+      "x": 730,
+      "y": 435,
+      "w": 260,
+      "h": 105,
+      "shape": "task",
+      "fill": "#FFFFFF",
+      "size": 25
+    },
+    {
+      "id": "decision",
+      "label": "Согласен?",
+      "x": 1080,
+      "y": 455,
+      "w": 60,
+      "h": 60,
+      "shape": "gateway",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "renew",
+      "label": "Учесть подписанное\nпродление и новый срок",
+      "x": 1250,
+      "y": 435,
+      "w": 300,
+      "h": 105,
+      "shape": "task",
+      "fill": "#FFFFFF",
+      "size": 25
+    },
+    {
+      "id": "renew_end",
+      "label": "Продление учтено",
+      "x": 1700,
+      "y": 460,
+      "w": 48,
+      "h": 48,
+      "shape": "end",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "decline",
+      "label": "Учесть отказ\nбез изменения срока",
+      "x": 1260,
+      "y": 810,
+      "w": 280,
+      "h": 95,
+      "shape": "task",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "decline_end",
+      "label": "Отказ учтён",
+      "x": 1700,
+      "y": 830,
+      "w": 48,
+      "h": 48,
+      "shape": "end",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "note",
+      "label": "Сроки и ответы сводятся менеджером вручную в таблице.",
+      "x": 350,
+      "y": 920,
+      "w": 1180,
+      "h": 50,
+      "shape": "rect",
+      "fill": "#F1F4F6",
+      "size": 22
+    }
+  ],
+  "edges": [
+    {
+      "a": "change_start",
+      "b": "change",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": true
+    },
+    {
+      "a": "change",
+      "b": "verify",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": true
+    },
+    {
+      "a": "verify",
+      "b": "execute",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": true
+    },
+    {
+      "a": "execute",
+      "b": "change_end",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": true
+    },
+    {
+      "a": "timer",
+      "b": "select",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": true
+    },
+    {
+      "a": "select",
+      "b": "contact",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": true
+    },
+    {
+      "a": "contact",
+      "b": "decision",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": true
+    },
+    {
+      "a": "renew",
+      "b": "renew_end",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": true
+    },
+    {
+      "a": "decline",
+      "b": "decline_end",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": true
+    },
+    {
+      "a": "decision",
+      "b": "renew",
+      "label": "Да",
+      "points": null,
+      "dash": false,
+      "arrow": true
+    },
+    {
+      "a": "decision",
+      "b": "decline",
+      "label": "Нет",
+      "points": [
+        [
+          1110,
+          515
+        ],
+        [
+          1110,
+          855
+        ],
+        [
+          1260,
+          855
+        ]
+      ],
+      "dash": false,
+      "arrow": true,
+      "labelpos": [
+        1130,
+        760
+      ]
+    }
+  ],
+  "lines": [
+    {
+      "pts": [
+        [
+          234,
+          205
+        ],
+        [
+          234,
+          330
+        ]
+      ],
+      "label": "Запрос клиента",
+      "dash": true,
+      "arrow": true,
+      "size": 23,
+      "labelpos": [
+        270,
+        220
+      ]
+    },
+    {
+      "pts": [
+        [
+          860,
+          435
+        ],
+        [
+          860,
+          205
+        ]
+      ],
+      "label": "Запрос продления",
+      "dash": true,
+      "arrow": true,
+      "size": 23,
+      "labelpos": [
+        880,
+        270
+      ]
+    },
+    {
+      "pts": [
+        [
+          1110,
+          205
+        ],
+        [
+          1110,
+          380
+        ],
+        [
+          1005,
+          380
+        ],
+        [
+          1005,
+          485
+        ],
+        [
+          990,
+          485
+        ]
+      ],
+      "label": "Решение клиента",
+      "dash": true,
+      "arrow": true,
+      "size": 23,
+      "labelpos": [
+        1130,
+        290
+      ]
+    }
+  ]
+}

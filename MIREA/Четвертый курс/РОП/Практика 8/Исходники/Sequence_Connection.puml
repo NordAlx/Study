@@ -1,0 +1,38 @@
+@startuml
+skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam backgroundColor white
+
+title Подключение и безопасный повтор
+actor "Технический специалист" as tech
+participant "Django / worker" as app
+database "PostgreSQL" as db
+participant "Внешняя система подключения" as ext
+tech -> app : Подтвердить READY
+activate app
+app -> db : Транзакция: SENT + integration_job(key)
+db --> app : Commit и захват задачи
+app -> ext : HTTPS / JSON + постоянный key
+alt Операция принята
+ ext --> app : external_ref и подтверждённый статус
+ app -> db : Сохранить IN_PROGRESS либо DONE
+else Подтверждён бизнес-отказ
+ ext --> app : Причина отказа
+ app -> db : Сохранить FAILED и аудит
+else Тайм-аут или техническая ошибка
+ app -> ext : Уточнить исход по тому же key
+ ext --> app : Операция найдена / неизвестно
+ loop Исход неизвестен и attempts < 5
+  app -> db : RETRY, ожидание 1, 5, 15, 60 минут
+  app -> ext : Повтор с прежним key, если результат не найден
+ end
+ app -> db : Если лимит исчерпан: ERROR очереди
+ app --> tech : Ручная сверка, заявку не считать выполненной
+end
+deactivate app
+note over app,ext
+Повторы разрешены только если внешний сервис
+поддерживает идемпотентность и поиск исхода.
+end note
+
+@enduml

@@ -1,0 +1,29 @@
+@startuml
+skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam backgroundColor white
+
+title Компоненты проектируемой ИС
+component "Веб-интерфейс" as ui
+package "Модульный монолит Django" {
+ component "SSO и RBAC" as access
+ component "Клиенты, сделки, предложения" as crm
+ component "Договоры, заявки, продления" as service
+ component "Отчётность и аудит" as reporting
+}
+component "Фоновый worker" as worker
+database "PostgreSQL\nданные и integration_job" as db
+cloud "Корпоративный IdP" as idp
+cloud "Система подключения / биллинга" as billing
+cloud "Почтовый шлюз" as mail
+ui --> crm : HTTPS
+crm ..> access : разрешения
+crm ..> service : бизнес-операции
+reporting --> db : SQL
+service --> db : транзакция заявки и очереди
+worker --> db : захват и результат задачи
+worker --> billing : HTTPS / JSON, постоянный ключ
+worker --> mail : SMTP TLS
+access --> idp : OIDC / HTTPS
+
+@enduml

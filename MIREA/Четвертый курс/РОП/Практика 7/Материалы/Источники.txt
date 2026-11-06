@@ -1,0 +1,7 @@
+PostgreSQL 18. Constraints. URL: https://www.postgresql.org/docs/18/ddl-constraints.html (дата обращения: 20.10.2026).
+
+PostgreSQL 18. Row Security Policies. URL: https://www.postgresql.org/docs/18/ddl-rowsecurity.html (дата обращения: 20.10.2026).
+
+PostgreSQL 18. Backup and Restore. URL: https://www.postgresql.org/docs/18/backup.html (дата обращения: 20.10.2026).
+
+Object Management Group. Unified Modeling Language 2.5.1. URL: https://www.omg.org/spec/UML/2.5.1/ (дата обращения: 20.10.2026).

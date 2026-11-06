@@ -1,0 +1,7 @@
+﻿"title";"version_no";"status";"currency";"billing_period";"amount"
+"Учебная сделка 2";"1";"rejected";"RUB";"month";"5000.00"
+"Учебная сделка 2";"2";"review";"RUB";"month";"12000.00"
+"Учебная сделка 3";"1";"approved";"RUB";"month";"17100.00"
+"Учебная сделка 3";"1";"approved";"RUB";"once";"5000.00"
+"Учебная сделка 4";"1";"approved";"RUB";"month";"10000.00"
+"Учебная сделка 6";"1";"draft";"RUB";"month";"2000.00"

@@ -1,0 +1,5 @@
+client.manager_id → employee (1 : 0..*)
+contact.client_id → client (1 : 0..*)
+deal.client_id → client (1 : 0..*)
+deal.owner_id → employee (1 : 0..*)
+deal.status_code → deal_status (1 : 0..*)

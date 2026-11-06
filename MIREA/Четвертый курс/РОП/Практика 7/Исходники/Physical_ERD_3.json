@@ -1,0 +1,208 @@
+{
+  "title": "Физическая ERD Договоры и сопровождение",
+  "width": 1900,
+  "height": 1120,
+  "nodes": [
+    {
+      "id": "contract",
+      "label": "contract\nPK id BIGINT\ncode VARCHAR(14)\nFK deal_id BIGINT\nFK offer_id BIGINT\nexternal_number VARCHAR(100)\ndocument_ref VARCHAR(500)\nsigned_on DATE\nstarts_on DATE\nends_on DATE\nstatus_code VARCHAR(16)\ncreated_at TIMESTAMPTZ",
+      "x": 70,
+      "y": 150,
+      "w": 535,
+      "h": 374,
+      "shape": "table",
+      "fill": "#FFFFFF",
+      "size": 22
+    },
+    {
+      "id": "contract_service",
+      "label": "contract_service\nPK id BIGINT\nFK contract_id BIGINT\nFK product_id BIGINT\nservice_label VARCHAR(120)\nquantity NUMERIC(12,3)\nmonthly_unit_price NUMERIC(14,2)\nvalid_from TIMESTAMPTZ\nvalid_to TIMESTAMPTZ",
+      "x": 690,
+      "y": 150,
+      "w": 535,
+      "h": 287,
+      "shape": "table",
+      "fill": "#FFFFFF",
+      "size": 22
+    },
+    {
+      "id": "service_request",
+      "label": "service_request\nPK id BIGINT\ncode VARCHAR(14)\nFK contract_id BIGINT\nFK type_code VARCHAR(16)\nFK status_code VARCHAR(16)\nFK owner_id BIGINT\nFK assignee_id BIGINT\ndetails TEXT\nrequested_at TIMESTAMPTZ\ntarget_at TIMESTAMPTZ\nclosed_at TIMESTAMPTZ\nexternal_ref VARCHAR(120)",
+      "x": 1310,
+      "y": 150,
+      "w": 535,
+      "h": 403,
+      "shape": "table",
+      "fill": "#FFFFFF",
+      "size": 22
+    },
+    {
+      "id": "renewal",
+      "label": "renewal\nPK id BIGINT\nFK contract_id BIGINT\nprevious_end DATE\nnew_end DATE\ndecision VARCHAR(16)\ndecided_at TIMESTAMPTZ\ndocument_ref VARCHAR(500)\nFK owner_id BIGINT\ncreated_at TIMESTAMPTZ",
+      "x": 70,
+      "y": 670,
+      "w": 535,
+      "h": 316,
+      "shape": "table",
+      "fill": "#FFFFFF",
+      "size": 22
+    },
+    {
+      "id": "request_type",
+      "label": "request_type\nPK code VARCHAR(16)\nname VARCHAR(120)",
+      "x": 690,
+      "y": 670,
+      "w": 535,
+      "h": 113,
+      "shape": "table",
+      "fill": "#FFFFFF",
+      "size": 22
+    },
+    {
+      "id": "request_status",
+      "label": "request_status\nPK code VARCHAR(16)\nname VARCHAR(120)",
+      "x": 1310,
+      "y": 670,
+      "w": 535,
+      "h": 113,
+      "shape": "table",
+      "fill": "#FFFFFF",
+      "size": 22
+    },
+    {
+      "id": "note",
+      "label": "Связи с точными кратностями приведены в таблице связей и исходной модели.\nPK — первичный ключ; FK — внешний ключ. Все представления относятся к одной схеме.",
+      "x": 70,
+      "y": 1010,
+      "w": 1750,
+      "h": 58,
+      "shape": "rect",
+      "fill": "#F2F5F7",
+      "size": 18
+    }
+  ],
+  "edges": [
+    {
+      "a": "contract",
+      "b": "contract_service",
+      "label": "1 : 0..*",
+      "points": [
+        [
+          605,
+          293.5
+        ],
+        [
+          690,
+          293.5
+        ]
+      ],
+      "dash": false,
+      "arrow": false,
+      "labelpos": [
+        608,
+        265.5
+      ]
+    },
+    {
+      "a": "contract",
+      "b": "service_request",
+      "label": "1 : 0..*",
+      "points": [
+        [
+          337.5,
+          150
+        ],
+        [
+          337.5,
+          112
+        ],
+        [
+          1577.5,
+          112
+        ],
+        [
+          1577.5,
+          150
+        ]
+      ],
+      "dash": false,
+      "arrow": false,
+      "labelpos": [
+        690.0,
+        87
+      ]
+    },
+    {
+      "a": "request_type",
+      "b": "service_request",
+      "label": "1 : 0..*",
+      "points": [
+        [
+          1577.5,
+          553
+        ],
+        [
+          1577.5,
+          630
+        ],
+        [
+          957.5,
+          630
+        ],
+        [
+          957.5,
+          670
+        ]
+      ],
+      "dash": false,
+      "arrow": false,
+      "labelpos": [
+        1040.0,
+        602
+      ]
+    },
+    {
+      "a": "request_status",
+      "b": "service_request",
+      "label": "1 : 0..*",
+      "points": [
+        [
+          1577.5,
+          670
+        ],
+        [
+          1577.5,
+          553
+        ]
+      ],
+      "dash": false,
+      "arrow": false,
+      "labelpos": [
+        1585.5,
+        611.5
+      ]
+    },
+    {
+      "a": "contract",
+      "b": "renewal",
+      "label": "1 : 0..*",
+      "points": [
+        [
+          337.5,
+          524
+        ],
+        [
+          337.5,
+          670
+        ]
+      ],
+      "dash": false,
+      "arrow": false,
+      "labelpos": [
+        345.5,
+        597.0
+      ]
+    }
+  ],
+  "lines": []
+}

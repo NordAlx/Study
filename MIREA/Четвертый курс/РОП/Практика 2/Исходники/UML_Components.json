@@ -1,0 +1,247 @@
+{
+  "title": "UML Диаграмма компонентов",
+  "width": 1800,
+  "height": 1070,
+  "nodes": [
+    {
+      "id": "boundary",
+      "label": "Проектируемая ИС",
+      "x": 160,
+      "y": 240,
+      "w": 1450,
+      "h": 600,
+      "shape": "group",
+      "fill": "#FBFCFD",
+      "size": 27
+    },
+    {
+      "id": "browser",
+      "label": "«component»\nВеб-интерфейс",
+      "x": 650,
+      "y": 110,
+      "w": 420,
+      "h": 100,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "access",
+      "label": "«component»\nSSO и RBAC",
+      "x": 250,
+      "y": 330,
+      "w": 350,
+      "h": 120,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "crm",
+      "label": "«component»\nКлиенты, сделки, предложения",
+      "x": 720,
+      "y": 330,
+      "w": 420,
+      "h": 120,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "service",
+      "label": "«component»\nДоговоры, заявки, продления",
+      "x": 720,
+      "y": 540,
+      "w": 420,
+      "h": 120,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "report",
+      "label": "«component»\nОтчётность и аудит",
+      "x": 250,
+      "y": 540,
+      "w": 350,
+      "h": 120,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "worker",
+      "label": "«component»\nФоновый worker",
+      "x": 1210,
+      "y": 540,
+      "w": 300,
+      "h": 120,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "db",
+      "label": "«database» PostgreSQL\nБизнес-данные и очередь",
+      "x": 650,
+      "y": 880,
+      "w": 550,
+      "h": 100,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 26
+    },
+    {
+      "id": "external",
+      "label": "«external»\nIdP / Подключение / Почта",
+      "x": 1210,
+      "y": 110,
+      "w": 510,
+      "h": 100,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 26
+    }
+  ],
+  "edges": [
+    {
+      "a": "browser",
+      "b": "crm",
+      "label": "HTTPS / формы",
+      "points": null,
+      "dash": true,
+      "arrow": true,
+      "labelpos": [
+        910,
+        250
+      ],
+      "labelwidth": 280
+    },
+    {
+      "a": "crm",
+      "b": "access",
+      "label": "проверка доступа",
+      "points": null,
+      "dash": true,
+      "arrow": true,
+      "labelpos": [
+        500,
+        285
+      ],
+      "labelwidth": 280
+    },
+    {
+      "a": "crm",
+      "b": "service",
+      "label": "бизнес-операции",
+      "points": null,
+      "dash": true,
+      "arrow": true,
+      "labelpos": [
+        940,
+        470
+      ],
+      "labelwidth": 280
+    },
+    {
+      "a": "service",
+      "b": "worker",
+      "label": "очередь в БД",
+      "points": null,
+      "dash": true,
+      "arrow": true,
+      "labelpos": [
+        1165,
+        490
+      ],
+      "labelwidth": 280
+    },
+    {
+      "a": "service",
+      "b": "db",
+      "label": "ORM / SQL",
+      "points": null,
+      "dash": true,
+      "arrow": true,
+      "labelpos": [
+        950,
+        740
+      ],
+      "labelwidth": 280
+    },
+    {
+      "a": "report",
+      "b": "db",
+      "label": "выборки / аудит",
+      "points": null,
+      "dash": true,
+      "arrow": true,
+      "labelpos": [
+        270,
+        740
+      ],
+      "labelwidth": 280
+    },
+    {
+      "a": "worker",
+      "b": "db",
+      "label": "захват задач",
+      "points": null,
+      "dash": true,
+      "arrow": true,
+      "labelpos": [
+        1220,
+        780
+      ],
+      "labelwidth": 280
+    },
+    {
+      "a": "worker",
+      "b": "external",
+      "label": "HTTPS JSON / почтовый шлюз",
+      "points": null,
+      "dash": true,
+      "arrow": true,
+      "labelpos": [
+        1490,
+        330
+      ],
+      "labelwidth": 280
+    },
+    {
+      "a": "access",
+      "b": "external",
+      "label": "OIDC / HTTPS",
+      "points": [
+        [
+          600,
+          390
+        ],
+        [
+          625,
+          390
+        ],
+        [
+          625,
+          80
+        ],
+        [
+          1465,
+          80
+        ],
+        [
+          1465,
+          110
+        ]
+      ],
+      "dash": true,
+      "arrow": true,
+      "labelpos": [
+        450,
+        75
+      ],
+      "labelwidth": 280
+    }
+  ],
+  "lines": []
+}

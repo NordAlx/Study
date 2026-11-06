@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1200" viewBox="0 0 1900 1200"><rect width="100%" height="100%" fill="white"/>
+<text x="734.5078125" y="57.0" font-family="Arial" font-size="32" font-weight="700" fill="#17212B">UML Компоненты системы</text>
+<text x="653.5078125" y="1171.0" font-family="Arial" font-size="20" font-weight="400" fill="#17212B">Проектируемая модель сопровождения корпоративных продаж</text>
+<rect x="70" y="200" width="500" height="190" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="238.0" y="272.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">«component»</text>
+<text x="274.5" y="305.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">Web UI</text>
+<text x="140.5078125" y="338.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">Формы клиента сделки и КП</text>
+<rect x="700" y="200" width="500" height="190" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="868.0" y="256.0" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">«component»</text>
+<text x="883.5" y="289.0" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">Application</text>
+<text x="790.0" y="322.0" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">OfferService OrderService</text>
+<text x="863.5" y="355.0" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">ReportService</text>
+<rect x="1330" y="200" width="500" height="190" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1498.0" y="272.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">«component»</text>
+<text x="1481.0" y="305.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">Identity Provider</text>
+<text x="1448.515625" y="338.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">Корпоративный вход</text>
+<rect x="70" y="750" width="500" height="190" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="238.0" y="822.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">«component»</text>
+<text x="248.5" y="855.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">Persistence</text>
+<text x="153.0078125" y="888.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">Репозитории и транзакции</text>
+<rect x="700" y="750" width="500" height="190" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="868.0" y="822.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">«component»</text>
+<text x="838.0" y="855.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">Integration Worker</text>
+<text x="767.0078125" y="888.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">Outbox и обработка статусов</text>
+<rect x="1330" y="750" width="500" height="190" rx="0" fill="#F3F5F7" stroke="#364152" stroke-width="2"/>
+<text x="1498.0" y="822.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">«component»</text>
+<text x="1378.515625" y="855.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">Внешняя система подключения</text>
+<text x="1421.5" y="888.5" font-family="Arial" font-size="27" font-weight="400" fill="#17212B">Приём заказов и статусы</text>
+<polyline points="570,295 700,295" fill="none" stroke="#364152" stroke-width="2" stroke-dasharray="9 7"/>
+<polyline points="686.3036658953154,301.11640679589357 700,295 686.3036658953154,288.88359320410643" fill="none" stroke="#364152" stroke-width="2"/>
+<rect x="560.5078125" y="230.5" width="148.984375" height="39" fill="white"/>
+<text x="576.5078125" y="258.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">HTTPS API</text>
+<polyline points="1200,295 1330,295" fill="none" stroke="#364152" stroke-width="2" stroke-dasharray="9 7"/>
+<polyline points="1316.3036658953154,301.11640679589357 1330,295 1316.3036658953154,288.88359320410643" fill="none" stroke="#364152" stroke-width="2"/>
+<rect x="1220.0" y="230.5" width="90.0" height="39" fill="white"/>
+<text x="1236.0" y="258.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">OIDC</text>
+<polyline points="850,390 850,570 320,570 320,750" fill="none" stroke="#364152" stroke-width="2" stroke-dasharray="9 7"/>
+<polyline points="313.88359320410643,736.3036658953154 320,750 326.11640679589357,736.3036658953154" fill="none" stroke="#364152" stroke-width="2"/>
+<rect x="491.0" y="520.5" width="158.0" height="39" fill="white"/>
+<text x="507.0" y="548.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">IUnitOfWork</text>
+<polyline points="950,390 950,750" fill="none" stroke="#364152" stroke-width="2" stroke-dasharray="9 7"/>
+<polyline points="943.8835932041064,736.3036658953154 950,750 956.1164067958936,736.3036658953154" fill="none" stroke="#364152" stroke-width="2"/>
+<rect x="1010.0" y="540.5" width="220.0" height="39" fill="white"/>
+<text x="1026.0" y="568.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">Outbox / команды</text>
+<polyline points="700,845 570,845" fill="none" stroke="#364152" stroke-width="2" stroke-dasharray="9 7"/>
+<polyline points="583.6963341046846,838.8835932041064 570,845 583.6963341046846,851.1164067958936" fill="none" stroke="#364152" stroke-width="2"/>
+<rect x="549.0078125" y="790.5" width="171.984375" height="39" fill="white"/>
+<text x="565.0078125" y="818.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">Репозиторий</text>
+<polyline points="1200,845 1330,845" fill="none" stroke="#364152" stroke-width="2" stroke-dasharray="9 7"/>
+<polyline points="1316.3036658953154,851.1164067958936 1330,845 1316.3036658953154,838.8835932041064" fill="none" stroke="#364152" stroke-width="2"/>
+<rect x="1136.5" y="780.5" width="257.0" height="39" fill="white"/>
+<text x="1152.5" y="808.5" font-family="Arial" font-size="23" font-weight="400" fill="#17212B">IProvisioningGateway</text>
+<text x="652.5234375" y="1061.5" font-family="Arial" font-size="26" font-weight="400" fill="#17212B">Контракты интеграции предлагаются для проекта</text>
+<text x="481.03125" y="1093.5" font-family="Arial" font-size="26" font-weight="400" fill="#17212B">Диаграмма не утверждает наличие конкретных API или платформ в компании</text>
+</svg>

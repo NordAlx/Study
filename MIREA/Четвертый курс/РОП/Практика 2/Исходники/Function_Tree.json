@@ -1,0 +1,211 @@
+{
+  "title": "Дерево функций проектируемой ИС",
+  "width": 1800,
+  "height": 1000,
+  "nodes": [
+    {
+      "id": "root",
+      "label": "F0 Сопровождение корпоративных продаж",
+      "x": 470,
+      "y": 120,
+      "w": 860,
+      "h": 100,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 32
+    },
+    {
+      "id": "F1",
+      "label": "F1 Ведение клиентской базы",
+      "x": 50,
+      "y": 330,
+      "w": 310,
+      "h": 105,
+      "shape": "rect",
+      "fill": "#E8EEF3",
+      "size": 25
+    },
+    {
+      "id": "F1_sub",
+      "label": "F1.1 Клиенты\nF1.2 Контакты",
+      "x": 50,
+      "y": 530,
+      "w": 310,
+      "h": 230,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 24
+    },
+    {
+      "id": "F2",
+      "label": "F2 Сопровождение сделки",
+      "x": 400,
+      "y": 330,
+      "w": 310,
+      "h": 105,
+      "shape": "rect",
+      "fill": "#E8EEF3",
+      "size": 25
+    },
+    {
+      "id": "F2_sub",
+      "label": "F2.1 Регистрация\nF2.2 Стадии\nF2.3 Предложение\nF2.4 Согласование",
+      "x": 400,
+      "y": 530,
+      "w": 310,
+      "h": 230,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 24
+    },
+    {
+      "id": "F3",
+      "label": "F3 Договоры и услуги",
+      "x": 750,
+      "y": 330,
+      "w": 310,
+      "h": 105,
+      "shape": "rect",
+      "fill": "#E8EEF3",
+      "size": 25
+    },
+    {
+      "id": "F3_sub",
+      "label": "F3.1 Учёт договора\nF3.2 Подключение\nF3.3 Изменение\nF3.4 Продление",
+      "x": 750,
+      "y": 530,
+      "w": 310,
+      "h": 230,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 24
+    },
+    {
+      "id": "F4",
+      "label": "F4 Контроль и отчётность",
+      "x": 1100,
+      "y": 330,
+      "w": 310,
+      "h": 105,
+      "shape": "rect",
+      "fill": "#E8EEF3",
+      "size": 25
+    },
+    {
+      "id": "F4_sub",
+      "label": "F4.1 Показатели\nF4.2 Сроки",
+      "x": 1100,
+      "y": 530,
+      "w": 310,
+      "h": 230,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 24
+    },
+    {
+      "id": "F5",
+      "label": "F5 Доступ и интеграции",
+      "x": 1450,
+      "y": 330,
+      "w": 310,
+      "h": 105,
+      "shape": "rect",
+      "fill": "#E8EEF3",
+      "size": 25
+    },
+    {
+      "id": "F5_sub",
+      "label": "F5.1 SSO\nF5.2 RBAC\nF5.3 Обмен\nF5.4 Аудит",
+      "x": 1450,
+      "y": 530,
+      "w": 310,
+      "h": 230,
+      "shape": "rect",
+      "fill": "#FFFFFF",
+      "size": 24
+    }
+  ],
+  "edges": [
+    {
+      "a": "root",
+      "b": "F1",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": false
+    },
+    {
+      "a": "F1",
+      "b": "F1_sub",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": false
+    },
+    {
+      "a": "root",
+      "b": "F2",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": false
+    },
+    {
+      "a": "F2",
+      "b": "F2_sub",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": false
+    },
+    {
+      "a": "root",
+      "b": "F3",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": false
+    },
+    {
+      "a": "F3",
+      "b": "F3_sub",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": false
+    },
+    {
+      "a": "root",
+      "b": "F4",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": false
+    },
+    {
+      "a": "F4",
+      "b": "F4_sub",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": false
+    },
+    {
+      "a": "root",
+      "b": "F5",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": false
+    },
+    {
+      "a": "F5",
+      "b": "F5_sub",
+      "label": "",
+      "points": null,
+      "dash": false,
+      "arrow": false
+    }
+  ],
+  "lines": []
+}

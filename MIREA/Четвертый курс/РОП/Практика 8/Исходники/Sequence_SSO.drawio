@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="24.7.17">
+  <diagram id="Sequence_SSO" name="UML Sequence Корпоративный вход">
+    <mxGraphModel dx="1900" dy="1480" grid="1" page="1" pageWidth="1900" pageHeight="1480">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p0" value="Браузер" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=23;" vertex="1" parent="1">
+          <mxGeometry x="65" y="100" width="210" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="p1" value="Django / SSO" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=23;" vertex="1" parent="1">
+          <mxGeometry x="585" y="100" width="210" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="p2" value="Корпоративный IdP" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=23;" vertex="1" parent="1">
+          <mxGeometry x="1105" y="100" width="210" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" value="PostgreSQL" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=23;" vertex="1" parent="1">
+          <mxGeometry x="1625" y="100" width="210" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="alt" value="alt [все проверки токена пройдены]" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#FFFFFF;fontSize=22;align=left;verticalAlign=top;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="845" width="1795" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="guard1140" value="[отказ IdP, неверный токен или техническая ошибка]" style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#F2F4F6;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1148" width="650" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="note" value="Пароль IdP и токены не записываются в журнал.&lt;br&gt;Роль назначается локально; новый sub не получает доступ автоматически." style="whiteSpace=wrap;html=1;fontFamily=Arial;strokeColor=#5B6570;fillColor=#F2F4F6;fontSize=23;" vertex="1" parent="1">
+          <mxGeometry x="170" y="1320" width="1550" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_0" value="" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=none;dashed=1;" edge="1" parent="1" source="p0" target="note">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="170" y="185" as="sourcePoint" />
+            <mxPoint x="170" y="1360" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_1" value="" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=none;dashed=1;" edge="1" parent="1" source="p1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="690" y="185" as="sourcePoint" />
+            <mxPoint x="690" y="1360" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_2" value="" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=none;dashed=1;" edge="1" parent="1" source="p2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1210" y="185" as="sourcePoint" />
+            <mxPoint x="1210" y="1360" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_3" value="" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=none;dashed=1;" edge="1" parent="1" source="p3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1730" y="185" as="sourcePoint" />
+            <mxPoint x="1730" y="1360" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_4" value="1 Войти" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="170" y="250" as="sourcePoint" />
+            <mxPoint x="690" y="250" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_5" value="2 Redirect: state, nonce, PKCE challenge" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="690" y="325" as="sourcePoint" />
+            <mxPoint x="170" y="325" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_6" value="3 HTTPS / вход в IdP" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="170" y="400" as="sourcePoint" />
+            <mxPoint x="1210" y="400" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_7" value="4 Код + state либо отказ IdP" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1210" y="475" as="sourcePoint" />
+            <mxPoint x="170" y="475" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_8" value="5 Код + state" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="170" y="550" as="sourcePoint" />
+            <mxPoint x="690" y="550" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_9" value="6 state проверен → HTTPS: код + verifier" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="690" y="625" as="sourcePoint" />
+            <mxPoint x="1210" y="625" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_10" value="7 Токены JSON либо ошибка обмена" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1210" y="700" as="sourcePoint" />
+            <mxPoint x="690" y="700" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_11" value="8 Проверить подпись, iss, aud, exp, nonce" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="690" y="775" as="sourcePoint" />
+            <mxPoint x="690" y="810" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="810" y="775" />
+              <mxPoint x="810" y="810" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_12" value="9 Найти активного employee по стабильному sub" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="690" y="920" as="sourcePoint" />
+            <mxPoint x="1730" y="920" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_13" value="10 Локальная роль / сотрудник не найден" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1730" y="995" as="sourcePoint" />
+            <mxPoint x="690" y="995" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_14" value="11 Сеанс только активному сотруднику; иначе отказ" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="690" y="1070" as="sourcePoint" />
+            <mxPoint x="170" y="1070" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_15" value="" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=none;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="60" y="1140" as="sourcePoint" />
+            <mxPoint x="1835" y="1140" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_16" value="12 Отказ без сеанса, безопасное сообщение и аудит" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3E4852;fontFamily=Arial;fontSize=22;endArrow=block;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="690" y="1230" as="sourcePoint" />
+            <mxPoint x="170" y="1230" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

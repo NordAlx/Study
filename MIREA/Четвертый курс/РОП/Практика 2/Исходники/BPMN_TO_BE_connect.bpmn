@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='utf-8'?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_BPMN_TO_BE_connect" targetNamespace="https://example.invalid/rop/educational">
+  <bpmn:process id="Process_BPMN_TO_BE_connect" isExecutable="false" name="BPMN 2.0 TO_BE Подключение">
+    <bpmn:laneSet id="LaneSet">
+      <bpmn:lane id="lane_manager" name="Менеджер">
+        <bpmn:flowNodeRef>start</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>create</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>clarify</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>stop</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="lane_tech" name="Технический&#10;специалист">
+        <bpmn:flowNodeRef>check</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>valid</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>status</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>end</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="lane_is" name="ИС и worker">
+        <bpmn:flowNodeRef>send</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>result</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>fail</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>unknown</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="start" name="Договор учтён">
+      <bpmn:outgoing>flow_0</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:userTask id="create" name="Создать заявку и плановый срок">
+      <bpmn:incoming>flow_0</bpmn:incoming>
+      <bpmn:outgoing>flow_1</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="check" name="Проверить данные и основание">
+      <bpmn:incoming>flow_1</bpmn:incoming>
+      <bpmn:outgoing>flow_2</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="valid" name="Данные верны?">
+      <bpmn:incoming>flow_2</bpmn:incoming>
+      <bpmn:outgoing>flow_6</bpmn:outgoing>
+      <bpmn:outgoing>flow_7</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="clarify" name="Вернуть на уточнение">
+      <bpmn:incoming>flow_6</bpmn:incoming>
+      <bpmn:outgoing>flow_3</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="stop" name="Уточнить данные">
+      <bpmn:incoming>flow_3</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:serviceTask id="send" name="Передать заявку с постоянным ключом">
+      <bpmn:incoming>flow_7</bpmn:incoming>
+      <bpmn:incoming>flow_11</bpmn:incoming>
+      <bpmn:outgoing>flow_4</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="result" name="Результат?">
+      <bpmn:incoming>flow_4</bpmn:incoming>
+      <bpmn:outgoing>flow_8</bpmn:outgoing>
+      <bpmn:outgoing>flow_9</bpmn:outgoing>
+      <bpmn:outgoing>flow_10</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="status" name="Сверить статус выполнения">
+      <bpmn:incoming>flow_8</bpmn:incoming>
+      <bpmn:outgoing>flow_5</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="end" name="DONE / WON">
+      <bpmn:incoming>flow_5</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:endEvent id="fail" name="FAILED">
+      <bpmn:incoming>flow_9</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:serviceTask id="unknown" name="Уточнить по ключу, затем повторить ≤5 раз">
+      <bpmn:incoming>flow_10</bpmn:incoming>
+      <bpmn:outgoing>flow_11</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="flow_0" sourceRef="start" targetRef="create" name="" />
+    <bpmn:sequenceFlow id="flow_1" sourceRef="create" targetRef="check" name="" />
+    <bpmn:sequenceFlow id="flow_2" sourceRef="check" targetRef="valid" name="" />
+    <bpmn:sequenceFlow id="flow_3" sourceRef="clarify" targetRef="stop" name="" />
+    <bpmn:sequenceFlow id="flow_4" sourceRef="send" targetRef="result" name="" />
+    <bpmn:sequenceFlow id="flow_5" sourceRef="status" targetRef="end" name="" />
+    <bpmn:sequenceFlow id="flow_6" sourceRef="valid" targetRef="clarify" name="Нет" />
+    <bpmn:sequenceFlow id="flow_7" sourceRef="valid" targetRef="send" name="Да" />
+    <bpmn:sequenceFlow id="flow_8" sourceRef="result" targetRef="status" name="Принята" />
+    <bpmn:sequenceFlow id="flow_9" sourceRef="result" targetRef="fail" name="Бизнес-отказ" />
+    <bpmn:sequenceFlow id="flow_10" sourceRef="result" targetRef="unknown" name="Тайм-аут" />
+    <bpmn:sequenceFlow id="flow_11" sourceRef="unknown" targetRef="send" name="Исход не подтверждён" />
+  </bpmn:process>
+  <bpmn:collaboration id="Collaboration">
+    <bpmn:participant id="Participant" name="Сопровождение" processRef="Process_BPMN_TO_BE_connect" />
+  </bpmn:collaboration>
+  <bpmndi:BPMNDiagram id="Diagram">
+    <bpmndi:BPMNPlane id="Plane" bpmnElement="Collaboration">
+      <bpmndi:BPMNShape id="Participant_di" bpmnElement="Participant" isHorizontal="true">
+        <dc:Bounds x="40" y="120" width="1820" height="900" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="lane_manager_di" bpmnElement="lane_manager" isHorizontal="true">
+        <dc:Bounds x="120" y="120" width="1740" height="280" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="lane_tech_di" bpmnElement="lane_tech" isHorizontal="true">
+        <dc:Bounds x="120" y="400" width="1740" height="280" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="lane_is_di" bpmnElement="lane_is" isHorizontal="true">
+        <dc:Bounds x="120" y="680" width="1740" height="320" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="start_di" bpmnElement="start">
+        <dc:Bounds x="205" y="220" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="create_di" bpmnElement="create">
+        <dc:Bounds x="315" y="195" width="230" height="95" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="check_di" bpmnElement="check">
+        <dc:Bounds x="620" y="475" width="215" height="95" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="valid_di" bpmnElement="valid">
+        <dc:Bounds x="900" y="490" width="60" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="clarify_di" bpmnElement="clarify">
+        <dc:Bounds x="1000" y="195" width="220" height="95" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="stop_di" bpmnElement="stop">
+        <dc:Bounds x="1320" y="220" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="send_di" bpmnElement="send">
+        <dc:Bounds x="1020" y="755" width="230" height="100" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="result_di" bpmnElement="result">
+        <dc:Bounds x="1340" y="775" width="60" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="status_di" bpmnElement="status">
+        <dc:Bounds x="1460" y="475" width="215" height="95" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="end_di" bpmnElement="end">
+        <dc:Bounds x="1770" y="500" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="fail_di" bpmnElement="fail">
+        <dc:Bounds x="1770" y="790" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="unknown_di" bpmnElement="unknown">
+        <dc:Bounds x="1270" y="900" width="330" height="95" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="flow_0_di" bpmnElement="flow_0">
+        <di:waypoint x="253.0" y="244.0" />
+        <di:waypoint x="284.0" y="244.0" />
+        <di:waypoint x="284.0" y="242.5" />
+        <di:waypoint x="315.0" y="242.5" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_1_di" bpmnElement="flow_1">
+        <di:waypoint x="545.0" y="242.5" />
+        <di:waypoint x="582.5" y="242.5" />
+        <di:waypoint x="582.5" y="522.5" />
+        <di:waypoint x="620.0" y="522.5" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_2_di" bpmnElement="flow_2">
+        <di:waypoint x="835.0" y="522.5" />
+        <di:waypoint x="867.5" y="522.5" />
+        <di:waypoint x="867.5" y="520.0" />
+        <di:waypoint x="900.0" y="520.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_3_di" bpmnElement="flow_3">
+        <di:waypoint x="1220.0" y="242.5" />
+        <di:waypoint x="1270.0" y="242.5" />
+        <di:waypoint x="1270.0" y="244.0" />
+        <di:waypoint x="1320.0" y="244.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_4_di" bpmnElement="flow_4">
+        <di:waypoint x="1250.0" y="805.0" />
+        <di:waypoint x="1295.0" y="805.0" />
+        <di:waypoint x="1295.0" y="805.0" />
+        <di:waypoint x="1340.0" y="805.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_5_di" bpmnElement="flow_5">
+        <di:waypoint x="1675.0" y="522.5" />
+        <di:waypoint x="1722.5" y="522.5" />
+        <di:waypoint x="1722.5" y="524.0" />
+        <di:waypoint x="1770.0" y="524.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_6_di" bpmnElement="flow_6">
+        <di:waypoint x="930.0" y="490.0" />
+        <di:waypoint x="930.0" y="390.0" />
+        <di:waypoint x="1110.0" y="390.0" />
+        <di:waypoint x="1110.0" y="290.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_7_di" bpmnElement="flow_7">
+        <di:waypoint x="930.0" y="550.0" />
+        <di:waypoint x="930.0" y="652.5" />
+        <di:waypoint x="1135.0" y="652.5" />
+        <di:waypoint x="1135.0" y="755.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_8_di" bpmnElement="flow_8">
+        <di:waypoint x="1370" y="775" />
+        <di:waypoint x="1370" y="522" />
+        <di:waypoint x="1460" y="522" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_9_di" bpmnElement="flow_9">
+        <di:waypoint x="1400.0" y="805.0" />
+        <di:waypoint x="1585.0" y="805.0" />
+        <di:waypoint x="1585.0" y="814.0" />
+        <di:waypoint x="1770.0" y="814.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_10_di" bpmnElement="flow_10">
+        <di:waypoint x="1370" y="835" />
+        <di:waypoint x="1370" y="900" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="flow_11_di" bpmnElement="flow_11">
+        <di:waypoint x="1270" y="947" />
+        <di:waypoint x="970" y="947" />
+        <di:waypoint x="970" y="805" />
+        <di:waypoint x="1020" y="805" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
